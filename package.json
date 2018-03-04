@@ -2,8 +2,9 @@
   "name": "create-next-example-app",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js",
+	  "build": "next build",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "next": "5.0.0",
