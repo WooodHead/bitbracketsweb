@@ -1,4 +1,4 @@
-import Head from './head'
+import Head from './Header'
 import Link from 'next/link'
 
 const links = [
@@ -57,4 +57,4 @@ const Nav = () => (
   </nav>
 )
 
-export default Nav
+export default Nav;
