@@ -1,0 +1,8 @@
+{
+    "presets": [],
+    "plugins": [
+        ["react-intl", {
+            "messagesDir": "lang/.messages/"
+        }]
+    ]
+}
