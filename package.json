@@ -34,5 +34,8 @@
     "react-intl": "^2.4.0",
     "react-scripts": "^1.1.0",
     "web3": "^1.0.0-beta.26"
+  },
+  "devDependencies": {
+    "babel-plugin-react-intl": "^2.4.0"
   }
 }
