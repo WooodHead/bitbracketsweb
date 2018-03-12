@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
+<div
+  className="jsx-2880368761"
+>
+  <nav
+    className="jsx-3661331558"
+  >
+    <ul
+      className="jsx-3661331558"
+    >
+      <li
+        className="jsx-3661331558"
+      >
+        <a
+          className="jsx-3661331558"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <ul
+        className="jsx-3661331558"
+      >
+        <li
+          className="jsx-3661331558"
+        >
+          <a
+            className="jsx-3661331558"
+            href="https://github.com/segmentio/create-next-app"
+            onClick={[Function]}
+          >
+            Github
+          </a>
+        </li>
+      </ul>
+    </ul>
+  </nav>
+  <div
+    className="jsx-2880368761 hero"
+  >
+    <h1
+      className="jsx-2880368761 title"
+    >
+      Welcome to Next!
+    </h1>
+    <p
+      className="jsx-2880368761 description"
+    >
+      To get started, edit 
+      <code
+        className="jsx-2880368761"
+      >
+        pages/index.js
+      </code>
+       and save to reload.
+    </p>
+    <div
+      className="jsx-2880368761 row"
+    >
+      <a
+        className="jsx-2880368761 card"
+        href="https://github.com/zeit/next.js#getting-started"
+        onClick={[Function]}
+      >
+        <h3
+          className="jsx-2880368761"
+        >
+          Getting Started →
+        </h3>
+        <p
+          className="jsx-2880368761"
+        >
+          Learn more about Next on Github and in their examples
+        </p>
+      </a>
+      <a
+        className="jsx-2880368761 card"
+        href="https://open.segment.com/create-next-app"
+        onClick={[Function]}
+      >
+        <h3
+          className="jsx-2880368761"
+        >
+          Examples →
+        </h3>
+        <p
+          className="jsx-2880368761"
+        >
+          Find other example boilerplates on the 
+          <code
+            className="jsx-2880368761"
+          >
+            create-next-app
+          </code>
+           site
+        </p>
+      </a>
+      <a
+        className="jsx-2880368761 card"
+        href="https://github.com/segmentio/create-next-app"
+        onClick={[Function]}
+      >
+        <h3
+          className="jsx-2880368761"
+        >
+          Create Next App →
+        </h3>
+        <p
+          className="jsx-2880368761"
+        >
+          Was this tool helpful? Let us know how we can improve it
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+`;
