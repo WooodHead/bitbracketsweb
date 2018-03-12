@@ -40,5 +40,8 @@ jobs:
           <<: *cache-options
           paths:
             - ./node_modules
+      - run:
+          name: test
+          command: npm test      
 
 
