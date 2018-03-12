@@ -18,26 +18,20 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+           <<: *cache-options
       - run:
           name: install-package-dependencies
           command: npm install    
       # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
       - run: npm run build
 
+      - run:
+          name: test-reporter-setup
+          command: npm install mocha-junit-reporter --no-save
       - save_cache:
+          <<: *cache-options
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      - run: npm run test
+            - ./node_modules
+
 
