@@ -1,8 +1,12 @@
 {
-    "presets": [],
-    "plugins": [
-        ["react-intl", {
-            "messagesDir": "lang/.messages/"
-        }]
+  "presets": ["next/babel"],
+  "env": { "test": { "presets": ["env", "next/babel"] } },
+  "plugins": [
+    [
+      "react-intl",
+      {
+        "messagesDir": "lang/.messages/"
+      }
     ]
+  ]
 }
