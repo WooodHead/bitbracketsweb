@@ -18,7 +18,12 @@ jobs:
 
     steps:
       - checkout
-
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - run:
+          name: install-package-dependencies
+          command: npm install    
       # Download and cache dependencies
       - restore_cache:
           keys:
