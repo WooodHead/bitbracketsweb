@@ -26,14 +26,27 @@
   },
   "dependencies": {
     "fs-extra": "^5.0.0",
+    "material-ui": "^1.0.0-beta.37",
+    "material-ui-icons": "^1.0.0-beta.36",
     "next": "^4.1.4",
     "next-routes": "^1.2.0",
     "react": "16.2.0",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "16.2.0",
+    "react-intl": "^2.4.0",
     "react-scripts": "^1.1.0",
-    "web3": "^1.0.0-beta.26"
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "web3": "^1.0.0-beta.26",
+    "webpack": "^4.1.1"
   },
   "devDependencies": {
+    "mocha": "^5.0.0",
+    "babel-plugin-react-intl": "^2.4.0",
+    "file-loader": "^1.1.11",
+    "react-scripts": "^1.1.0",
+    "web3": "^1.0.0-beta.26",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.2",
