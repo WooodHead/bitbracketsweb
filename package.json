@@ -43,6 +43,5 @@
   "devDependencies": {
     "babel-plugin-react-intl": "^2.4.0",
     "file-loader": "^1.1.11"
-
   }
 }
