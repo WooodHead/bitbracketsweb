@@ -10,7 +10,7 @@ class Layout extends Component {
         <Navigation />
 
         {this.props.children}
-        <style jsx>{``}</style>
+        {/* <style jsx>{``}</style> */}
       </div>
     );
   }

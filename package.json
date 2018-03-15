@@ -27,7 +27,7 @@
   "dependencies": {
     "fs-extra": "^5.0.0",
     "material-ui": "^1.0.0-beta.37",
-    "material-ui-icons": "^1.0.0-beta.36", 
+    "material-ui-icons": "^1.0.0-beta.36",
     "next": "^4.1.4",
     "next-routes": "^1.2.0",
     "react": "16.2.0",
