@@ -4,6 +4,7 @@ import Navbar from "./common/Navbar";
 import Icon from "./common/Icon";
 import Drawer from "./common/Drawer";
 import { NavDropdown, MenuItem } from "react-bootstrap";
+import ListDrawer from "./ListDrawer";
 
 class Navigation extends Component {
   render() {
@@ -11,7 +12,14 @@ class Navigation extends Component {
       <div>
         <div className="navbarResponsive">
           <Navbar
-            drawer={<Drawer />}
+            drawer={
+              <Drawer
+                listDrawer={<ListDrawer />}
+                colorButtonToggle="#fff"
+                drawerWidth="250px"
+                backgroundColorDrawer="#323150"
+              />
+            }
             style={{
               background: "#323150",
               margin: 0,
@@ -36,26 +44,18 @@ class Navigation extends Component {
             link1="Sign Up"
             link2="Log In "
             className="description"
+            title="Language"
             dropdown={
-              <div>
-                <NavDropdown
-                  className="dropdown"
-                  eventKey={3}
-                  title={<span className="titledropdown">Language</span>}
-                >
-                  <MenuItem eventKey={3.1}>
-                    <span className="dropdownItem">English</span>
-                  </MenuItem>
-                  <MenuItem eventKey={3.2}>
-                    {" "}
-                    <span className="dropdownItem">Spanish</span>
-                  </MenuItem>
-                  <MenuItem eventKey={3.3}>
-                    {" "}
-                    <span className="dropdownItem">Portuguese</span>
-                  </MenuItem>
-                </NavDropdown>
-              </div>
+              <NavDropdown
+                title="Language"
+                id="basic-nav-dropdown"
+                activekey="true"
+              >
+                <MenuItem>English</MenuItem>
+                <MenuItem>Spanish</MenuItem>
+                <MenuItem>Portuguese</MenuItem>
+                <MenuItem>Italian</MenuItem>
+              </NavDropdown>
             }
           />
 
