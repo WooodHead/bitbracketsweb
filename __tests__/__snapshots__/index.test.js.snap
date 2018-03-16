@@ -44,50 +44,52 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                 }
               }
             >
-              <div
-                className="jsx-1864780814"
-              >
-                <button
-                  className="MuiButtonBase-root-16 MuiButton-root-1"
-                  disabled={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  style={
-                    Object {
-                      "color": "#fff",
-                    }
-                  }
-                  tabIndex="0"
-                  type="button"
+              <div>
+                <span
+                  className="colorButton"
                 >
-                  <span
-                    className="MuiButton-label-2"
+                  <button
+                    className="MuiButtonBase-root-16 MuiButton-root-1"
+                    disabled={false}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    style={
+                      Object {
+                        "color": "#fff",
+                      }
+                    }
+                    tabIndex="0"
+                    type="button"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className="MuiSvgIcon-root-19"
-                      color={undefined}
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <span
+                      className="MuiButton-label-2"
                     >
-                      <path
-                        d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    className="MuiTouchRipple-root-25"
-                  />
-                </button>
+                      <svg
+                        aria-hidden="true"
+                        className="MuiSvgIcon-root-19"
+                        color={undefined}
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className="MuiTouchRipple-root-25"
+                    />
+                  </button>
+                </span>
               </div>
             </div>
             <div
@@ -193,18 +195,6 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                     className="jsx-661576907 "
                   />
                 </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                />
               </li>
             </ul>
           </div>
@@ -363,111 +353,92 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                 </a>
               </li>
               <li
-                className=""
-                role="presentation"
+                className="dropdown"
                 style={undefined}
               >
                 <a
+                  activekey="true"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="dropdown-toggle"
                   href="#"
+                  id="basic-nav-dropdown"
                   onClick={[Function]}
                   onKeyDown={[Function]}
                   role="button"
                 >
-                  <div
-                    className="jsx-803102528"
-                  >
-                    <li
-                      className="dropdown dropdown"
-                      style={undefined}
-                    >
-                      <a
-                        aria-expanded={false}
-                        aria-haspopup={true}
-                        className="dropdown-toggle"
-                        href="#"
-                        id={undefined}
-                        onClick={[Function]}
-                        onKeyDown={[Function]}
-                        role="button"
-                      >
-                        <span
-                          className="jsx-803102528 titledropdown"
-                        >
-                          Language
-                        </span>
-                         
-                        <span
-                          className="caret"
-                        />
-                      </a>
-                      <ul
-                        aria-labelledby={undefined}
-                        className="dropdown-menu"
-                        role="menu"
-                      >
-                        <li
-                          className=""
-                          role="presentation"
-                          style={undefined}
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            role="menuitem"
-                            tabIndex="-1"
-                          >
-                            <span
-                              className="jsx-803102528 dropdownItem"
-                            >
-                              English
-                            </span>
-                          </a>
-                        </li>
-                        <li
-                          className=""
-                          role="presentation"
-                          style={undefined}
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            role="menuitem"
-                            tabIndex="-1"
-                          >
-                             
-                            <span
-                              className="jsx-803102528 dropdownItem"
-                            >
-                              Spanish
-                            </span>
-                          </a>
-                        </li>
-                        <li
-                          className=""
-                          role="presentation"
-                          style={undefined}
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            role="menuitem"
-                            tabIndex="-1"
-                          >
-                             
-                            <span
-                              className="jsx-803102528 dropdownItem"
-                            >
-                              Portuguese
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </div>
+                  Language
+                   
+                  <span
+                    className="caret"
+                  />
                 </a>
+                <ul
+                  aria-labelledby="basic-nav-dropdown"
+                  className="dropdown-menu"
+                  role="menu"
+                >
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      English
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Spanish
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Portuguese
+                    </a>
+                  </li>
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Italian
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -651,18 +622,6 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                   />
                 </a>
               </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                />
-              </li>
             </ul>
           </div>
         </div>
@@ -813,18 +772,6 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                   </span>
                 </a>
               </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                />
-              </li>
             </ul>
           </div>
         </div>
@@ -832,221 +779,16 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
     </div>
   </div>
   <div
-    className="jsx-48934217"
+    className="jsx-2085888330"
   >
     <div
-      className="jsx-48934217"
+      className="jsx-2085888330"
     >
-      <p
-        className="jsx-48934217 description"
+      <h1
+        className="jsx-2085888330"
       >
-        To get started, edit 
-        <code
-          className="jsx-48934217"
-        >
-          pages/index.js
-        </code>
-         and save to reload.
-      </p>
-      <button
-        className="MuiButtonBase-root-16 MuiButton-root-1 MuiButton-raised-6"
-        disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex="0"
-        type="button"
-      >
-        <span
-          className="MuiButton-label-2"
-        >
-          Subscribe
-        </span>
-        <span
-          className="MuiTouchRipple-root-25"
-        />
-      </button>
-      <div
-        aria-describedby={undefined}
-        className="MuiFormControl-root-45 MuiFormControl-marginNormal-46"
-        onBlur={[Function]}
-        onFocus={[Function]}
-      >
-        <label
-          className="MuiFormLabel-root-55 MuiInputLabel-root-49 MuiInputLabel-formControl-50 MuiInputLabel-animated-53"
-          data-shrink={false}
-          htmlFor="textarea"
-        >
-          pick a name
-        </label>
-        <div
-          className="MuiInput-root-61 MuiInput-formControl-62 MuiInput-multiline-67 MuiInput-underline-65"
-        >
-          <div
-            className="MuiTextarea-root-75"
-            style={
-              Object {
-                "height": 19,
-              }
-            }
-          >
-            <textarea
-              aria-hidden="true"
-              className="MuiTextarea-shadow-77 MuiTextarea-textarea-76"
-              readOnly={true}
-              rows="1"
-              tabIndex={-1}
-              value=""
-            />
-            <textarea
-              aria-hidden="true"
-              className="MuiTextarea-shadow-77 MuiTextarea-textarea-76"
-              defaultValue={undefined}
-              readOnly={true}
-              rows={1}
-              tabIndex={-1}
-              value={undefined}
-            />
-            <textarea
-              aria-invalid={false}
-              aria-required={false}
-              autoComplete={undefined}
-              autoFocus={undefined}
-              className="MuiTextarea-textarea-76 MuiInput-input-69 MuiInput-inputMultiline-72"
-              defaultValue={undefined}
-              disabled={false}
-              id="textarea"
-              name={undefined}
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onKeyDown={undefined}
-              onKeyUp={undefined}
-              placeholder="pick a name"
-              readOnly={undefined}
-              required={undefined}
-              rows={1}
-              type="text"
-              value={undefined}
-            />
-          </div>
-        </div>
-      </div>
-      <div>
-        <form>
-          <div
-            className="form-group"
-            style={
-              Object {
-                "color": "grey",
-              }
-            }
-          >
-            <label
-              className="control-label"
-              htmlFor="formBasicText"
-            >
-              subcribe
-            </label>
-            <input
-              className="form-control"
-              id="formBasicText"
-              placeholder="pick placeholder"
-              style={
-                Object {
-                  "background": "purple",
-                  "color": "#fff",
-                  "width": 200,
-                }
-              }
-              type="text"
-            />
-          </div>
-        </form>
-      </div>
-      <div>
-        <form>
-          <input
-            className="form-control"
-            id={undefined}
-            placeholder="Search"
-            style={
-              Object {
-                "background": "purple",
-                "borderRadius": 25,
-                "color": "#fff",
-                "width": 200,
-              }
-            }
-            type="text"
-          />
-        </form>
-      </div>
-      <span
-        color={undefined}
-        style={
-          Object {
-            "color": "red",
-          }
-        }
-        variant="raised"
-      >
-        <i
-          className="jsx-48934217 fab fa-accessible-icon"
-        />
-      </span>
-      <div
-        className="jsx-1864780814"
-      >
-        <button
-          className="MuiButtonBase-root-16 MuiButton-root-1"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          style={
-            Object {
-              "color": "#fff",
-            }
-          }
-          tabIndex="0"
-          type="button"
-        >
-          <span
-            className="MuiButton-label-2"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-19"
-              color={undefined}
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-              />
-            </svg>
-          </span>
-          <span
-            className="MuiTouchRipple-root-25"
-          />
-        </button>
-      </div>
+        Este es el app
+      </h1>
     </div>
   </div>
   <p>
