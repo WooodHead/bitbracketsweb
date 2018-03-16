@@ -17,35 +17,42 @@ class LeftSideNavBar extends Component {
     });
   };
   render() {
+    const { colorButtonToggle } = this.props;
+    const { drawerWidth } = this.props;
+    const { backgroundColorDrawer } = this.props;
+
     return (
       <div>
-        <Button
-          onClick={this.toggleDrawer("left", true)}
-          style={{ color: "#fff" }}
-        >
-          <MenuIcon />
-        </Button>
+        <span className="colorButton">
+          <Button
+            onClick={this.toggleDrawer("left", true)}
+            style={{ color: colorButtonToggle }}
+          >
+            <MenuIcon />
+          </Button>
+        </span>
+
         <Drawer
           open={this.state.left}
           onClose={this.toggleDrawer("left", false)}
         >
           <div
-            className="drawerWidth"
+            style={{
+              width: drawerWidth,
+              backgroundColor: backgroundColorDrawer
+            }}
             tabIndex={0}
             role="button"
             onClick={this.toggleDrawer("left", false)}
             onKeyDown={this.toggleDrawer("left", false)}
           >
-            <ListDrawer />
+            {this.props.listDrawer ? (
+              this.props.listDrawer
+            ) : (
+              <h1>need list drawer</h1>
+            )}
           </div>
         </Drawer>
-        <style jsx>{`
-          .drawerWidth {
-            width: 250px;
-
-            background-color: #323150;
-          }
-        `}</style>
       </div>
     );
   }

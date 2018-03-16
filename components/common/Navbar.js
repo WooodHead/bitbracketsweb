@@ -23,22 +23,21 @@ export default props => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav style={props.styleNav}>
-          <NavItem eventKey={1} href="#">
+          <NavItem href="#">
             <span className={props.className}>{props.link1}</span>
           </NavItem>
 
-          <NavItem eventKey={2} href="#">
+          <NavItem href="#">
             <span className={props.className}>{props.link2}</span>
           </NavItem>
-          <NavItem eventKey={3} href="#">
+          <NavItem href="#">
             <span className={props.className}>{props.link3}</span>
           </NavItem>
-          <NavItem eventKey={4} href="#">
+          <NavItem href="#">
             <span className={props.className}>{props.link4}</span>
           </NavItem>
-          <NavItem eventKey={5} href="#">
-            {props.dropdown}
-          </NavItem>
+
+          {props.dropdown}
         </Nav>
       </Navbar.Collapse>
       <style jsx>{`
