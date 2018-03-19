@@ -4,8 +4,9 @@ import withRedux from 'next-redux-wrapper';
 import Link from 'next/link';
 // import { connect } from 'react-redux';
 import Button from 'material-ui/Button';
-import SelectField from '../components/common/SelectField'; 
 
+import withRoot from '../md/withRoot';
+import LanguageSelect from '../components/LanguageSelect';
 import { initStore } from '../store';
 import { changeLanguage } from '../actions';
 
@@ -20,8 +21,13 @@ class ReduxExample extends React.Component {
         return (
             <div>
                 <div>Language: <strong>{this.props.language}</strong></div>
-                <Button onClick={() => this.props.changeLanguage("es")}>Change Language to Spanish</Button>
-                <div><SelectField id="language" name="language" items={["English","Español"]} /></div>
+                <div>
+                    <LanguageSelect  
+                        languages={["en", "es"]}
+                        current={this.props.language} 
+                        onChange={(key, value) => this.props.changeLanguage(value)} 
+                    />
+                </div>
                 <div><Link href="/"><a>Regresar</a></Link></div>
             </div>
         )
@@ -40,4 +46,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(ReduxExample)
+export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(ReduxExample))
