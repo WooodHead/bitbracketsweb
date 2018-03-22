@@ -22,7 +22,8 @@
     "test": "NODE_ENV=test jest",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "json-server": "json-server --watch ./json_mock_server/db.json --routes ./json_mock_server/routes.json --port 3001"
   },
   "dependencies": {
     "fs-extra": "^5.0.0",
