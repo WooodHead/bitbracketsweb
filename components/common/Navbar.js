@@ -7,7 +7,7 @@ export default props => {
     <Navbar style={props.style}>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href="#home" style={props.styleBrandName}>
+          <a href={props.linkBrand} style={props.styleBrandName}>
             {props.brandname}
           </a>
         </Navbar.Brand>
@@ -23,18 +23,18 @@ export default props => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav style={props.styleNav}>
-          <NavItem href="#">
-            <span className={props.className}>{props.link1}</span>
+          <NavItem href={props.link1}>
+            <span className={props.className}>{props.linkName1}</span>
           </NavItem>
 
-          <NavItem href="#">
-            <span className={props.className}>{props.link2}</span>
+          <NavItem href={props.link2}>
+            <span className={props.className}>{props.linkName2}</span>
           </NavItem>
-          <NavItem href="#">
-            <span className={props.className}>{props.link3}</span>
+          <NavItem href={props.link3}>
+            <span className={props.className}>{props.linkName3}</span>
           </NavItem>
-          <NavItem href="#">
-            <span className={props.className}>{props.link4}</span>
+          <NavItem href={props.link4}>
+            <span className={props.className}>{props.linkName4}</span>
           </NavItem>
 
           {props.dropdown}

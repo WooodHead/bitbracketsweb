@@ -9,29 +9,29 @@ export default props => {
   return (
     <div className="root">
       <List component="nav">
-        <ListItem>
+        <ListItem button component="a" href="/">
           <span className="brand">BitBrackets</span>
         </ListItem>
         <Divider />
-        <ListItem button>
+        <ListItem button component="a" href="/">
           <span className="ListColor">Home</span>
         </ListItem>
         <Divider />
-        <ListItem button>
+        <ListItem button component="a" href="/contest">
           <span className="ListColor">Contest</span>
         </ListItem>
         <Divider />
-        <ListItem button>
+        <ListItem button component="a" href="/faq">
           <span className="ListColor">FAQ</span>
         </ListItem>
         <Divider />
-        <ListItem button>
+        <ListItem button component="a" href="/rules">
           <span className="ListColor">Rules</span>
         </ListItem>
       </List>
       <Divider />
       <List component="nav">
-        <ListItem button>
+        <ListItem button component="a" href="/signup">
           <ListItemIcon>
             <Icon
               style={{ color: "#3ffeca", marginRight: "20%" }}
@@ -40,7 +40,7 @@ export default props => {
           </ListItemIcon>
           <span className="ListColor">SignUp</span>
         </ListItem>
-        <ListItem button component="a" href="#simple-list">
+        <ListItem button component="a" href="/login">
           <ListItemIcon>
             <Icon
               style={{ color: "#3ffeca", marginRight: "20%" }}
@@ -58,7 +58,7 @@ export default props => {
           </ListItemIcon>
           <span className="ListColor">Language</span>
         </ListItem>
-        <ListItem button>
+        <ListItem button component="a" href="/contact">
           <ListItemIcon>
             <Icon
               style={{ color: "#3ffeca", marginRight: "20%" }}

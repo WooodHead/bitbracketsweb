@@ -3,779 +3,699 @@
 exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
 <div>
   <div
-    className="jsx-803102528"
+    className="jsx-896431938"
   >
     <div
-      className="jsx-803102528 navbarResponsive"
+      className="jsx-896431938 navbarResponsive"
     >
-      <nav
-        className="navbar navbar-default"
-        style={
-          Object {
-            "background": "#323150",
-            "borderColor": "#323150",
-            "borderRadius": 0,
-            "margin": 0,
-          }
-        }
+      <div
+        className="jsx-2085888330"
       >
-        <div
-          className="container"
+        <nav
+          className="navbar navbar-default"
+          style={
+            Object {
+              "background": "#323150",
+              "borderColor": "#323150",
+              "borderRadius": 0,
+              "margin": 0,
+            }
+          }
         >
           <div
-            className="navbar-header"
+            className="container"
           >
-            <a
-              className="jsx-661576907 navbar-brand"
-              href="#home"
-              style={
-                Object {
-                  "color": "#3ffeca",
-                }
-              }
-            >
-              BitBrackets
-            </a>
             <div
-              className="jsx-661576907"
-              style={
-                Object {
-                  "float": "right",
-                }
-              }
+              className="navbar-header"
             >
-              <div>
-                <span
-                  className="colorButton"
-                >
-                  <button
-                    className="MuiButtonBase-root-16 MuiButton-root-1"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    style={
-                      Object {
-                        "color": "#fff",
-                      }
-                    }
-                    tabIndex="0"
-                    type="button"
+              <a
+                className="jsx-661576907 navbar-brand"
+                href="/"
+                style={
+                  Object {
+                    "color": "#3ffeca",
+                  }
+                }
+              >
+                BitBrackets
+              </a>
+              <div
+                className="jsx-661576907"
+                style={
+                  Object {
+                    "float": "right",
+                  }
+                }
+              >
+                <div>
+                  <span
+                    className="colorButton"
                   >
-                    <span
-                      className="MuiButton-label-2"
+                    <button
+                      className="MuiButtonBase-root-16 MuiButton-root-1"
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      style={
+                        Object {
+                          "color": "#fff",
+                        }
+                      }
+                      tabIndex="0"
+                      type="button"
                     >
-                      <svg
-                        aria-hidden="true"
-                        className="MuiSvgIcon-root-19"
-                        color={undefined}
-                        focusable="false"
-                        viewBox="0 0 24 24"
+                      <span
+                        className="MuiButton-label-2"
                       >
-                        <path
-                          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      className="MuiTouchRipple-root-25"
-                    />
-                  </button>
-                </span>
+                        <svg
+                          aria-hidden="true"
+                          className="MuiSvgIcon-root-19"
+                          color={undefined}
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="MuiTouchRipple-root-25"
+                      />
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div
+                className="jsx-661576907"
+                style={
+                  Object {
+                    "display": "none",
+                    "visibility": "hidden",
+                  }
+                }
+              >
+                <button
+                  className="navbar-toggle collapsed"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    Toggle navigation
+                  </span>
+                  <span
+                    className="icon-bar"
+                  />
+                  <span
+                    className="icon-bar"
+                  />
+                  <span
+                    className="icon-bar"
+                  />
+                </button>
               </div>
             </div>
             <div
-              className="jsx-661576907"
-              style={
-                Object {
-                  "display": "none",
-                  "visibility": "hidden",
-                }
-              }
+              aria-expanded={null}
+              className="navbar-collapse collapse"
             >
-              <button
-                className="navbar-toggle collapsed"
-                onClick={[Function]}
-                type="button"
+              <ul
+                className="nav navbar-nav"
+                role={null}
+                style={undefined}
               >
-                <span
-                  className="sr-only"
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
                 >
-                  Toggle navigation
-                </span>
-                <span
-                  className="icon-bar"
-                />
-                <span
-                  className="icon-bar"
-                />
-                <span
-                  className="icon-bar"
-                />
-              </button>
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-661576907 "
+                    />
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-661576907 "
+                    />
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-661576907 "
+                    />
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-661576907 "
+                    />
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div
-            aria-expanded={null}
-            className="navbar-collapse collapse"
-          >
-            <ul
-              className="nav navbar-nav"
-              role={null}
-              style={undefined}
-            >
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  <span
-                    className="jsx-661576907 "
-                  />
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  <span
-                    className="jsx-661576907 "
-                  />
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  <span
-                    className="jsx-661576907 "
-                  />
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  <span
-                    className="jsx-661576907 "
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
     <div
-      className="jsx-803102528 navbar"
+      className="jsx-896431938 navbar"
     >
-      <nav
-        className="navbar navbar-default"
-        style={
-          Object {
-            "background": "#323150",
-            "borderColor": "#323150",
-            "borderRadius": 0,
-            "margin": 0,
-          }
-        }
+      <div
+        className="jsx-2085888330"
       >
-        <div
-          className="container"
+        <nav
+          className="navbar navbar-default"
+          style={
+            Object {
+              "background": "#323150",
+              "borderColor": "#323150",
+              "borderRadius": 0,
+              "margin": 0,
+            }
+          }
         >
           <div
-            className="navbar-header"
+            className="container"
           >
-            <a
-              className="jsx-661576907 navbar-brand"
-              href="#home"
-              style={
-                Object {
-                  "color": "#3ffeca",
-                }
-              }
-            >
-              BitBrackets
-            </a>
             <div
-              className="jsx-661576907"
-              style={
-                Object {
-                  "float": "right",
-                }
-              }
-            />
-            <div
-              className="jsx-661576907"
-              style={
-                Object {
-                  "display": "none",
-                  "visibility": "hidden",
-                }
-              }
+              className="navbar-header"
             >
-              <button
-                className="navbar-toggle collapsed"
-                onClick={[Function]}
-                type="button"
+              <a
+                className="jsx-661576907 navbar-brand"
+                href="/"
+                style={
+                  Object {
+                    "color": "#3ffeca",
+                  }
+                }
               >
-                <span
-                  className="sr-only"
+                BitBrackets
+              </a>
+              <div
+                className="jsx-661576907"
+                style={
+                  Object {
+                    "float": "right",
+                  }
+                }
+              />
+              <div
+                className="jsx-661576907"
+                style={
+                  Object {
+                    "display": "none",
+                    "visibility": "hidden",
+                  }
+                }
+              >
+                <button
+                  className="navbar-toggle collapsed"
+                  onClick={[Function]}
+                  type="button"
                 >
-                  Toggle navigation
-                </span>
-                <span
-                  className="icon-bar"
-                />
-                <span
-                  className="icon-bar"
-                />
-                <span
-                  className="icon-bar"
-                />
-              </button>
+                  <span
+                    className="sr-only"
+                  >
+                    Toggle navigation
+                  </span>
+                  <span
+                    className="icon-bar"
+                  />
+                  <span
+                    className="icon-bar"
+                  />
+                  <span
+                    className="icon-bar"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              aria-expanded={null}
+              className="navbar-collapse collapse"
+            >
+              <ul
+                className="nav navbar-nav"
+                role={null}
+                style={
+                  Object {
+                    "float": "right",
+                  }
+                }
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="/signup"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    >
+                      Sign Up
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="/login"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    >
+                      Log In 
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    />
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    />
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div
-            aria-expanded={null}
-            className="navbar-collapse collapse"
-          >
-            <ul
-              className="nav navbar-nav"
-              role={null}
-              style={
-                Object {
-                  "float": "right",
-                }
-              }
-            >
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  <span
-                    className="jsx-661576907 description"
-                  >
-                    Sign Up
-                  </span>
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  <span
-                    className="jsx-661576907 description"
-                  >
-                    Log In 
-                  </span>
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  <span
-                    className="jsx-661576907 description"
-                  />
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  <span
-                    className="jsx-661576907 description"
-                  />
-                </a>
-              </li>
-              <li
-                className="dropdown"
-                style={undefined}
-              >
-                <a
-                  activekey="true"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  className="dropdown-toggle"
-                  href="#"
-                  id="basic-nav-dropdown"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
-                  Language
-                   
-                  <span
-                    className="caret"
-                  />
-                </a>
-                <ul
-                  aria-labelledby="basic-nav-dropdown"
-                  className="dropdown-menu"
-                  role="menu"
-                >
-                  <li
-                    className=""
-                    role="presentation"
-                    style={undefined}
-                  >
-                    <a
-                      href="#"
-                      onClick={[Function]}
-                      onKeyDown={[Function]}
-                      role="menuitem"
-                      tabIndex="-1"
-                    >
-                      English
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                    role="presentation"
-                    style={undefined}
-                  >
-                    <a
-                      href="#"
-                      onClick={[Function]}
-                      onKeyDown={[Function]}
-                      role="menuitem"
-                      tabIndex="-1"
-                    >
-                      Spanish
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                    role="presentation"
-                    style={undefined}
-                  >
-                    <a
-                      href="#"
-                      onClick={[Function]}
-                      onKeyDown={[Function]}
-                      role="menuitem"
-                      tabIndex="-1"
-                    >
-                      Portuguese
-                    </a>
-                  </li>
-                  <li
-                    className=""
-                    role="presentation"
-                    style={undefined}
-                  >
-                    <a
-                      href="#"
-                      onClick={[Function]}
-                      onKeyDown={[Function]}
-                      role="menuitem"
-                      tabIndex="-1"
-                    >
-                      Italian
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <nav
-        className="navbar navbar-default"
-        style={
-          Object {
-            "background": "#282840",
-            "borderColor": "#282840",
-            "borderRadius": 0,
-            "margin": 0,
-          }
-        }
+        </nav>
+      </div>
+      <div
+        className="jsx-2085888330"
       >
-        <div
-          className="container"
+        <nav
+          className="navbar navbar-default"
+          style={
+            Object {
+              "background": "#282840",
+              "borderColor": "#282840",
+              "borderRadius": 0,
+              "margin": 0,
+            }
+          }
         >
           <div
-            className="navbar-header"
+            className="container"
           >
-            <a
-              className="jsx-661576907 navbar-brand"
-              href="#home"
-              style={undefined}
-            />
             <div
-              className="jsx-661576907"
-              style={
-                Object {
-                  "float": "right",
-                }
-              }
-            />
-            <div
-              className="jsx-661576907"
-              style={
-                Object {
-                  "display": "none",
-                  "visibility": "hidden",
-                }
-              }
+              className="navbar-header"
             >
-              <button
-                className="navbar-toggle collapsed"
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="sr-only"
-                >
-                  Toggle navigation
-                </span>
-                <span
-                  className="icon-bar"
-                />
-                <span
-                  className="icon-bar"
-                />
-                <span
-                  className="icon-bar"
-                />
-              </button>
-            </div>
-          </div>
-          <div
-            aria-expanded={null}
-            className="navbar-collapse collapse"
-          >
-            <ul
-              className="nav navbar-nav"
-              role={null}
-              style={
-                Object {
-                  "marginLeft": "40%",
-                }
-              }
-            >
-              <li
-                className=""
-                role="presentation"
+              <a
+                className="jsx-661576907 navbar-brand"
+                href={undefined}
                 style={undefined}
+              />
+              <div
+                className="jsx-661576907"
+                style={
+                  Object {
+                    "float": "right",
+                  }
+                }
+              />
+              <div
+                className="jsx-661576907"
+                style={
+                  Object {
+                    "display": "none",
+                    "visibility": "hidden",
+                  }
+                }
               >
-                <a
-                  href="#"
+                <button
+                  className="navbar-toggle collapsed"
                   onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
+                  type="button"
                 >
                   <span
-                    className="jsx-661576907 description"
+                    className="sr-only"
                   >
-                    <div
-                      className="jsx-803102528"
+                    Toggle navigation
+                  </span>
+                  <span
+                    className="icon-bar"
+                  />
+                  <span
+                    className="icon-bar"
+                  />
+                  <span
+                    className="icon-bar"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              aria-expanded={null}
+              className="navbar-collapse collapse"
+            >
+              <ul
+                className="nav navbar-nav"
+                role={null}
+                style={
+                  Object {
+                    "marginLeft": "40%",
+                  }
+                }
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="/contest"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                  >
+                    <span
+                      className="jsx-661576907 description"
                     >
-                      <span
-                        color={undefined}
-                        style={undefined}
-                        variant="raised"
+                      <div
+                        className="jsx-2085888330"
                       >
-                        <i
-                          className="jsx-803102528 fas fa-trophy"
-                          style={
-                            Object {
-                              "color": "#3ffeca",
+                        <span
+                          color={undefined}
+                          style={undefined}
+                          variant="raised"
+                        >
+                          <i
+                            className="jsx-2085888330 fas fa-trophy"
+                            style={
+                              Object {
+                                "color": "#3ffeca",
+                              }
                             }
-                          }
-                        />
-                      </span>
-                         Contest
-                    </div>
-                  </span>
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
+                          />
+                        </span>
+                           Contest
+                      </div>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
                 >
-                  <span
-                    className="jsx-661576907 description"
+                  <a
+                    href="/results"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
                   >
-                    <div
-                      className="jsx-803102528"
+                    <span
+                      className="jsx-661576907 description"
                     >
-                      <span
-                        color={undefined}
-                        style={undefined}
-                        variant="raised"
+                      <div
+                        className="jsx-2085888330"
                       >
-                        <i
-                          className="jsx-803102528 fas fa-envelope"
-                          style={
-                            Object {
-                              "color": "#3ffeca",
+                        <span
+                          color={undefined}
+                          style={undefined}
+                          variant="raised"
+                        >
+                          <i
+                            className="jsx-2085888330 fas fa-table"
+                            style={
+                              Object {
+                                "color": "#3ffeca",
+                              }
                             }
-                          }
-                        />
-                      </span>
-                         Contact
-                    </div>
-                  </span>
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
+                          />
+                        </span>
+                           Results
+                      </div>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
                 >
-                  <span
-                    className="jsx-661576907 description"
-                  />
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    />
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
                 >
-                  <span
-                    className="jsx-661576907 description"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <nav
-        className="navbar navbar-default"
-        style={
-          Object {
-            "background": "#323150",
-            "borderColor": "#323150",
-            "borderRadius": 0,
-            "margin": 0,
-          }
-        }
-      >
-        <div
-          className="container"
-        >
-          <div
-            className="navbar-header"
-          >
-            <a
-              className="jsx-661576907 navbar-brand"
-              href="#home"
-              style={undefined}
-            />
-            <div
-              className="jsx-661576907"
-              style={
-                Object {
-                  "float": "right",
-                }
-              }
-            />
-            <div
-              className="jsx-661576907"
-              style={
-                Object {
-                  "display": "none",
-                  "visibility": "hidden",
-                }
-              }
-            >
-              <button
-                className="navbar-toggle collapsed"
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="sr-only"
-                >
-                  Toggle navigation
-                </span>
-                <span
-                  className="icon-bar"
-                />
-                <span
-                  className="icon-bar"
-                />
-                <span
-                  className="icon-bar"
-                />
-              </button>
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    />
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
+        </nav>
+      </div>
+      <div
+        className="jsx-2085888330"
+      >
+        <nav
+          className="navbar navbar-default"
+          style={
+            Object {
+              "background": "#323150",
+              "borderColor": "#323150",
+              "borderRadius": 0,
+              "margin": 0,
+            }
+          }
+        >
           <div
-            aria-expanded={null}
-            className="navbar-collapse collapse"
+            className="container"
           >
-            <ul
-              className="nav navbar-nav"
-              role={null}
-              style={
-                Object {
-                  "float": "left",
-                }
-              }
+            <div
+              className="navbar-header"
             >
-              <li
-                className=""
-                role="presentation"
+              <a
+                className="jsx-661576907 navbar-brand"
+                href={undefined}
                 style={undefined}
+              />
+              <div
+                className="jsx-661576907"
+                style={
+                  Object {
+                    "float": "right",
+                  }
+                }
+              />
+              <div
+                className="jsx-661576907"
+                style={
+                  Object {
+                    "display": "none",
+                    "visibility": "hidden",
+                  }
+                }
               >
-                <a
-                  href="#"
+                <button
+                  className="navbar-toggle collapsed"
                   onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
+                  type="button"
                 >
                   <span
-                    className="jsx-661576907 description"
+                    className="sr-only"
                   >
-                    Home
+                    Toggle navigation
                   </span>
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
                   <span
-                    className="jsx-661576907 description"
-                  >
-                    Contest 
-                  </span>
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
+                    className="icon-bar"
+                  />
                   <span
-                    className="jsx-661576907 description"
-                  >
-                    FAQ
-                  </span>
-                </a>
-              </li>
-              <li
-                className=""
-                role="presentation"
-                style={undefined}
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
-                  role="button"
-                >
+                    className="icon-bar"
+                  />
                   <span
-                    className="jsx-661576907 description"
+                    className="icon-bar"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              aria-expanded={null}
+              className="navbar-collapse collapse"
+            >
+              <ul
+                className="nav navbar-nav"
+                role={null}
+                style={
+                  Object {
+                    "float": "left",
+                  }
+                }
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
                   >
-                    Rules
-                  </span>
-                </a>
-              </li>
-            </ul>
+                    <span
+                      className="jsx-661576907 description"
+                    >
+                      Home
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="/rules"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    >
+                      Rules 
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="/faq"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    >
+                      FAQ
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="/contact"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                  >
+                    <span
+                      className="jsx-661576907 description"
+                    >
+                      Contact
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   </div>
   <div
