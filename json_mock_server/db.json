@@ -5,6 +5,10 @@
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 }
     ],
-    "profile": { "name": "typicode" }
+    "profile": { "name": "typicode" },
+    "languages": [
+      { "code": "en", "name": "English" },
+      { "code": "es", "name": "Español" }
+    ]
 }
   
