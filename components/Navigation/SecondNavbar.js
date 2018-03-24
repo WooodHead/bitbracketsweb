@@ -29,12 +29,12 @@ class Navigation extends Component {
             <div>
               <Icon
                 icon={
-                  <i className="fas fa-envelope" style={{ color: "#3ffeca" }} />
+                  <i className="fas fa-table" style={{ color: "#3ffeca" }} />
                 }
-              />&nbsp; &nbsp;Contact
+              />&nbsp; &nbsp;Results
             </div>
           }
-          link2="/contact"
+          link2="/results"
           className="description"
         />
 

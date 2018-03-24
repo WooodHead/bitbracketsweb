@@ -8,7 +8,7 @@ import Layout from "../components/Layout";
 
 export default () => (
   <Layout>
-    <Banner header="Rules" subheader="BitBrackets" />
-    <h1> Este es el Layout Rules</h1>
+    <Banner header="Results" subheader="BitBrackets" />
+    <h1> Este es el Layout RESULTS</h1>
   </Layout>
 );

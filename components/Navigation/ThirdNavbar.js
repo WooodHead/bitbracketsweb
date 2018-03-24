@@ -16,12 +16,12 @@ class Navigation extends Component {
           styleNav={{ float: "left" }}
           linkName1="Home"
           link1="/"
-          linkName2="Contest "
-          link2="/contest"
+          linkName2="Rules "
+          link2="/rules"
           linkName3="FAQ"
           link3="/faq"
-          linkName4="Rules"
-          link4="/rules"
+          linkName4="Contact"
+          link4="/contact"
           className="description"
         />
 
