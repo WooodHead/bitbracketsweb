@@ -9,13 +9,9 @@
     "test": {
          "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
     }
-  },      
+  },
   "plugins": [
-    [
-      "react-intl",
-      {
-        "messagesDir": "lang/.messages/"
-      }
-    ]
+    ["react-intl", { "messagesDir": "lang/.messages/" }],
+    ["transform-define", "./env.config.js"]
   ]
 }
