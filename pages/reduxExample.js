@@ -11,27 +11,35 @@ import { initStore } from '../store';
 import { changeLanguage, fetchLanguages } from '../actions';
 
 class ReduxExample extends React.Component {
-    static getInitialProps({ store, isServer }) {
-        // store.dispatch(fetchLanguages());
-
+    static async getInitialProps({ store, isServer }) {
+        await store.dispatch(fetchLanguages());
         return { isServer }
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.fetchLanguages();
+    }
+
+    renderLanguages() {
+        return this.props.languages.map(language => {
+            return <li key={language.code}>{language.name}</li>
+        });
     }
 
     render() {
         return (
             <div>
-                <div>Language: <strong>{this.props.language}</strong></div>
+                <div>Language: <strong>{this.props.current}</strong></div>
                 <div>
                     <LanguageSelect  
-                        languages={["en", "es"]}
-                        current={this.props.language} 
-                        onChange={(key, value) => this.props.changeLanguage(value)} 
+                        languages={this.props.languages}// {["en", "es"]}
+                        current={this.props.current} 
+                        onChange={(value) => this.props.changeLanguage(value)} 
                     />
                 </div>
+                <ul>
+                    {this.renderLanguages()}
+                </ul>
                 <div><Link href="/"><a>Regresar</a></Link></div>
             </div>
         )

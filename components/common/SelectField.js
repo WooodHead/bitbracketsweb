@@ -30,12 +30,12 @@ class SelectField extends React.Component {
 
     handleChange = event => {
         this.setState({ value: event.target.value });
-        this.props.onChange(this.props.property, event.target.value);
+        this.props.onChange(event.target.value);
     };
 
     renderItems() {
         return this.props.items.map((item, i) => (
-            <MenuItem key={i} value={item}>{item}</MenuItem>
+            <MenuItem key={item.id} value={item.id}>{item.name}</MenuItem>
         ));
     }
 
