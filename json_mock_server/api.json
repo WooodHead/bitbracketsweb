@@ -1,0 +1,180 @@
+FORMAT: 1A
+HOST: https://api.bitbrackets.io/
+REST API
+
+# BitBrackets
+
+Api for Contest Pools
+
+## Contest resource [/contests/rusia2018]
+## restricted to list all pools, only specific pools can be queried
+
+# list a specific contest definition information [GET]
+
++ Response 200 (application/json)
+
+{
+    "name": "Rusia2018",
+    "startTime": "2018-06-14T08:40:51.620Z",
+    "endTime": "2018-07-16T08:40:51.620Z",
+    "graceTimeInHours": "24",
+    "maxAllowedBalance": "1000",
+    "fee": "0.0005",
+    "managerFeePercentage": "10",
+    "ownerFeePercentage": "10",
+    "published_at": "2015-08-05T08:40:51.620Z",
+}
+
+
+## Contest results resource [/contests/rusia2018/results]
+# get contest results [GET]
+
++ Response 200 (application/json)
+
+{
+    "name": "Rusia2018",
+    "startTime": "2018-06-14T08:40:51.620Z",
+    "endTime": "2018-07-16T08:40:51.620Z",
+    "status": "IN_PROGRESS", // NOT_STARTED, CLOSED, PAUSED
+    "results": [8,3,111,3,5],
+    "gamesPlayed": 5,
+    "last_updated": "2018-05-19T08:40:51.620Z",
+
+}
+
+
+
+## pool resource [/pools/100] #url que el manager
+## restricted to list all pools, only specific pools can be queried
+## pool resource [/pools/0x0bbdbdbdbd2121200231]
+## can also use contract address 
+
+# list a specific contest pool information [GET]
+
++ Response 200 (application/json)
+
+  { 
+      "address":"0x0bbdbdbdbd2121200231",
+      "contestName": "Rusia2018",  
+      "manager": "0x02332212121212121200231",
+      "startTime": "2018-06-14T08:40:51.620Z",
+      "endTime": "2018-07-16T08:40:51.620Z",
+      "graceTimeInHours": "24",
+      "amountToPlay": "0.0000001",
+      "managerFeePercentage": "10",
+      "ownerFeePercentage": 10,
+      "totalBalance": "1",
+      "highScore": "32",
+      "firstPlacePlayer": "0x01",
+      "status": "IN_PROGRESS", // NOT_STARTED, CLOSED, PAUSED, EMERGENCY
+      "results": [8,3,111,3,5],
+      "gamesPlayed": 5,
+      "published_at": "2015-08-05T08:40:51.620Z",
+      "totalPlayer": 4,
+      "players": [
+          {
+              "address": "0x01",
+              "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+              "score": 32
+          }, {
+              "address": "0x02",
+              "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+              "score": 28
+          }, {
+              "address": "0x03",
+              "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+              "score": 21
+          }, {
+              "address": "0x04",
+              "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+              "score": 11
+          }
+      ],
+      "winner" : [],
+      "results": []
+
+  }
+        
+
+  ## pool player resource [/pools/100/players/0x02] 
+  ## fetch player specific prediction
+
+  # list a specific player information in a contest pool [GET]
+
+  + Response 200 (application/json)
+
+    {
+        "contestName": "Rusia2018",
+        "address": "0x02",
+        "linkedEmail": "demo@bb.co",
+        "startTime": "2018-06-14T08:40:51.620Z",
+        "endTime": "2018-07-16T08:40:51.620Z",
+        "graceTimeInHours": "24",
+        "amountToPlay": "0.0000001",
+        "contractHighScore": "32",
+        "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+        "score": 21,
+        "published_at": "2015-08-05T08:40:51.620Z",
+        "predictionDetail":{
+            "games" : [
+                {
+                    "a":"Rusia",
+                    "b":"Arabia",
+                    "prediction": "Rusia",
+                    "result" : "Rusia",
+                    "points": "1"
+                },
+
+            ]
+        }
+    }        
+
+## user resource [/user/100001/] or  [/user/0x01/] (by linked address)  or [/user/me] (using token)
+## fetch player information, restricted to player only
+
+    # list user information  [GET]
+
+    + Response 200 (application/json)
+
+      {
+          "email": "demo@bb.co",
+          "nickname":"nicoperez",
+          "listOfAddresses": [
+            0x01,
+            0x02,
+            0x03
+          ],
+          "last_login": "2015-08-05T08:40:51.620Z",
+          "last_updated": "2015-08-05T08:40:51.620Z",
+      }  
+  
+## user pools resource [/user/100001/pools]
+## fetch player information, restricted to player only
+
+    # list user current active pools [GET]
+    # only active pools, can send parameter for other status (?status=all)
+
+    + Response 200 (application/json)
+
+      {
+          "email": "demo@bb.co",
+          "managerOf": [
+            {
+              "address": "0x02q123123131231",
+              "status" : "IN_PROGRESS"
+            }
+            
+          ],
+          "playerOf": [
+            {
+              "address": "0x03bcbcbcbcbcbcb",
+              "status" : "IN_PROGRESS"
+            }
+          ],
+          "totalPlayed" : "0.02",
+          "totalEarnFees" : "1",
+          "last_login": "2015-08-05T08:40:51.620Z",
+          "last_updated": "2015-08-05T08:40:51.620Z",
+      }        
+      
+      

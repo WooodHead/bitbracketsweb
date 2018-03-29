@@ -8,13 +8,17 @@ import Button from 'material-ui/Button';
 import withRoot from '../md/withRoot';
 import LanguageSelect from '../components/LanguageSelect';
 import { initStore } from '../store';
-import { changeLanguage } from '../actions';
+import { changeLanguage, fetchLanguages } from '../actions';
 
 class ReduxExample extends React.Component {
     static getInitialProps({ store, isServer }) {
-        // store.dispatch(serverRenderSomething(isServer))
+        // store.dispatch(fetchLanguages());
 
         return { isServer }
+    }
+
+    componentDidMount() {
+        this.props.fetchLanguages();
     }
 
     render() {
@@ -36,13 +40,15 @@ class ReduxExample extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        language: state.language.current,
+        current: state.language.current,
+        languages: state.language.languages,
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         changeLanguage: bindActionCreators(changeLanguage, dispatch),
+        fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
     }
 }
 
