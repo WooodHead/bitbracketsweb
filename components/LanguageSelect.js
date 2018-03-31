@@ -11,7 +11,6 @@ class LanguageSelect extends Component {
     render() {
         return (
             <SelectField
-                id="language"
                 name="language"
                 items={this.itemList()}
                 value={this.props.current}

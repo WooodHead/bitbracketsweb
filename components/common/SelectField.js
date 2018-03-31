@@ -6,8 +6,6 @@ import { MenuItem } from 'material-ui/Menu';
 import { FormControl, FormHelperText } from 'material-ui/Form';
 import Select from 'material-ui/Select';
 
-import withRoot from '../../md/withRoot';
-
 const styles = theme => ({
     root: {
         display: 'flex',
@@ -20,14 +18,7 @@ const styles = theme => ({
 });
 
 class SelectField extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            value: props.value,
-        };
-    }
-
+    
     handleChange = event => {
         this.setState({ value: event.target.value });
         this.props.onChange(event.target.value);
@@ -47,7 +38,7 @@ class SelectField extends React.Component {
                 <FormControl className={classes.formControl}>
                     <InputLabel>{this.props.name}</InputLabel>
                     <Select
-                        value={this.state.value}
+                        value={this.props.value}
                         onChange={this.handleChange}
                     >
                         {this.renderItems()}
