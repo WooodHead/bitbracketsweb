@@ -2,7 +2,7 @@
  * Function util helper to call several promises in parallel
  * and get the first successful promise or an array of error from all
  * rejected promises.
- * Note: useful for calling web3 and axis in parallel to get first
+ * Note: useful for calling web3 and API in parallel to get first
  * value from either server or smart contract
  * @param {Array of Promises} promises 
  */
