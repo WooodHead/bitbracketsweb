@@ -15,19 +15,19 @@ class NavigationResponsive extends Component {
           drawer={
             <Drawer
               listDrawer={<ListDrawer />}
-              colorButtonToggle="#fff"
+              colorButtonToggle="#E72459"
               drawerWidth="250px"
-              backgroundColorDrawer="#323150"
             />
           }
           style={{
-            background: "#323150",
+            background: "#fff",
             margin: 0,
             borderColor: "#323150",
             borderRadius: 0
           }}
+          images="../../static/logo.png"
           brandname="BitBrackets"
-          styleBrandName={{ color: "#3ffeca" }}
+          styleBrandName={{ color: "#3d3d3d" }}
         />
 
         <style jsx>{``}</style>
