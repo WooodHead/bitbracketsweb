@@ -9,31 +9,48 @@ class Section4 extends Component {
         <div className="root">
           <Grid>
             <Row className="show-grid">
-              <Col xs={8} md={8}>
-                <img src="../../static/img4.png" width="200" height="180" />
+              <Col xs={6} md={6}>
+                <div className="image">
+                  <img src="../../static/img4.png" width="150" height="120" />
+                </div>
               </Col>
-              <Col xs={4} md={4}>
-                <h3 className="Easy-Secure-Fun">Claim the prize </h3>
-                <p>
-                  95% of the pool goes to the winner. Also, if you are the pool
-                  creator you will win 5% of the pool.
-                </p>
+              <Col xs={6} md={6}>
+                <div className="prize">
+                  <h3 className="Claim-the-prize">Claim the prize </h3>
+                  <p className="description">
+                    <span className="percentage">95%</span> of the pool goes to
+                    the winner.<br /> Also, if you are the pool creator you will
+                    win <span className="percentage">5%</span>
+                    of the pool.
+                  </p>
+                </div>
               </Col>
             </Row>
           </Grid>
         </div>
         <style jsx>{`
           .root {
-            font-family: robot;
+            font-family: Roboto;
+            margin-top: 50px;
           }
-          .title {
-            font-size: 32px;
+          .image {
+            display: flex;
+            justify-content: flex-end;
           }
-          .Easy-Secure-Fun {
+
+          .Claim-the-prize {
+            color: #3d3d3d;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .description {
+            font-size: 10px;
+          }
+
+          .percentage {
             color: #e72459;
-          }
-          .crypto-currencie {
-            color: #e72459;
+            font-size: 20px;
+            font-weight: bold;
           }
         `}</style>
       </div>

@@ -31,7 +31,7 @@ class Section2 extends Component {
         </div>
         <style jsx>{`
           .root {
-            font-family: robot;
+            font-family: Roboto;
           }
           .title {
             font-size: 32px;

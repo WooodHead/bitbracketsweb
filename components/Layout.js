@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Head from "./Header";
 import Navigation from "./Navigation/Navigation";
+import Footer from "../components/Footer/Footer";
 
 class Layout extends Component {
   render() {
@@ -10,7 +11,14 @@ class Layout extends Component {
         <Navigation />
 
         {this.props.children}
-        {/* <style jsx>{``}</style> */}
+        <div className="footer">
+          <Footer />
+        </div>
+
+        <style jsx>{`
+          .footer {
+          }
+        `}</style>
       </div>
     );
   }

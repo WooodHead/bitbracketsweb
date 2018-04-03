@@ -6,6 +6,7 @@ import es from "react-intl/locale-data/es";
 import Layout from "../components/Layout";
 import App from "../components/App";
 import Home from "../components/home/Home";
+
 import messages from "../intl/messages";
 import IntlExample from "../components/examples/IntlExample";
 
@@ -19,7 +20,7 @@ export default () => (
     <Layout>
       {/* <App /> */}
       <Home />
-      <IntlExample />
+      {/* <IntlExample /> */}
     </Layout>
   </IntlProvider>
 );
