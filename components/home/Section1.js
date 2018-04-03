@@ -33,6 +33,7 @@ class Section1 extends Component {
             width: auto;
             padding-bottom: 350px;
             margin-top: -25px;
+            flex-grow: 1;
           }
           .title {
             color: #fff;

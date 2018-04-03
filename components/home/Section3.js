@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from "../common/Button";
 import { Row, Col, Grid } from "react-bootstrap";
 
-class Section1 extends Component {
+class Section3 extends Component {
   render() {
     return (
       <div>
@@ -103,4 +103,4 @@ class Section1 extends Component {
   }
 }
 
-export default Section1;
+export default Section3;
