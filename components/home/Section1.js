@@ -30,11 +30,9 @@ class Section1 extends Component {
             .root {
               background: url(../../static/section1.png);
               background-repeat: no-repeat;
-              background-size: auto;
-              width: auto;
-              padding-bottom: 350px;
-              margin-top: -100px;
-              flex-grow: 1;
+              background-size: 100% 100%;
+              // width: auto;
+              padding-bottom: 180px;
             }
             .title {
               color: #fff;
@@ -42,7 +40,7 @@ class Section1 extends Component {
               display: flex;
               justify-content: flex-end;
               font-size: 38px;
-              padding-top: 80px;
+              // padding-top: 80px;
             }
             .sub-title {
               color: #fff;
@@ -53,9 +51,11 @@ class Section1 extends Component {
               margin-top: -10px;
               margin-right: 30px;
             }
-            .section {
-              padding-top: 120px;
-              justify-content: flex-start;
+            .section button {
+              // margin-top: 70px;
+              // justify-content: flex-start;
+              display: flex;
+              align-self: flex-end;
             }
           }
           @media screen and (max-width: 320px) {

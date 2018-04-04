@@ -25,6 +25,7 @@ class Section3 extends Component {
                       The more participants, the bigger the prize. All the
                       crypto money will be secured by a Smart Contract.
                     </p>
+                    <hr className="hr" />
                   </Col>
                 </Row>
               </Col>
@@ -36,6 +37,7 @@ class Section3 extends Component {
                   be saved in the Blockchain. You must enter picks before the
                   cup starts.
                 </p>
+                <hr className="hr" />
               </Col>
             </Row>
             <Row className="show-grid">
@@ -49,6 +51,7 @@ class Section3 extends Component {
                   more participants, the bigger the prize. All the crypto money
                   will be secured by a Smart Contract.
                 </p>
+                <hr className="hr" />
               </Col>
               <Col sm={6} md={8}>
                 <img src="../../static/group29.png" width="250" height="80" />
@@ -96,6 +99,78 @@ class Section3 extends Component {
             padding-right: 50px;
             font-size: 8px;
             text-align: justify;
+          }
+          .hr {
+            height: 1px;
+            color: #123455;
+            background-color: #123455;
+            border: none;
+          }
+          @media only screen and (max-width: 320px) {
+            .Enter-picks {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+            .paragraph {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+            .create-group {
+              font-size: 16px;
+            }
+            .Are-you-winning {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+          }
+          @media only screen and (max-width: 375px) {
+            .Enter-picks {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+            .paragraph {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+            .create-group {
+              font-size: 16px;
+            }
+            .Are-you-winning {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+          }
+          @media only screen and (max-width: 425px) {
+            .Enter-picks {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+            .paragraph {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+            .create-group {
+              font-size: 16px;
+            }
+            .Are-you-winning {
+              padding-left: 40px;
+              padding-right: 40px;
+              font-size: 12px;
+            }
+          }
+
+          @media only screen and (min-width: 768px) {
+            .hr {
+              display: none;
+            }
           }
         `}</style>
       </div>

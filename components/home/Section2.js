@@ -39,7 +39,7 @@ class Section2 extends Component {
           .title {
             font-size: 16px;
             display: flex;
-            justify-content: center;
+            text-align: justify;
           }
           .paragraph {
             text-align: justify;
@@ -59,18 +59,38 @@ class Section2 extends Component {
             .Easy-Secure-Fun {
               display: none;
             }
+            .Easy-Secure-Fun2 {
+              text-align: center;
+              color: #e72459;
+              font-size: 20px;
+            }
           }
           @media only screen and (max-width: 375px) {
             .Easy-Secure-Fun {
               display: none;
             }
+            .Easy-Secure-Fun2 {
+              text-align: center;
+              color: #e72459;
+              font-size: 20px;
+            }
           }
-          @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 425px) {
+            .Easy-Secure-Fun {
+              display: none;
+            }
+            .Easy-Secure-Fun2 {
+              text-align: center;
+              color: #e72459;
+              font-size: 20px;
+            }
+          }
+          @media only screen and (min-width: 768px) {
             .Easy-Secure-Fun2 {
               display: none;
             }
           }
-          @media only screen and (max-width: 1024px) {
+          @media only screen and (min-width: 1024px) {
             .Easy-Secure-Fun2 {
               display: none;
             }
