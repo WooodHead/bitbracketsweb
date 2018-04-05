@@ -12,29 +12,46 @@ import Checkbox from 'material-ui/Checkbox';
 import { FormGroup, FormControlLabel } from 'material-ui/Form';
 
 const styles = theme => ({
-    container: {
-        width: '100%',
-        maxWidth: '360px',
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    stepper: {
+        width: '60%',
+        border: '2px solid lightgray',
+        borderRadius: '5px',
+    },
+    headingSecondary: {
+        alignSelf: 'center',
+        width: '60%',
+    },
+    headingTertiary: {
+        margin: 0,
+        padding: 0,
+    },
+    formBox: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '60%',
+        backgroundColor: 'white',
+        border: '2px solid lightgray',
+        borderRadius: '5px',
+        paddingLeft: theme.spacing.unit * 3,
+        paddingRight: theme.spacing.unit * 3,
     },
     textField: {
-        margin: theme.spacing.unit,
-        width: 200,
-    },
-    menu: {
-        width: 200,
-    },
-    root: {
-        width: '90%',
-    },
-    backButton: {
-        marginRight: theme.spacing.unit,
-    },
-    instructions: {
-        marginTop: theme.spacing.unit,
         marginBottom: theme.spacing.unit,
     },
     division: {
-        margin: theme.spacing.unit * 2,
+        alignSelf: 'center',
+        width: '80%',
+        marginTop: theme.spacing.unit * 3,
+        marginBottom: theme.spacing.unit * 2,
+    },
+    nav: {
+        marginTop: theme.spacing.unit * 2,
+        marginBottom: theme.spacing.unit * 2,
     }
 });
 
@@ -42,17 +59,17 @@ class CreatePoolForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeStep: 0,
+            activeStep: 1,
         };
     }
 
     getSteps() {
-        return ['Setup', 'Review', 'Payment'];
+        return ['Pool Setup', 'Review Details', 'Payment'];
     }
 
     renderStepper(steps, activeStep) {
         return (
-            <Stepper activeStep={activeStep} alternativeLabel>
+            <Stepper activeStep={activeStep - 1} alternativeLabel>
                 {steps.map(label => {
                     return (
                         <Step key={label}>
@@ -69,72 +86,61 @@ class CreatePoolForm extends Component {
         const { activeStep } = this.state;
 
         return (
-            <div>
-                <Typography className={classes.instructions}>1. Pool Setup</Typography>
-                <Form className={classes.container}
-                    model="pool"
-                    onSubmit={(pool) => this.handleSubmit(pool)}
-                >
-                    <Typography className={classes.instructions}>Admin Info</Typography>
-                    <Control.text
-                        className={classes.textField}
-                        model=".adminName"
-                        component={TextField}
-                        label="Name"
-                    />
+            <Form className={classes.formBox}
+                model="pool"
+                onSubmit={(pool) => this.handleSubmit(pool)}
+            >
+                <Typography className={classes.headingTertiary} variant="subheading">
+                    <h4>Admin Info</h4>
+                </Typography>
+                <Control.text
+                    className={classes.textField}
+                    model=".adminName"
+                    component={TextField}
+                    label="Name"
+                />
 
-                    <Control.text
-                        className={classes.textField}
-                        model=".adminEmail"
-                        component={TextField}
-                        label="Email"
-                    />
-                    <Divider className={classes.division} />
+                <Control.text
+                    className={classes.textField}
+                    model=".adminEmail"
+                    component={TextField}
+                    label="Email"
+                />
+                <Divider className={classes.division} />
 
-                    <Typography className={classes.instructions}>Pool Info</Typography>
-                    <Control.text
-                        className={classes.textField}
-                        model=".poolName"
-                        component={TextField}
-                        label="Name"
-                    />
+                <Typography className={classes.headingTertiary} variant="subheading">
+                    <h4>Pool Info</h4>
+                </Typography>
+                <Control.text
+                    className={classes.textField}
+                    model=".poolName"
+                    component={TextField}
+                    label="Name"
+                />
 
-                    <Control.text
-                        className={classes.textField}
-                        model=".entryPrice"
-                        component={TextField}
-                        label="Entry Price"
-                    />
-                    <Divider className={classes.division} />
+                <Control.text
+                    className={classes.textField}
+                    model=".entryPrice"
+                    component={TextField}
+                    label="Entry Price"
+                />
+                <Divider className={classes.division} />
 
+                <div>
                     <Control.checkbox
                         model=".terms"
                         component={Checkbox}
                     />
                     I agree with the terms of use
-
-                    <br />
-
+                </div>
+                <div>
                     <Control.checkbox
                         model=".rules"
                         component={Checkbox}
                     />
                     I agree with the pool rules
-
+                </div>
                 </Form>
-            </div>
-        );
-    }
-
-    renderFinishStep() {
-        const { classes } = this.props;
-        return (
-            <div>
-                <Typography className={classes.instructions}>
-                    All steps completed - you&quot;re finished
-                </Typography>
-                <Button onClick={this.handleReset}>Reset</Button>
-            </div>
         );
     }
 
@@ -142,16 +148,16 @@ class CreatePoolForm extends Component {
         const { classes } = this.props;
 
         return (
-            <div>
+            <div className={classes.nav}>
                 <Button
-                    disabled={activeStep === 0}
+                    disabled={activeStep === 1}
                     onClick={this.handleBack}
                     className={classes.backButton}
                 >
                     Back
                 </Button>
                 <Button variant="raised" color="primary" onClick={this.handleNext}>
-                    {activeStep === this.getSteps().length - 1 ? 'Finish' : 'Next'}
+                    {activeStep === this.getSteps().length ? 'Finish' : 'Next'}
                 </Button>
             </div>
         );
@@ -159,11 +165,11 @@ class CreatePoolForm extends Component {
 
     getStepContent(stepIndex) {
         switch (stepIndex) {
-            case 0:
-                return this.renderPoolSetup();
             case 1:
-                return '2. Review Details';
+                return this.renderPoolSetup();
             case 2:
+                return '2. Review Details';
+            case 3:
                 return '3. Payment';
             default:
                 return 'Uknown stepIndex';
@@ -184,12 +190,6 @@ class CreatePoolForm extends Component {
         });
     };
 
-    handleReset = () => {
-        this.setState({
-            activeStep: 0,
-        });
-    };
-
     handleSubmit(pool) {
 
     }
@@ -200,17 +200,21 @@ class CreatePoolForm extends Component {
 
         return (
             <div className={classes.root}>
-                {this.renderStepper(this.getSteps(), activeStep)}
-                <div>
-                    {this.state.activeStep === this.getSteps().length ? (
-                        this.renderFinishStep()
-                    ) : (
-                            <div>
-                                {this.getStepContent(activeStep)}
-                                {this.renderNavigator(activeStep)}
-                            </div>
-                        )}
+                <div className="heading-primary">
+                    <Typography variant="headline" align="center" gutterBottom>
+                        <h3>Create Pool</h3>
+                    </Typography>
                 </div>
+                <div className={classes.stepper}>
+                    {this.renderStepper(this.getSteps(), activeStep)}
+                </div>
+                <div className={classes.headingSecondary}>
+                    <Typography variant="title" gutterBottom>
+                        <h4>{`${activeStep}. ${this.getSteps()[activeStep-1]}`}</h4>
+                    </Typography>
+                </div>
+                {this.getStepContent(activeStep)}
+                {this.renderNavigator(activeStep)}
             </div>
         );
     }
