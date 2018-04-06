@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
-<div>
+<div
+  className="jsx-50096001"
+>
   <div
     className="jsx-896431938"
   >
@@ -15,7 +17,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
           className="navbar navbar-default"
           style={
             Object {
-              "background": "#323150",
+              "background": "#fff",
               "borderColor": "#323150",
               "borderRadius": 0,
               "margin": 0,
@@ -28,19 +30,33 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
             <div
               className="navbar-header"
             >
-              <a
-                className="jsx-661576907 navbar-brand"
-                href="/"
-                style={
-                  Object {
-                    "color": "#3ffeca",
-                  }
-                }
+              <span
+                className="navbar-brand"
               >
-                BitBrackets
-              </a>
+                <span
+                  className="jsx-424069936 "
+                >
+                  <img
+                    className="jsx-424069936"
+                    height="20"
+                    src="../../static/logo.png"
+                    width="20"
+                  />
+                </span>
+                <a
+                  className="jsx-424069936 "
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#3d3d3d",
+                    }
+                  }
+                >
+                  BitBrackets
+                </a>
+              </span>
               <div
-                className="jsx-661576907"
+                className="jsx-424069936"
                 style={
                   Object {
                     "float": "right",
@@ -67,7 +83,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                       onTouchStart={[Function]}
                       style={
                         Object {
-                          "color": "#fff",
+                          "color": "#E72459",
                         }
                       }
                       tabIndex="0"
@@ -96,7 +112,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                 </div>
               </div>
               <div
-                className="jsx-661576907"
+                className="jsx-424069936"
                 style={
                   Object {
                     "display": "none",
@@ -147,7 +163,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                     role="button"
                   >
                     <span
-                      className="jsx-661576907 "
+                      className="jsx-424069936 "
                     />
                   </a>
                 </li>
@@ -163,7 +179,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                     role="button"
                   >
                     <span
-                      className="jsx-661576907 "
+                      className="jsx-424069936 "
                     />
                   </a>
                 </li>
@@ -179,7 +195,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                     role="button"
                   >
                     <span
-                      className="jsx-661576907 "
+                      className="jsx-424069936 "
                     />
                   </a>
                 </li>
@@ -195,7 +211,23 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                     role="button"
                   >
                     <span
-                      className="jsx-661576907 "
+                      className="jsx-424069936 "
+                    />
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-424069936 "
                     />
                   </a>
                 </li>
@@ -215,8 +247,8 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
           className="navbar navbar-default"
           style={
             Object {
-              "background": "#323150",
-              "borderColor": "#323150",
+              "background": "#fff",
+              "border": "transparent",
               "borderRadius": 0,
               "margin": 0,
             }
@@ -228,19 +260,29 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
             <div
               className="navbar-header"
             >
-              <a
-                className="jsx-661576907 navbar-brand"
-                href="/"
-                style={
-                  Object {
-                    "color": "#3ffeca",
-                  }
-                }
+              <span
+                className="navbar-brand"
               >
-                BitBrackets
-              </a>
+                <span
+                  className="jsx-424069936 image"
+                >
+                  <img
+                    className="jsx-424069936"
+                    height="20"
+                    src="../../static/logo.png"
+                    width="20"
+                  />
+                </span>
+                <a
+                  className="jsx-424069936 brandName"
+                  href="/"
+                  style={undefined}
+                >
+                  BitBrackets
+                </a>
+              </span>
               <div
-                className="jsx-661576907"
+                className="jsx-424069936"
                 style={
                   Object {
                     "float": "right",
@@ -248,7 +290,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                 }
               />
               <div
-                className="jsx-661576907"
+                className="jsx-424069936"
                 style={
                   Object {
                     "display": "none",
@@ -297,346 +339,14 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                   style={undefined}
                 >
                   <a
-                    href="/signup"
+                    href="/howDoesItWork"
                     onClick={[Function]}
                     onKeyDown={[Function]}
                   >
                     <span
-                      className="jsx-661576907 description"
+                      className="jsx-424069936 description"
                     >
-                      Sign Up
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="/login"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                  >
-                    <span
-                      className="jsx-661576907 description"
-                    >
-                      Log In 
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-661576907 description"
-                    />
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-661576907 description"
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div
-        className="jsx-2085888330"
-      >
-        <nav
-          className="navbar navbar-default"
-          style={
-            Object {
-              "background": "#282840",
-              "borderColor": "#282840",
-              "borderRadius": 0,
-              "margin": 0,
-            }
-          }
-        >
-          <div
-            className="container"
-          >
-            <div
-              className="navbar-header"
-            >
-              <a
-                className="jsx-661576907 navbar-brand"
-                href={undefined}
-                style={undefined}
-              />
-              <div
-                className="jsx-661576907"
-                style={
-                  Object {
-                    "float": "right",
-                  }
-                }
-              />
-              <div
-                className="jsx-661576907"
-                style={
-                  Object {
-                    "display": "none",
-                    "visibility": "hidden",
-                  }
-                }
-              >
-                <button
-                  className="navbar-toggle collapsed"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <span
-                    className="sr-only"
-                  >
-                    Toggle navigation
-                  </span>
-                  <span
-                    className="icon-bar"
-                  />
-                  <span
-                    className="icon-bar"
-                  />
-                  <span
-                    className="icon-bar"
-                  />
-                </button>
-              </div>
-            </div>
-            <div
-              aria-expanded={null}
-              className="navbar-collapse collapse"
-            >
-              <ul
-                className="nav navbar-nav"
-                role={null}
-                style={
-                  Object {
-                    "marginLeft": "40%",
-                  }
-                }
-              >
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="/contest"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                  >
-                    <span
-                      className="jsx-661576907 description"
-                    >
-                      <div
-                        className="jsx-2085888330"
-                      >
-                        <span
-                          color={undefined}
-                          style={undefined}
-                          variant="raised"
-                        >
-                          <i
-                            className="jsx-2085888330 fas fa-trophy"
-                            style={
-                              Object {
-                                "color": "#3ffeca",
-                              }
-                            }
-                          />
-                        </span>
-                           Contest
-                      </div>
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="/results"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                  >
-                    <span
-                      className="jsx-661576907 description"
-                    >
-                      <div
-                        className="jsx-2085888330"
-                      >
-                        <span
-                          color={undefined}
-                          style={undefined}
-                          variant="raised"
-                        >
-                          <i
-                            className="jsx-2085888330 fas fa-table"
-                            style={
-                              Object {
-                                "color": "#3ffeca",
-                              }
-                            }
-                          />
-                        </span>
-                           Results
-                      </div>
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-661576907 description"
-                    />
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-661576907 description"
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div
-        className="jsx-2085888330"
-      >
-        <nav
-          className="navbar navbar-default"
-          style={
-            Object {
-              "background": "#323150",
-              "borderColor": "#323150",
-              "borderRadius": 0,
-              "margin": 0,
-            }
-          }
-        >
-          <div
-            className="container"
-          >
-            <div
-              className="navbar-header"
-            >
-              <a
-                className="jsx-661576907 navbar-brand"
-                href={undefined}
-                style={undefined}
-              />
-              <div
-                className="jsx-661576907"
-                style={
-                  Object {
-                    "float": "right",
-                  }
-                }
-              />
-              <div
-                className="jsx-661576907"
-                style={
-                  Object {
-                    "display": "none",
-                    "visibility": "hidden",
-                  }
-                }
-              >
-                <button
-                  className="navbar-toggle collapsed"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <span
-                    className="sr-only"
-                  >
-                    Toggle navigation
-                  </span>
-                  <span
-                    className="icon-bar"
-                  />
-                  <span
-                    className="icon-bar"
-                  />
-                  <span
-                    className="icon-bar"
-                  />
-                </button>
-              </div>
-            </div>
-            <div
-              aria-expanded={null}
-              className="navbar-collapse collapse"
-            >
-              <ul
-                className="nav navbar-nav"
-                role={null}
-                style={
-                  Object {
-                    "float": "left",
-                  }
-                }
-              >
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="/"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                  >
-                    <span
-                      className="jsx-661576907 description"
-                    >
-                      Home
+                      How does it work?
                     </span>
                   </a>
                 </li>
@@ -651,7 +361,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                     onKeyDown={[Function]}
                   >
                     <span
-                      className="jsx-661576907 description"
+                      className="jsx-424069936 description"
                     >
                       Rules 
                     </span>
@@ -663,12 +373,12 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                   style={undefined}
                 >
                   <a
-                    href="/faq"
+                    href="faq"
                     onClick={[Function]}
                     onKeyDown={[Function]}
                   >
                     <span
-                      className="jsx-661576907 description"
+                      className="jsx-424069936 description"
                     >
                       FAQ
                     </span>
@@ -680,14 +390,64 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
                   style={undefined}
                 >
                   <a
-                    href="/contact"
+                    href="myPools"
                     onClick={[Function]}
                     onKeyDown={[Function]}
                   >
                     <span
-                      className="jsx-661576907 description"
+                      className="jsx-424069936 description"
                     >
-                      Contact
+                      My Pools
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                  >
+                    <span
+                      className="jsx-424069936 description"
+                    >
+                      <button
+                        className="MuiButtonBase-root-16 MuiButton-root-1"
+                        disabled={false}
+                        onBlur={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchMove={[Function]}
+                        onTouchStart={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "#E72459",
+                            "borderRadius": undefined,
+                            "color": "#fff",
+                            "width": undefined,
+                          }
+                        }
+                        tabIndex="0"
+                        type="button"
+                      >
+                        <span
+                          className="MuiButton-label-2"
+                        >
+                          Start Pool
+                        </span>
+                        <span
+                          className="MuiTouchRipple-root-25"
+                        />
+                      </button>
                     </span>
                   </a>
                 </li>
@@ -704,21 +464,485 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
     <div
       className="jsx-2085888330"
     >
-      <h1
-        className="jsx-2085888330"
+      <div
+        className="jsx-500659663"
       >
-        Este es el app
-      </h1>
+        <div
+          className="jsx-500659663 root"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="show-grid row"
+            >
+              <div
+                className="col-md-8 col-sm-6"
+              >
+                <h1
+                  className="jsx-500659663 title"
+                >
+                  BitBrackets
+                </h1>
+                <h1
+                  className="jsx-500659663 sub-title"
+                >
+                  Russia 2018
+                </h1>
+              </div>
+              <div
+                className="col-md-4 col-sm-6"
+              >
+                <div
+                  className="jsx-500659663 section"
+                >
+                  <button
+                    className="MuiButtonBase-root-16 MuiButton-root-1"
+                    disabled={false}
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#E72459",
+                        "borderRadius": undefined,
+                        "color": "#fff",
+                        "width": undefined,
+                      }
+                    }
+                    tabIndex="0"
+                    type="button"
+                  >
+                    <span
+                      className="MuiButton-label-2"
+                    >
+                      Start Pool
+                    </span>
+                    <span
+                      className="MuiTouchRipple-root-25"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="jsx-3374438666 container"
+      >
+        <div
+          className="jsx-3374438666 root"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="show-grid row"
+            >
+              <div
+                className="col-md-8 col-sm-6"
+              >
+                <h3
+                  className="jsx-3374438666 title"
+                >
+                  Be hard die fan & a Crypto geek 
+                  <br
+                    className="jsx-3374438666"
+                  />
+                   this 2018 World Cup
+                </h3>
+                <p
+                  className="jsx-3374438666 paragraph"
+                >
+                  Create your own football pool using
+                   
+                  <span
+                    className="jsx-3374438666 crypto-currencie"
+                  >
+                    crypto currencies
+                  </span>
+                   
+                  with your friends, pets, family, people in your office or crypto enthusiasts and start betting who will win each match. crypto currencies are in and are growing, play geeky.
+                   
+                </p>
+              </div>
+              <div
+                className="col-md-4 col-sm-6"
+              >
+                <h3
+                  className="jsx-3374438666 Easy-Secure-Fun"
+                >
+                  Easy 
+                  <br
+                    className="jsx-3374438666"
+                  />
+                   Secure 
+                  <br
+                    className="jsx-3374438666"
+                  />
+                  & fun
+                   
+                </h3>
+                <h3
+                  className="jsx-3374438666 Easy-Secure-Fun2"
+                >
+                  Easy Secure & fun 
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="jsx-2751072226"
+      >
+        <div
+          className="jsx-2751072226 root"
+        >
+          <h2
+            className="jsx-2751072226 title"
+          >
+            How does it work?
+          </h2>
+          <div
+            className="container"
+          >
+            <div
+              className="show-grid row"
+            >
+              <div
+                className="col-md-8 col-sm-6"
+              >
+                <img
+                  className="jsx-2751072226"
+                  height="80"
+                  src="../../static/group3.png"
+                  width="200"
+                />
+                <p
+                  className="jsx-2751072226 create-group"
+                >
+                  Create a group & Invite Friends
+                </p>
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col-md-6 col-sm-6"
+                  >
+                    <div
+                      className="jsx-2751072226 paragraph"
+                    >
+                      Name the pool and determine the crypto price to enter the pool. If you don´t have a crypto wallet learn here.
+                    </div>
+                  </div>
+                  <div
+                    className="col-md-6 col-sm-6"
+                  >
+                    <p
+                      className="jsx-2751072226 paragraph"
+                    >
+                      The more participants, the bigger the prize. All the crypto money will be secured by a Smart Contract.
+                    </p>
+                    <hr
+                      className="jsx-2751072226 hr"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-md-4 col-sm-6"
+              >
+                <img
+                  className="jsx-2751072226"
+                  height="80"
+                  src="../../static/group22.png"
+                  width="120"
+                />
+                <p
+                  className="jsx-2751072226 create-group"
+                >
+                  Enter picks
+                </p>
+                <p
+                  className="jsx-2751072226 Enter-picks"
+                >
+                  Will Costa Rica win against Brazil 4 to 2? This guesses will be saved in the Blockchain. You must enter picks before the cup starts.
+                </p>
+                <hr
+                  className="jsx-2751072226 hr"
+                />
+              </div>
+            </div>
+            <div
+              className="show-grid row"
+            >
+              <div
+                className="col-md-4 col-sm-6"
+              >
+                <img
+                  className="jsx-2751072226"
+                  height="80"
+                  src="../../static/group25.png"
+                  width="120"
+                />
+                <p
+                  className="jsx-2751072226 create-group"
+                >
+                  Are you winning?
+                </p>
+                <p
+                  className="jsx-2751072226 Are-you-winning"
+                >
+                  If you are winning, and there’s no chance someone can beat you, open the smart contract! The smart contract will validate you are winning, if it is true the pool might be yours The more participants, the bigger the prize. All the crypto money will be secured by a Smart Contract.
+                </p>
+                <hr
+                  className="jsx-2751072226 hr"
+                />
+              </div>
+              <div
+                className="col-md-8 col-sm-6"
+              >
+                <img
+                  className="jsx-2751072226"
+                  height="80"
+                  src="../../static/group29.png"
+                  width="250"
+                />
+                <p
+                  className="jsx-2751072226 create-group"
+                >
+                  Fake it until you... somebody can say the other way!
+                </p>
+                <p
+                  className="jsx-2751072226 Enter-picks"
+                >
+                  If a day goes by after you open the smart contract and nobody denies it, then you are the winner! The smart contract will allow you to take the prize
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="jsx-3325881311 container"
+      >
+        <div
+          className="jsx-3325881311 root"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="show-grid row"
+            >
+              <div
+                className="col-md-6 col-xs-6"
+              >
+                <div
+                  className="jsx-3325881311 image"
+                >
+                  <img
+                    className="jsx-3325881311"
+                    height="120"
+                    src="../../static/img4.png"
+                    width="150"
+                  />
+                </div>
+              </div>
+              <div
+                className="col-md-6 col-xs-6"
+              >
+                <div
+                  className="jsx-3325881311 prize"
+                >
+                  <h3
+                    className="jsx-3325881311 Claim-the-prize"
+                  >
+                    Claim the prize 
+                  </h3>
+                  <p
+                    className="jsx-3325881311 description"
+                  >
+                    <span
+                      className="jsx-3325881311 percentage"
+                    >
+                      95%
+                    </span>
+                     of the pool goes to the winner.
+                    <br
+                      className="jsx-3325881311"
+                    />
+                     Also, if you are the pool creator you will win 
+                    <span
+                      className="jsx-3325881311 percentage"
+                    >
+                      5%
+                    </span>
+                    of the pool.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="jsx-2732205983"
+      >
+        <div
+          className="jsx-2732205983 root"
+        />
+      </div>
     </div>
   </div>
-  <p>
-    <span>
-      Hello 
-      <b>
-        bitbracket
-      </b>
-      , you have 1,000 messages
-    </span>
-  </p>
+  <div
+    className="jsx-50096001 footer"
+  >
+    <footer
+      className="container"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="jsx-3074756442 root"
+        >
+          <div
+            className="show-grid row"
+          >
+            <div
+              className="col-md-6 col-xs-6"
+            >
+              <div
+                className="show-grid row"
+              >
+                <div
+                  className="col-md-6 col-xs-6"
+                >
+                  <ul
+                    className="jsx-3074756442 list"
+                  >
+                    <li
+                      className="jsx-3074756442"
+                    >
+                      <a
+                        className="jsx-3074756442"
+                        href="myPools"
+                      >
+                        My pools
+                      </a>
+                    </li>
+                    <li
+                      className="jsx-3074756442"
+                    >
+                      <a
+                        className="jsx-3074756442"
+                        href="myPools"
+                      >
+                        Join Pool
+                      </a>
+                    </li>
+                    <li
+                      className="jsx-3074756442"
+                    >
+                      <a
+                        className="jsx-3074756442"
+                        href="faq"
+                      >
+                        FAQs
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  className="col-md-6 col-xs-6"
+                >
+                  <ul
+                    className="jsx-3074756442 list"
+                  >
+                    <li
+                      className="jsx-3074756442"
+                    >
+                      <a
+                        className="jsx-3074756442"
+                        href="myPools"
+                      >
+                        More pools
+                      </a>
+                    </li>
+                    <li
+                      className="jsx-3074756442"
+                    >
+                      <a
+                        className="jsx-3074756442"
+                        href="myPools"
+                      >
+                        Blog
+                      </a>
+                    </li>
+                    <li
+                      className="jsx-3074756442"
+                    >
+                      <a
+                        className="jsx-3074756442"
+                        href="myPools"
+                      >
+                        FaceBook
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-md-6 col-xs-6"
+            >
+              <div
+                className="jsx-3074756442 term-conditions"
+              >
+                <a
+                  className="jsx-3074756442"
+                  href="myPools"
+                >
+                  <p
+                    className="jsx-3074756442"
+                  >
+                    Terms & Conditions
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="show-grid row"
+          >
+            <div
+              className="col-md-12 col-xs-12"
+            >
+              <p
+                className="jsx-3074756442 description"
+              >
+                Power by 
+                <span
+                  className="jsx-3074756442 bitbrackets"
+                >
+                  BitBrackets
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
 `;
