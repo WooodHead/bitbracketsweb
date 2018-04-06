@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import Button from "./common/Button";
+import Home from "./home/Home";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <div>
-          <h1>Este es el app</h1>
-        </div>
+        <div />
         <style jsx>{``}</style>
       </div>
     );

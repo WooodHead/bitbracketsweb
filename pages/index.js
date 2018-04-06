@@ -5,6 +5,8 @@ import es from "react-intl/locale-data/es";
 
 import Layout from "../components/Layout";
 import App from "../components/App";
+import Home from "../components/home/Home";
+
 import messages from "../intl/messages";
 import IntlExample from "../components/examples/IntlExample";
 
@@ -16,8 +18,9 @@ const language = "en"; //TODO: Create a redux state for managing language
 export default () => (
   <IntlProvider locale={language} messages={messages[language]}>
     <Layout>
-      <App />
-      <IntlExample />
+      {/* <App /> */}
+      <Home />
+      {/* <IntlExample /> */}
     </Layout>
   </IntlProvider>
 );

@@ -1,4 +1,11 @@
-import { Navbar, NavItem, Nav, MenuItem, NavDropdown } from "react-bootstrap";
+import {
+  Navbar,
+  NavItem,
+  Nav,
+  MenuItem,
+  NavDropdown,
+  Image
+} from "react-bootstrap";
 import Link from "./Link";
 
 export default props => {
@@ -7,7 +14,15 @@ export default props => {
     <Navbar style={props.style}>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href={props.linkBrand} style={props.styleBrandName}>
+          <span className={props.classNameImage}>
+            <img src={props.images} width="20" height="20" />
+          </span>
+
+          <a
+            className={props.classNameBrandName}
+            href={props.linkBrand}
+            style={props.styleBrandName}
+          >
             {props.brandname}
           </a>
         </Navbar.Brand>
@@ -36,29 +51,35 @@ export default props => {
           <NavItem href={props.link4}>
             <span className={props.className}>{props.linkName4}</span>
           </NavItem>
+          <NavItem href={props.link5}>
+            <span className={props.className}>{props.linkName5}</span>
+          </NavItem>
 
           {props.dropdown}
         </Nav>
       </Navbar.Collapse>
       <style jsx>{`
-         
-         .description:hover {
-          color: #3ffeca;
+        .brandName {
+          color: #3d3d3d;
+          font-size: 14px;
+          font-family: Roboto;
         }
-        .description{
-          color: #fff;
+        .brandName:hover {
+          color: #00aecc;
+        }
+        .description:hover {
+          color: #00aecc;
+        }
+        .description {
+          color: #3d3d3d;
           font-size: 9px;
+          font-family: Roboto;
         }
-        .description1:hover {
-          color: #067df7;
+
+        .image {
+          margin-right: 5px;
         }
-        .description1{
-          color:  #fff;
-          font-size: 9px;
-        }
-        
-          }
-        `}</style>
+      `}</style>
     </Navbar>
   );
 };
