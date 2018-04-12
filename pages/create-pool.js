@@ -8,7 +8,7 @@ import es from "react-intl/locale-data/es";
 
 import withRoot from '../md/withRoot';
 import { initStore } from '../store';
-import CreatePoolForm from '../components/CreatePoolForm';
+import CreatePoolForm from '../components/CreatePoolForm/CreatePoolForm';
 import messages from "../intl/pages/create-pool";
 
 addLocaleData(en);
