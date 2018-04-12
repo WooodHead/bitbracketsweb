@@ -35,8 +35,10 @@ const styles = theme => ({
         fontWeight: 'bold',
     },
     headingSecondary: {
-        alignSelf: 'center',
+        fontWeight: 'bold',
         width: '60%',
+        marginTop: theme.spacing.unit * 2,
+        marginBottom: theme.spacing.unit * 2,
     },
     nav: {
         marginTop: theme.spacing.unit * 2,
@@ -179,7 +181,7 @@ class CreatePoolForm extends Component {
                     {this.renderStepper(this.getSteps(), activeStep)}
                 </div>
                 <Typography className={classes.headingSecondary} variant="title" gutterBottom>
-                    <h4>{`${activeStep}. ${this.getSteps()[activeStep - 1]}`}</h4>
+                    {`${activeStep}. ${this.getSteps()[activeStep - 1]}`}
                 </Typography>
                 {this.getStepContent(activeStep)}
                 {this.renderNavigator(activeStep)}
