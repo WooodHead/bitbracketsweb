@@ -48,7 +48,37 @@ const messages = defineMessages({
     headingPrimary: {
         id: 'headingPrimary',
         defaultMessage: 'Create Pool',
-        description: 'Create Pool Page -> Create Pool Form -> Primary Header',
+        description: 'Create Pool Page -> Create Pool Form -> Primary Tittle',
+    },
+    poolSetupStep: {
+        id: 'poolSetupStep',
+        defaultMessage: 'Pool Setup',
+        description: 'Create Pool Page -> Create Pool Form -> Pool Setup Step',
+    },
+    reviewDetailsStep: {
+        id: 'reviewDetailsStep',
+        defaultMessage: 'Review Details',
+        description: 'Create Pool Page -> Create Pool Form -> Review Details Step',
+    },
+    paymentStep: {
+        id: 'paymentStep',
+        defaultMessage: 'Payment',
+        description: 'Create Pool Page -> Create Pool Form -> Payment Step',
+    },
+    backButton: {
+        id: 'backButton',
+        defaultMessage: 'Back',
+        description: 'Create Pool Page -> Create Pool Form -> Back Step Button Label',
+    },
+    nextButton: {
+        id: 'nextButton',
+        defaultMessage: 'Next',
+        description: 'Create Pool Page -> Create Pool Form -> Next Step Button Label',
+    },
+    finishButton: {
+        id: 'finishButton',
+        defaultMessage: 'Finish',
+        description: 'Create Pool Page -> Create Pool Form -> Finish Steps Button Label',
     },
 });
 
@@ -61,7 +91,13 @@ class CreatePoolForm extends Component {
     }
 
     getSteps() {
-        return ['Pool Setup', 'Review Details', 'Payment'];
+        const { intl } = this.props;
+
+        return [
+            intl.formatMessage(messages.poolSetupStep),
+            intl.formatMessage(messages.reviewDetailsStep),
+            intl.formatMessage(messages.paymentStep),
+        ];
     }
 
     renderStepper(steps, activeStep) {
@@ -79,7 +115,7 @@ class CreatePoolForm extends Component {
     }
 
     renderNavigator(activeStep) {
-        const { classes } = this.props;
+        const { classes, intl } = this.props;
 
         return (
             <div className={classes.nav}>
@@ -88,10 +124,12 @@ class CreatePoolForm extends Component {
                     onClick={this.handleBack}
                     className={classes.backButton}
                 >
-                    Back
+                    {intl.formatMessage(messages.backButton)}
                 </Button>
                 <Button variant="raised" color="primary" onClick={this.handleNext}>
-                    {activeStep === this.getSteps().length ? 'Finish' : 'Next'}
+                    {activeStep === this.getSteps().length ? 
+                        intl.formatMessage(messages.finishButton) 
+                        : intl.formatMessage(messages.nextButton)}
                 </Button>
             </div>
         );

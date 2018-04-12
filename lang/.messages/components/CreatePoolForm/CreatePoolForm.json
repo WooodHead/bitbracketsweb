@@ -1,7 +1,37 @@
 [
   {
     "id": "headingPrimary",
-    "description": "Create Pool Page -> Create Pool Form -> Primary Header",
+    "description": "Create Pool Page -> Create Pool Form -> Primary Tittle",
     "defaultMessage": "Create Pool"
+  },
+  {
+    "id": "poolSetupStep",
+    "description": "Create Pool Page -> Create Pool Form -> Pool Setup Step",
+    "defaultMessage": "Pool Setup"
+  },
+  {
+    "id": "reviewDetailsStep",
+    "description": "Create Pool Page -> Create Pool Form -> Review Details Step",
+    "defaultMessage": "Review Details"
+  },
+  {
+    "id": "paymentStep",
+    "description": "Create Pool Page -> Create Pool Form -> Payment Step",
+    "defaultMessage": "Payment"
+  },
+  {
+    "id": "backButton",
+    "description": "Create Pool Page -> Create Pool Form -> Back Step Button Label",
+    "defaultMessage": "Back"
+  },
+  {
+    "id": "nextButton",
+    "description": "Create Pool Page -> Create Pool Form -> Next Step Button Label",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "finishButton",
+    "description": "Create Pool Page -> Create Pool Form -> Finish Steps Button Label",
+    "defaultMessage": "Finish"
   }
 ]
