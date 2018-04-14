@@ -1,7 +1,57 @@
 [
   {
-    "id": "headingPrimary",
-    "description": "Create Pool Page -> Create Pool Form -> Primary Header",
-    "defaultMessage": "Create Pool"
+    "id": "headingTertiary1",
+    "description": "Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 1",
+    "defaultMessage": "Admin Info"
+  },
+  {
+    "id": "headingTertiary2",
+    "description": "Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 2",
+    "defaultMessage": "Pool Info"
+  },
+  {
+    "id": "nameLabel",
+    "description": "",
+    "defaultMessage": "Name"
+  },
+  {
+    "id": "adminNameTextbox",
+    "description": "",
+    "defaultMessage": "Nickname"
+  },
+  {
+    "id": "emailLabel",
+    "description": "",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "emailTextbox",
+    "description": "",
+    "defaultMessage": "email@email.com"
+  },
+  {
+    "id": "poolNameTextbox",
+    "description": "",
+    "defaultMessage": "Pool Name"
+  },
+  {
+    "id": "entryLabel",
+    "description": "",
+    "defaultMessage": "Entry Price"
+  },
+  {
+    "id": "entryTextbox",
+    "description": "",
+    "defaultMessage": "0"
+  },
+  {
+    "id": "termsCheckbox",
+    "description": "",
+    "defaultMessage": "I agree with the terms of use"
+  },
+  {
+    "id": "rulesCheckbox",
+    "description": "",
+    "defaultMessage": "I agree with the pool rules"
   }
 ]
