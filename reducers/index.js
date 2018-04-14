@@ -4,12 +4,12 @@ import languageReducer from './languageReducer';
 import metamaskReducer from './metamaskReducer';
 
 const poolInitialState = {
-  adminName: '',
-  adminEmail: '',
-  poolName: '',
+  adminName: 'Gabriel',
+  adminEmail: 'gmolina@gmail.com',
+  poolName: 'bitbrackets',
   entryPrice: 0.0,
   entryFee: 0.0,
-  entryPassword: '',
+  entryPassword: 'fakepwd',
   terms: false,
   rules: false,
 };

@@ -10,11 +10,11 @@ import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
 import { FormLabel } from 'material-ui/Form';
+import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
     headingTertiary: {
-        margin: 0,
-        padding: 0,
+        fontWeight: 'bold',
     },
     formBox: {
         display: 'flex',
@@ -23,34 +23,67 @@ const styles = theme => ({
         backgroundColor: 'white',
         border: '2px solid lightgray',
         borderRadius: '5px',
-        paddingLeft: theme.spacing.unit * 3,
-        paddingRight: theme.spacing.unit * 3,
-        paddingBottom: theme.spacing.unit * 5,
+        padding: theme.spacing.unit * 3,
     },
     textField: {
         marginBottom: theme.spacing.unit,
-        width: '60%',
+        // width: '60%',
     },
     division: {
         alignSelf: 'center',
         width: '100%',
-        marginTop: theme.spacing.unit * 3,
+        marginTop: theme.spacing.unit * 2,
         marginBottom: theme.spacing.unit * 2,
     },
 });
 
 const messages = defineMessages({
-    headingPrimary: {
-        id: 'headingPrimary',
-        defaultMessage: 'Create Pool',
-        description: 'Create Pool Page -> Create Pool Form -> Primary Header',
+    headingTertiary1: {
+        id: 'headingTertiary1',
+        defaultMessage: 'Admin Info',
+        description: 'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 1',
+    },
+    headingTertiary2: {
+        id: 'headingTertiary2',
+        defaultMessage: 'Pool Info',
+        description: 'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 2',
+    },
+    headingTertiary3: {
+        id: 'headingTertiary3',
+        defaultMessage: 'Payment Details',
+        description: 'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 3',
+    },
+    nameLabel: {
+        id: 'nameLabel',
+        defaultMessage: 'Name',
+        description: '',
+    },
+    emailLabel: {
+        id: 'emailLabel',
+        defaultMessage: 'Email',
+        description: '',
+    },
+    entryPasswordLabel: {
+        id: 'entryPasswordLabel',
+        defaultMessage: 'Entry Password',
+        description: '',
+    },
+    entryLabel: {
+        id: 'entryLabel',
+        defaultMessage: 'Entry Price',
+        description: '',
+    },
+    feeLabel: {
+        id: 'feeLabel',
+        defaultMessage: 'Entry Fee',
+        description: '',
     },
 });
 
 class ReviewDetailForm extends Component {
 
     render() {
-        const { classes } = this.props;
+        const { classes, intl } = this.props;
 
         return (
             <Form className={classes.formBox}
@@ -58,71 +91,124 @@ class ReviewDetailForm extends Component {
                 onSubmit={(pool) => this.handleSubmit(pool)}
             >
                 <Typography className={classes.headingTertiary} variant="subheading">
-                    <h4>Admin Info</h4>
+                    {intl.formatMessage(messages.headingTertiary1)}
                 </Typography>
-                <Control.text
-                    className={classes.textField}
-                    model=".adminName"
-                    component={TextField}
-                    label="Name"
-                    disabled
-                />
 
-                <Control.text
-                    className={classes.textField}
-                    model=".adminEmail"
-                    component={TextField}
-                    label="Email"
-                    disabled
-                />
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".adminName"
+                            component={TextField}
+                            disabled
+                            InputProps={{disableUnderline: true}}
+                        />
+                    </Grid>
+                </Grid>
+
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.emailLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".adminEmail"
+                            component={TextField}
+                            disabled
+                            InputProps={{disableUnderline: true}}
+                        />
+                    </Grid>
+                </Grid>
+
+                <Divider className={classes.division} />                
+
+                <Typography className={classes.headingTertiary} variant="subheading">
+                    {intl.formatMessage(messages.headingTertiary2)}
+                </Typography>
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".poolName"
+                            component={TextField}
+                            disabled
+                            InputProps={{disableUnderline: true}}
+                        />
+                    </Grid>
+                </Grid>
+
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.entryPasswordLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".entryPassword"
+                            component={TextField}
+                            disabled
+                            InputProps={{disableUnderline: true}}
+                        />
+                    </Grid>
+                </Grid>
+
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".entryPrice"
+                            component={TextField}
+                            disabled
+                            InputProps={{disableUnderline: true}}
+                        />
+                    </Grid>
+                </Grid>
+
                 <Divider className={classes.division} />
 
                 <Typography className={classes.headingTertiary} variant="subheading">
-                    <h4>Pool Info</h4>
+                    {intl.formatMessage(messages.headingTertiary3)}
                 </Typography>
-                <Control.text
-                    className={classes.textField}
-                    model=".poolName"
-                    component={TextField}
-                    label="Name"
-                    disabled
-                />
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".entryPrice"
+                            component={TextField}
+                            disabled
+                            InputProps={{disableUnderline: true}}
+                        />
+                    </Grid>
+                </Grid>
 
-                <Control.text
-                    className={classes.textField}
-                    model=".entryPassword"
-                    component={TextField}
-                    label="Entry Password"
-                    disabled
-                />
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.feeLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".entryFee"
+                            component={TextField}
+                            disabled
+                            InputProps={{disableUnderline: true}}
+                        />
+                    </Grid>
+                </Grid>
 
-                <Control.text
-                    className={classes.textField}
-                    model=".entryPrice"
-                    component={TextField}
-                    label="Entry Price"
-                    disabled
-                />
-                <Divider className={classes.division} />
-
-                <Typography className={classes.headingTertiary} variant="subheading">
-                    <h4>Payment Details</h4>
-                </Typography>
-                <Control.text
-                    className={classes.textField}
-                    model=".entryPrice"
-                    component={TextField}
-                    label="Entry Price"
-                    disabled
-                />
-
-                <Control.text
-                    className={classes.textField}
-                    model=".entryFee"
-                    component={TextField}
-                    label="Entry Fee"
-                    disabled
-                />
             </Form>
         );
     }

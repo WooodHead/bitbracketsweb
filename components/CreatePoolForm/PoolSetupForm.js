@@ -24,13 +24,13 @@ const styles = theme => ({
         padding: theme.spacing.unit * 3,
     },
     textField: {
-        // marginBottom: theme.spacing.unit,
+        marginBottom: theme.spacing.unit,
         // width: '60%',
     },
     division: {
         alignSelf: 'center',
         width: '100%',
-        marginTop: theme.spacing.unit * 3,
+        marginTop: theme.spacing.unit * 2,
         marginBottom: theme.spacing.unit * 2,
     },
 });
@@ -116,7 +116,7 @@ class PoolSetupForm extends Component {
                             className={classes.textField}
                             model=".adminName"
                             component={TextField}
-                            label={intl.formatMessage(messages.adminNameTextbox)}
+                            placeholder={intl.formatMessage(messages.adminNameTextbox)}
                         />
                     </Grid>
                 </Grid>
@@ -130,7 +130,7 @@ class PoolSetupForm extends Component {
                             className={classes.textField}
                             model=".adminEmail"
                             component={TextField}
-                            label={intl.formatMessage(messages.emailTextbox)}
+                            placeholder={intl.formatMessage(messages.emailTextbox)}
                         />
                     </Grid>
                 </Grid>
@@ -149,7 +149,7 @@ class PoolSetupForm extends Component {
                             className={classes.textField}
                             model=".poolName"
                             component={TextField}
-                            label={intl.formatMessage(messages.poolNameTextbox)}
+                            placeholder={intl.formatMessage(messages.poolNameTextbox)}
                         />
                     </Grid>
                 </Grid>
@@ -163,7 +163,7 @@ class PoolSetupForm extends Component {
                             className={classes.textField}
                             model=".entryPrice"
                             component={TextField}
-                            label={intl.formatMessage(messages.entryTextbox)}
+                            placeholder={intl.formatMessage(messages.entryTextbox)}
                         />
                     </Grid>
                 </Grid>

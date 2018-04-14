@@ -1,7 +1,42 @@
 [
   {
-    "id": "headingPrimary",
-    "description": "Create Pool Page -> Create Pool Form -> Primary Header",
-    "defaultMessage": "Create Pool"
+    "id": "headingTertiary1",
+    "description": "Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 1",
+    "defaultMessage": "Admin Info"
+  },
+  {
+    "id": "headingTertiary2",
+    "description": "Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 2",
+    "defaultMessage": "Pool Info"
+  },
+  {
+    "id": "headingTertiary3",
+    "description": "Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 3",
+    "defaultMessage": "Payment Details"
+  },
+  {
+    "id": "nameLabel",
+    "description": "",
+    "defaultMessage": "Name"
+  },
+  {
+    "id": "emailLabel",
+    "description": "",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "entryPasswordLabel",
+    "description": "",
+    "defaultMessage": "Entry Password"
+  },
+  {
+    "id": "entryLabel",
+    "description": "",
+    "defaultMessage": "Entry Price"
+  },
+  {
+    "id": "feeLabel",
+    "description": "",
+    "defaultMessage": "Entry Fee"
   }
 ]
