@@ -88,7 +88,7 @@ class CreatePoolForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeStep: 1,
+            activeStep: 3,
         };
     }
 

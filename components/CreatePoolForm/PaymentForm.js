@@ -12,12 +12,12 @@ import ExpansionPanel, {
     ExpansionPanelDetails,
 } from 'material-ui/ExpansionPanel';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
-
+import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
     headingTertiary: {
-        margin: 0,
-        padding: 0,
+        fontWeight: 'bold',
+        marginBottom: theme.spacing.unit * 2,
     },
     formBox: {
         display: 'flex',
@@ -26,37 +26,91 @@ const styles = theme => ({
         backgroundColor: 'white',
         border: '2px solid lightgray',
         borderRadius: '5px',
-        paddingLeft: theme.spacing.unit * 3,
-        paddingRight: theme.spacing.unit * 3,
-        paddingBottom: theme.spacing.unit * 5,
+        padding: theme.spacing.unit * 3,
     },
     textField: {
         marginBottom: theme.spacing.unit,
-        width: '60%',
+        // width: '60%',
     },
     division: {
         alignSelf: 'center',
         width: '100%',
-        marginTop: theme.spacing.unit * 3,
+        marginTop: theme.spacing.unit * 2,
         marginBottom: theme.spacing.unit * 2,
     },
     expansionPanel: {
         flexGrow: 1,
+        marginTop: theme.spacing.unit * 2,
     },
 });
 
 const messages = defineMessages({
-    headingPrimary: {
-        id: 'headingPrimary',
-        defaultMessage: 'Create Pool',
-        description: 'Create Pool Page -> Create Pool Form -> Primary Header',
+    headingTertiary1: {
+        id: 'headingTertiary1',
+        defaultMessage: 'Finish Installing MetaMask to Continue',
+        description: '',
+    },
+    help: {
+        id: 'help',
+        defaultMessage: 'Here some help:',
+        description: '',
+    },
+    installHeader: {
+        id: 'installHeader',
+        defaultMessage: 'How to Install MetaMask',
+        description: '',
+    },
+    installDescription: {
+        id: 'installDescription',
+        defaultMessage: '...',
+        description: '',
+    },
+    etherHeader: {
+        id: 'etherHeader',
+        defaultMessage: 'Getting Ether Your Digital Currency',
+        description: '',
+    },
+    etherDescription: {
+        id: 'etherDescription',
+        defaultMessage: '...',
+        description: '',
+    },
+    sendHeader: {
+        id: 'sendHeader',
+        defaultMessage: 'How to Send ETH to MetaMask',
+        description: '',
+    },
+    sendDescription: {
+        id: 'sendDescription',
+        defaultMessage: '...',
+        description: '',
+    },
+    headingTertiary2: {
+        id: 'headingTertiary2',
+        defaultMessage: 'Payment Details',
+        description: '',
+    },
+    entryLabel: {
+        id: 'entryLabel',
+        defaultMessage: 'Entry Price',
+        description: '',
+    },
+    feeLabel: {
+        id: 'feeLabel',
+        defaultMessage: 'Entry Fee',
+        description: '',
+    },
+    totalLabel: {
+        id: 'totalLabel',
+        defaultMessage: 'TOTAL',
+        description: '',
     },
 });
 
 class PaymentForm extends Component {
 
     renderPayment() {
-        const { classes } = this.props;
+        const { classes, intl } = this.props;
 
         return (
             <Form className={classes.formBox}
@@ -64,41 +118,41 @@ class PaymentForm extends Component {
                 onSubmit={(pool) => this.handleSubmit(pool)}
             >
                 <Typography className={classes.headingTertiary} variant="subheading">
-                    <h4>Finish Installing Metamesk to continue</h4>
+                    {intl.formatMessage(messages.headingTertiary1)}
                 </Typography>
 
                 <Typography>
-                    <p>Here some help:</p>
+                    {intl.formatMessage(messages.help)}
                 </Typography>
 
                 <div className={classes.expansionPanel}>
                     <ExpansionPanel>
                         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography>How to Install Metamask</Typography>
+                            <Typography>{intl.formatMessage(messages.installHeader)}</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                             <Typography>
-                                Steps...
+                                {intl.formatMessage(messages.installDescription)}
                             </Typography>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
                         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography>Getting ether your digital currency</Typography>
+                            <Typography>{intl.formatMessage(messages.etherHeader)}</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                             <Typography>
-                                Steps...
+                                {intl.formatMessage(messages.etherDescription)}
                             </Typography>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                     <ExpansionPanel>
                         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography>How to send ETH to MetaMask</Typography>
+                            <Typography>{intl.formatMessage(messages.sendHeader)}</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                             <Typography>
-                                Steps...
+                                {intl.formatMessage(messages.sendDescription)}
                             </Typography>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
@@ -109,7 +163,7 @@ class PaymentForm extends Component {
     }
 
     renderPaymentDetails() {
-        const { classes } = this.props;
+        const { classes, intl } = this.props;
 
         return (
             <Form className={classes.formBox}
@@ -117,24 +171,55 @@ class PaymentForm extends Component {
                 onSubmit={(pool) => this.handleSubmit(pool)}
             >
                 <Typography className={classes.headingTertiary} variant="subheading">
-                    <h4>Payment Details</h4>
+                    {intl.formatMessage(messages.headingTertiary2)}
                 </Typography>
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".entryPrice"
+                            component={TextField}
+                            disabled
+                            InputProps={{ disableUnderline: true }}
+                        />
+                    </Grid>
+                </Grid>
 
-                <Control.text
-                    className={classes.textField}
-                    model=".entryPrice"
-                    component={TextField}
-                    label="Entry Price"
-                    disabled
-                />
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.feeLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".entryFee"
+                            component={TextField}
+                            disabled
+                            InputProps={{ disableUnderline: true }}
+                        />
+                    </Grid>
+                </Grid>
 
-                <Control.text
-                    className={classes.textField}
-                    model=".entryFee"
-                    component={TextField}
-                    label="Entry Fee"
-                    disabled
-                />
+                <Divider className={classes.division} />
+
+                <Grid container alignItems='baseline'>
+                    <Grid item xs={3}>
+                        <Typography>{intl.formatMessage(messages.totalLabel)}</Typography>
+                    </Grid>
+                    <Grid item xs={9}>
+                        <Control.text
+                            className={classes.textField}
+                            model=".entryTotal"
+                            component={TextField}
+                            disabled
+                            InputProps={{ disableUnderline: true }}
+                        />
+                    </Grid>
+                </Grid>
+
             </Form>
         );
     }
