@@ -1,101 +1,52 @@
 import React, { Component } from "react";
-import Button from "../common/Button";
-import { Row, Col, Grid } from "react-bootstrap";
+import Typography from "material-ui/Typography";
+import Grid from "material-ui/Grid";
+import { FormattedMessage } from "react-intl";
 
 class Section2 extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="root">
-          <Grid>
-            <Row className="show-grid">
-              <Col sm={6} md={8}>
-                <h3 className="title">
-                  Be hard die fan & a Crypto geek <br /> this 2018 World Cup
-                </h3>
-                <p className="paragraph">
-                  Create your own football pool using{" "}
-                  <span className="crypto-currencie">crypto currencies</span>{" "}
-                  with your friends, pets, family, people in your office or
-                  crypto enthusiasts and start betting who will win each match.
-                  crypto currencies are in and are growing, play geeky.{" "}
-                </p>
-              </Col>
-              <Col sm={6} md={4}>
-                <h3 className="Easy-Secure-Fun">
-                  Easy <br /> Secure <br />& fun{" "}
-                </h3>
-                <h3 className="Easy-Secure-Fun2">Easy Secure & fun </h3>
-              </Col>
-            </Row>
+      <div className="container" style={{ paddingTop: "5em" }}>
+        <Grid container spacing={24}>
+          <Grid item xs={12} sm={6}>
+            <Typography
+              variant="display2"
+              gutterBottom
+              style={{ color: "black", fontWeight: "500" }}
+            >
+              <FormattedMessage id="home.section2.title1" />
+              <br />
+              <FormattedMessage id="home.section2.title2" />
+            </Typography>
+            <Typography
+              variant="headline"
+              gutterBottom
+              style={{
+                color: "black",
+                fontWeight: "400",
+                letterSpacing: "0.5px"
+              }}
+            >
+              Create your own soccer pool using cryptocurrencies with your
+              friends, pets, family, people in your office or crypto enthusiasts
+              and start predicting who will win each match and win big.
+              Cryptocurrencies are in and are growing, help the crypto community
+              grow by inviting friends to play and spread the word.
+            </Typography>
           </Grid>
-        </div>
-        <style jsx>{`
-          .root {
-            font-family: Roboto;
-            display: flex;
-            justify-content: center;
-          }
-          .title {
-            font-size: 16px;
-            display: flex;
-            text-align: justify;
-          }
-          .paragraph {
-            text-align: justify;
-            font-size: 14px;
-          }
-          .Easy-Secure-Fun {
-            color: #e72459;
-            text-align: justify;
-            font-size: 16px;
-            display: flex;
-            justify-content: center;
-          }
-          .crypto-currencie {
-            color: #e72459;
-          }
-          @media only screen and (max-width: 320px) {
-            .Easy-Secure-Fun {
-              display: none;
-            }
-            .Easy-Secure-Fun2 {
-              text-align: center;
-              color: #e72459;
-              font-size: 20px;
-            }
-          }
-          @media only screen and (max-width: 375px) {
-            .Easy-Secure-Fun {
-              display: none;
-            }
-            .Easy-Secure-Fun2 {
-              text-align: center;
-              color: #e72459;
-              font-size: 20px;
-            }
-          }
-          @media only screen and (max-width: 425px) {
-            .Easy-Secure-Fun {
-              display: none;
-            }
-            .Easy-Secure-Fun2 {
-              text-align: center;
-              color: #e72459;
-              font-size: 20px;
-            }
-          }
-          @media only screen and (min-width: 768px) {
-            .Easy-Secure-Fun2 {
-              display: none;
-            }
-          }
-          @media only screen and (min-width: 1024px) {
-            .Easy-Secure-Fun2 {
-              display: none;
-            }
-          }
-        `}</style>
+          <Grid item xs={12} sm={6}>
+            <Typography
+              align="center"
+              variant="display1"
+              gutterBottom
+              style={{ color: "#E72459", fontWeight: "400" }}
+            >
+              Easy <br /> Secure <br /> & Fun
+            </Typography>
+          </Grid>
+
+          <style jsx>{``}</style>
+        </Grid>
       </div>
     );
   }
