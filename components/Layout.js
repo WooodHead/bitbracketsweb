@@ -12,8 +12,8 @@ import initMessages from "../intl/";
 
 import Footer from "../components/Footer/Footer";
 
-const language = "en"; //TODO: Create a redux state for managing language
-
+const language = "es"; //TODO: Create a redux state for managing language
+addLocaleData([...en, ...es]);
 const messages = initMessages();
 
 console.log("messages", messages);
