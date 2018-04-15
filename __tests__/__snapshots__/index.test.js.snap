@@ -1,948 +1,572 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
-<div
-  className="jsx-50096001"
->
+<div>
   <div
     className="jsx-896431938"
   >
     <div
-      className="jsx-896431938 navbarResponsive"
+      className="FirstNavbar-root-1"
     >
-      <div
-        className="jsx-2085888330"
+      <header
+        className="MuiPaper-root-12 MuiPaper-elevation4-18 MuiAppBar-root-4 MuiAppBar-positionStatic-8 MuiAppBar-colorDefault-9"
       >
-        <nav
-          className="navbar navbar-default"
-          style={
-            Object {
-              "background": "#fff",
-              "borderColor": "#323150",
-              "borderRadius": 0,
-              "margin": 0,
-            }
-          }
+        <div
+          className="MuiToolbar-root-39 MuiToolbar-gutters-40"
         >
-          <div
-            className="container"
+          <img
+            alt="cryptocurrency-pool"
+            height="30"
+            src="../../static/logo.png"
+            width="30"
+          />
+          <h2
+            className="MuiTypography-root-41 MuiTypography-title-47 MuiTypography-colorInherit-60 FirstNavbar-flex-2"
           >
-            <div
-              className="navbar-header"
+            <a
+              className="MuiButtonBase-root-80 MuiButton-root-65 MuiButton-colorInherit-69"
+              href="/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex="0"
             >
               <span
-                className="navbar-brand"
+                className="MuiButton-label-66"
               >
+                 
+                  BitBrackets
+              </span>
+              <span
+                className="MuiTouchRipple-root-83"
+              />
+            </a>
+          </h2>
+          <a
+            className="MuiButtonBase-root-80 MuiButton-root-65 MuiButton-colorInherit-69"
+            href="/howDoesItWork"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <span
+              className="MuiButton-label-66"
+            >
+              <span>
+                Cómo funcion?
+              </span>
+            </span>
+            <span
+              className="MuiTouchRipple-root-83"
+            />
+          </a>
+          <a
+            className="MuiButtonBase-root-80 MuiButton-root-65 MuiButton-colorInherit-69"
+            href="/rules"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <span
+              className="MuiButton-label-66"
+            >
+              <span>
+                reglas
+              </span>
+            </span>
+            <span
+              className="MuiTouchRipple-root-83"
+            />
+          </a>
+          <a
+            className="MuiButtonBase-root-80 MuiButton-root-65 MuiButton-colorInherit-69"
+            href="/faq"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <span
+              className="MuiButton-label-66"
+            >
+              FAQs
+            </span>
+            <span
+              className="MuiTouchRipple-root-83"
+            />
+          </a>
+          <a
+            className="MuiButtonBase-root-80 MuiButton-root-65 MuiButton-colorInherit-69"
+            href="/howDoesItWork"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <span
+              className="MuiButton-label-66"
+            >
+              <span>
+                mis quinelas
+              </span>
+            </span>
+            <span
+              className="MuiTouchRipple-root-83"
+            />
+          </a>
+          <a
+            className="MuiButtonBase-root-80 MuiButton-root-65 MuiButton-raised-70 MuiButton-raisedSecondary-73"
+            href="/howDoesItWork"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            <span
+              className="MuiButton-label-66"
+            >
+              <span>
+                crear quinela
+              </span>
+            </span>
+            <span
+              className="MuiTouchRipple-root-83"
+            />
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div>
+    <div
+      className="jsx-553563916 root"
+    >
+      <h1
+        className="MuiTypography-root-41 MuiTypography-display4-42 MuiTypography-gutterBottom-58 MuiTypography-alignCenter-54"
+        style={
+          Object {
+            "color": "#fff",
+            "fontWeight": "500",
+            "paddingTop": "1em",
+          }
+        }
+      >
+        BitBrackets
+      </h1>
+      <h1
+        className="MuiTypography-root-41 MuiTypography-display2-44 MuiTypography-gutterBottom-58 MuiTypography-alignCenter-54"
+        style={
+          Object {
+            "color": "#fff",
+            "fontWeight": "400",
+          }
+        }
+      >
+        Russia 2018
+      </h1>
+    </div>
+    <div
+      className="container"
+      style={
+        Object {
+          "paddingTop": "5em",
+        }
+      }
+    >
+      <div
+        className="MuiGrid-typeContainer-90 MuiGrid-spacing-xs-24-113"
+      >
+        <div
+          className="MuiGrid-typeItem-91 MuiGrid-grid-xs-12-127 MuiGrid-grid-sm-6-134"
+        >
+          <h1
+            className="MuiTypography-root-41 MuiTypography-display2-44 MuiTypography-gutterBottom-58"
+            style={
+              Object {
+                "color": "black",
+                "fontWeight": "500",
+              }
+            }
+          >
+            <span>
+              Hazte fan y un Crypto geek
+            </span>
+            <br
+              className="jsx-2085888330"
+            />
+            <span>
+              este mundial 2018
+            </span>
+          </h1>
+          <h1
+            className="MuiTypography-root-41 MuiTypography-headline-46 MuiTypography-gutterBottom-58"
+            style={
+              Object {
+                "color": "black",
+                "fontWeight": "400",
+                "letterSpacing": "0.5px",
+              }
+            }
+          >
+            Create your own soccer pool using cryptocurrencies with your friends, pets, family, people in your office or crypto enthusiasts and start predicting who will win each match and win big. Cryptocurrencies are in and are growing, help the crypto community grow by inviting friends to play and spread the word.
+          </h1>
+        </div>
+        <div
+          className="MuiGrid-typeItem-91 MuiGrid-grid-xs-12-127 MuiGrid-grid-sm-6-134"
+        >
+          <h1
+            className="MuiTypography-root-41 MuiTypography-display1-45 MuiTypography-gutterBottom-58 MuiTypography-alignCenter-54"
+            style={
+              Object {
+                "color": "#E72459",
+                "fontWeight": "400",
+              }
+            }
+          >
+            Easy 
+            <br
+              className="jsx-2085888330"
+            />
+             Secure 
+            <br
+              className="jsx-2085888330"
+            />
+             & Fun
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer
+    className="container"
+  >
+    <div
+      className="MuiGrid-typeContainer-90 MuiGrid-spacing-xs-24-113"
+    >
+      <div
+        className="MuiGrid-typeItem-91 MuiGrid-grid-xs-6-121 MuiGrid-grid-sm-3-131"
+      >
+        <a
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          href="/howDoesItWork"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <div
+            className="MuiListItemText-root-190"
+          >
+            <h3
+              className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
+            >
+              <span>
+                Cómo funcion?
+              </span>
+            </h3>
+          </div>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </a>
+        <a
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          href="/rules"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <div
+            className="MuiListItemText-root-190"
+          >
+            <h3
+              className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
+            >
+              <span>
+                reglas
+              </span>
+            </h3>
+          </div>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </a>
+        <a
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          href="/faq"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <div
+            className="MuiListItemText-root-190"
+          >
+            <h3
+              className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
+            >
+              FAQs
+            </h3>
+          </div>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </a>
+      </div>
+      <div
+        className="MuiGrid-typeItem-91 MuiGrid-grid-xs-6-121 MuiGrid-grid-sm-3-131"
+      >
+        <a
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <div
+            className="MuiListItemText-root-190"
+          >
+            <h3
+              className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
+            >
+              <span>
+                mis quinelas
+              </span>
+            </h3>
+          </div>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </a>
+        <a
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <div
+            className="MuiListItemText-root-190"
+          >
+            <h3
+              className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
+            >
+              Blog
+            </h3>
+          </div>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </a>
+        <a
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <div
+            className="MuiListItemText-root-190"
+          >
+            <h3
+              className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
+            >
+              FaceBook
+            </h3>
+          </div>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </a>
+      </div>
+      <div
+        className="MuiGrid-typeItem-91 MuiGrid-grid-xs-6-121 MuiGrid-grid-sm-3-131"
+      >
+        <a
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+          tabIndex="0"
+        >
+          <div
+            className="MuiListItemText-root-190"
+          >
+            <h3
+              className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
+            >
+              Terms & Conditions
+            </h3>
+          </div>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </a>
+      </div>
+      <div
+        className="MuiGrid-typeItem-91 MuiGrid-grid-xs-12-127"
+      >
+        <a
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          href="https://coralbytes.com/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+          tabIndex="0"
+          target="_blank"
+        >
+          <div
+            className="MuiListItemText-root-190"
+          >
+            <h3
+              className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
+            >
+              <span>
+                Powered by:
+                 
                 <span
-                  className="jsx-424069936 "
-                >
-                  <img
-                    className="jsx-424069936"
-                    height="20"
-                    src="../../static/logo.png"
-                    width="20"
-                  />
-                </span>
-                <a
-                  className="jsx-424069936 "
-                  href="/"
                   style={
                     Object {
-                      "color": "#3d3d3d",
+                      "color": "#E72459",
                     }
                   }
                 >
-                  BitBrackets
-                </a>
-              </span>
-              <div
-                className="jsx-424069936"
-                style={
-                  Object {
-                    "float": "right",
-                  }
-                }
-              >
-                <div>
-                  <span
-                    className="colorButton"
-                  >
-                    <button
-                      className="MuiButtonBase-root-16 MuiButton-root-1"
-                      disabled={false}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onKeyUp={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      style={
-                        Object {
-                          "color": "#E72459",
-                        }
-                      }
-                      tabIndex="0"
-                      type="button"
-                    >
-                      <span
-                        className="MuiButton-label-2"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          className="MuiSvgIcon-root-19"
-                          color={undefined}
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="MuiTouchRipple-root-25"
-                      />
-                    </button>
-                  </span>
-                </div>
-              </div>
-              <div
-                className="jsx-424069936"
-                style={
-                  Object {
-                    "display": "none",
-                    "visibility": "hidden",
-                  }
-                }
-              >
-                <button
-                  className="navbar-toggle collapsed"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <span
-                    className="sr-only"
-                  >
-                    Toggle navigation
-                  </span>
-                  <span
-                    className="icon-bar"
-                  />
-                  <span
-                    className="icon-bar"
-                  />
-                  <span
-                    className="icon-bar"
-                  />
-                </button>
-              </div>
-            </div>
-            <div
-              aria-expanded={null}
-              className="navbar-collapse collapse"
-            >
-              <ul
-                className="nav navbar-nav"
-                role={null}
-                style={undefined}
-              >
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-424069936 "
-                    />
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-424069936 "
-                    />
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-424069936 "
-                    />
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-424069936 "
-                    />
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-424069936 "
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <div
-      className="jsx-896431938 navbar"
-    >
-      <div
-        className="jsx-2085888330"
-      >
-        <nav
-          className="navbar navbar-default"
-          style={
-            Object {
-              "background": "#fff",
-              "border": "transparent",
-              "borderRadius": 0,
-              "margin": 0,
-            }
-          }
-        >
-          <div
-            className="container"
-          >
-            <div
-              className="navbar-header"
-            >
-              <span
-                className="navbar-brand"
-              >
-                <span
-                  className="jsx-424069936 image"
-                >
-                  <img
-                    className="jsx-424069936"
-                    height="20"
-                    src="../../static/logo.png"
-                    width="20"
-                  />
+                  CoralBytes Studios
                 </span>
-                <a
-                  className="jsx-424069936 brandName"
-                  href="/"
-                  style={undefined}
-                >
-                  BitBrackets
-                </a>
               </span>
-              <div
-                className="jsx-424069936"
-                style={
-                  Object {
-                    "float": "right",
-                  }
-                }
-              />
-              <div
-                className="jsx-424069936"
-                style={
-                  Object {
-                    "display": "none",
-                    "visibility": "hidden",
-                  }
-                }
-              >
-                <button
-                  className="navbar-toggle collapsed"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <span
-                    className="sr-only"
-                  >
-                    Toggle navigation
-                  </span>
-                  <span
-                    className="icon-bar"
-                  />
-                  <span
-                    className="icon-bar"
-                  />
-                  <span
-                    className="icon-bar"
-                  />
-                </button>
-              </div>
-            </div>
-            <div
-              aria-expanded={null}
-              className="navbar-collapse collapse"
-            >
-              <ul
-                className="nav navbar-nav"
-                role={null}
-                style={
-                  Object {
-                    "float": "right",
-                  }
-                }
-              >
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="/howDoesItWork"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                  >
-                    <span
-                      className="jsx-424069936 description"
-                    >
-                      How does it work?
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="/rules"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                  >
-                    <span
-                      className="jsx-424069936 description"
-                    >
-                      Rules 
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="faq"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                  >
-                    <span
-                      className="jsx-424069936 description"
-                    >
-                      FAQ
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="myPools"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                  >
-                    <span
-                      className="jsx-424069936 description"
-                    >
-                      My Pools
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className=""
-                  role="presentation"
-                  style={undefined}
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    role="button"
-                  >
-                    <span
-                      className="jsx-424069936 description"
-                    >
-                      <button
-                        className="MuiButtonBase-root-16 MuiButton-root-1"
-                        disabled={false}
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        onKeyUp={[Function]}
-                        onMouseDown={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchMove={[Function]}
-                        onTouchStart={[Function]}
-                        style={
-                          Object {
-                            "backgroundColor": "#E72459",
-                            "borderRadius": undefined,
-                            "color": "#fff",
-                            "width": undefined,
-                          }
-                        }
-                        tabIndex="0"
-                        type="button"
-                      >
-                        <span
-                          className="MuiButton-label-2"
-                        >
-                          Start Pool
-                        </span>
-                        <span
-                          className="MuiTouchRipple-root-25"
-                        />
-                      </button>
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            </h3>
           </div>
-        </nav>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </a>
       </div>
     </div>
-  </div>
-  <div
-    className="jsx-2085888330"
-  >
-    <div
-      className="jsx-2085888330"
-    >
-      <div
-        className="jsx-500659663"
-      >
-        <div
-          className="jsx-500659663 root"
-        >
-          <div
-            className="container"
-          >
-            <div
-              className="show-grid row"
-            >
-              <div
-                className="col-md-8 col-sm-6"
-              >
-                <h1
-                  className="jsx-500659663 title"
-                >
-                  BitBrackets
-                </h1>
-                <h1
-                  className="jsx-500659663 sub-title"
-                >
-                  Russia 2018
-                </h1>
-              </div>
-              <div
-                className="col-md-4 col-sm-6"
-              >
-                <div
-                  className="jsx-500659663 section"
-                >
-                  <button
-                    className="MuiButtonBase-root-16 MuiButton-root-1"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    style={
-                      Object {
-                        "backgroundColor": "#E72459",
-                        "borderRadius": undefined,
-                        "color": "#fff",
-                        "width": undefined,
-                      }
-                    }
-                    tabIndex="0"
-                    type="button"
-                  >
-                    <span
-                      className="MuiButton-label-2"
-                    >
-                      Start Pool
-                    </span>
-                    <span
-                      className="MuiTouchRipple-root-25"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="jsx-3374438666 container"
-      >
-        <div
-          className="jsx-3374438666 root"
-        >
-          <div
-            className="container"
-          >
-            <div
-              className="show-grid row"
-            >
-              <div
-                className="col-md-8 col-sm-6"
-              >
-                <h3
-                  className="jsx-3374438666 title"
-                >
-                  Be hard die fan & a Crypto geek 
-                  <br
-                    className="jsx-3374438666"
-                  />
-                   this 2018 World Cup
-                </h3>
-                <p
-                  className="jsx-3374438666 paragraph"
-                >
-                  Create your own football pool using
-                   
-                  <span
-                    className="jsx-3374438666 crypto-currencie"
-                  >
-                    crypto currencies
-                  </span>
-                   
-                  with your friends, pets, family, people in your office or crypto enthusiasts and start betting who will win each match. crypto currencies are in and are growing, play geeky.
-                   
-                </p>
-              </div>
-              <div
-                className="col-md-4 col-sm-6"
-              >
-                <h3
-                  className="jsx-3374438666 Easy-Secure-Fun"
-                >
-                  Easy 
-                  <br
-                    className="jsx-3374438666"
-                  />
-                   Secure 
-                  <br
-                    className="jsx-3374438666"
-                  />
-                  & fun
-                   
-                </h3>
-                <h3
-                  className="jsx-3374438666 Easy-Secure-Fun2"
-                >
-                  Easy Secure & fun 
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="jsx-2751072226"
-      >
-        <div
-          className="jsx-2751072226 root"
-        >
-          <h2
-            className="jsx-2751072226 title"
-          >
-            How does it work?
-          </h2>
-          <div
-            className="container"
-          >
-            <div
-              className="show-grid row"
-            >
-              <div
-                className="col-md-8 col-sm-6"
-              >
-                <img
-                  className="jsx-2751072226"
-                  height="80"
-                  src="../../static/group3.png"
-                  width="200"
-                />
-                <p
-                  className="jsx-2751072226 create-group"
-                >
-                  Create a group & Invite Friends
-                </p>
-                <div
-                  className="row"
-                >
-                  <div
-                    className="col-md-6 col-sm-6"
-                  >
-                    <div
-                      className="jsx-2751072226 paragraph"
-                    >
-                      Name the pool and determine the crypto price to enter the pool. If you don´t have a crypto wallet learn here.
-                    </div>
-                  </div>
-                  <div
-                    className="col-md-6 col-sm-6"
-                  >
-                    <p
-                      className="jsx-2751072226 paragraph"
-                    >
-                      The more participants, the bigger the prize. All the crypto money will be secured by a Smart Contract.
-                    </p>
-                    <hr
-                      className="jsx-2751072226 hr"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-md-4 col-sm-6"
-              >
-                <img
-                  className="jsx-2751072226"
-                  height="80"
-                  src="../../static/group22.png"
-                  width="120"
-                />
-                <p
-                  className="jsx-2751072226 create-group"
-                >
-                  Enter picks
-                </p>
-                <p
-                  className="jsx-2751072226 Enter-picks"
-                >
-                  Will Costa Rica win against Brazil 4 to 2? This guesses will be saved in the Blockchain. You must enter picks before the cup starts.
-                </p>
-                <hr
-                  className="jsx-2751072226 hr"
-                />
-              </div>
-            </div>
-            <div
-              className="show-grid row"
-            >
-              <div
-                className="col-md-4 col-sm-6"
-              >
-                <img
-                  className="jsx-2751072226"
-                  height="80"
-                  src="../../static/group25.png"
-                  width="120"
-                />
-                <p
-                  className="jsx-2751072226 create-group"
-                >
-                  Are you winning?
-                </p>
-                <p
-                  className="jsx-2751072226 Are-you-winning"
-                >
-                  If you are winning, and there’s no chance someone can beat you, open the smart contract! The smart contract will validate you are winning, if it is true the pool might be yours The more participants, the bigger the prize. All the crypto money will be secured by a Smart Contract.
-                </p>
-                <hr
-                  className="jsx-2751072226 hr"
-                />
-              </div>
-              <div
-                className="col-md-8 col-sm-6"
-              >
-                <img
-                  className="jsx-2751072226"
-                  height="80"
-                  src="../../static/group29.png"
-                  width="250"
-                />
-                <p
-                  className="jsx-2751072226 create-group"
-                >
-                  Fake it until you... somebody can say the other way!
-                </p>
-                <p
-                  className="jsx-2751072226 Enter-picks"
-                >
-                  If a day goes by after you open the smart contract and nobody denies it, then you are the winner! The smart contract will allow you to take the prize
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="jsx-3325881311 container"
-      >
-        <div
-          className="jsx-3325881311 root"
-        >
-          <div
-            className="container"
-          >
-            <div
-              className="show-grid row"
-            >
-              <div
-                className="col-md-6 col-xs-6"
-              >
-                <div
-                  className="jsx-3325881311 image"
-                >
-                  <img
-                    className="jsx-3325881311"
-                    height="120"
-                    src="../../static/img4.png"
-                    width="150"
-                  />
-                </div>
-              </div>
-              <div
-                className="col-md-6 col-xs-6"
-              >
-                <div
-                  className="jsx-3325881311 prize"
-                >
-                  <h3
-                    className="jsx-3325881311 Claim-the-prize"
-                  >
-                    Claim the prize 
-                  </h3>
-                  <p
-                    className="jsx-3325881311 description"
-                  >
-                    <span
-                      className="jsx-3325881311 percentage"
-                    >
-                      95%
-                    </span>
-                     of the pool goes to the winner.
-                    <br
-                      className="jsx-3325881311"
-                    />
-                     Also, if you are the pool creator you will win 
-                    <span
-                      className="jsx-3325881311 percentage"
-                    >
-                      5%
-                    </span>
-                    of the pool.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="jsx-2732205983"
-      >
-        <div
-          className="jsx-2732205983 root"
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="jsx-50096001 footer"
-  >
-    <footer
-      className="container"
-    >
-      <div
-        className="container"
-      >
-        <div
-          className="jsx-3074756442 root"
-        >
-          <div
-            className="show-grid row"
-          >
-            <div
-              className="col-md-6 col-xs-6"
-            >
-              <div
-                className="show-grid row"
-              >
-                <div
-                  className="col-md-6 col-xs-6"
-                >
-                  <ul
-                    className="jsx-3074756442 list"
-                  >
-                    <li
-                      className="jsx-3074756442"
-                    >
-                      <a
-                        className="jsx-3074756442"
-                        href="myPools"
-                      >
-                        My pools
-                      </a>
-                    </li>
-                    <li
-                      className="jsx-3074756442"
-                    >
-                      <a
-                        className="jsx-3074756442"
-                        href="myPools"
-                      >
-                        Join Pool
-                      </a>
-                    </li>
-                    <li
-                      className="jsx-3074756442"
-                    >
-                      <a
-                        className="jsx-3074756442"
-                        href="faq"
-                      >
-                        FAQs
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="col-md-6 col-xs-6"
-                >
-                  <ul
-                    className="jsx-3074756442 list"
-                  >
-                    <li
-                      className="jsx-3074756442"
-                    >
-                      <a
-                        className="jsx-3074756442"
-                        href="myPools"
-                      >
-                        More pools
-                      </a>
-                    </li>
-                    <li
-                      className="jsx-3074756442"
-                    >
-                      <a
-                        className="jsx-3074756442"
-                        href="myPools"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li
-                      className="jsx-3074756442"
-                    >
-                      <a
-                        className="jsx-3074756442"
-                        href="myPools"
-                      >
-                        FaceBook
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-md-6 col-xs-6"
-            >
-              <div
-                className="jsx-3074756442 term-conditions"
-              >
-                <a
-                  className="jsx-3074756442"
-                  href="myPools"
-                >
-                  <p
-                    className="jsx-3074756442"
-                  >
-                    Terms & Conditions
-                  </p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            className="show-grid row"
-          >
-            <div
-              className="col-md-12 col-xs-12"
-            >
-              <p
-                className="jsx-3074756442 description"
-              >
-                Power by 
-                <span
-                  className="jsx-3074756442 bitbrackets"
-                >
-                  BitBrackets
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
+  </footer>
 </div>
 `;

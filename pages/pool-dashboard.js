@@ -1,18 +1,15 @@
 import React from "react";
 import { IntlProvider, addLocaleData } from "react-intl";
-
+import withRoot from "../md/withRoot";
 import en from "react-intl/locale-data/en";
 import es from "react-intl/locale-data/es";
 
 import Layout from "../components/Layout";
-import App from "../components/App";
-import Home from "../components/home/Home";
+import IndexDashboard from "../components/Dashboard/IndexDashboard";
 
-export default () => (
+const poolDashboard = () => (
   <Layout>
-    {/* <App /> */}
-
-    <Home />
-    {/* <IntlExample /> */}
+    <IndexDashboard />
   </Layout>
 );
+export default withRoot(poolDashboard);

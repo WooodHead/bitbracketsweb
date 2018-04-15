@@ -1,94 +1,65 @@
 import React, { Component } from "react";
-import Button from "../common/Button";
-import { Row, Col, Grid } from "react-bootstrap";
+import { FormattedMessage } from "react-intl";
+
+import Grid from "material-ui/Grid";
+import List, { ListItem, ListItemIcon, ListItemText } from "material-ui/List";
 
 class Footer extends Component {
   render() {
     return (
       <footer className="container">
-        <Grid>
-          <div className="root">
-            <Row className="show-grid">
-              <Col xs={6} md={6}>
-                <Row className="show-grid">
-                  <Col xs={6} md={6}>
-                    <ul className="list">
-                      <li>
-                        <a href="myPools">My pools</a>
-                      </li>
-                      <li>
-                        <a href="myPools">Join Pool</a>
-                      </li>
-                      <li>
-                        <a href="faq">FAQs</a>
-                      </li>
-                    </ul>
-                  </Col>
-                  <Col xs={6} md={6}>
-                    <ul className="list">
-                      <li>
-                        <a href="myPools">More pools</a>
-                      </li>
-                      <li>
-                        <a href="myPools">Blog</a>
-                      </li>
-                      <li>
-                        <a href="myPools">FaceBook</a>
-                      </li>
-                    </ul>
-                  </Col>
-                </Row>
-              </Col>
-              <Col xs={6} md={6}>
-                <div className="term-conditions">
-                  <a href="myPools">
-                    <p>Terms & Conditions</p>
-                  </a>
-                </div>
-              </Col>
-            </Row>
-            <Row className="show-grid">
-              <Col xs={12} md={12}>
-                <p className="description">
-                  Power by <span className="bitbrackets">BitBrackets</span>
-                </p>
-              </Col>
-            </Row>
-            <style jsx>{`
-              .root {
-                font-family: Roboto;
-                font-size: 8px;
-                margin-top: 50px;
-              }
-              .list {
-                list-style-type: none;
-                color: red;
-              }
-              .list a {
-                color: black;
-              }
-              .list a:hover {
-                color: #067df7;
-              }
-              .bitbrackets {
-                color: #e72459;
-              }
-              .term-conditions {
-                display: flex;
-                justify-content: flex-end;
-              }
-              .term-conditions p {
-                color: black;
-              }
-              .term-conditions p:hover {
-                color: #067df7;
-              }
-              .description {
-                text-align: center;
-                margin-top: 20px;
-              }
-            `}</style>
-          </div>
+        <Grid container spacing={24}>
+          <Grid item xs={6} sm={3}>
+            <ListItem button component="a" href="/howDoesItWork">
+              <ListItemText
+                primary={<FormattedMessage id="navigation.navbarlink1" />}
+              />
+            </ListItem>
+            <ListItem button component="a" href="/rules">
+              <ListItemText
+                primary={<FormattedMessage id="navigation.navbarlink2" />}
+              />
+            </ListItem>
+            <ListItem button component="a" href="/faq">
+              <ListItemText primary="FAQs" />
+            </ListItem>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <ListItem button component="a">
+              <ListItemText
+                primary={<FormattedMessage id="navigation.navbarlink3" />}
+              />
+            </ListItem>
+            <ListItem button component="a">
+              <ListItemText primary="Blog" />
+            </ListItem>
+            <ListItem button component="a">
+              <ListItemText primary="FaceBook" />
+            </ListItem>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <ListItem button component="a" style={{ textAlign: "right" }}>
+              <ListItemText primary="Terms & Conditions" />
+            </ListItem>
+          </Grid>
+          <Grid item xs={12}>
+            <ListItem
+              button
+              component="a"
+              href="https://coralbytes.com/"
+              target="_blank"
+              style={{ textAlign: "center" }}
+            >
+              <ListItemText
+                primary={
+                  <span>
+                    Powered by:{" "}
+                    <span style={{ color: "#E72459" }}>CoralBytes Studios</span>
+                  </span>
+                }
+              />
+            </ListItem>
+          </Grid>
         </Grid>
       </footer>
     );
