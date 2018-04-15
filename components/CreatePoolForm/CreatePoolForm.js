@@ -156,10 +156,13 @@ class CreatePoolForm extends Component {
 
     handleNext = () => {
         const { activeStep } = this.state;
-        this.props.onSubmit(this.props.pool);
-        this.setState({
-            activeStep: activeStep + 1,
-        });
+        if (activeStep === this.getSteps().length) {
+            this.props.onSubmit(this.props.pool);
+        } else {
+            this.setState({
+                activeStep: activeStep + 1,
+            });
+        }
     };
 
     handleBack = () => {

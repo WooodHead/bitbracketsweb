@@ -117,6 +117,9 @@ class PoolSetupForm extends Component {
                             model=".adminName"
                             component={TextField}
                             placeholder={intl.formatMessage(messages.adminNameTextbox)}
+                            validators={{
+                                required: (val) => val && val.length,
+                            }}
                         />
                     </Grid>
                 </Grid>
