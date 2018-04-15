@@ -33,6 +33,7 @@ const styles = theme => ({
     },
     headingPrimary: {
         fontWeight: 'bold',
+        marginTop: theme.spacing.unit * 3,
     },
     headingSecondary: {
         fontWeight: 'bold',

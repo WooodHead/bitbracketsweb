@@ -70,7 +70,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiButton-label-66"
             >
               <span>
-                Cómo funcion?
+                How does it Work?
               </span>
             </span>
             <span
@@ -97,7 +97,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiButton-label-66"
             >
               <span>
-                reglas
+                rules
               </span>
             </span>
             <span
@@ -149,7 +149,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiButton-label-66"
             >
               <span>
-                mis quinelas
+                my pools
               </span>
             </span>
             <span
@@ -176,7 +176,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiButton-label-66"
             >
               <span>
-                crear quinela
+                start pool
               </span>
             </span>
             <span
@@ -239,13 +239,13 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
             }
           >
             <span>
-              Hazte fan y un Crypto geek
+              Be a die hard soccer & Crypto fan
             </span>
             <br
               className="jsx-2085888330"
             />
             <span>
-              este mundial 2018
+              this 2018 World Cup
             </span>
           </h1>
           <h1
@@ -319,7 +319,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
             >
               <span>
-                Cómo funcion?
+                How does it Work?
               </span>
             </h3>
           </div>
@@ -350,7 +350,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
             >
               <span>
-                reglas
+                rules
               </span>
             </h3>
           </div>
@@ -413,7 +413,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
             >
               <span>
-                mis quinelas
+                my pools
               </span>
             </h3>
           </div>
