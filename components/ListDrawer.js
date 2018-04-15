@@ -10,6 +10,7 @@ export default props => {
     <div className="root">
       <List component="nav">
         <ListItem button component="a" href="/">
+          <img src="../static/logo.png" width="20" height="20" />
           <span className="brand">BitBrackets</span>
         </ListItem>
         <Divider />
@@ -34,7 +35,7 @@ export default props => {
         <ListItem button component="a" href="/signup">
           <ListItemIcon>
             <Icon
-              style={{ color: "#3ffeca", marginRight: "20%" }}
+              style={{ color: "#E72459", marginRight: "20%" }}
               icon={<i className="fas fa-user-plus" />}
             />
           </ListItemIcon>
@@ -43,7 +44,7 @@ export default props => {
         <ListItem button component="a" href="/login">
           <ListItemIcon>
             <Icon
-              style={{ color: "#3ffeca", marginRight: "20%" }}
+              style={{ color: "#E72459", marginRight: "20%" }}
               icon={<i className="fas fa-sign-in-alt" />}
             />
           </ListItemIcon>
@@ -52,7 +53,7 @@ export default props => {
         <ListItem button>
           <ListItemIcon>
             <Icon
-              style={{ color: "#3ffeca", marginRight: "20%" }}
+              style={{ color: "#E72459", marginRight: "20%" }}
               icon={<i className="fas fa-language" />}
             />
           </ListItemIcon>
@@ -61,7 +62,7 @@ export default props => {
         <ListItem button component="a" href="/contact">
           <ListItemIcon>
             <Icon
-              style={{ color: "#3ffeca", marginRight: "20%" }}
+              style={{ color: "#E72459", marginRight: "20%" }}
               icon={<i className="fas fa-envelope" />}
             />
           </ListItemIcon>
@@ -74,14 +75,14 @@ export default props => {
           max-width: 360px;
         }
         .ListColor {
-          color: #fff;
+          color: #3d3d3d;
           font-size: 12px;
         }
         .ListColor:hover {
-          color: #3ffeca;
+          color: #3d3d3d;
         }
         .brand {
-          color: #3ffeca;
+          color: #3d3d3d;
           font-size: 18px;
         }
       `}</style>

@@ -20,8 +20,8 @@ class Navigation extends Component {
 
         <div className="navbar">
           <FirstNavbar />
-          <SecondNavbar />
-          <ThirdNavbar />
+          {/* <SecondNavbar />
+          <ThirdNavbar /> */}
         </div>
 
         <style jsx>{`
