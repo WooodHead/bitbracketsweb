@@ -88,7 +88,7 @@ class CreatePoolForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeStep: 3,
+            activeStep: 1,
         };
     }
 
@@ -128,7 +128,11 @@ class CreatePoolForm extends Component {
                 >
                     {intl.formatMessage(messages.backButton)}
                 </Button>
-                <Button variant="raised" color="primary" onClick={this.handleNext}>
+                <Button 
+                    variant="raised" 
+                    color="primary" 
+                    onClick={this.handleNext}
+                >
                     {activeStep === this.getSteps().length ? 
                         intl.formatMessage(messages.finishButton) 
                         : intl.formatMessage(messages.nextButton)}
@@ -152,6 +156,7 @@ class CreatePoolForm extends Component {
 
     handleNext = () => {
         const { activeStep } = this.state;
+        this.props.onSubmit(this.props.pool);
         this.setState({
             activeStep: activeStep + 1,
         });

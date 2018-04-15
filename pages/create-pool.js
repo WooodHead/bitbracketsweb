@@ -10,6 +10,7 @@ import withRoot from '../md/withRoot';
 import { initStore } from '../store';
 import CreatePoolForm from '../components/CreatePoolForm/CreatePoolForm';
 import messages from "../intl/pages/create-pool";
+import { createPool } from '../actions';
 
 addLocaleData(en);
 addLocaleData(es);
@@ -20,7 +21,7 @@ class CreatePoolPage extends React.Component {
     render() {
         return (
             <IntlProvider locale={language} messages={messages[language]}>
-                <CreatePoolForm />
+                <CreatePoolForm pool={this.props.pool} onSubmit={this.props.createPool}/>
             </IntlProvider>
         )
     }
@@ -28,14 +29,13 @@ class CreatePoolPage extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        // current: state.language.current,
-        // languages: state.language.languages,
+        pool: state.createPool,
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // changeLanguage: bindActionCreators(changeLanguage, dispatch),
+        createPool: bindActionCreators(createPool, dispatch),
     }
 }
 

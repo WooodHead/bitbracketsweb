@@ -100,7 +100,7 @@ class PoolSetupForm extends Component {
 
         return (
             <Form className={classes.formBox}
-                model="pool"
+                model="createPool"
                 onSubmit={(pool) => this.handleSubmit(pool)}
             >
                 <Typography className={classes.headingTertiary} variant="subheading">
