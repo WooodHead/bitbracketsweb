@@ -70,7 +70,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiButton-label-66"
             >
               <span>
-                Cómo funcion?
+                How does it Work?
               </span>
             </span>
             <span
@@ -97,7 +97,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiButton-label-66"
             >
               <span>
-                reglas
+                rules
               </span>
             </span>
             <span
@@ -149,7 +149,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiButton-label-66"
             >
               <span>
-                mis quinelas
+                my pools
               </span>
             </span>
             <span
@@ -176,7 +176,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiButton-label-66"
             >
               <span>
-                crear quinela
+                start pool
               </span>
             </span>
             <span
@@ -239,13 +239,13 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
             }
           >
             <span>
-              Hazte fan y un Crypto geek
+              Be a die hard soccer & Crypto fan
             </span>
             <br
               className="jsx-2085888330"
             />
             <span>
-              este mundial 2018
+              this 2018 World Cup
             </span>
           </h1>
           <h1
@@ -319,7 +319,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
             >
               <span>
-                Cómo funcion?
+                How does it Work?
               </span>
             </h3>
           </div>
@@ -350,7 +350,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
             >
               <span>
-                reglas
+                rules
               </span>
             </h3>
           </div>
@@ -413,7 +413,7 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
               className="MuiTypography-root-41 MuiTypography-subheading-48 MuiListItemText-primary-193"
             >
               <span>
-                mis quinelas
+                my pools
               </span>
             </h3>
           </div>
@@ -514,6 +514,98 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
             className="MuiTouchRipple-root-83"
           />
         </a>
+        <div
+          className="MuiButtonBase-root-80 MuiListItem-root-180 MuiListItem-default-183 MuiListItem-gutters-187 MuiListItem-button-188"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <form
+            autoComplete="off"
+            className="SelectField-root-196"
+          >
+            <div
+              className="MuiFormControl-root-198 SelectField-formControl-197"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <label
+                className="MuiFormLabel-root-207 MuiInputLabel-root-202 MuiInputLabel-formControl-203 MuiInputLabel-animated-206 MuiInputLabel-shrink-205"
+                data-shrink={true}
+              >
+                language
+              </label>
+              <div
+                className="MuiInput-root-218 MuiInput-formControl-219 MuiInput-underline-222"
+              >
+                <div
+                  className="MuiSelect-root-213"
+                >
+                  <div
+                    aria-haspopup="true"
+                    aria-owns={null}
+                    aria-pressed="false"
+                    className="MuiSelect-select-214 MuiSelect-selectMenu-215 MuiInput-input-226"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <span
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "&#8203",
+                        }
+                      }
+                    />
+                  </div>
+                  <input
+                    aria-invalid={false}
+                    aria-required={false}
+                    autoComplete={undefined}
+                    autoFocus={undefined}
+                    defaultValue={undefined}
+                    id={undefined}
+                    name={undefined}
+                    onKeyDown={undefined}
+                    onKeyUp={undefined}
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    required={undefined}
+                    rows={undefined}
+                    type="hidden"
+                    value="en"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-232 MuiSelect-icon-217"
+                    color={undefined}
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </form>
+          <span
+            className="MuiTouchRipple-root-83"
+          />
+        </div>
       </div>
       <div
         className="MuiGrid-typeItem-91 MuiGrid-grid-xs-12-127"

@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import { IntlProvider, addLocaleData } from "react-intl";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import en from "react-intl/locale-data/en";
-import es from "react-intl/locale-data/es";
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
 
-import Head from "./Header";
-import Navigation from "./Navigation/Navigation";
+import Head from './Header';
+import Navigation from './Navigation/Navigation';
 
-import initMessages from "../intl/";
+import initMessages from '../intl/';
 
-import Footer from "../components/Footer/Footer";
+import Footer from '../components/Footer/Footer';
 
 import LanguageSelect from '../components/LanguageSelect';
-import { changeLanguage, fetchLanguages } from '../actions';
+import { changeLanguage, fetchLanguages } from '../actions/languageActions';
 
 addLocaleData([...en, ...es]);
 const messages = initMessages();
@@ -23,7 +23,7 @@ console.log("messages", messages);
 
 class Layout extends Component {
   componentWillMount() {
-    this.props.fetchLanguages();
+    // this.props.fetchLanguages();
   }
 
   render() {
@@ -60,8 +60,8 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    changeLanguage: bindActionCreators(changeLanguage, dispatch),
-    fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
+    // changeLanguage: bindActionCreators(changeLanguage, dispatch),
+    // fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
   }
 }
 
