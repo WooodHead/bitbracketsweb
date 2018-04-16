@@ -41,7 +41,10 @@ class Section2 extends Component {
   render() {
     const { intl } = this.props;
     return (
-      <div className="container" style={{ paddingTop: "5em" }}>
+      <div
+        className="container"
+        style={{ paddingTop: "5em", paddingBottom: "5em" }}
+      >
         <Grid container spacing={24}>
           <Grid item xs={12} sm={6}>
             <Typography

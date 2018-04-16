@@ -1,0 +1,52 @@
+[
+  {
+    "id": "home.section3.title1",
+    "description": "home > section3",
+    "defaultMessage": "How does it work?"
+  },
+  {
+    "id": "home.section3.title2",
+    "description": "home > section3",
+    "defaultMessage": "Create a Pool & Invite Friends"
+  },
+  {
+    "id": "home.section3.title3",
+    "description": "home > section3",
+    "defaultMessage": "Name the pool and determine the entry amount to play in the pool. If you don´t have a crypto wallet learn here."
+  },
+  {
+    "id": "home.section3.title4",
+    "description": "home > section3",
+    "defaultMessage": "The more participants, the bigger the prize. The pool is secured by a Smart Contract."
+  },
+  {
+    "id": "home.section3.title5",
+    "description": "home > section3",
+    "defaultMessage": "Enter prediction"
+  },
+  {
+    "id": "home.section3.title6",
+    "description": "home > section3",
+    "defaultMessage": "Will Costa Rica win against Brazil? This predictions will be saved in the Blockchain. You must enter your predictions before the event starts."
+  },
+  {
+    "id": "home.section3.title7",
+    "description": "home > section3",
+    "defaultMessage": "Are you winning?"
+  },
+  {
+    "id": "home.section3.title8",
+    "description": "home > section3",
+    "defaultMessage": "If you are winning, and there’s no chance someone can beat you, publish your high score to the blockchain! The smart contract will validate you are winning and record your high score, if it is true the pool might be yours. The more participants, the bigger the prize. The pool is secured by Smart Contracts."
+  },
+  {
+    "id": "home.section3.title9",
+    "description": "home > section3",
+    "defaultMessage": "Fake it until you... somebody can say otherwise!"
+  },
+  {
+    "id": "home.section3.title10",
+    "description": "home > section3",
+    "defaultMessage": "Fake it until you... somebody can say otherwise!"
+  }
+]
