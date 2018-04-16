@@ -1,0 +1,22 @@
+[
+  {
+    "id": "home.section4.title1",
+    "description": "home > section3",
+    "defaultMessage": "Claim the prize"
+  },
+  {
+    "id": "home.section4.title2",
+    "description": "home > section3",
+    "defaultMessage": "The Balance of the pool goes to the winner"
+  },
+  {
+    "id": "home.section4.title3",
+    "description": "home > section3",
+    "defaultMessage": "If you are the pool creator you will win a"
+  },
+  {
+    "id": "home.section4.title4",
+    "description": "home > section3",
+    "defaultMessage": "fee of the pool for helping to spread crypto awareness"
+  }
+]

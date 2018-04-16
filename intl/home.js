@@ -14,7 +14,11 @@ export default {
     "home.section3.title7": `Are you winning?`,
     "home.section3.title8": `If you are winning, and there’s no chance someone can beat you, publish your high score to the blockchain! The smart contract will validate you are winning and record your high score, if it is true the pool might be yours. The more participants, the bigger the prize. The pool is secured by Smart Contracts.`,
     "home.section3.title9": `Fake it until you... somebody can say otherwise!`,
-    "home.section3.title10": `When the event ends the smart contract waits for a given period (day) for someone to publish a higher score, if you have the highest score by the closing date then you are the winner! The smart contract will allow you to take the prize.`
+    "home.section3.title10": `When the event ends the smart contract waits for a given period (day) for someone to publish a higher score, if you have the highest score by the closing date then you are the winner! The smart contract will allow you to take the prize.`,
+    "home.section4.title1": `Claim the prize`,
+    "home.section4.title2": `The Balance of the pool goes to the winner`,
+    "home.section4.title3": `If you are the pool creator you will win a `,
+    "home.section4.title4": `fee of the pool for helping to spread crypto awareness`
   },
   es: {
     "home.section2.title1": `Hazte fan y un Crypto geek`,
@@ -32,7 +36,11 @@ export default {
     "home.section3.title7": `Vas ganando esta quinela?`,
     "home.section3.title8": `Si estás ganando, y no hay posibilidad de que alguien te pueda ganar, publica tu resultado al blockchain! El contrato inteligente validará tu puntaje y se es el mayor pasaras a ser el posible ganador, si nadie mas publica un puntaje mayor el premio sera tuyo. Cuantos más participantes, mayor será el premio. Todo el monto de la quinela estará asegurado por Contratos Inteligentes.`,
     "home.section3.title9": `Finge hasta que ... ¡alguien pueda decir lo contrario!`,
-    "home.section3.title10": `Al finalizar el torneo existe un periodo de espera para publicar puntajes. Si termina ese periodo y tu tienes el puntaje mayor publicado, ¡entonces tu eres el ganador! El contrato inteligente te permitirá tomar todo el premio.
-    `
+    "home.section3.title10": `Al finalizar el torneo existe un periodo de espera para publicar puntajes. Si termina ese periodo y tu tienes el puntaje mayor publicado, ¡entonces tu eres el ganador! El contrato inteligente te permitirá tomar todo el premio.`,
+    "home.section4.title1": `Reclama tu Premio`,
+    "home.section4.title2": `El pozo sera para el ganador con mayor puntaje de predicciones acertadas
+    `,
+    "home.section4.title3": `si creaste la quinela tambien tendras un `,
+    "home.section4.title4": `del pozo por ser un embajador del cripto.`
   }
 };
