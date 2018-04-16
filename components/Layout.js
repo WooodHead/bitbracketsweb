@@ -23,7 +23,7 @@ console.log("messages", messages);
 
 class Layout extends Component {
   componentWillMount() {
-    // this.props.fetchLanguages();
+    this.props.fetchLanguages();
   }
 
   render() {
@@ -60,8 +60,8 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // changeLanguage: bindActionCreators(changeLanguage, dispatch),
-    // fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
+    changeLanguage: bindActionCreators(changeLanguage, dispatch),
+    fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
   }
 }
 
