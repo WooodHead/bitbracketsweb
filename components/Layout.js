@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { IntlProvider, addLocaleData } from "react-intl";
 import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
 
 import en from "react-intl/locale-data/en";
 import es from "react-intl/locale-data/es";
@@ -15,7 +16,6 @@ import Footer from "../components/Footer/Footer";
 import LanguageSelect from '../components/LanguageSelect';
 import { changeLanguage, fetchLanguages } from '../actions';
 
-const language = "es"; //TODO: Create a redux state for managing language
 addLocaleData([...en, ...es]);
 const messages = initMessages();
 
@@ -27,11 +27,8 @@ class Layout extends Component {
   }
 
   render() {
-    <LanguageSelect
-      languages={this.props.languages}// {["en", "es"]}
-      current={this.props.current}
-      onChange={(value) => this.props.changeLanguage(value)}
-    />
+    const language = this.props.current;
+
     console.log("esto son los mensajes", messages[language]);
     return (
       <IntlProvider locale={language} messages={messages[language]}>
@@ -41,7 +38,13 @@ class Layout extends Component {
           <Navigation />
 
           {this.props.children}
-          <Footer />
+          <Footer>
+            <LanguageSelect
+              languages={this.props.languages}// {["en", "es"]}
+              current={language}
+              onChange={(value) => this.props.changeLanguage(value)}
+            />
+          </Footer>
         </div>
       </IntlProvider>
     );

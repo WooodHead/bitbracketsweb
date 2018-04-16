@@ -41,6 +41,9 @@ class Footer extends Component {
             <ListItem button component="a" style={{ textAlign: "right" }}>
               <ListItemText primary="Terms & Conditions" />
             </ListItem>
+            <ListItem button>
+              {this.props.children}
+            </ListItem>
           </Grid>
           <Grid item xs={12}>
             <ListItem

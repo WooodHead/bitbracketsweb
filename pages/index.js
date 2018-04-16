@@ -8,11 +8,35 @@ import Layout from "../components/Layout";
 import App from "../components/App";
 import Home from "../components/home/Home";
 
-export default () => (
-  <Layout>
-    {/* <App /> */}
+import withRoot from '../md/withRoot';
+import { bindActionCreators } from 'redux';
+import withRedux from 'next-redux-wrapper';
+import { initStore } from '../store';
 
-    <Home />
-    {/* <IntlExample /> */}
-  </Layout>
-);
+class Index extends React.Component {
+  render() {
+    return (
+      <Layout>
+        {/* <App /> */}
+
+        <Home />
+        {/* <IntlExample /> */}
+      </Layout>
+    )
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    // current: state.language.current,
+    // languages: state.language.languages,
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // changeLanguage: bindActionCreators(changeLanguage, dispatch),
+  }
+}
+
+export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(Index))
