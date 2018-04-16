@@ -8,10 +8,10 @@ import Layout from "../components/Layout";
 import App from "../components/App";
 import Home from "../components/home/Home";
 
-import withRoot from '../md/withRoot';
-import { bindActionCreators } from 'redux';
-import withRedux from 'next-redux-wrapper';
-import { initStore } from '../store';
+// import withRoot from '../md/withRoot';
+import { bindActionCreators } from "redux";
+import withRedux from "next-redux-wrapper";
+import { initStore } from "../store";
 
 class Index extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class Index extends React.Component {
         <Home />
         {/* <IntlExample /> */}
       </Layout>
-    )
+    );
   }
 }
 
@@ -33,10 +33,10 @@ function mapStateToProps(state) {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     // changeLanguage: bindActionCreators(changeLanguage, dispatch),
-  }
-}
+  };
+};
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(Index))
+export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(Index);
