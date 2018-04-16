@@ -29,13 +29,20 @@ class Layout extends Component {
   render() {
     const language = this.props.current;
 
-    console.log("esto son los mensajes", messages[language]);
     return (
       <IntlProvider locale={language} messages={messages[language]}>
         <div>
           <Head title="BitBrackets" />
 
-          <Navigation />
+          <Navigation
+            languageSelect={
+              <LanguageSelect
+                languages={this.props.languages} // {["en", "es"]}
+                current={language}
+                onChange={value => this.props.changeLanguage(value)}
+              />
+            }
+          />
 
           {this.props.children}
           <Footer>

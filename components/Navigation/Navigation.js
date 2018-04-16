@@ -16,7 +16,7 @@ class Navigation extends Component {
           <NavigationResponsive />
         </div> */}
 
-        <FirstNavbar />
+        <FirstNavbar languageSelect={this.props.languageSelect} />
 
         <style jsx>{`
           @media (max-width: 425px) {
