@@ -6,9 +6,9 @@ export default {
     "navigation.navbarlink4": `start pool`
   },
   es: {
-    "navigation.navbarlink1": `Cómo funcion?`,
-    "navigation.navbarlink2": `reglas`,
-    "navigation.navbarlink3": `mis quinelas`,
-    "navigation.navbarlink4": `crear quinela`
+    "navigation.navbarlink1": `Cómo funciona?`,
+    "navigation.navbarlink2": `Reglas`,
+    "navigation.navbarlink3": `Mis quinelas`,
+    "navigation.navbarlink4": `Crear quinela`
   }
 };

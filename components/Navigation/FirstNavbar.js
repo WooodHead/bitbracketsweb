@@ -64,7 +64,7 @@ function FirstNavbar(props) {
               &nbsp;&nbsp;BitBrackets
             </Button>
           </Typography>
-          <Button href="/howDoesItWork" color="inherit">
+          <Button href="#section3" color="inherit">
             {intl.formatMessage(messages.navigationNavbarlink1)}
           </Button>
           <Button href="/rules" color="inherit">

@@ -1,21 +1,36 @@
-// import React, { Component } from "react";
-// import Button from "../common/Button";
-// import { Row, Col, Grid } from "react-bootstrap";
+//
 
-// class Section5 extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <div className="root" />
-//         <style jsx>{`
-//           .root {
-//             background-color: #418bff;
-//             padding: 100px;
-//           }
-//         `}</style>
-//       </div>
-//     );
-//   }
-// }
+import React, { Component } from "react";
+import Typography from "material-ui/Typography";
 
-// export default Section5;
+import { injectIntl, defineMessages, FormattedMessage } from "react-intl";
+
+const messages = defineMessages({
+  homeSection5Title1: {
+    id: "home.section5.title1",
+    defaultMessage: "Play your favorite sport events with Cryptocurrency",
+    description: "home > section3"
+  }
+});
+
+class Section5 extends Component {
+  render() {
+    const { intl } = this.props;
+    return (
+      <div
+        style={{ background: "#418BFF", padding: "12%", textAlign: "center" }}
+      >
+        <Typography
+          variant="display1"
+          gutterBottom
+          align="center"
+          style={{ color: "#fff" }}
+        >
+          {intl.formatMessage(messages.homeSection5Title1)}
+        </Typography>
+      </div>
+    );
+  }
+}
+
+export default injectIntl(Section5);

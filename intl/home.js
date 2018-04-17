@@ -18,7 +18,8 @@ export default {
     "home.section4.title1": `Claim the prize`,
     "home.section4.title2": `The Balance of the pool goes to the winner`,
     "home.section4.title3": `If you are the pool creator you will win a `,
-    "home.section4.title4": `fee of the pool for helping to spread crypto awareness`
+    "home.section4.title4": `fee of the pool for helping to spread crypto awareness`,
+    "home.section5.title1": `Play your favorite sport events with Cryptocurrency`
   },
   es: {
     "home.section2.title1": `Hazte fan y un Crypto geek`,
@@ -41,6 +42,7 @@ export default {
     "home.section4.title2": `El pozo sera para el ganador con mayor puntaje de predicciones acertadas
     `,
     "home.section4.title3": `si creaste la quinela tambien tendras un `,
-    "home.section4.title4": `del pozo por ser un embajador del cripto.`
+    "home.section4.title4": `del pozo por ser un embajador del cripto.`,
+    "home.section5.title1": `Juega la quinela de tu evento deportivo favorito con criptomonedas`
   }
 };

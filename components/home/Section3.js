@@ -3,6 +3,7 @@ import Typography from "material-ui/Typography";
 import Grid from "material-ui/Grid";
 import { injectIntl, defineMessages, FormattedMessage } from "react-intl";
 import Card, { CardActions, CardContent, CardMedia } from "material-ui/Card";
+import ScrollableAnchor from "react-scrollable-anchor";
 
 const messages = defineMessages({
   homeSection3Title1: {
@@ -65,139 +66,141 @@ class Section3 extends Component {
   render() {
     const { intl } = this.props;
     return (
-      <div
-        style={{
-          paddingTop: "5em",
-          backgroundColor: "#374785"
-        }}
-      >
-        <div className="container">
-          <Grid container spacing={24}>
-            <Grid item xs={12}>
-              <Typography
-                align="center"
-                variant="display2"
-                gutterBottom
-                style={{
-                  color: "#fff"
-                }}
-              >
-                {intl.formatMessage(messages.homeSection3Title1)}
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <CardContent align="center">
-                <img
-                  src="../../static/Invitefriend.png"
-                  width="200"
-                  height="80"
-                />
+      <ScrollableAnchor id={"section3"}>
+        <div
+          style={{
+            paddingTop: "5em",
+            backgroundColor: "#374785"
+          }}
+        >
+          <div className="container">
+            <Grid container spacing={24}>
+              <Grid item xs={12}>
                 <Typography
-                  variant="display1"
+                  align="center"
+                  variant="display2"
                   gutterBottom
                   style={{
                     color: "#fff"
                   }}
                 >
-                  {intl.formatMessage(messages.homeSection3Title2)}
+                  {intl.formatMessage(messages.homeSection3Title1)}
                 </Typography>
-                <Grid container spacing={24}>
-                  <Grid item xs={12} sm={6}>
-                    <Typography
-                      align="justify"
-                      variant="headline"
-                      gutterBottom
-                      style={{
-                        color: "#fff"
-                      }}
-                    >
-                      {intl.formatMessage(messages.homeSection3Title3)}
-                    </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <CardContent align="center">
+                  <img
+                    src="../../static/Invitefriend.png"
+                    width="200"
+                    height="80"
+                  />
+                  <Typography
+                    variant="display1"
+                    gutterBottom
+                    style={{
+                      color: "#fff"
+                    }}
+                  >
+                    {intl.formatMessage(messages.homeSection3Title2)}
+                  </Typography>
+                  <Grid container spacing={24}>
+                    <Grid item xs={12} sm={6}>
+                      <Typography
+                        align="justify"
+                        variant="headline"
+                        gutterBottom
+                        style={{
+                          color: "#fff"
+                        }}
+                      >
+                        {intl.formatMessage(messages.homeSection3Title3)}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Typography
+                        align="justify"
+                        variant="headline"
+                        gutterBottom
+                        style={{
+                          color: "#fff"
+                        }}
+                      >
+                        {intl.formatMessage(messages.homeSection3Title4)}
+                      </Typography>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <Typography
-                      align="justify"
-                      variant="headline"
-                      gutterBottom
-                      style={{
-                        color: "#fff"
-                      }}
-                    >
-                      {intl.formatMessage(messages.homeSection3Title4)}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <CardContent align="center">
-                <img src="../../static/grupo36.png" width="120" height="80" />
+                </CardContent>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <CardContent align="center">
+                  <img src="../../static/grupo36.png" width="120" height="80" />
 
-                <Typography
-                  align="center"
-                  variant="display1"
-                  gutterBottom
-                  style={{
-                    color: "#fff"
-                  }}
-                >
-                  {intl.formatMessage(messages.homeSection3Title5)}
-                </Typography>
-                <Typography
-                  variant="headline"
-                  align="justify"
-                  style={{ color: "#fff" }}
-                >
-                  {intl.formatMessage(messages.homeSection3Title6)}
-                </Typography>
-              </CardContent>
+                  <Typography
+                    align="center"
+                    variant="display1"
+                    gutterBottom
+                    style={{
+                      color: "#fff"
+                    }}
+                  >
+                    {intl.formatMessage(messages.homeSection3Title5)}
+                  </Typography>
+                  <Typography
+                    variant="headline"
+                    align="justify"
+                    style={{ color: "#fff" }}
+                  >
+                    {intl.formatMessage(messages.homeSection3Title6)}
+                  </Typography>
+                </CardContent>
+              </Grid>
             </Grid>
-          </Grid>
-          <Grid container spacing={24}>
-            <Grid item xs={12} sm={6}>
-              <CardContent align="center">
-                <img src="../../static/grupo35.png" width="120" height="80" />
-                <Typography
-                  gutterBottom
-                  variant="display1"
-                  component="h2"
-                  style={{ color: "#fff" }}
-                >
-                  {intl.formatMessage(messages.homeSection3Title7)}
-                </Typography>
-                <Typography
-                  variant="headline"
-                  align="justify"
-                  style={{ color: "#fff" }}
-                >
-                  {intl.formatMessage(messages.homeSection3Title8)}
-                </Typography>
-              </CardContent>
+            <Grid container spacing={24}>
+              <Grid item xs={12} sm={6}>
+                <CardContent align="center">
+                  <img src="../../static/grupo35.png" width="120" height="80" />
+                  <Typography
+                    gutterBottom
+                    variant="display1"
+                    component="h2"
+                    style={{ color: "#fff" }}
+                  >
+                    {intl.formatMessage(messages.homeSection3Title7)}
+                  </Typography>
+                  <Typography
+                    variant="headline"
+                    align="justify"
+                    style={{ color: "#fff" }}
+                  >
+                    {intl.formatMessage(messages.homeSection3Title8)}
+                  </Typography>
+                </CardContent>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <CardContent align="center">
+                  <img src="../../static/grupo37.png" width="280" height="80" />
+                  <Typography
+                    gutterBottom
+                    variant="display1"
+                    component="h2"
+                    align="center"
+                    style={{ color: "#fff" }}
+                  >
+                    {intl.formatMessage(messages.homeSection3Title9)}
+                  </Typography>
+                  <Typography
+                    variant="headline"
+                    align="justify"
+                    style={{ color: "#fff" }}
+                  >
+                    {intl.formatMessage(messages.homeSection3Title10)}
+                  </Typography>
+                </CardContent>
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <CardContent align="center">
-                <img src="../../static/grupo37.png" width="280" height="80" />
-                <Typography
-                  gutterBottom
-                  variant="display1"
-                  component="h2"
-                  align="center"
-                  style={{ color: "#fff" }}
-                >
-                  {intl.formatMessage(messages.homeSection3Title9)}
-                </Typography>
-                <Typography
-                  variant="headline"
-                  align="justify"
-                  style={{ color: "#fff" }}
-                >
-                  {intl.formatMessage(messages.homeSection3Title10)}
-                </Typography>
-              </CardContent>
-            </Grid>
-          </Grid>
+          </div>
         </div>
-      </div>
+      </ScrollableAnchor>
     );
   }
 }
