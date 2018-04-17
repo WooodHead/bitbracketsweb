@@ -83,13 +83,10 @@ class TemporaryDrawer extends React.Component {
             </span>
           </ListItem>
           <Divider />
-          <ListItem button component="a" href="/rules">
-            <span className="ListColor">
-              <Button href="/howDoesItWork" variant="raised" color="secondary">
-                {intl.formatMessage(messages.navigationNavbarlink4)}
-              </Button>
-            </span>
-          </ListItem>
+
+          <Button href="/howDoesItWork" variant="raised" color="secondary">
+            {intl.formatMessage(messages.navigationNavbarlink4)}
+          </Button>
         </List>
       </div>
     );

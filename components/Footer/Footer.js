@@ -1,23 +1,48 @@
 import React, { Component } from "react";
-import { FormattedMessage } from "react-intl";
 
 import Grid from "material-ui/Grid";
 import List, { ListItem, ListItemIcon, ListItemText } from "material-ui/List";
 
+import { injectIntl, defineMessages, FormattedMessage } from "react-intl";
+
+const messages = defineMessages({
+  navigationNavbarlink1: {
+    id: "navigation.navbarlink1",
+    defaultMessage: "How does it works?",
+    description: "Navigation link How does it works?"
+  },
+  navigationNavbarlink2: {
+    id: "navigation.navbarlink2",
+    defaultMessage: "rules",
+    description: "Navigation link rules"
+  },
+  navigationNavbarlink3: {
+    id: "navigation.navbarlink3",
+    defaultMessage: "My Pools",
+    description: "Navigation link My Pools"
+  },
+  navigationNavbarlink4: {
+    id: "navigation.navbarlink4",
+    defaultMessage: "start pool",
+    description: "Navigation link start pool"
+  }
+});
+
 class Footer extends Component {
   render() {
+    const { intl } = this.props;
     return (
       <footer className="container">
         <Grid container spacing={24}>
           <Grid item xs={6} sm={3}>
-            <ListItem button component="a" href="/howDoesItWork">
+            <ListItem button component="a" href="#section3">
               <ListItemText
-                primary={<FormattedMessage id="navigation.navbarlink1" />}
+                primary={intl.formatMessage(messages.navigationNavbarlink1)}
               />
             </ListItem>
             <ListItem button component="a" href="/rules">
               <ListItemText
-                primary={<FormattedMessage id="navigation.navbarlink2" />}
+                primary={intl.formatMessage(messages.navigationNavbarlink2)}
               />
             </ListItem>
             <ListItem button component="a" href="/faq">
@@ -27,22 +52,24 @@ class Footer extends Component {
           <Grid item xs={6} sm={3}>
             <ListItem button component="a">
               <ListItemText
-                primary={<FormattedMessage id="navigation.navbarlink3" />}
+                primary={intl.formatMessage(messages.navigationNavbarlink3)}
               />
             </ListItem>
             <ListItem button component="a">
               <ListItemText primary="Blog" />
             </ListItem>
-            <ListItem button component="a">
+            <ListItem
+              button
+              component="a"
+              href="https://www.facebook.com/BitBrackets-401862976892734/"
+              target="_blank"
+            >
               <ListItemText primary="FaceBook" />
             </ListItem>
           </Grid>
           <Grid item xs={6} sm={3}>
             <ListItem button component="a" style={{ textAlign: "right" }}>
               <ListItemText primary="Terms & Conditions" />
-            </ListItem>
-            <ListItem button>
-              {this.props.children}
             </ListItem>
           </Grid>
           <Grid item xs={12}>
@@ -69,4 +96,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default injectIntl(Footer);

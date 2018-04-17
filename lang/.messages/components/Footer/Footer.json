@@ -1,0 +1,22 @@
+[
+  {
+    "id": "navigation.navbarlink1",
+    "description": "Navigation link How does it works?",
+    "defaultMessage": "How does it works?"
+  },
+  {
+    "id": "navigation.navbarlink2",
+    "description": "Navigation link rules",
+    "defaultMessage": "rules"
+  },
+  {
+    "id": "navigation.navbarlink3",
+    "description": "Navigation link My Pools",
+    "defaultMessage": "My Pools"
+  },
+  {
+    "id": "navigation.navbarlink4",
+    "description": "Navigation link start pool",
+    "defaultMessage": "start pool"
+  }
+]
