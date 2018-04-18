@@ -18,5 +18,10 @@
     "id": "navigation.navbarlink4",
     "description": "Navigation link start pool",
     "defaultMessage": "start pool"
+  },
+  {
+    "id": "navigation.navbarlink5",
+    "description": "Navigation link start pool",
+    "defaultMessage": "Terms & conditions"
   }
 ]

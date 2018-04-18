@@ -25,6 +25,11 @@ const messages = defineMessages({
     id: "navigation.navbarlink4",
     defaultMessage: "start pool",
     description: "Navigation link start pool"
+  },
+  navigationNavbarlink5: {
+    id: "navigation.navbarlink5",
+    defaultMessage: "Terms & conditions",
+    description: "Navigation link start pool"
   }
 });
 
@@ -69,7 +74,9 @@ class Footer extends Component {
           </Grid>
           <Grid item xs={6} sm={3}>
             <ListItem button component="a" style={{ textAlign: "right" }}>
-              <ListItemText primary="Terms & Conditions" />
+              <ListItemText
+                primary={intl.formatMessage(messages.navigationNavbarlink5)}
+              />
             </ListItem>
           </Grid>
           <Grid item xs={12}>

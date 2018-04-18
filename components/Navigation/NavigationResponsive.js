@@ -77,6 +77,10 @@ class TemporaryDrawer extends React.Component {
           </ListItem>
           <Divider />
           <ListItem button component="a" href="/faq">
+            <span className="ListColor"> Faqs</span>
+          </ListItem>
+          <Divider />
+          <ListItem button component="a" href="/faq">
             <span className="ListColor">
               {" "}
               {intl.formatMessage(messages.navigationNavbarlink3)}
