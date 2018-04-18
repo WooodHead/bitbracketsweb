@@ -19,7 +19,7 @@ import { changeLanguage, fetchLanguages } from '../actions/languageActions';
 addLocaleData([...en, ...es]);
 const messages = initMessages();
 
-console.log("messages", messages);
+// console.log("messages", messages);
 
 class Layout extends Component {
   componentWillMount() {
@@ -29,7 +29,7 @@ class Layout extends Component {
   render() {
     const language = this.props.current;
 
-    console.log("esto son los mensajes", messages[language]);
+    // console.log("esto son los mensajes", messages[language]);
     return (
       <IntlProvider locale={language} messages={messages[language]}>
         <div>

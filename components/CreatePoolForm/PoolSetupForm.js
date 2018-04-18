@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
-import { Control, Form, actions } from 'react-redux-form';
+import { connect } from 'react-redux';
+import { Control, Form, Errors } from 'react-redux-form';
 
 import { withStyles } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
@@ -33,6 +34,9 @@ const styles = theme => ({
         marginTop: theme.spacing.unit * 2,
         marginBottom: theme.spacing.unit * 2,
     },
+    error: {
+
+    }
 });
 
 const messages = defineMessages({
@@ -93,10 +97,27 @@ const messages = defineMessages({
     },
 });
 
+const required = (val) => val && val.length;
+const formValid = (form) => {
+    return form.adminName.valid &&
+        form.adminEmail.valid &&
+        from.poolName.valid &&
+        form.entryPrice.valid &&
+        form.terms.value &&
+        form.rules.value;
+};
+const hasError = (field) => {
+    return !field.valid && field.touched;
+}
+const getError = ({ errors }) => {
+    if (errors.required) return 'Field is Required';
+    if (errors.isEmail) return 'Must be Valid Email';    
+}
+
 class PoolSetupForm extends Component {
 
     render() {
-        const { classes, intl } = this.props;
+        const { classes, intl, form } = this.props;
 
         return (
             <Form className={classes.formBox}
@@ -118,8 +139,11 @@ class PoolSetupForm extends Component {
                             component={TextField}
                             placeholder={intl.formatMessage(messages.adminNameTextbox)}
                             validators={{
-                                required: (val) => val && val.length,
+                                required,
                             }}
+                            validateOn="blur"
+                            error={hasError(form.adminName)}
+                            helperText={getError(form.adminName)}
                         />
                     </Grid>
                 </Grid>
@@ -134,6 +158,12 @@ class PoolSetupForm extends Component {
                             model=".adminEmail"
                             component={TextField}
                             placeholder={intl.formatMessage(messages.emailTextbox)}
+                            validators={{
+                                required,
+                            }}
+                            validateOn="blur"
+                            error={hasError(form.adminEmail)}
+                            helperText={getError(form.adminEmail)}                            
                         />
                     </Grid>
                 </Grid>
@@ -153,6 +183,12 @@ class PoolSetupForm extends Component {
                             model=".poolName"
                             component={TextField}
                             placeholder={intl.formatMessage(messages.poolNameTextbox)}
+                            validators={{
+                                required,
+                            }}
+                            validateOn="blur"
+                            error={hasError(form.poolName)}
+                            helperText={getError(form.poolName)}                            
                         />
                     </Grid>
                 </Grid>
@@ -167,6 +203,12 @@ class PoolSetupForm extends Component {
                             model=".entryPrice"
                             component={TextField}
                             placeholder={intl.formatMessage(messages.entryTextbox)}
+                            validators={{
+                                required,
+                            }}
+                            validateOn="blur"
+                            error={hasError(form.entryPrice)}
+                            helperText={getError(form.entryPrice)}                            
                         />
                     </Grid>
                 </Grid>
@@ -205,4 +247,10 @@ class PoolSetupForm extends Component {
     }
 }
 
-export default withStyles(styles)(injectIntl(PoolSetupForm));
+const mapStateToProps = (state) => {
+    return {
+        form: state.forms.createPool,
+    };
+}
+
+export default withStyles(styles)(injectIntl(connect(mapStateToProps)(PoolSetupForm)));
