@@ -1,12 +1,29 @@
 import React from "react";
-import { IntlProvider, addLocaleData } from "react-intl";
-import en from "react-intl/locale-data/en";
-import es from "react-intl/locale-data/es";
+import { bindActionCreators } from "redux";
+import withRedux from "next-redux-wrapper";
 
 import Layout from "../components/Layout";
 
-export default () => (
-  <Layout>
-    <h1> Este es el Layout FAQ</h1>
-  </Layout>
-);
+// import withRoot from '../md/withRoot';
+import { initStore } from "../store";
+
+class faq extends React.Component {
+  render() {
+    return <Layout>FAQ</Layout>;
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    // current: state.language.current,
+    // languages: state.language.languages,
+  };
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    // changeLanguage: bindActionCreators(changeLanguage, dispatch),
+  };
+};
+
+export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(faq);

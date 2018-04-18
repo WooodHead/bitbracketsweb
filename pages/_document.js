@@ -1,8 +1,8 @@
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import JssProvider from 'react-jss/lib/JssProvider';
-import flush from 'styled-jsx/server';
-import getPageContext from '../md/getPageContext';
+import React from "react";
+import Document, { Head, Main, NextScript } from "next/document";
+import JssProvider from "react-jss/lib/JssProvider";
+import flush from "styled-jsx/server";
+import getPageContext from "../md/getPageContext";
 
 class MyDocument extends Document {
   render() {
@@ -17,15 +17,22 @@ class MyDocument extends Document {
           <meta
             name="viewport"
             content={
-              'user-scalable=0, initial-scale=1, ' +
-              'minimum-scale=1, width=device-width, height=device-height'
+              "user-scalable=0, initial-scale=1, " +
+              "minimum-scale=1, width=device-width, height=device-height"
             }
           />
           {/* PWA primary color */}
-          <meta name="theme-color" content={pageContext.theme.palette.primary[500]} />
+          <meta
+            name="theme-color"
+            content={pageContext.theme.palette.primary[500]}
+          />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+          />
+          <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
           />
         </Head>
         <body>
@@ -74,11 +81,13 @@ MyDocument.getInitialProps = ctx => {
         <style
           id="jss-server-side"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: pageContext.sheetsRegistry.toString() }}
+          dangerouslySetInnerHTML={{
+            __html: pageContext.sheetsRegistry.toString()
+          }}
         />
         {flush() || null}
       </React.Fragment>
-    ),
+    )
   };
 };
 
