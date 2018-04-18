@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import { Control, Form, Errors } from 'react-redux-form';
+import { Control, Form, Errors, actions } from 'react-redux-form';
 
 import { withStyles } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
@@ -98,7 +98,7 @@ const messages = defineMessages({
 });
 
 const required = (val) => val && val.length;
-const formValid = (form) => {
+const isFormValid = (form) => {
     return form.adminName.valid &&
         form.adminEmail.valid &&
         from.poolName.valid &&
@@ -109,7 +109,10 @@ const formValid = (form) => {
 const hasError = (field) => {
     return !field.valid && field.touched;
 }
-const getError = ({ errors }) => {
+const getError = (field) => {
+    const { errors } = field;
+    if (!hasError(field)) return; 
+
     if (errors.required) return 'Field is Required';
     if (errors.isEmail) return 'Must be Valid Email';    
 }
@@ -122,7 +125,6 @@ class PoolSetupForm extends Component {
         return (
             <Form className={classes.formBox}
                 model="createPool"
-                onSubmit={(pool) => this.handleSubmit(pool)}
             >
                 <Typography className={classes.headingTertiary} variant="subheading">
                     {intl.formatMessage(messages.headingTertiary1)}

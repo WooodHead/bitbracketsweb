@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
-import { Control, Form, actions } from 'react-redux-form';
+import { connect } from 'react-redux';
+import { actions } from 'react-redux-form';
 
 import { withStyles } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
@@ -133,6 +134,7 @@ class CreatePoolForm extends Component {
                     variant="raised" 
                     color="primary" 
                     onClick={this.handleNext}
+                    // onClick={() => this.props.dispatch(actions.submit('createPool'))}
                 >
                     {activeStep === this.getSteps().length ? 
                         intl.formatMessage(messages.finishButton) 
@@ -160,9 +162,10 @@ class CreatePoolForm extends Component {
         if (activeStep === this.getSteps().length) {
             this.props.onSubmit(this.props.pool);
         } else {
-            this.setState({
-                activeStep: activeStep + 1,
-            });
+            this.props.dispatch(actions.submit('createPool'));
+            // this.setState({
+            //     activeStep: activeStep + 1,
+            // });
         }
     };
 
@@ -199,4 +202,11 @@ class CreatePoolForm extends Component {
     }
 }
 
-export default withStyles(styles)(injectIntl(CreatePoolForm));
+
+const mapStateToProps = (state) => {
+    return {
+        form: state.forms.createPool,
+    };
+}
+
+export default withStyles(styles)(injectIntl(connect(mapStateToProps)(CreatePoolForm)));

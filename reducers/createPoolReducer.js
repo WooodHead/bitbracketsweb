@@ -1,12 +1,12 @@
 import { actionTypes } from '../actions/types';
 
 const INITIAL_STATE = {
-    adminName: 'Gabriel',
-    adminEmail: 'gmolina@gmail.com',
-    poolName: 'bitbrackets',
+    adminName: '',
+    adminEmail: '',
+    poolName: '',
     entryPrice: 0.0,
     entryFee: 0.0,
-    entryPassword: 'fakepwd',
+    entryPassword: '',
     entryTotal: 0.0,
     terms: false,
     rules: false,

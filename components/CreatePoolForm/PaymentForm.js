@@ -168,7 +168,6 @@ class PaymentForm extends Component {
         return (
             <Form className={classes.formBox}
                 model="pool"
-                onSubmit={(pool) => this.handleSubmit(pool)}
             >
                 <Typography className={classes.headingTertiary} variant="subheading">
                     {intl.formatMessage(messages.headingTertiary2)}
