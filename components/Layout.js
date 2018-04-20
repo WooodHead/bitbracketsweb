@@ -45,6 +45,7 @@ class Layout extends Component {
           />
 
           {this.props.children}
+
           <Footer>
             <LanguageSelect
               languages={this.props.languages} // {["en", "es"]}
