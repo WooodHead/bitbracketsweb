@@ -24,6 +24,13 @@ export default function(state = INITIAL_STATE, action) {
         case actionTypes.CREATE_POOL_FAIL:
             return { ...state, loading: false, error: action.payload }
 
+        case actionTypes.POOL_DETAIL_REQUEST:
+            return { ...state, loading: true, error: undefined };
+        case actionTypes.POOL_DETAIL_SUCCESS:
+            return { ...state, ...action.payload, loading: false, error: undefined }
+        case actionTypes.POOL_DETAIL_FAIL:
+            return { ...state, loading: false, error: action.payload }
+            
         default: return state
     }
 }

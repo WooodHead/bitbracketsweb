@@ -16,6 +16,7 @@ import ExpansionPanel, {
     ExpansionPanelDetails,
 } from 'material-ui/ExpansionPanel';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
+import { CircularProgress } from 'material-ui/Progress';
 
 import PoolSetupForm from './PoolSetupForm';
 import ReviewDetailsForm from './ReviewDetailsForm';
@@ -45,6 +46,14 @@ const styles = theme => ({
     nav: {
         marginTop: theme.spacing.unit * 2,
         marginBottom: theme.spacing.unit * 2,
+        position: 'relative',
+    },
+    buttonProgress: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        marginTop: -12,
+        marginLeft: -12,
     },
 });
 
@@ -119,27 +128,28 @@ class CreatePoolForm extends Component {
     }
 
     renderNavigator(activeStep) {
-        const { classes, intl } = this.props;
+        const { classes, intl, form, pool } = this.props;
 
         return (
             <div className={classes.nav}>
                 <Button
-                    disabled={activeStep === 1}
                     onClick={this.handleBack}
                     className={classes.backButton}
+                    disabled={activeStep === 1 || pool.loading}
                 >
                     {intl.formatMessage(messages.backButton)}
                 </Button>
-                <Button 
-                    variant="raised" 
-                    color="primary" 
+                <Button
+                    variant="raised"
+                    color="primary"
                     onClick={this.handleNext}
-                    // onClick={() => this.props.dispatch(actions.submit('createPool'))}
+                    disabled={!(form.terms.value && form.rules.value) || pool.loading}
                 >
-                    {activeStep === this.getSteps().length ? 
-                        intl.formatMessage(messages.finishButton) 
+                    {activeStep === this.getSteps().length ?
+                        intl.formatMessage(messages.finishButton)
                         : intl.formatMessage(messages.nextButton)}
                 </Button>
+                {pool.loading && <CircularProgress size={24} className={classes.buttonProgress} />}
             </div>
         );
     }
@@ -159,13 +169,22 @@ class CreatePoolForm extends Component {
 
     handleNext = () => {
         const { activeStep } = this.state;
-        if (activeStep === this.getSteps().length) {
-            this.props.onSubmit(this.props.pool);
-        } else {
-            this.props.dispatch(actions.submit('createPool'));
-            // this.setState({
-            //     activeStep: activeStep + 1,
-            // });
+        const { pool, form } = this.props;
+        const lastStep = this.getSteps().length;
+
+        switch (activeStep) {
+            case 1:
+                this.props.dispatch(actions.submit('createPool'));
+                if (form.$form.valid) {
+                    this.props.onNext(pool);
+                    this.setState({ activeStep: activeStep + 1 });
+                }
+                break;
+            case 2:
+                if (form.$form.valid) this.setState({ activeStep: activeStep + 1 });
+                break;
+            case lastStep:
+                this.props.onSubmit(pool);
         }
     };
 

@@ -95,6 +95,16 @@ const messages = defineMessages({
         defaultMessage: 'I agree with the pool rules',
         description: '',
     },
+    errorRequired: {
+        id: 'errorRequired',
+        defaultMessage: 'Field is Required',
+        description: '',
+    },
+    errorEmail: {
+        id: 'errorEmail',
+        defaultMessage: 'Not a Valid Email',
+        description: '',
+    },
 });
 
 const required = (val) => val && val.length;
@@ -109,12 +119,13 @@ const isFormValid = (form) => {
 const hasError = (field) => {
     return !field.valid && field.touched;
 }
-const getError = (field) => {
+const getError = (field, intl) => {
     const { errors } = field;
+
     if (!hasError(field)) return; 
 
-    if (errors.required) return 'Field is Required';
-    if (errors.isEmail) return 'Must be Valid Email';    
+    if (errors.required) return intl.formatMessage(messages.errorRequired);
+    if (errors.isEmail) return intl.formatMessage(messages.errorEmail);    
 }
 
 class PoolSetupForm extends Component {
@@ -145,7 +156,7 @@ class PoolSetupForm extends Component {
                             }}
                             validateOn="blur"
                             error={hasError(form.adminName)}
-                            helperText={getError(form.adminName)}
+                            helperText={getError(form.adminName, intl)}
                         />
                     </Grid>
                 </Grid>

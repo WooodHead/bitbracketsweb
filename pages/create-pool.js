@@ -6,14 +6,14 @@ import Link from 'next/link';
 import withRoot from '../md/withRoot';
 import { initStore } from '../store';
 import CreatePoolForm from '../components/CreatePoolForm/CreatePoolForm';
-import { createPool } from '../actions';
+import { createPool, fetchPoolDetails } from '../actions';
 import Layout from "../components/Layout";
 
 class CreatePoolPage extends React.Component {
     render() {
         return (
             <Layout>
-                <CreatePoolForm pool={this.props.pool} onSubmit={this.props.createPool} />
+                <CreatePoolForm pool={this.props.pool} onSubmit={this.props.createPool} onNext={this.props.fetchPoolDetails} />
             </Layout>
         )
     }
@@ -28,6 +28,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = (dispatch) => {
     return {
         createPool: bindActionCreators(createPool, dispatch),
+        fetchPoolDetails: bindActionCreators(fetchPoolDetails, dispatch),
     }
 }
 

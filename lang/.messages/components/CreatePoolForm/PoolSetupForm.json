@@ -53,5 +53,15 @@
     "id": "rulesCheckbox",
     "description": "",
     "defaultMessage": "I agree with the pool rules"
+  },
+  {
+    "id": "errorRequired",
+    "description": "",
+    "defaultMessage": "Field is Required"
+  },
+  {
+    "id": "errorEmail",
+    "description": "",
+    "defaultMessage": "Not a Valid Email"
   }
 ]

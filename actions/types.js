@@ -17,4 +17,7 @@ export const actionTypes = {
     CREATE_POOL_REQUEST: 'create_pool_request',
     CREATE_POOL_SUCCESS: 'create_pool_success',
     CREATE_POOL_FAIL: 'create_pool_fail',
+    POOL_DETAIL_REQUEST: 'pool_detail_request',
+    POOL_DETAIL_SUCCESS: 'pool_detail_success',
+    POOL_DETAIL_FAIL: 'pool_detail_fail',    
 }

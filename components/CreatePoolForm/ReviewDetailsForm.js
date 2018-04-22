@@ -143,7 +143,7 @@ class ReviewDetailForm extends Component {
                     </Grid>
                 </Grid>
 
-                <Grid container alignItems='baseline'>
+                {/* <Grid container alignItems='baseline'>
                     <Grid item xs={3}>
                         <Typography>{intl.formatMessage(messages.entryPasswordLabel)}</Typography>
                     </Grid>
@@ -156,7 +156,7 @@ class ReviewDetailForm extends Component {
                             InputProps={{disableUnderline: true}}
                         />
                     </Grid>
-                </Grid>
+                </Grid> */}
 
                 <Grid container alignItems='baseline'>
                     <Grid item xs={3}>
