@@ -18,7 +18,11 @@ class Section5 extends Component {
     const { intl } = this.props;
     return (
       <div
-        style={{ background: "#418BFF", padding: "12%", textAlign: "center" }}
+        style={{
+          background: "#418BFF",
+          padding: "12%",
+          textAlign: "center"
+        }}
       >
         <Typography
           variant="display1"
