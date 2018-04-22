@@ -176,7 +176,7 @@ class PoolSetupForm extends Component {
                             }}
                             validateOn="blur"
                             error={hasError(form.adminEmail)}
-                            helperText={getError(form.adminEmail)}                            
+                            helperText={getError(form.adminEmail, intl)}                            
                         />
                     </Grid>
                 </Grid>
@@ -201,7 +201,7 @@ class PoolSetupForm extends Component {
                             }}
                             validateOn="blur"
                             error={hasError(form.poolName)}
-                            helperText={getError(form.poolName)}                            
+                            helperText={getError(form.poolName, intl)}                            
                         />
                     </Grid>
                 </Grid>
@@ -221,7 +221,7 @@ class PoolSetupForm extends Component {
                             }}
                             validateOn="blur"
                             error={hasError(form.entryPrice)}
-                            helperText={getError(form.entryPrice)}                            
+                            helperText={getError(form.entryPrice, intl)}                            
                         />
                     </Grid>
                 </Grid>
