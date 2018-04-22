@@ -8,9 +8,6 @@ import grey from "material-ui/colors/grey";
 
 import Grid from "material-ui/Grid";
 import Button from "material-ui/Button";
-import ListTableParticipant from "./ListTableParticipant";
-import ResponsiveListTableParticipant from "./ResponsiveListTableParticipant";
-import HeaderParticipantList from "./HeaderParticipantList";
 
 const theme = createMuiTheme({
   palette: {
@@ -25,7 +22,7 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 3
   }),
   box: {
-    // display: "flex",
+    display: "flex",
 
     marginTop: "3em",
     padding: "2em",
@@ -54,28 +51,50 @@ const styles = theme => ({
   }
 });
 
-class ParticipantList extends Component {
-  render() {
+class HeaderParticipantList extends Component {
+  // constructor(props) {
+  //   // This binding is necessary to make `this` work in the callback
+  //   this.ShowButtonJoinPool = this.ShowButtonJoinPool.bind(this);
+  // }
+
+  ShowButtonJoinPool() {
     const { classes } = this.props;
     return (
-      <div className={classes.box}>
-        <HeaderParticipantList list={this.props.list} />
-
-        <Grid className={classes.list}>
-          {" "}
-          <ListTableParticipant list={this.props.list} />
+      <Grid container spacing={24}>
+        <Grid item xs={6} sm={4}>
+          <Typography
+            style={{ fontWeight: "600" }}
+            variant="headline"
+            gutterBottom
+          >
+            Participant List
+          </Typography>
         </Grid>
-
-        <div className={classes.listResponsive}>
-          <ResponsiveListTableParticipant list={this.props.list} />
-        </div>
-      </div>
+        <Grid item xs={6} sm={4} align="right">
+          <MuiThemeProvider theme={theme}>
+            <Button variant="raised" color="primary">
+              Invite friends
+            </Button>
+          </MuiThemeProvider>
+        </Grid>
+        <Grid item xs={6} sm={4} align="right">
+          <MuiThemeProvider theme={theme}>
+            <Button variant="raised" color="primary">
+              Publish score
+            </Button>
+          </MuiThemeProvider>
+        </Grid>
+      </Grid>
     );
   }
+
+  render() {
+    return <div>{this.ShowButtonJoinPool()}</div>;
+  }
 }
-ParticipantList.propTypes = {
+HeaderParticipantList.propTypes = {
   classes: PropTypes.object.isRequired,
   list: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(ParticipantList);
+export default withStyles(styles)(HeaderParticipantList);

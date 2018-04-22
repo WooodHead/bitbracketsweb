@@ -1,19 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "material-ui/styles";
-import Paper from "material-ui/Paper";
+
 import Typography from "material-ui/Typography";
-import Countdown from "react-count-down";
+
 import Grid from "material-ui/Grid";
-
-const cb = () => {
-  console.log("expired callback");
-};
-
-const OPTIONS = {
-  endDate: "07/16/2018 10:55 AM",
-  cb
-};
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -23,7 +14,7 @@ const styles = theme => ({
   }),
   box: {
     display: "flex",
-    // flexDirection: "row",
+
     marginTop: "3em",
     padding: "2em",
 
@@ -39,7 +30,8 @@ const styles = theme => ({
 
 class PoolDetails extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, list } = this.props;
+
     return (
       <div>
         <Grid container spacing={24} className={classes.box}>
@@ -51,23 +43,29 @@ class PoolDetails extends Component {
           <Grid item xs={12} sm={3}>
             <Typography className={classes.paragraph} variant="title">
               Pool Name:<span style={{ fontWeight: "600" }}>
-                Office Crypto pool
+                {list.contestName}
               </span>
             </Typography>
           </Grid>
           <Grid item xs={12} sm={3}>
             <Typography className={classes.paragraph} variant="title">
-              Admin: <span style={{ fontWeight: "600" }}>Chuck Norris </span>
+              Manager:{" "}
+              <span style={{ fontWeight: "600" }}>{list.manager} </span>
             </Typography>
           </Grid>
           <Grid item xs={12} sm={3}>
             <Typography className={classes.paragraph} variant="title">
-              Entry Price:<span style={{ fontWeight: "600" }}> 0.0004ETH</span>
+              Entry Price:<span style={{ fontWeight: "600" }}>
+                {" "}
+                {list.amountToPlay}ETH
+              </span>
             </Typography>
           </Grid>
           <Grid item xs={12} sm={3}>
             <Typography className={classes.paragraph} variant="title">
-              Prize:<span style={{ fontWeight: "600" }}>0.0004ETH</span>
+              Total Balance :<span style={{ fontWeight: "600" }}>
+                {list.totalBalance}ETH
+              </span>
             </Typography>
           </Grid>
         </Grid>
@@ -76,7 +74,8 @@ class PoolDetails extends Component {
   }
 }
 PoolDetails.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  list: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(PoolDetails);

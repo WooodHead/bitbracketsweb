@@ -20,21 +20,8 @@ const styles = theme => ({
   }
 });
 
-let id = 0;
-function createData(name, status, makePick) {
-  id += 1;
-  return { id, name, status, makePick };
-}
-
-const data = [
-  createData("Chuck Norris", "No Picks Made", "makePick"),
-  createData("Pamela Lizzeth Rivera Laitano", "updated picks", "makePick"),
-  createData("Douglas", "No Picks Made", "makePick"),
-  createData("Gabriel", "updated picks", "makePick")
-];
-
 function ListTableParticipant(props) {
-  const { classes } = props;
+  const { classes, list } = props;
 
   return (
     <div className={classes.root}>
@@ -58,15 +45,25 @@ function ListTableParticipant(props) {
                 variant="title"
                 gutterBottom
               >
-                Picks Status
+                Predictions
+              </Typography>
+            </TableCell>
+            <TableCell>
+              {" "}
+              <Typography
+                style={{ color: "grey", fontWeight: "500" }}
+                variant="title"
+                gutterBottom
+              >
+                Score
               </Typography>
             </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map(n => {
+          {list.players.map(n => {
             return (
-              <TableRow key={n.id}>
+              <TableRow key={Math.random()}>
                 <TableCell>
                   {" "}
                   <Typography
@@ -74,7 +71,7 @@ function ListTableParticipant(props) {
                     variant="headline"
                     gutterBottom
                   >
-                    {n.name}
+                    {n.playerName}
                   </Typography>
                 </TableCell>
                 <TableCell>
@@ -83,17 +80,18 @@ function ListTableParticipant(props) {
                     variant="headline"
                     gutterBottom
                   >
-                    {n.status}{" "}
+                    view predictions {n.status}
                   </Typography>
                 </TableCell>
                 <TableCell>
                   {" "}
                   <Typography
-                    style={{ fontWeight: "600" }}
+                    style={{ fontWeight: "500" }}
                     variant="headline"
                     gutterBottom
                   >
-                    {n.makePick}{" "}
+                    {n.score}
+                    {/* {n.makePick} */}
                   </Typography>
                 </TableCell>
               </TableRow>
@@ -113,7 +111,8 @@ function ListTableParticipant(props) {
 }
 
 ListTableParticipant.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  list: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(ListTableParticipant);

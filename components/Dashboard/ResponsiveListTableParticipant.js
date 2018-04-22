@@ -15,31 +15,20 @@ const styles = theme => ({
   table: {}
 });
 
-let id = 0;
-function createData(name, pickstatus, makepick) {
-  id += 1;
-  return { id, name, pickstatus, makepick };
-}
-
-const data = [
-  createData("Pamela Lizzeth Rivera Laitano", "no picks", "Makes picks"),
-  createData("Douglas Edgardo Molina Rivera", "no picks", "Makes picks")
-];
-
 function ResponsiveListTableParticipant(props) {
-  const { classes } = props;
+  const { classes, list } = props;
 
   return (
     <div>
       <div>
-        {data.map(n => {
+        {list.players.map(n => {
           return (
-            <div key={n.id}>
+            <div key={Math.random()}>
               <Grid container spacing={24}>
                 <Grid item xs={6}>
                   <Typography
-                    style={{ fontWeight: "400" }}
-                    variant="headline"
+                    style={{ color: "grey", fontWeight: "500" }}
+                    variant="title"
                     gutterBottom
                   >
                     Name:
@@ -53,18 +42,18 @@ function ResponsiveListTableParticipant(props) {
                     variant="headline"
                     gutterBottom
                   >
-                    {n.name}
+                    {n.playerName}
                   </Typography>
                 </Grid>
               </Grid>
               <Grid container spacing={24}>
                 <Grid item xs={6}>
                   <Typography
-                    style={{ fontWeight: "400" }}
-                    variant="headline"
+                    style={{ color: "grey", fontWeight: "500" }}
+                    variant="title"
                     gutterBottom
                   >
-                    Pick Status:
+                    Predictions
                   </Typography>
                 </Grid>
                 <Grid item xs={6}>
@@ -75,21 +64,33 @@ function ResponsiveListTableParticipant(props) {
                     variant="headline"
                     gutterBottom
                   >
-                    {n.pickstatus}
+                    view predictions {n.status}
                   </Typography>
                 </Grid>
               </Grid>
               <Grid container spacing={24}>
-                <Grid item xs={12} align="center">
+                <Grid item xs={6}>
                   <Typography
-                    style={{ fontWeight: "600" }}
+                    style={{ color: "grey", fontWeight: "500" }}
+                    variant="title"
+                    gutterBottom
+                  >
+                    Score:
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography
+                    display="flex"
+                    justify-content="flex-end"
+                    style={{ fontWeight: "500" }}
                     variant="headline"
                     gutterBottom
                   >
-                    {n.makepick}
+                    {n.score}
                   </Typography>
                 </Grid>
               </Grid>
+
               <Divider />
             </div>
           );
@@ -107,7 +108,8 @@ function ResponsiveListTableParticipant(props) {
 }
 
 ResponsiveListTableParticipant.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  list: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(ResponsiveListTableParticipant);

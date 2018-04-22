@@ -37,7 +37,8 @@ class TimeRemaining extends Component {
       <div>
         <Paper className={classes.root}>
           <Typography className={classes.paragraph} variant="title">
-            Time remaining to make your picks: <Countdown options={OPTIONS} />
+            Time remaining to make your predictions:
+            <Countdown options={OPTIONS} />
           </Typography>
         </Paper>
       </div>
