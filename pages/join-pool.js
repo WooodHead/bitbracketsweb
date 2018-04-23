@@ -6,14 +6,14 @@ import Link from "next/link";
 import withRoot from '../md/withRoot';
 import { initStore } from '../store';
 import JoinPoolForm from '../components/JoinPoolForm/JoinPoolForm';
-import { fetchPoolDetails } from '../actions';
+import { joinPool } from '../actions';
 import Layout from "../components/Layout";
 
 class JoinPoolPage extends React.Component {
     render() {
         return (
             <Layout>
-                <JoinPoolForm pool={this.props.pool} />
+                <JoinPoolForm pool={this.props.pool} onSubmit={this.props.joinPool} />
             </Layout>
         )
     }
@@ -27,7 +27,7 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // fetchPoolDetails: bindActionCreators(fetchPoolDetails, dispatch),
+        joinPool: bindActionCreators(joinPool, dispatch),
     }
 }
 
