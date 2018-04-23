@@ -1,0 +1,32 @@
+[
+  {
+    "id": "JoinPoolForm.headingPrimary",
+    "description": "",
+    "defaultMessage": "Welcome to [CRYPTOPOOL]"
+  },
+  {
+    "id": "JoinPoolForm.userSetupStep",
+    "description": "",
+    "defaultMessage": "Player Setup"
+  },
+  {
+    "id": "JoinPoolForm.paymentStep",
+    "description": "",
+    "defaultMessage": "Payment"
+  },
+  {
+    "id": "JoinPoolForm.backButton",
+    "description": "",
+    "defaultMessage": "Back"
+  },
+  {
+    "id": "JoinPoolForm.nextButton",
+    "description": "",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "JoinPoolForm.finishButton",
+    "description": "",
+    "defaultMessage": "Pay"
+  }
+]

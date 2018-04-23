@@ -19,5 +19,15 @@ export const actionTypes = {
     CREATE_POOL_FAIL: 'create_pool_fail',
     POOL_DETAIL_REQUEST: 'pool_detail_request',
     POOL_DETAIL_SUCCESS: 'pool_detail_success',
-    POOL_DETAIL_FAIL: 'pool_detail_fail',    
+    POOL_DETAIL_FAIL: 'pool_detail_fail',
+
+    /** Fetch Pool actions. */
+    FETCH_POOL_REQUEST: 'fetch_pool_request',
+    FETCH_POOL_SUCCESS: 'fetch_pool_success',
+    FETCH_POOL_FAIL: 'fetch_pool_fail',
+
+    /** Join Pool actions. */
+    JOIN_POOL_REQUEST: 'join_pool_request',
+    JOIN_POOL_SUCCESS: 'join_pool_success',
+    JOIN_POOL_FAIL: 'join_pool_fail',
 }
