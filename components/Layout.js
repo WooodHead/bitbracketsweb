@@ -19,7 +19,7 @@ import { changeLanguage, fetchLanguages } from "../actions/languageActions";
 addLocaleData([...en, ...es]);
 const messages = initMessages();
 
-console.log("messages", messages);
+// console.log("messages", messages);
 
 class Layout extends Component {
   componentWillMount() {
