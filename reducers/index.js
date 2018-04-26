@@ -5,7 +5,7 @@ import metamaskReducer from './metamaskReducer';
 import createPoolReducer from './createPoolReducer';
 
 export default combineReducers({
-  list: listParticipantReducer,
+  // list: listParticipantReducer,
   language: languageReducer,
   metamask: metamaskReducer,
   ...createForms({
