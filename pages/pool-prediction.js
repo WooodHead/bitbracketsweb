@@ -9,57 +9,57 @@ import PredictionForm from '../components/PredictionForm/PredictionForm';
 import { joinPool } from '../actions';
 import Layout from "../components/Layout";
 
-const structure = {
-    match1: {
+const matches = {
+    1: {
         match: 1,
         group: 'A',
         round: 1,
         team1: 'Russia',
         team2: 'Saudi Arabia'
     },
-    match2: {
+    2: {
         match: 2,
         group: 'A',
         round: 1,
         team1: 'Uruguay',
         team2: 'Egypt'
     },
-    match3: {
+    3: {
         match: 3,
         group: 'A',
         round: 1,
         team1: 'Russia',
         team2: 'Saudi Arabia'
     },
-    match4: {
+    4: {
         match: 4,
         group: 'A',
         round: 1,
         team1: 'Uruguay',
         team2: 'Egypt'
     },
-    match5: {
+    5: {
         match: 5,
         group: 'B',
         round: 1,
         team1: 'Russia',
         team2: 'Saudi Arabia'
     },
-    match6: {
+    6: {
         match: 6,
         group: 'B',
         round: 1,
         team1: 'Uruguay',
         team2: 'Egypt'
     },
-    match7: {
+    7: {
         match: 7,
         group: 'B',
         round: 1,
         team1: 'Russia',
         team2: 'Saudi Arabia'
     },
-    match4: {
+    8: {
         match: 8,
         group: 'B',
         round: 1,
@@ -72,7 +72,7 @@ class PoolPredictionPage extends React.Component {
     render() {
         return (
             <Layout>
-                <PredictionForm structure={structure} />
+                <PredictionForm brackets={matches} />
             </Layout>
         )
     }

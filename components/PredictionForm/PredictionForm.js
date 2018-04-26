@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import { actions } from 'react-redux-form';
 
 import { withStyles } from 'material-ui/styles';
-// import SwipeableViews from 'react-swipeable-views';
-import AppBar from 'material-ui/AppBar';
+import Grid from 'material-ui/Grid';
+import Paper from 'material-ui/Paper';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import { CircularProgress } from 'material-ui/Progress';
+import MatchCard from './MatchCard';
 
 const styles = theme => ({
     root: {
@@ -27,6 +28,16 @@ const styles = theme => ({
         width: '60%',
         marginTop: theme.spacing.unit * 2,
         marginBottom: theme.spacing.unit * 2,
+    },
+    form: {
+        width: '80%',
+        paddingTop: theme.spacing.unit * 2,
+    },
+    tabs: {
+
+    },
+    matches: {
+        padding: theme.spacing.unit * 2,
     },
     buttonProgress: {
         position: 'absolute',
@@ -65,62 +76,56 @@ const messages = defineMessages({
     },
 });
 
-class JoinPoolForm extends Component {
+class PredictionForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeTab: 1,
+            activeTab: 0,
         };
     }
 
-    renderTabForm(steps, activeStep) {
+    handleTabChange = (event, value) => {
+        this.setState({ activeTab: value });
+    };
+
+    renderTabForm() {
         const { classes, intl } = this.props;
         return (
-            <div className={classes.root}>
-                <AppBar position="static" color="default">
-                    <Tabs
-                        value={this.state.value}
-                        onChange={this.handleChange}
-                        indicatorColor="primary"
-                        textColor="primary"
-                        fullWidth
-                    >
-                        <Tab label="Item One" />
-                        <Tab label="Item Two" />
-                        <Tab label="Item Three" />
-                    </Tabs>
-                </AppBar>
-                {/* <SwipeableViews
-                    axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                    index={this.state.value}
-                    onChangeIndex={this.handleChangeIndex}
+            <Paper className={classes.form}>
+                <Tabs
+                    className={classes.tabs}
+                    value={this.state.activeTab}
+                    onChange={this.handleTabChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    centered
                 >
-                    <TabContainer dir={theme.direction}>Item One</TabContainer>
-                    <TabContainer dir={theme.direction}>Item Two</TabContainer>
-                    <TabContainer dir={theme.direction}>Item Three</TabContainer>
-                </SwipeableViews> */}
-            </div>
-            // <Stepper activeStep={activeStep - 1} alternativeLabel>
-            //     {steps.map(label => {
-            //         return (
-            //             <Step key={label}>
-            //                 <StepLabel>{label}</StepLabel>
-            //             </Step>
-            //         );
-            //     })}
-            // </Stepper>
+                    <Tab label="Item One" />
+                    <Tab label="Item Two" />
+                    <Tab label="Item Three" />
+                </Tabs>
+                {this.renderTabContent()}
+            </Paper>
         );
     }
 
-    getTabContent(tab) {
-        switch (tab) {
-            case 1:
-                <div>TAB 1</div>
-            case 2:
-                <div>TAB 2</div>
-            default:
-                return 'Unknown Tab';
-        }
+    renderTabContent() {
+        const { activeTab } = this.state;
+        const { classes, intl } = this.props;
+
+        return (
+            <Grid container className={classes.matches} spacing={16}>
+                <Grid item xs={6}>
+                    <MatchCard />
+                </Grid>
+                <Grid item xs={6}>
+                    <MatchCard />
+                </Grid>
+                <Grid item xs={6}>
+                    <MatchCard />
+                </Grid>
+            </Grid>
+        );
     }
 
     render() {
@@ -135,7 +140,7 @@ class JoinPoolForm extends Component {
                 <Typography className={classes.headingSecondary} variant="headline" align="center" gutterBottom>
                     {intl.formatMessage(messages.headingSecondary)}
                 </Typography>
-                {this.renderTabForm(activeStep)}
+                {this.renderTabForm()}
             </div>
         );
     }
@@ -148,4 +153,4 @@ const mapStateToProps = (state) => {
     };
 }
 
-export default withStyles(styles)(injectIntl(connect(mapStateToProps)(JoinPoolForm)));
+export default withStyles(styles)(injectIntl(connect(mapStateToProps)(PredictionForm)));
