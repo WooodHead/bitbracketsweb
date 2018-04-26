@@ -7,11 +7,13 @@ import es from "react-intl/locale-data/es";
 import Layout from "../components/Layout";
 import App from "../components/App";
 import Home from "../components/home/Home";
+import ScrollToTop from "react-scroll-up";
+import Button from "material-ui/Button";
 
-import withRoot from '../md/withRoot';
-import { bindActionCreators } from 'redux';
-import withRedux from 'next-redux-wrapper';
-import { initStore } from '../store';
+import withRoot from "../md/withRoot";
+import { bindActionCreators } from "redux";
+import withRedux from "next-redux-wrapper";
+import { initStore } from "../store";
 
 class Index extends React.Component {
   render() {
@@ -20,9 +22,14 @@ class Index extends React.Component {
         {/* <App /> */}
 
         <Home />
+        <ScrollToTop showUnder={160}>
+          <Button variant="fab" mini color="secondary" aria-label="edit">
+            <i className="fas fa-arrow-up" />
+          </Button>
+        </ScrollToTop>
         {/* <IntlExample /> */}
       </Layout>
-    )
+    );
   }
 }
 
@@ -33,10 +40,12 @@ function mapStateToProps(state) {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     // changeLanguage: bindActionCreators(changeLanguage, dispatch),
-  }
-}
+  };
+};
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(Index))
+export default withRoot(
+  withRedux(initStore, mapStateToProps, mapDispatchToProps)(Index)
+);

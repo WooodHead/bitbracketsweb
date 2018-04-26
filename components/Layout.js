@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { IntlProvider, addLocaleData } from 'react-intl';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React, { Component } from "react";
+import { IntlProvider, addLocaleData } from "react-intl";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
-import en from 'react-intl/locale-data/en';
-import es from 'react-intl/locale-data/es';
+import en from "react-intl/locale-data/en";
+import es from "react-intl/locale-data/es";
 
-import Head from './Header';
-import Navigation from './Navigation/Navigation';
+import Head from "./Header";
+import Navigation from "./Navigation/Navigation";
 
-import initMessages from '../intl/';
+import initMessages from "../intl/";
 
-import Footer from '../components/Footer/Footer';
+import Footer from "../components/Footer/Footer";
 
-import LanguageSelect from '../components/LanguageSelect';
-import { changeLanguage, fetchLanguages } from '../actions/languageActions';
+import LanguageSelect from "../components/LanguageSelect";
+import { changeLanguage, fetchLanguages } from "../actions/languageActions";
 
 addLocaleData([...en, ...es]);
 const messages = initMessages();
@@ -29,20 +29,28 @@ class Layout extends Component {
   render() {
     const language = this.props.current;
 
-    // console.log("esto son los mensajes", messages[language]);
     return (
       <IntlProvider locale={language} messages={messages[language]}>
         <div>
           <Head title="BitBrackets" />
 
-          <Navigation />
+          <Navigation
+            languageSelect={
+              <LanguageSelect
+                languages={this.props.languages} // {["en", "es"]}
+                current={language}
+                onChange={value => this.props.changeLanguage(value)}
+              />
+            }
+          />
 
           {this.props.children}
+
           <Footer>
             <LanguageSelect
-              languages={this.props.languages}// {["en", "es"]}
+              languages={this.props.languages} // {["en", "es"]}
               current={language}
-              onChange={(value) => this.props.changeLanguage(value)}
+              onChange={value => this.props.changeLanguage(value)}
             />
           </Footer>
         </div>
@@ -54,15 +62,15 @@ class Layout extends Component {
 function mapStateToProps(state) {
   return {
     current: state.language.current,
-    languages: state.language.languages,
+    languages: state.language.languages
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     changeLanguage: bindActionCreators(changeLanguage, dispatch),
-    fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
-  }
-}
+    fetchLanguages: bindActionCreators(fetchLanguages, dispatch)
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layout);

@@ -1,61 +1,73 @@
-// import React, { Component } from "react";
-// import Button from "../common/Button";
-// import { Row, Col, Grid } from "react-bootstrap";
+import React, { Component } from "react";
+import Typography from "material-ui/Typography";
+import Grid from "material-ui/Grid";
+import { injectIntl, defineMessages, FormattedMessage } from "react-intl";
+import Card, { CardActions, CardContent, CardMedia } from "material-ui/Card";
 
-// class Section4 extends Component {
-//   render() {
-//     return (
-//       <div className="container">
-//         <div className="root">
-//           <Grid>
-//             <Row className="show-grid">
-//               <Col xs={6} md={6}>
-//                 <div className="image">
-//                   <img src="../../static/img4.png" width="150" height="120" />
-//                 </div>
-//               </Col>
-//               <Col xs={6} md={6}>
-//                 <div className="prize">
-//                   <h3 className="Claim-the-prize">Claim the prize </h3>
-//                   <p className="description">
-//                     <span className="percentage">95%</span> of the pool goes to
-//                     the winner.<br /> Also, if you are the pool creator you will
-//                     win <span className="percentage">5%</span>
-//                     of the pool.
-//                   </p>
-//                 </div>
-//               </Col>
-//             </Row>
-//           </Grid>
-//         </div>
-//         <style jsx>{`
-//           .root {
-//             font-family: Roboto;
-//             margin-top: 50px;
-//           }
-//           .image {
-//             display: flex;
-//             justify-content: flex-end;
-//           }
+const messages = defineMessages({
+  homeSection4Title1: {
+    id: "home.section4.title1",
+    defaultMessage: "Claim the prize",
+    description: "home > section3"
+  },
+  homeSection4Title2: {
+    id: "home.section4.title2",
+    defaultMessage: "The Balance of the pool goes to the winner",
+    description: "home > section3"
+  },
+  homeSection4Title3: {
+    id: "home.section4.title3",
+    defaultMessage: "If you are the pool creator you will win a ",
+    description: "home > section3"
+  },
+  homeSection4Title4: {
+    id: "home.section4.title4",
+    defaultMessage: "fee of the pool for helping to spread crypto awareness",
+    description: "home > section3"
+  }
+});
 
-//           .Claim-the-prize {
-//             color: #3d3d3d;
-//             font-size: 18px;
-//             font-weight: bold;
-//           }
-//           .description {
-//             font-size: 10px;
-//           }
+class Section4 extends Component {
+  render() {
+    const { intl } = this.props;
+    return (
+      <div style={{ marginTop: "2em", marginBottom: "2em", marginLeft: "1em" }}>
+        <div className="container">
+          <Grid container spacing={24}>
+            <Grid item xs={12} sm={6} align="center">
+              <img src="../../static/img4.png" width="200" height="200" />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Typography
+                variant="display2"
+                align="justify"
+                gutterBottom
+                style={{ color: "black", fontWeight: "500" }}
+              >
+                {intl.formatMessage(messages.homeSection4Title1)}
+              </Typography>
+              <Typography
+                variant="headline"
+                align="justify"
+                style={{
+                  color: "black",
+                  fontWeight: "400",
+                  letterSpacing: "0.5px"
+                }}
+              >
+                {intl.formatMessage(messages.homeSection4Title2)}
+                <br />
+                {intl.formatMessage(messages.homeSection4Title3)}
 
-//           .percentage {
-//             color: #e72459;
-//             font-size: 20px;
-//             font-weight: bold;
-//           }
-//         `}</style>
-//       </div>
-//     );
-//   }
-// }
+                <span style={{ color: "#E72459" }}>%</span>
+                {intl.formatMessage(messages.homeSection4Title4)}
+              </Typography>
+            </Grid>
+          </Grid>
+        </div>
+      </div>
+    );
+  }
+}
 
-// export default Section4;
+export default injectIntl(Section4);

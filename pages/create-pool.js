@@ -1,7 +1,7 @@
-import React from 'react';
-import { bindActionCreators } from 'redux';
-import withRedux from 'next-redux-wrapper';
-import Link from 'next/link';
+import React from "react";
+import { bindActionCreators } from "redux";
+import withRedux from "next-redux-wrapper";
+import Link from "next/link";
 
 import withRoot from '../md/withRoot';
 import { initStore } from '../store';
@@ -32,4 +32,6 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(CreatePoolPage))
+export default withRoot(
+  withRedux(initStore, mapStateToProps, mapDispatchToProps)(CreatePoolPage)
+);
