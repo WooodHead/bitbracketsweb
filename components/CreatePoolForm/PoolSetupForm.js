@@ -12,258 +12,254 @@ import { FormLabel } from 'material-ui/Form';
 import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
-    headingTertiary: {
-        fontWeight: 'bold',
-    },
-    formBox: {
-        display: 'flex',
-        flexDirection: 'column',
-        width: '60%',
-        backgroundColor: 'white',
-        border: '2px solid lightgray',
-        borderRadius: '5px',
-        padding: theme.spacing.unit * 3,
-    },
-    textField: {
-        marginBottom: theme.spacing.unit,
-        // width: '60%',
-    },
-    division: {
-        alignSelf: 'center',
-        width: '100%',
-        marginTop: theme.spacing.unit * 2,
-        marginBottom: theme.spacing.unit * 2,
-    },
-    error: {
+  headingTertiary: {
+    fontWeight: 'bold',
+  },
+  formBox: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '60%',
+    backgroundColor: 'white',
+    border: '2px solid lightgray',
+    borderRadius: '5px',
+    padding: theme.spacing.unit * 3,
+  },
+  textField: {
+    marginBottom: theme.spacing.unit,
+    // width: '60%',
+  },
+  division: {
+    alignSelf: 'center',
+    width: '100%',
+    marginTop: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2,
+  },
+  error: {
 
-    }
+  },
 });
 
 const messages = defineMessages({
-    headingTertiary1: {
-        id: 'headingTertiary1',
-        defaultMessage: 'Admin Info',
-        description: 'Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 1',
-    },
-    headingTertiary2: {
-        id: 'headingTertiary2',
-        defaultMessage: 'Pool Info',
-        description: 'Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 2',
-    },
-    nameLabel: {
-        id: 'nameLabel',
-        defaultMessage: 'Name',
-        description: '',
-    },
-    adminNameTextbox: {
-        id: 'adminNameTextbox',
-        defaultMessage: 'Nickname',
-        description: '',
-    },
-    emailLabel: {
-        id: 'emailLabel',
-        defaultMessage: 'Email',
-        description: '',
-    },
-    emailTextbox: {
-        id: 'emailTextbox',
-        defaultMessage: 'email@email.com',
-        description: '',
-    },
-    poolNameTextbox: {
-        id: 'poolNameTextbox',
-        defaultMessage: 'Pool Name',
-        description: '',
-    },
-    entryLabel: {
-        id: 'entryLabel',
-        defaultMessage: 'Entry Price',
-        description: '',
-    },
-    entryTextbox: {
-        id: 'entryTextbox',
-        defaultMessage: '0',
-        description: '',
-    },
-    termsCheckbox: {
-        id: 'termsCheckbox',
-        defaultMessage: 'I agree with the terms of use',
-        description: '',
-    },
-    rulesCheckbox: {
-        id: 'rulesCheckbox',
-        defaultMessage: 'I agree with the pool rules',
-        description: '',
-    },
-    errorRequired: {
-        id: 'errorRequired',
-        defaultMessage: 'Field is Required',
-        description: '',
-    },
-    errorEmail: {
-        id: 'errorEmail',
-        defaultMessage: 'Not a Valid Email',
-        description: '',
-    },
+  headingTertiary1: {
+    id: 'headingTertiary1',
+    defaultMessage: 'Admin Info',
+    description: 'Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 1',
+  },
+  headingTertiary2: {
+    id: 'headingTertiary2',
+    defaultMessage: 'Pool Info',
+    description: 'Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 2',
+  },
+  nameLabel: {
+    id: 'nameLabel',
+    defaultMessage: 'Name',
+    description: '',
+  },
+  adminNameTextbox: {
+    id: 'adminNameTextbox',
+    defaultMessage: 'Nickname',
+    description: '',
+  },
+  emailLabel: {
+    id: 'emailLabel',
+    defaultMessage: 'Email',
+    description: '',
+  },
+  emailTextbox: {
+    id: 'emailTextbox',
+    defaultMessage: 'email@email.com',
+    description: '',
+  },
+  poolNameTextbox: {
+    id: 'poolNameTextbox',
+    defaultMessage: 'Pool Name',
+    description: '',
+  },
+  entryLabel: {
+    id: 'entryLabel',
+    defaultMessage: 'Entry Price',
+    description: '',
+  },
+  entryTextbox: {
+    id: 'entryTextbox',
+    defaultMessage: '0',
+    description: '',
+  },
+  termsCheckbox: {
+    id: 'termsCheckbox',
+    defaultMessage: 'I agree with the terms of use',
+    description: '',
+  },
+  rulesCheckbox: {
+    id: 'rulesCheckbox',
+    defaultMessage: 'I agree with the pool rules',
+    description: '',
+  },
+  errorRequired: {
+    id: 'errorRequired',
+    defaultMessage: 'Field is Required',
+    description: '',
+  },
+  errorEmail: {
+    id: 'errorEmail',
+    defaultMessage: 'Not a Valid Email',
+    description: '',
+  },
 });
 
-const required = (val) => val && val.length;
-const isFormValid = (form) => {
-    return form.adminName.valid &&
+const required = val => val && val.length;
+const isFormValid = form => form.adminName.valid &&
         form.adminEmail.valid &&
-        from.poolName.valid &&
+        form.poolName.valid &&
         form.entryPrice.valid &&
         form.terms.value &&
         form.rules.value;
-};
-const hasError = (field) => {
-    return !field.valid && field.touched;
-}
+const hasError = field => !field.valid && field.touched;
 const getError = (field, intl) => {
-    const { errors } = field;
+  const { errors } = field;
 
-    if (!hasError(field)) return; 
+  if (!hasError(field)) return;
 
-    if (errors.required) return intl.formatMessage(messages.errorRequired);
-    if (errors.isEmail) return intl.formatMessage(messages.errorEmail);    
-}
+  if (errors.required) return intl.formatMessage(messages.errorRequired);
+  if (errors.isEmail) return intl.formatMessage(messages.errorEmail);
+};
 
 class PoolSetupForm extends Component {
+  render() {
+    const { classes, intl, form } = this.props;
 
-    render() {
-        const { classes, intl, form } = this.props;
+    return (
+      <Form
+            className={classes.formBox}
+            model="createPool"
+          >
+            <Typography className={classes.headingTertiary} variant="subheading">
+                {intl.formatMessage(messages.headingTertiary1)}
+              </Typography>
 
-        return (
-            <Form className={classes.formBox}
-                model="createPool"
-            >
-                <Typography className={classes.headingTertiary} variant="subheading">
-                    {intl.formatMessage(messages.headingTertiary1)}
-                </Typography>
-
-                <Grid container alignItems='baseline'>
-                    <Grid item xs={3}>
-                        <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
-                    </Grid>
-                    <Grid item xs={9}>
-                        <Control.text
-                            className={classes.textField}
-                            model=".adminName"
-                            component={TextField}
-                            placeholder={intl.formatMessage(messages.adminNameTextbox)}
-                            validators={{
+            <Grid container alignItems="baseline">
+                <Grid item xs={3}>
+                    <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
+                  </Grid>
+                <Grid item xs={9}>
+                    <Control.text
+                        className={classes.textField}
+                        model=".adminName"
+                        component={TextField}
+                        placeholder={intl.formatMessage(messages.adminNameTextbox)}
+                        validators={{
                                 required,
                             }}
-                            validateOn="blur"
-                            error={hasError(form.adminName)}
-                            helperText={getError(form.adminName, intl)}
-                        />
-                    </Grid>
-                </Grid>
+                        validateOn="blur"
+                        error={hasError(form.adminName)}
+                        helperText={getError(form.adminName, intl)}
+                      />
+                  </Grid>
+              </Grid>
 
-                <Grid container alignItems='baseline'>
-                    <Grid item xs={3}>
-                        <Typography>{intl.formatMessage(messages.emailLabel)}</Typography>
-                    </Grid>
-                    <Grid item xs={9}>
-                        <Control.text
-                            className={classes.textField}
-                            model=".adminEmail"
-                            component={TextField}
-                            placeholder={intl.formatMessage(messages.emailTextbox)}
-                            validators={{
+            <Grid container alignItems="baseline">
+                <Grid item xs={3}>
+                    <Typography>{intl.formatMessage(messages.emailLabel)}</Typography>
+                  </Grid>
+                <Grid item xs={9}>
+                    <Control.text
+                        className={classes.textField}
+                        model=".adminEmail"
+                        component={TextField}
+                        placeholder={intl.formatMessage(messages.emailTextbox)}
+                        validators={{
                                 required,
                             }}
-                            validateOn="blur"
-                            error={hasError(form.adminEmail)}
-                            helperText={getError(form.adminEmail, intl)}                            
-                        />
-                    </Grid>
-                </Grid>
+                        validateOn="blur"
+                        error={hasError(form.adminEmail)}
+                        helperText={getError(form.adminEmail, intl)}
+                      />
+                  </Grid>
+              </Grid>
 
-                <Divider className={classes.division} />
+            <Divider className={classes.division} />
 
-                <Typography className={classes.headingTertiary} variant="subheading">
-                    {intl.formatMessage(messages.headingTertiary2)}
-                </Typography>
-                <Grid container alignItems='baseline'>
-                    <Grid item xs={3}>
-                        <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
-                    </Grid>
-                    <Grid item xs={9}>
-                        <Control.text
-                            className={classes.textField}
-                            model=".poolName"
-                            component={TextField}
-                            placeholder={intl.formatMessage(messages.poolNameTextbox)}
-                            validators={{
+            <Typography className={classes.headingTertiary} variant="subheading">
+                {intl.formatMessage(messages.headingTertiary2)}
+              </Typography>
+            <Grid container alignItems="baseline">
+                <Grid item xs={3}>
+                    <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
+                  </Grid>
+                <Grid item xs={9}>
+                    <Control.text
+                        className={classes.textField}
+                        model=".poolName"
+                        component={TextField}
+                        placeholder={intl.formatMessage(messages.poolNameTextbox)}
+                        validators={{
                                 required,
                             }}
-                            validateOn="blur"
-                            error={hasError(form.poolName)}
-                            helperText={getError(form.poolName, intl)}                            
-                        />
-                    </Grid>
-                </Grid>
+                        validateOn="blur"
+                        error={hasError(form.poolName)}
+                        helperText={getError(form.poolName, intl)}
+                      />
+                  </Grid>
+              </Grid>
 
-                <Grid container alignItems='baseline'>
-                    <Grid item xs={3}>
-                        <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
-                    </Grid>
-                    <Grid item xs={9}>
-                        <Control.text
-                            className={classes.textField}
-                            model=".entryPrice"
-                            component={TextField}
-                            placeholder={intl.formatMessage(messages.entryTextbox)}
-                            validators={{
+            <Grid container alignItems="baseline">
+                <Grid item xs={3}>
+                    <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
+                  </Grid>
+                <Grid item xs={9}>
+                    <Control.text
+                        className={classes.textField}
+                        model=".entryPrice"
+                        component={TextField}
+                        placeholder={intl.formatMessage(messages.entryTextbox)}
+                        validators={{
                                 required,
                             }}
-                            validateOn="blur"
-                            error={hasError(form.entryPrice)}
-                            helperText={getError(form.entryPrice, intl)}                            
-                        />
-                    </Grid>
-                </Grid>
-                <Divider className={classes.division} />
+                        validateOn="blur"
+                        error={hasError(form.entryPrice)}
+                        helperText={getError(form.entryPrice, intl)}
+                      />
+                  </Grid>
+              </Grid>
+            <Divider className={classes.division} />
 
-                <Grid container alignItems='baseline'>
-                    <Grid item>
-                        <Control.checkbox
-                            model=".terms"
-                            component={Checkbox}
-                        />
-                    </Grid>
-                    <Grid item>
-                        <Typography>
-                            {intl.formatMessage(messages.termsCheckbox)}
-                        </Typography>
-                    </Grid>
-                </Grid>
+            <Grid container alignItems="baseline">
+                <Grid item>
+                    <Control.checkbox
+                        model=".terms"
+                        component={Checkbox}
+                      />
+                  </Grid>
+                <Grid item>
+                    <Typography>
+                        {intl.formatMessage(messages.termsCheckbox)}
+                      </Typography>
+                  </Grid>
+              </Grid>
 
-                <Grid container alignItems='baseline'>
-                    <Grid item>
-                        <Control.checkbox
-                            model=".rules"
-                            component={Checkbox}
-                        />
-                    </Grid>
-                    <Grid item>
-                        <Typography>
-                            {intl.formatMessage(messages.rulesCheckbox)}
-                        </Typography>
-                    </Grid>
-                </Grid>
+            <Grid container alignItems="baseline">
+                <Grid item>
+                    <Control.checkbox
+                        model=".rules"
+                        component={Checkbox}
+                      />
+                  </Grid>
+                <Grid item>
+                    <Typography>
+                        {intl.formatMessage(messages.rulesCheckbox)}
+                      </Typography>
+                  </Grid>
+              </Grid>
 
-            </Form>
-        );
-    }
+          </Form>
+    );
+  }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        form: state.forms.createPool,
-    };
-}
+const mapStateToProps = ({ forms }) => ({
+  form: forms.createPool,
+});
 
-export default withStyles(styles)(injectIntl(connect(mapStateToProps)(PoolSetupForm)));
+const ConnectedPoolSetupForm = connect(mapStateToProps)(PoolSetupForm);
+
+export default withStyles(styles)(injectIntl(ConnectedPoolSetupForm));

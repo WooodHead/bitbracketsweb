@@ -60,7 +60,12 @@ function FirstNavbar(props) {
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Toolbar>
-          <img src="../../static/logo.png" alt="cryptocurrency-pool" width="30" height="30" />
+          <img
+            src="/static/logo.png"
+            alt="cryptocurrency-pool"
+            width="30"
+            height="30"
+          />
           <Typography variant="title" color="inherit" className={classes.flex}>
             <Button href="/" color="inherit">
               {' '}

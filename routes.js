@@ -6,4 +6,8 @@ routes
     ;
 */
 
+routes
+  .add('/contest/:contest/pools/new', '/pools/new')
+  .add('/pools/:address', '/pools/show');
+
 module.exports = routes;
