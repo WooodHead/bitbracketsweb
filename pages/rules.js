@@ -4,7 +4,7 @@ import withRedux from "next-redux-wrapper";
 
 import Layout from "../components/Layout";
 
-// import withRoot from '../md/withRoot';
+// import withRoot from "../components/HOC/md/withRoot";
 import { initStore } from "../store";
 
 class rules extends React.Component {

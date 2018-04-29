@@ -4,7 +4,7 @@ import { initStore } from '../store';
 import withRedux from 'next-redux-wrapper';
 import {unlockedMetamaskAccount, lockedMetamaskAccount, changeMetamaskAccount, changeMetamaskNetwork } from '../actions';
 import Layout from "../components/Layout";
-import withMetaMask from "../md/withMetaMask";
+import withMetaMask from "../components/HOC/withMetaMask";
 
 class Metamask extends React.Component {
   constructor(props, context) {
