@@ -5,7 +5,7 @@ import Link from 'next/link';
 // import { connect } from 'react-redux';
 import Button from 'material-ui/Button';
 
-import withRoot from '../md/withRoot';
+import withRoot from "../components/HOC/md/withRoot";
 import LanguageSelect from '../components/LanguageSelect';
 import { initStore } from '../store';
 import { changeLanguage, fetchLanguages } from '../actions';

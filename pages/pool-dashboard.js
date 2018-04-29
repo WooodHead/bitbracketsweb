@@ -5,7 +5,7 @@ import withRedux from "next-redux-wrapper";
 import Layout from "../components/Layout";
 import IndexDashboard from "../components/Dashboard/IndexDashboard";
 
-import withRoot from "../md/withRoot";
+import withRoot from "../components/HOC/md/withRoot";
 import { initStore } from "../store";
 
 class poolDashboard extends React.Component {
