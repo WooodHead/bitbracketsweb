@@ -43,8 +43,8 @@ CreatePoolPage.propTypes = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  createPool: bindActionCreators(createPool, dispatch),
-  fetchPoolDetails: bindActionCreators(fetchPoolDetails, dispatch),
+  createPoolAction: bindActionCreators(createPool, dispatch),
+  fetchPoolDetailsAction: bindActionCreators(fetchPoolDetails, dispatch),
 });
 
 const createPoolPageWeb3 = CreatePoolPage;

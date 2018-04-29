@@ -162,7 +162,7 @@ class CreatePoolForm extends Component {
 
     renderNavigator(activeStep) {
       const {
-        classes, intl, form, pool, 
+        classes, intl, form, pool,
       } = this.props;
 
       return (
@@ -200,13 +200,13 @@ class CreatePoolForm extends Component {
     )
 
     render() {
-      const { classes, intl } = this.props;
+      const { classes, intl, contest } = this.props;
       const { activeStep } = this.state;
 
       return (
         <div className={classes.root}>
           <Typography className={classes.headingPrimary} variant="headline" align="center" gutterBottom>
-            {intl.formatMessage(messages.headingPrimary)}
+            {intl.formatMessage(messages.headingPrimary)} {`${contest}`}
           </Typography>
           <div className={classes.stepper}>
             {this.renderStepper(this.getSteps(), activeStep)}
