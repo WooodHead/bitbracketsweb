@@ -109,16 +109,17 @@ class CreatePoolForm extends Component {
 
 
   getStepContent = (stepIndex) => {
-    const PoolSetupWithMM = withMetaMask(PoolSetupForm);
-    const ReviewDetailsWithMM = withMetaMask(ReviewDetailsForm);
+    const { contest } = this.props;
+    // const PoolSetupWithMM = withMetaMask(PoolSetupForm);
+    // const ReviewDetailsWithMM = withMetaMask(ReviewDetailsForm);
     const PaymentFormWithMM = withMetaMask(PaymentForm);
     switch (stepIndex) {
       case 1:
-        return <PoolSetupWithMM />;
+        return <PoolSetupForm />;
       case 2:
-        return <ReviewDetailsWithMM />;
+        return <ReviewDetailsForm />;
       case 3:
-        return <PaymentFormWithMM />;
+        return <PaymentFormWithMM contest={contest} />;
       default:
         return 'Unknown stepIndex';
     }
@@ -161,7 +162,7 @@ class CreatePoolForm extends Component {
 
     renderNavigator(activeStep) {
       const {
-        classes, intl, form, pool,
+        classes, intl, form, pool, 
       } = this.props;
 
       return (
@@ -221,7 +222,9 @@ class CreatePoolForm extends Component {
 }
 
 CreatePoolForm.propTypes = {
+  contest: PropTypes.string.isRequired,
   classes: PropTypes.object.isRequired,
+
 
 };
 

@@ -61,7 +61,7 @@ function FirstNavbar(props) {
       <AppBar position="static" color="default">
         <Toolbar>
           <img
-            src="../../static/logo.png"
+            src="/static/logo.png"
             alt="cryptocurrency-pool"
             width="30"
             height="30"

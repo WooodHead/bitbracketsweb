@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import { Control, Form, actions } from 'react-redux-form';
 
@@ -45,46 +46,6 @@ const styles = theme => ({
 });
 
 const messages = defineMessages({
-  headingTertiary1: {
-    id: 'headingTertiary1',
-    defaultMessage: 'Finish Installing MetaMask to Continue',
-    description: '',
-  },
-  help: {
-    id: 'help',
-    defaultMessage: 'Here some help:',
-    description: '',
-  },
-  installHeader: {
-    id: 'installHeader',
-    defaultMessage: 'How to Install MetaMask',
-    description: '',
-  },
-  installDescription: {
-    id: 'installDescription',
-    defaultMessage: '...',
-    description: '',
-  },
-  etherHeader: {
-    id: 'etherHeader',
-    defaultMessage: 'Getting Ether Your Digital Currency',
-    description: '',
-  },
-  etherDescription: {
-    id: 'etherDescription',
-    defaultMessage: '...',
-    description: '',
-  },
-  sendHeader: {
-    id: 'sendHeader',
-    defaultMessage: 'How to Send ETH to MetaMask',
-    description: '',
-  },
-  sendDescription: {
-    id: 'sendDescription',
-    defaultMessage: '...',
-    description: '',
-  },
   headingTertiary2: {
     id: 'headingTertiary2',
     defaultMessage: 'Payment Details',
@@ -108,61 +69,8 @@ const messages = defineMessages({
 });
 
 class PaymentForm extends Component {
-  renderPayment() {
-    const { classes, intl } = this.props;
-
-    return (
-      <Form
-        className={classes.formBox}
-        model="createPool"
-      >
-        <Typography className={classes.headingTertiary} variant="subheading">
-          {intl.formatMessage(messages.headingTertiary1)}
-        </Typography>
-
-        <Typography>
-          {intl.formatMessage(messages.help)}
-        </Typography>
-
-        <div className={classes.expansionPanel}>
-          <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{intl.formatMessage(messages.installHeader)}</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                {intl.formatMessage(messages.installDescription)}
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{intl.formatMessage(messages.etherHeader)}</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                {intl.formatMessage(messages.etherDescription)}
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{intl.formatMessage(messages.sendHeader)}</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                {intl.formatMessage(messages.sendDescription)}
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-        </div>
-
-      </Form>
-    );
-  }
-
   renderPaymentDetails() {
-    const { classes, intl } = this.props;
+    const { classes, intl, forms } = this.props;
 
     return (
       <Form
@@ -231,4 +139,10 @@ class PaymentForm extends Component {
   }
 }
 
-export default withStyles(styles)(injectIntl(PaymentForm));
+const mapStateToProps = ({ forms }) => ({
+  form: forms.createPool,
+});
+
+const ConnectedPaymentForm = connect(mapStateToProps)(PaymentForm);
+
+export default withStyles(styles)(injectIntl(ConnectedPaymentForm));
