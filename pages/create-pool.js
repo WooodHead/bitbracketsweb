@@ -8,16 +8,17 @@ import { initStore } from '../store';
 import CreatePoolForm from '../components/CreatePoolForm/CreatePoolForm';
 import { createPool, fetchPoolDetails } from '../actions';
 import Layout from '../components/Layout';
+import withMetaMask from '../components/HOC/withMetaMask';
 
-class CreatePoolPage extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <CreatePoolForm pool={this.props.pool} onSubmit={this.props.createPool} onNext={this.props.fetchPoolDetails} />
-      </Layout>
-    );
-  }
-}
+const CreatePoolPage = ({ pool, createPool, fetchPoolDetails }) => (
+  <Layout>
+    <CreatePoolForm
+      pool={pool}
+      onSubmit={createPool}
+      onNext={fetchPoolDetails}
+    />
+  </Layout>
+);
 
 function mapStateToProps(state) {
   return {
@@ -30,4 +31,7 @@ const mapDispatchToProps = dispatch => ({
   fetchPoolDetails: bindActionCreators(fetchPoolDetails, dispatch),
 });
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(CreatePoolPage));
+const createPoolPageWeb3 = CreatePoolPage;
+const reduxConfig = withRedux(initStore, mapStateToProps, mapDispatchToProps);
+
+export default withRoot(reduxConfig(createPoolPageWeb3));
