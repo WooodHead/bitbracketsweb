@@ -13,6 +13,7 @@ import ExpansionPanel, {
 } from 'material-ui/ExpansionPanel';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import Grid from 'material-ui/Grid';
+import withMetamask from '../HOC/withMetaMask';
 
 const styles = theme => ({
     headingTertiary: {
