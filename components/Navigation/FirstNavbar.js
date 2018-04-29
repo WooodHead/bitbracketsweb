@@ -85,7 +85,7 @@ function FirstNavbar(props) {
             {intl.formatMessage(messages.navigationNavbarlink3)}
           </Button>
           <MuiThemeProvider theme={theme}>
-            <Button href="/howDoesItWork" variant="raised" color="primary">
+            <Button href="/contest/Russia2018/pools/new" variant="raised" color="primary">
               {intl.formatMessage(messages.navigationNavbarlink4)}
             </Button>
           </MuiThemeProvider>
