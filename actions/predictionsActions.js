@@ -10,10 +10,13 @@ export const fetchPredictions = (pool) => async dispatch => {
     dispatch({ type: actionTypes.FETCH_PREDICTIONS_SUCCESS, payload: pool });
 }
 
-export const updatePrediction = (pool, prediction) => async dispatch => {
+export const updatePrediction = (matchIndex, prediction) => async dispatch => {
     dispatch({ type: actionTypes.UPDATE_PREDICTION_REQUEST });
-    await delay(5000);
-    dispatch({ type: actionTypes.UPDATE_PREDICTION_SUCCESS, payload: pool });
+    const payload = {
+        index: matchIndex,
+        prediction
+    };
+    dispatch({ type: actionTypes.UPDATE_PREDICTION_SUCCESS, payload });
 }
 
 // export const savePredictions = (pool, predictions) => async dispatch => {

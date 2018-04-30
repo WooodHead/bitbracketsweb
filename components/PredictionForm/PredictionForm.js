@@ -108,7 +108,7 @@ class PredictionForm extends Component {
 
     renderTabContent() {
         const { activeTab } = this.state;
-        const { classes, intl, matches, groups, predictions } = this.props;
+        const { classes, intl, matches, groups, predictions, update } = this.props;
 
         return (
             <Grid container className={classes.matches} spacing={16}>
@@ -117,8 +117,8 @@ class PredictionForm extends Component {
                     <Grid item xs={6} key={match.index}>
                         <MatchCard 
                             match={match} 
-                            prediction={predictions[match.index]} 
-                            update={this.props.update} 
+                            prediction={predictions[match.index] ? predictions[match.index].prediction : ""} 
+                            update={update} 
                         />
                     </Grid>
                 )}

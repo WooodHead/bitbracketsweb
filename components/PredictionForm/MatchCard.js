@@ -22,58 +22,43 @@ const styles = theme => ({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    buttonWin: {
+    buttonSelected: {
         backgroundColor: 'green',
         '&:hover': {
             backgroundColor: 'green',
         },
     },
-    buttonLose: {
-        backgroundColor: 'red',
-        '&:hover': {
-            backgroundColor: 'red',
-        },
-    },
-    buttonTie: {
-        backgroundColor: 'orange',
-        '&:hover': {
-            backgroundColor: 'orange',
-        },
-    },
-    buttonNeutral: {
-        backgroundColor: 'gray',
-        '&:hover': {
-            backgroundColor: 'gray',
-        },
-    },
 });
 
-const MatchCard = ({ classes, match }) => {
+const MatchCard = ({ classes, match, prediction, update }) => {
     return (
         <Card className={classes.card}>
             <Grid container className={classes.container} spacing={16}>
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        className={classes.buttonSuccess}
+                        color={prediction === "H" ? "primary" : "" }
+                        onClick={() => update(match.index, "H")}
                     >
-                        
+                        H
                     </Button>
                 </Grid>
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        className={classes.buttonSuccess}
+                        color={prediction === "T" ? "primary" : "" }
+                        onClick={() => update(match.index, "T")}                        
                     >
-                        
+                        T
                     </Button>
                 </Grid>
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        className={classes.buttonSuccess}
+                        color={prediction === "A" ? "primary" : "" }
+                        onClick={() => update(match.index, "A")}                        
                     >
-                        
+                        A
                     </Button>
                 </Grid>
             </Grid>
