@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { actions } from 'react-redux-form';
+import _ from 'lodash';
 
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
@@ -89,7 +90,7 @@ class PredictionForm extends Component {
     };
 
     renderTabForm() {
-        const { classes, intl } = this.props;
+        const { classes, intl, groups } = this.props;
         return (
             <Paper className={classes.form}>
                 <Tabs
@@ -100,9 +101,7 @@ class PredictionForm extends Component {
                     textColor="primary"
                     centered
                 >
-                    <Tab label="Item One" />
-                    <Tab label="Item Two" />
-                    <Tab label="Item Three" />
+                    {groups.map(group => <Tab key={group} label={group} />)}
                 </Tabs>
                 {this.renderTabContent()}
             </Paper>
@@ -111,19 +110,16 @@ class PredictionForm extends Component {
 
     renderTabContent() {
         const { activeTab } = this.state;
-        const { classes, intl } = this.props;
+        const { classes, intl, matches, groups } = this.props;
 
         return (
             <Grid container className={classes.matches} spacing={16}>
-                <Grid item xs={6}>
-                    <MatchCard />
-                </Grid>
-                <Grid item xs={6}>
-                    <MatchCard />
-                </Grid>
-                <Grid item xs={6}>
-                    <MatchCard />
-                </Grid>
+                {_.filter(matches, match => match.data.group === groups[activeTab])
+                  .map(match => 
+                    <Grid item xs={6} key={match.index}>
+                        <MatchCard match={match} />
+                    </Grid>
+                )}
             </Grid>
         );
     }
