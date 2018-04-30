@@ -38,4 +38,7 @@ export const actionTypes = {
     UPDATE_PREDICTION_REQUEST: 'update_prediction_request',
     UPDATE_PREDICTION_SUCCESS: 'update_prediction_success',
     UPDATE_PREDICTION_FAIL: 'update_prediction_fail',
+    SAVE_PREDICTIONS_REQUEST: 'save_prediction_request',
+    SAVE_PREDICTIONS_SUCCESS: 'save_prediction_success',
+    SAVE_PREDICTIONS_FAIL: 'save_prediction_fail',
 }

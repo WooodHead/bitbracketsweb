@@ -38,6 +38,11 @@ const styles = theme => ({
     matches: {
         padding: theme.spacing.unit * 2,
     },
+    actions: {
+        marginTop: theme.spacing.unit * 2,
+        marginBottom: theme.spacing.unit * 2,
+        position: 'relative',
+    },
     buttonProgress: {
         position: 'absolute',
         top: '50%',
@@ -70,7 +75,7 @@ const messages = defineMessages({
     },
     finishButton: {
         id: 'PredictionForm.finishButton',
-        defaultMessage: 'Save',
+        defaultMessage: 'Save Predictions',
         description: '',
     },
 });
@@ -108,21 +113,42 @@ class PredictionForm extends Component {
 
     renderTabContent() {
         const { activeTab } = this.state;
-        const { classes, intl, matches, groups, predictions, update } = this.props;
+        const { classes, intl, matches, groups, predictions, update, read } = this.props;
 
         return (
             <Grid container className={classes.matches} spacing={16}>
                 {_.filter(matches, match => match.data.group === groups[activeTab])
-                  .map(match => 
-                    <Grid item xs={6} key={match.index}>
-                        <MatchCard 
-                            match={match} 
-                            prediction={predictions[match.index] ? predictions[match.index].prediction : ""} 
-                            update={update} 
-                        />
-                    </Grid>
-                )}
+                    .map(match =>
+                        <Grid item xs={6} key={match.index}>
+                            <MatchCard
+                                match={match}
+                                prediction={predictions[match.index] ? predictions[match.index].prediction : ""}
+                                update={update}
+                                read={read}
+                            />
+                        </Grid>
+                    )}
             </Grid>
+        );
+    }
+
+    renderActions() {
+        const { classes, intl, predictions, save, read } = this.props;
+
+        if (read) return <div className={classes.actions}></div>;
+
+        return (
+            <div className={classes.actions}>
+                <Button
+                    variant="raised"
+                    color="primary"
+                    onClick={() => save(predictions)}
+                    disabled={predictions.loading}
+                >
+                    {intl.formatMessage(messages.finishButton)}
+                </Button>
+                {predictions.loading && <CircularProgress size={24} className={classes.buttonProgress} />}
+            </div>
         );
     }
 
@@ -139,6 +165,7 @@ class PredictionForm extends Component {
                     {intl.formatMessage(messages.headingSecondary)}
                 </Typography>
                 {this.renderTabForm()}
+                {this.renderActions()}
             </div>
         );
     }

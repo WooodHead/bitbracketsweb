@@ -22,23 +22,26 @@ const styles = theme => ({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    buttonSelected: {
-        backgroundColor: 'green',
-        '&:hover': {
-            backgroundColor: 'green',
-        },
-    },
+    disabled: {
+        background: 'linear-gradient(45deg, #e72564, #e72564)',
+        color: 'white',
+    }
 });
 
-const MatchCard = ({ classes, match, prediction, update }) => {
+const MatchCard = ({ classes, match, prediction, update, read }) => {
+
     return (
         <Card className={classes.card}>
             <Grid container className={classes.container} spacing={16}>
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        color={prediction === "H" ? "primary" : "" }
+                        color={prediction === "H" ? "primary" : "default" }
                         onClick={() => update(match.index, "H")}
+                        classes={{
+                            disabled: prediction === "H" ? classes.disabled : "",
+                        }}
+                        disabled={read}
                     >
                         H
                     </Button>
@@ -46,8 +49,12 @@ const MatchCard = ({ classes, match, prediction, update }) => {
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        color={prediction === "T" ? "primary" : "" }
-                        onClick={() => update(match.index, "T")}                        
+                        color={prediction === "T" ? "primary" : "default" }
+                        onClick={() => update(match.index, "T")}
+                        classes={{
+                            disabled: prediction === "T" ? classes.disabled : "",
+                        }}
+                        disabled={read}
                     >
                         T
                     </Button>
@@ -55,8 +62,12 @@ const MatchCard = ({ classes, match, prediction, update }) => {
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        color={prediction === "A" ? "primary" : "" }
-                        onClick={() => update(match.index, "A")}                        
+                        color={prediction === "A" ? "primary" : "default" }
+                        onClick={() => update(match.index, "A")}
+                        classes={{
+                            disabled: prediction === "A" ? classes.disabled : "",
+                        }}
+                        disabled={read}
                     >
                         A
                     </Button>

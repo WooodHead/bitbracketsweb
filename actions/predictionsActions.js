@@ -19,8 +19,8 @@ export const updatePrediction = (matchIndex, prediction) => async dispatch => {
     dispatch({ type: actionTypes.UPDATE_PREDICTION_SUCCESS, payload });
 }
 
-// export const savePredictions = (pool, predictions) => async dispatch => {
-//     dispatch({ type: actionTypes.UPDATE_PREDICTIONS_REQUEST });
-//     await delay(5000);
-//     dispatch({ type: actionTypes.UPDATE_PREDICTIONS_SUCCESS, payload: pool });
-// }
+export const savePredictions = (predictions) => async dispatch => {
+    dispatch({ type: actionTypes.SAVE_PREDICTIONS_REQUEST });
+    await delay(5000);
+    dispatch({ type: actionTypes.SAVE_PREDICTIONS_SUCCESS, payload: predictions });
+}

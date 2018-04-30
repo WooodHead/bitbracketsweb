@@ -8,7 +8,7 @@ import { initStore } from '../store';
 import PredictionForm from '../components/PredictionForm/PredictionForm';
 import Layout from '../components/Layout';
 import GroupsSelector from '../selectors/groupsSelector';
-import { updatePrediction } from '../actions';
+import { updatePrediction, savePredictions } from '../actions';
 
 class PoolPredictionPage extends React.Component {
     render() {
@@ -19,6 +19,8 @@ class PoolPredictionPage extends React.Component {
                     matches={this.props.matches} 
                     predictions={this.props.predictions}
                     update={this.props.updatePrediction}
+                    save={this.props.savePredictions}
+                    // read
                 />
             </Layout>
         )
@@ -36,6 +38,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = (dispatch) => {
     return {
         updatePrediction: bindActionCreators(updatePrediction, dispatch),
+        savePredictions: bindActionCreators(savePredictions, dispatch),        
     }
 }
 
