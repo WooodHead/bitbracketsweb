@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
-import { connect } from 'react-redux';
-import { actions } from 'react-redux-form';
 import _ from 'lodash';
 
 import { withStyles } from 'material-ui/styles';
@@ -110,14 +108,18 @@ class PredictionForm extends Component {
 
     renderTabContent() {
         const { activeTab } = this.state;
-        const { classes, intl, matches, groups } = this.props;
+        const { classes, intl, matches, groups, predictions } = this.props;
 
         return (
             <Grid container className={classes.matches} spacing={16}>
                 {_.filter(matches, match => match.data.group === groups[activeTab])
                   .map(match => 
                     <Grid item xs={6} key={match.index}>
-                        <MatchCard match={match} />
+                        <MatchCard 
+                            match={match} 
+                            prediction={predictions[match.index]} 
+                            update={this.props.update} 
+                        />
                     </Grid>
                 )}
             </Grid>
@@ -142,11 +144,4 @@ class PredictionForm extends Component {
     }
 }
 
-
-const mapStateToProps = (state) => {
-    return {
-        form: state.forms.joinPool,
-    };
-}
-
-export default withStyles(styles)(injectIntl(connect(mapStateToProps)(PredictionForm)));
+export default withStyles(styles)(injectIntl(PredictionForm));

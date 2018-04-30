@@ -30,4 +30,12 @@ export const actionTypes = {
     JOIN_POOL_REQUEST: 'join_pool_request',
     JOIN_POOL_SUCCESS: 'join_pool_success',
     JOIN_POOL_FAIL: 'join_pool_fail',
+
+    /** Predictions actions. */
+    FETCH_PREDICTIONS_REQUEST: 'fetch_predictions_request',
+    FETCH_PREDICTIONS_SUCCESS: 'fetch_predictions_success',
+    FETCH_PREDICTIONS_FAIL: 'fetch_predictions_fail',
+    UPDATE_PREDICTION_REQUEST: 'update_prediction_request',
+    UPDATE_PREDICTION_SUCCESS: 'update_prediction_success',
+    UPDATE_PREDICTION_FAIL: 'update_prediction_fail',
 }

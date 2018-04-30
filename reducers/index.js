@@ -6,6 +6,7 @@ import createPoolReducer from './createPoolReducer';
 import joinPoolReducer from './joinPoolReducer';
 import poolReducer from './poolReducer';
 import matchesReducer from './matchesReducer';
+import predictionsReducer from './predictionsReducer';
 
 export default combineReducers({
   // list: listParticipantReducer,
@@ -13,6 +14,7 @@ export default combineReducers({
   metamask: metamaskReducer,
   pool: poolReducer,
   matches: matchesReducer,
+  predictions: predictionsReducer,
   ...createForms({
     createPool: createPoolReducer,
     joinPool: joinPoolReducer,

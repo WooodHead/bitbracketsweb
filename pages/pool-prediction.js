@@ -8,13 +8,18 @@ import { initStore } from '../store';
 import PredictionForm from '../components/PredictionForm/PredictionForm';
 import Layout from '../components/Layout';
 import GroupsSelector from '../selectors/groupsSelector';
-import { joinPool } from '../actions';
+import { updatePrediction } from '../actions';
 
 class PoolPredictionPage extends React.Component {
     render() {
         return (
             <Layout>
-                <PredictionForm groups={this.props.groups} matches={this.props.matches} />
+                <PredictionForm 
+                    groups={this.props.groups} 
+                    matches={this.props.matches} 
+                    predictions={this.props.predictions}
+                    update={this.props.updatePrediction}
+                />
             </Layout>
         )
     }
@@ -24,12 +29,13 @@ function mapStateToProps(state) {
     return {
         matches: state.matches,
         groups: GroupsSelector(state),
+        predictions: state.predictions,
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // joinPool: bindActionCreators(joinPool, dispatch),
+        updatePrediction: bindActionCreators(updatePrediction, dispatch),
     }
 }
 
