@@ -10,7 +10,7 @@ import Home from "../components/home/Home";
 import ScrollToTop from "react-scroll-up";
 import Button from "material-ui/Button";
 
-import withRoot from "../md/withRoot";
+import withRoot from "../components/HOC/md/withRoot";
 import { bindActionCreators } from "redux";
 import withRedux from "next-redux-wrapper";
 import { initStore } from "../store";

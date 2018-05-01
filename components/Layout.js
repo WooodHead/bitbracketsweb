@@ -29,7 +29,6 @@ class Layout extends Component {
   render() {
     const language = this.props.current;
 
-    // console.log("esto son los mensajes", messages[language]);
     return (
       <IntlProvider locale={language} messages={messages[language]}>
         <div>
