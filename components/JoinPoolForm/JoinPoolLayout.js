@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { actions } from 'react-redux-form';
+import _ from 'lodash';
 
 import { withStyles } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
@@ -55,6 +56,10 @@ const styles = theme => ({
         marginTop: -12,
         marginLeft: -12,
     },
+    errorMessage: {
+        color: 'red',
+        marginTop: theme.spacing.unit * 2,
+    },
 });
 
 const messages = defineMessages({
@@ -93,6 +98,11 @@ const messages = defineMessages({
         defaultMessage: 'Pay',
         description: '',
     },
+    predictionError: {
+        id: 'JoinPoolLayout.predictionError',
+        defaultMessage: '*You Must Fill All Predictions',
+        description: '',
+    },
 });
 
 class JoinPoolLayout extends Component {
@@ -100,6 +110,7 @@ class JoinPoolLayout extends Component {
         super(props);
         this.state = {
             activeStep: 1,
+            error: ''
         };
     }
 
@@ -177,7 +188,7 @@ class JoinPoolLayout extends Component {
 
     handleNext = () => {
         const { activeStep } = this.state;
-        const { pool, form } = this.props;
+        const { intl, pool, form, predictions, matches } = this.props;
         const lastStep = this.getSteps().length;
 
         switch (activeStep) {
@@ -188,10 +199,16 @@ class JoinPoolLayout extends Component {
                 }
                 break;
             case 2:
-                this.setState({ activeStep: activeStep + 1 });
+                const numberMatches = _.filter(matches, match => _.isObject(match)).length;
+                const numberPredictions = _.filter(predictions, prediction => _.isObject(prediction)).length;
+                if ( numberMatches === numberPredictions ) {
+                    this.setState({ activeStep: activeStep + 1, error: '' });
+                } else {
+                    this.setState({ error: intl.formatMessage(messages.predictionError) });
+                }
                 break;
             case lastStep:
-                this.props.onSubmit(pool);
+                this.props.onSubmit(pool, predictions);
         }
     };
 
@@ -204,7 +221,7 @@ class JoinPoolLayout extends Component {
 
     render() {
         const { classes, intl } = this.props;
-        const { activeStep } = this.state;
+        const { activeStep, error } = this.state;
 
         return (
             <div className={classes.root}>
@@ -218,6 +235,9 @@ class JoinPoolLayout extends Component {
                     {`${activeStep}. ${this.getSteps()[activeStep - 1]}`}
                 </Typography>
                 {this.getStepContent(activeStep)}
+                <Typography className={classes.errorMessage} variant="caption">
+                    {`${error}`}
+                </Typography>
                 {this.renderNavigator(activeStep)}
             </div>
         );

@@ -33,5 +33,10 @@
     "id": "JoinPoolLayout.finishButton",
     "description": "",
     "defaultMessage": "Pay"
+  },
+  {
+    "id": "JoinPoolLayout.predictionError",
+    "description": "",
+    "defaultMessage": "*You Must Fill All Predictions"
   }
 ]

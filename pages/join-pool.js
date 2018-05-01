@@ -41,7 +41,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         joinPool: bindActionCreators(joinPool, dispatch),
         updatePrediction: bindActionCreators(updatePrediction, dispatch),
-        savePredictions: bindActionCreators(savePredictions, dispatch),   
     }
 }
 
