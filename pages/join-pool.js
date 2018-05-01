@@ -3,7 +3,7 @@ import { bindActionCreators } from "redux";
 import withRedux from "next-redux-wrapper";
 import Link from "next/link";
 
-import withRoot from '../md/withRoot';
+import withRoot from '../components/HOC/md/withRoot';
 import { initStore } from '../store';
 import JoinPoolLayout from '../components/JoinPoolForm/JoinPoolLayout';
 import Layout from "../components/Layout";
