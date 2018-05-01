@@ -6,10 +6,6 @@ import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import Tabs, { Tab } from 'material-ui/Tabs';
-import TextField from 'material-ui/TextField';
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
-import { CircularProgress } from 'material-ui/Progress';
 import MatchCard from './MatchCard';
 
 const styles = theme => ({

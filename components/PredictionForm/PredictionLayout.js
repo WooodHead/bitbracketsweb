@@ -3,14 +3,9 @@ import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import _ from 'lodash';
 
 import { withStyles } from 'material-ui/styles';
-import Grid from 'material-ui/Grid';
-import Paper from 'material-ui/Paper';
-import Tabs, { Tab } from 'material-ui/Tabs';
-import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import { CircularProgress } from 'material-ui/Progress';
-import MatchCard from './MatchCard';
 import PredictionForm from './PredictionForm';
 
 const styles = theme => ({
@@ -93,7 +88,7 @@ class PredictionLayout extends Component {
     }
 
     render() {
-        const { classes, intl } = this.props;
+        const { classes, intl, groups, matches, predictions, update, read } = this.props;
 
         return (
             <div className={classes.root}>
@@ -104,11 +99,11 @@ class PredictionLayout extends Component {
                     {intl.formatMessage(messages.headingSecondary)}
                 </Typography>
                 <PredictionForm
-                    groups={this.props.groups} 
-                    matches={this.props.matches} 
-                    predictions={this.props.predictions}
-                    update={this.props.updatePrediction}
-                    read={this.props.read}
+                    groups={groups} 
+                    matches={matches} 
+                    predictions={predictions}
+                    update={update}
+                    read={read}
                 />
                 {this.renderActions()}
             </div>
