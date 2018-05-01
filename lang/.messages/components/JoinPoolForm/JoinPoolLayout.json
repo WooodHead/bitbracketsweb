@@ -1,31 +1,36 @@
 [
   {
-    "id": "JoinPoolForm.headingPrimary",
+    "id": "JoinPoolLayout.headingPrimary",
     "description": "",
     "defaultMessage": "Welcome to [CRYPTOPOOL]"
   },
   {
-    "id": "JoinPoolForm.userSetupStep",
+    "id": "JoinPoolLayout.userSetupStep",
     "description": "",
     "defaultMessage": "Player Setup"
   },
   {
-    "id": "JoinPoolForm.paymentStep",
+    "id": "JoinPoolLayout.predictionStep",
+    "description": "",
+    "defaultMessage": "Predictions"
+  },
+  {
+    "id": "JoinPoolLayout.paymentStep",
     "description": "",
     "defaultMessage": "Payment"
   },
   {
-    "id": "JoinPoolForm.backButton",
+    "id": "JoinPoolLayout.backButton",
     "description": "",
     "defaultMessage": "Back"
   },
   {
-    "id": "JoinPoolForm.nextButton",
+    "id": "JoinPoolLayout.nextButton",
     "description": "",
     "defaultMessage": "Next"
   },
   {
-    "id": "JoinPoolForm.finishButton",
+    "id": "JoinPoolLayout.finishButton",
     "description": "",
     "defaultMessage": "Pay"
   }

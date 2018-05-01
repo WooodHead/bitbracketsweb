@@ -59,32 +59,37 @@ const styles = theme => ({
 
 const messages = defineMessages({
     headingPrimary: {
-        id: 'JoinPoolForm.headingPrimary',
+        id: 'JoinPoolLayout.headingPrimary',
         defaultMessage: 'Welcome to [CRYPTOPOOL]',
         description: '',
     },
     userSetupStep: {
-        id: 'JoinPoolForm.userSetupStep',
+        id: 'JoinPoolLayout.userSetupStep',
         defaultMessage: 'Player Setup',
         description: '',
     },
+    predictionsStep: {
+        id: 'JoinPoolLayout.predictionStep',
+        defaultMessage: 'Predictions',
+        description: '',
+    },
     paymentStep: {
-        id: 'JoinPoolForm.paymentStep',
+        id: 'JoinPoolLayout.paymentStep',
         defaultMessage: 'Payment',
         description: '',
     },
     backButton: {
-        id: 'JoinPoolForm.backButton',
+        id: 'JoinPoolLayout.backButton',
         defaultMessage: 'Back',
         description: '',
     },
     nextButton: {
-        id: 'JoinPoolForm.nextButton',
+        id: 'JoinPoolLayout.nextButton',
         defaultMessage: 'Next',
         description: '',
     },
     finishButton: {
-        id: 'JoinPoolForm.finishButton',
+        id: 'JoinPoolLayout.finishButton',
         defaultMessage: 'Pay',
         description: '',
     },
@@ -103,6 +108,7 @@ class JoinPoolLayout extends Component {
 
         return [
             intl.formatMessage(messages.userSetupStep),
+            intl.formatMessage(messages.predictionsStep),
             intl.formatMessage(messages.paymentStep),
         ];
     }
@@ -149,19 +155,19 @@ class JoinPoolLayout extends Component {
     }
 
     getStepContent(stepIndex) {
+        const { groups, matches, predictions, update, read } = this.props;
+
         switch (stepIndex) {
             case 1:
                 return <PlayerSetupForm />;
             case 2:
-                return
-                    <PredictionForm
-                        groups={this.props.groups}
-                        matches={this.props.matches}
-                        predictions={this.props.predictions}
-                        update={this.props.updatePrediction}
-                        save={this.props.savePredictions}
-                        // read
-                    />
+                return <PredictionForm
+                    groups={groups}
+                    matches={matches}
+                    predictions={predictions}
+                    update={update}
+                    read={read}
+                />
             case 3:
                 return <JoinPaymentForm />;
             default:
@@ -180,6 +186,9 @@ class JoinPoolLayout extends Component {
                 if (form.$form.valid) {
                     this.setState({ activeStep: activeStep + 1 });
                 }
+                break;
+            case 2:
+                this.setState({ activeStep: activeStep + 1 });
                 break;
             case lastStep:
                 this.props.onSubmit(pool);
