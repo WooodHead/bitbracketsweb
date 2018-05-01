@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import withRoot from '../md/withRoot';
 import { initStore } from '../store';
-import PredictionForm from '../components/PredictionForm/PredictionForm';
+import PredictionLayout from '../components/PredictionForm/PredictionLayout';
 import Layout from '../components/Layout';
 import GroupsSelector from '../selectors/groupsSelector';
 import { updatePrediction, savePredictions } from '../actions';
@@ -14,7 +14,7 @@ class PoolPredictionPage extends React.Component {
     render() {
         return (
             <Layout>
-                <PredictionForm 
+                <PredictionLayout 
                     groups={this.props.groups} 
                     matches={this.props.matches} 
                     predictions={this.props.predictions}

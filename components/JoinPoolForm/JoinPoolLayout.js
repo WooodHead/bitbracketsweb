@@ -20,6 +20,7 @@ import { CircularProgress } from 'material-ui/Progress';
 
 import PlayerSetupForm from './PlayerSetupForm';
 import JoinPaymentForm from './JoinPaymentForm';
+import PredictionForm from '../PredictionForm/PredictionForm';
 
 const styles = theme => ({
     root: {
@@ -89,7 +90,7 @@ const messages = defineMessages({
     },
 });
 
-class JoinPoolForm extends Component {
+class JoinPoolLayout extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -152,6 +153,16 @@ class JoinPoolForm extends Component {
             case 1:
                 return <PlayerSetupForm />;
             case 2:
+                return
+                    <PredictionForm
+                        groups={this.props.groups}
+                        matches={this.props.matches}
+                        predictions={this.props.predictions}
+                        update={this.props.updatePrediction}
+                        save={this.props.savePredictions}
+                        // read
+                    />
+            case 3:
                 return <JoinPaymentForm />;
             default:
                 return 'Unknown stepIndex';
@@ -211,4 +222,4 @@ const mapStateToProps = (state) => {
     };
 }
 
-export default withStyles(styles)(injectIntl(connect(mapStateToProps)(JoinPoolForm)));
+export default withStyles(styles)(injectIntl(connect(mapStateToProps)(JoinPoolLayout)));

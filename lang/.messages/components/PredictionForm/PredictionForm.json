@@ -1,27 +1,7 @@
 [
   {
-    "id": "PredictionForm.headingPrimary",
-    "description": "",
-    "defaultMessage": "[MY] Predictions"
-  },
-  {
-    "id": "PredictionForm.headingSecondary",
-    "description": "",
-    "defaultMessage": "[NAME] Crypto Pool"
-  },
-  {
     "id": "PredictionForm.group",
     "description": "",
     "defaultMessage": "Group"
-  },
-  {
-    "id": "PredictionForm.backButton",
-    "description": "",
-    "defaultMessage": "Back to Pool Dashboard"
-  },
-  {
-    "id": "PredictionForm.finishButton",
-    "description": "",
-    "defaultMessage": "Save Predictions"
   }
 ]

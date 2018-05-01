@@ -13,21 +13,6 @@ import { CircularProgress } from 'material-ui/Progress';
 import MatchCard from './MatchCard';
 
 const styles = theme => ({
-    root: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    headingPrimary: {
-        fontWeight: 'bold',
-        marginTop: theme.spacing.unit * 3,
-    },
-    headingSecondary: {
-        fontWeight: 'bold',
-        width: '60%',
-        marginTop: theme.spacing.unit * 2,
-        marginBottom: theme.spacing.unit * 2,
-    },
     form: {
         width: '80%',
         paddingTop: theme.spacing.unit * 2,
@@ -38,49 +23,17 @@ const styles = theme => ({
     matches: {
         padding: theme.spacing.unit * 2,
     },
-    actions: {
-        marginTop: theme.spacing.unit * 2,
-        marginBottom: theme.spacing.unit * 2,
-        position: 'relative',
-    },
-    buttonProgress: {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        marginTop: -12,
-        marginLeft: -12,
-    },
 });
 
 const messages = defineMessages({
-    headingPrimary: {
-        id: 'PredictionForm.headingPrimary',
-        defaultMessage: '[MY] Predictions',
-        description: '',
-    },
-    headingSecondary: {
-        id: 'PredictionForm.headingSecondary',
-        defaultMessage: '[NAME] Crypto Pool',
-        description: '',
-    },
     group: {
         id: 'PredictionForm.group',
         defaultMessage: 'Group',
         description: '',
     },
-    backButton: {
-        id: 'PredictionForm.backButton',
-        defaultMessage: 'Back to Pool Dashboard',
-        description: '',
-    },
-    finishButton: {
-        id: 'PredictionForm.finishButton',
-        defaultMessage: 'Save Predictions',
-        description: '',
-    },
 });
 
-class PredictionForm extends Component {
+class PredictionLayout extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -91,25 +44,6 @@ class PredictionForm extends Component {
     handleTabChange = (event, value) => {
         this.setState({ activeTab: value });
     };
-
-    renderTabForm() {
-        const { classes, intl, groups } = this.props;
-        return (
-            <Paper className={classes.form}>
-                <Tabs
-                    className={classes.tabs}
-                    value={this.state.activeTab}
-                    onChange={this.handleTabChange}
-                    indicatorColor="primary"
-                    textColor="primary"
-                    centered
-                >
-                    {groups.map(group => <Tab key={group} label={group} />)}
-                </Tabs>
-                {this.renderTabContent()}
-            </Paper>
-        );
-    }
 
     renderTabContent() {
         const { activeTab } = this.state;
@@ -132,43 +66,26 @@ class PredictionForm extends Component {
         );
     }
 
-    renderActions() {
-        const { classes, intl, predictions, save, read } = this.props;
-
-        if (read) return <div className={classes.actions}></div>;
-
-        return (
-            <div className={classes.actions}>
-                <Button
-                    variant="raised"
-                    color="primary"
-                    onClick={() => save(predictions)}
-                    disabled={predictions.loading}
-                >
-                    {intl.formatMessage(messages.finishButton)}
-                </Button>
-                {predictions.loading && <CircularProgress size={24} className={classes.buttonProgress} />}
-            </div>
-        );
-    }
-
     render() {
-        const { classes, intl } = this.props;
+        const { classes, intl, groups } = this.props;
         const { activeStep } = this.state;
 
         return (
-            <div className={classes.root}>
-                <Typography className={classes.headingPrimary} variant="headline" align="center" gutterBottom>
-                    {intl.formatMessage(messages.headingPrimary)}
-                </Typography>
-                <Typography className={classes.headingSecondary} variant="headline" align="center" gutterBottom>
-                    {intl.formatMessage(messages.headingSecondary)}
-                </Typography>
-                {this.renderTabForm()}
-                {this.renderActions()}
-            </div>
+            <Paper className={classes.form}>
+                <Tabs
+                    className={classes.tabs}
+                    value={this.state.activeTab}
+                    onChange={this.handleTabChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    centered
+                >
+                    {groups.map(group => <Tab key={group} label={group} />)}
+                </Tabs>
+                {this.renderTabContent()}
+            </Paper>
         );
     }
 }
 
-export default withStyles(styles)(injectIntl(PredictionForm));
+export default withStyles(styles)(injectIntl(PredictionLayout));
