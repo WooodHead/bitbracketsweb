@@ -43,7 +43,7 @@ const MatchCard = ({ classes, match, prediction, update, read }) => {
                         }}
                         disabled={read}
                     >
-                        H
+                        {match.home.match(/\b(\w)/g).join('')}
                     </Button>
                 </Grid>
                 <Grid item className={classes.controls} xs={4}>
@@ -56,7 +56,7 @@ const MatchCard = ({ classes, match, prediction, update, read }) => {
                         }}
                         disabled={read}
                     >
-                        T
+                        TIE
                     </Button>
                 </Grid>
                 <Grid item className={classes.controls} xs={4}>
@@ -69,7 +69,7 @@ const MatchCard = ({ classes, match, prediction, update, read }) => {
                         }}
                         disabled={read}
                     >
-                        A
+                        {match.away.match(/\b(\w)/g).join('')}
                     </Button>
                 </Grid>
             </Grid>
