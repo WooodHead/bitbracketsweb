@@ -1,0 +1,62 @@
+[
+  {
+    "id": "JoinPaymentForm.headingTertiary1",
+    "description": "",
+    "defaultMessage": "Finish Installing MetaMask to Continue"
+  },
+  {
+    "id": "JoinPaymentForm.help",
+    "description": "",
+    "defaultMessage": "Here some help:"
+  },
+  {
+    "id": "JoinPaymentForm.installHeader",
+    "description": "",
+    "defaultMessage": "How to Install MetaMask"
+  },
+  {
+    "id": "JoinPaymentForm.installDescription",
+    "description": "",
+    "defaultMessage": "..."
+  },
+  {
+    "id": "JoinPaymentForm.etherHeader",
+    "description": "",
+    "defaultMessage": "Getting Ether Your Digital Currency"
+  },
+  {
+    "id": "JoinPaymentForm.etherDescription",
+    "description": "",
+    "defaultMessage": "..."
+  },
+  {
+    "id": "JoinPaymentForm.sendHeader",
+    "description": "",
+    "defaultMessage": "How to Send ETH to MetaMask"
+  },
+  {
+    "id": "JoinPaymentForm.sendDescription",
+    "description": "",
+    "defaultMessage": "..."
+  },
+  {
+    "id": "JoinPaymentForm.headingTertiary2",
+    "description": "",
+    "defaultMessage": "Payment Details"
+  },
+  {
+    "id": "JoinPaymentForm.entryLabel",
+    "description": "",
+    "defaultMessage": "Entry Price"
+  },
+  {
+    "id": "JoinPaymentForm.feeLabel",
+    "description": "",
+    "defaultMessage": "Entry Fee"
+  },
+  {
+    "id": "JoinPaymentForm.totalLabel",
+    "description": "",
+    "defaultMessage": "TOTAL"
+  }
+]

@@ -19,5 +19,26 @@ export const actionTypes = {
     CREATE_POOL_FAIL: 'create_pool_fail',
     POOL_DETAIL_REQUEST: 'pool_detail_request',
     POOL_DETAIL_SUCCESS: 'pool_detail_success',
-    POOL_DETAIL_FAIL: 'pool_detail_fail',    
+    POOL_DETAIL_FAIL: 'pool_detail_fail',
+
+    /** Fetch Pool actions. */
+    FETCH_POOL_REQUEST: 'fetch_pool_request',
+    FETCH_POOL_SUCCESS: 'fetch_pool_success',
+    FETCH_POOL_FAIL: 'fetch_pool_fail',
+
+    /** Join Pool actions. */
+    JOIN_POOL_REQUEST: 'join_pool_request',
+    JOIN_POOL_SUCCESS: 'join_pool_success',
+    JOIN_POOL_FAIL: 'join_pool_fail',
+
+    /** Predictions actions. */
+    FETCH_PREDICTIONS_REQUEST: 'fetch_predictions_request',
+    FETCH_PREDICTIONS_SUCCESS: 'fetch_predictions_success',
+    FETCH_PREDICTIONS_FAIL: 'fetch_predictions_fail',
+    UPDATE_PREDICTION_REQUEST: 'update_prediction_request',
+    UPDATE_PREDICTION_SUCCESS: 'update_prediction_success',
+    UPDATE_PREDICTION_FAIL: 'update_prediction_fail',
+    SAVE_PREDICTIONS_REQUEST: 'save_prediction_request',
+    SAVE_PREDICTIONS_SUCCESS: 'save_prediction_success',
+    SAVE_PREDICTIONS_FAIL: 'save_prediction_fail',
 }

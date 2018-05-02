@@ -1,0 +1,42 @@
+[
+  {
+    "id": "JoinPoolLayout.headingPrimary",
+    "description": "",
+    "defaultMessage": "Welcome to [CRYPTOPOOL]"
+  },
+  {
+    "id": "JoinPoolLayout.userSetupStep",
+    "description": "",
+    "defaultMessage": "Player Setup"
+  },
+  {
+    "id": "JoinPoolLayout.predictionStep",
+    "description": "",
+    "defaultMessage": "Predictions"
+  },
+  {
+    "id": "JoinPoolLayout.paymentStep",
+    "description": "",
+    "defaultMessage": "Payment"
+  },
+  {
+    "id": "JoinPoolLayout.backButton",
+    "description": "",
+    "defaultMessage": "Back"
+  },
+  {
+    "id": "JoinPoolLayout.nextButton",
+    "description": "",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "JoinPoolLayout.finishButton",
+    "description": "",
+    "defaultMessage": "Pay"
+  },
+  {
+    "id": "JoinPoolLayout.predictionError",
+    "description": "",
+    "defaultMessage": "*You Must Fill All Predictions"
+  }
+]

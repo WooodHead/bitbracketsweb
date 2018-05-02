@@ -1,0 +1,47 @@
+[
+  {
+    "id": "PlayerSetupForm.headingTertiary1",
+    "description": "",
+    "defaultMessage": "Player Info"
+  },
+  {
+    "id": "PlayerSetupForm.playerLabel",
+    "description": "",
+    "defaultMessage": "Player"
+  },
+  {
+    "id": "PlayerSetupForm.playerTextbox",
+    "description": "",
+    "defaultMessage": "Nickname"
+  },
+  {
+    "id": "PlayerSetupForm.emailLabel",
+    "description": "",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "PlayerSetupForm.emailTextbox",
+    "description": "",
+    "defaultMessage": "email@email.com"
+  },
+  {
+    "id": "PlayerSetupForm.termsCheckbox",
+    "description": "",
+    "defaultMessage": "I agree with the terms of use"
+  },
+  {
+    "id": "PlayerSetupForm.rulesCheckbox",
+    "description": "",
+    "defaultMessage": "I agree with the pool rules"
+  },
+  {
+    "id": "PlayerSetupForm.errorRequired",
+    "description": "",
+    "defaultMessage": "Field is Required"
+  },
+  {
+    "id": "PlayerSetupForm.errorEmail",
+    "description": "",
+    "defaultMessage": "Not a Valid Email"
+  }
+]
