@@ -20,9 +20,9 @@ export const initStore = (initialState, { isServer, req, debug, storeKey }) => {
     } else {
 
         const persistConfig = {
-            key: 'nextjs',
-            // whitelist: ['matches'], // make sure it does not clash with server keys
-            storage
+            key: 'root',
+            storage,
+            whitelist: ['predictions'], // make sure it does not clash with server keys
         };
 
         const persistedReducer = persistReducer(persistConfig, reducer);
