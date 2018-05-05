@@ -4,6 +4,7 @@ import withRedux from "next-redux-wrapper";
 import Link from "next/link";
 
 import withRoot from '../components/HOC/md/withRoot';
+import withPersistGate from '../components/HOC/withPersistGate';
 import { initStore } from '../store';
 import JoinPoolLayout from '../components/JoinPoolForm/JoinPoolLayout';
 import Layout from "../components/Layout";
@@ -14,14 +15,14 @@ class JoinPoolPage extends React.Component {
     render() {
         return (
             <Layout>
-                <JoinPoolLayout 
-                    pool={this.props.pool} 
-                    onSubmit={this.props.joinPool} 
-                    groups={this.props.groups} 
-                    matches={this.props.matches} 
+                <JoinPoolLayout
+                    pool={this.props.pool}
+                    onSubmit={this.props.joinPool}
+                    groups={this.props.groups}
+                    matches={this.props.matches}
                     predictions={this.props.predictions}
                     update={this.props.updatePrediction}
-                    // read
+                // read
                 />
             </Layout>
         )
@@ -45,5 +46,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default withRoot(
-  withRedux(initStore, mapStateToProps, mapDispatchToProps)(JoinPoolPage)
+    withRedux(initStore, mapStateToProps, mapDispatchToProps)(JoinPoolPage)
+    // withRedux(initStore, mapStateToProps, mapDispatchToProps)(withPersistGate()(JoinPoolPage))
 );
