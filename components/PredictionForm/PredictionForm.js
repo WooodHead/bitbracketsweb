@@ -14,7 +14,7 @@ const styles = theme => ({
         paddingTop: theme.spacing.unit * 2,
     },
     tabs: {
-
+    
     },
     matches: {
         padding: theme.spacing.unit * 2,
@@ -74,7 +74,8 @@ class PredictionLayout extends Component {
                     onChange={this.handleTabChange}
                     indicatorColor="primary"
                     textColor="primary"
-                    centered
+                    scrollable
+                    scrollButtons="auto"
                 >
                     {groups.map(group => <Tab key={group} label={group} />)}
                 </Tabs>

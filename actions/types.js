@@ -41,4 +41,12 @@ export const actionTypes = {
     SAVE_PREDICTIONS_REQUEST: 'save_prediction_request',
     SAVE_PREDICTIONS_SUCCESS: 'save_prediction_success',
     SAVE_PREDICTIONS_FAIL: 'save_prediction_fail',
+
+    /** Contest actions. */
+    FETCH_MATCHES_REQUEST: 'fetch_matches_request',
+    FETCH_MATCHES_SUCCESS: 'fetch_matches_success',
+    FETCH_MATCHES_FAIL: 'fetch_matches_fail',
+    FETCH_TEAMS_REQUEST: 'fetch_teams_request',
+    FETCH_TEAMS_SUCCESS: 'fetch_teams_success',
+    FETCH_TEAMS_FAIL: 'fetch_teams_fail',
 }

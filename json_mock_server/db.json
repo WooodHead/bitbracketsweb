@@ -1,14 +1,689 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" },
-    "languages": [
-      { "code": "en", "name": "English" },
-      { "code": "es", "name": "Español" }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    }
+  ],
+  "teams": [
+    {
+      "index": 1,
+      "name": "Russia",
+      "iso2": "ru",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/900px-Flag_of_Russia.png",
+      "emoji": "flag-ru"
+    },
+    {
+      "index": 2,
+      "name": "Saudi Arabia",
+      "iso2": "sa",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/750px-Flag_of_Saudi_Arabia.png",
+      "emoji": "flag-sa"
+    },
+    {
+      "index": 3,
+      "name": "Egypt",
+      "iso2": "eg",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/900px-Flag_of_Egypt.png",
+      "emoji": "flag-eg"
+    },
+    {
+      "index": 4,
+      "name": "Uruguay",
+      "iso2": "uy",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/900px-Flag_of_Uruguay.png",
+      "emoji": "flag-uy"
+    },
+    {
+      "index": 5,
+      "name": "Portugal",
+      "iso2": "pt",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/600px-Flag_of_Portugal.png",
+      "emoji": "flag-pt"
+    },
+    {
+      "index": 6,
+      "name": "Spain",
+      "iso2": "es",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.png",
+      "emoji": "flag-es"
+    },
+    {
+      "index": 7,
+      "name": "Morocco",
+      "iso2": "ma",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/900px-Flag_of_Morocco.png",
+      "emoji": "flag-ma"
+    },
+    {
+      "index": 8,
+      "name": "Iran",
+      "iso2": "ir",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/630px-Flag_of_Iran.png",
+      "emoji": "flag-ir"
+    },
+    {
+      "index": 9,
+      "name": "France",
+      "iso2": "fr",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/900px-Flag_of_France.png",
+      "emoji": "flag-fr"
+    },
+    {
+      "index": 10,
+      "name": "Australia",
+      "iso2": "au",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.png",
+      "emoji": "flag-au"
+    },
+    {
+      "index": 11,
+      "name": "Peru",
+      "iso2": "pe",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/900px-Flag_of_Peru_%28state%29.png",
+      "emoji": "flag-pe"
+    },
+    {
+      "index": 12,
+      "name": "Denmark",
+      "iso2": "dk",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/740px-Flag_of_Denmark.png",
+      "emoji": "flag-dk"
+    },
+    {
+      "index": 13,
+      "name": "Argentina",
+      "iso2": "ar",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/800px-Flag_of_Argentina.png",
+      "emoji": "flag-ar"
+    },
+    {
+      "index": 14,
+      "name": "Iceland",
+      "iso2": "is",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/800px-Flag_of_Iceland.png",
+      "emoji": "flag-is"
+    },
+    {
+      "index": 15,
+      "name": "Croatia",
+      "iso2": "hr",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/800px-Flag_of_Croatia.png",
+      "emoji": "flag-hr"
+    },
+    {
+      "index": 16,
+      "name": "Nigeria",
+      "iso2": "ng",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/800px-Flag_of_Nigeria.png",
+      "emoji": "flag-ng"
+    },
+    {
+      "index": 17,
+      "name": "Brazil",
+      "iso2": "br",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/720px-Flag_of_Brazil.png",
+      "emoji": "flag-br"
+    },
+    {
+      "index": 18,
+      "name": "Switzerland",
+      "iso2": "ch",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/320px-Flag_of_Switzerland_%28Pantone%29.png",
+      "emoji": "flag-ch"
+    },
+    {
+      "index": 19,
+      "name": "Costa Rica",
+      "iso2": "cr",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Costa_Rica_%28state%29.svg/833px-Flag_of_Costa_Rica_%28state%29.png",
+      "emoji": "flag-cr"
+    },
+    {
+      "index": 20,
+      "name": "Serbia",
+      "iso2": "rs",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1350px-Flag_of_Serbia.png",
+      "emoji": "flag-rs"
+    },
+    {
+      "index": 21,
+      "name": "Germany",
+      "iso2": "de",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.png",
+      "emoji": "flag-de"
+    },
+    {
+      "index": 22,
+      "name": "Mexico",
+      "iso2": "mx",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/800px-Flag_of_Mexico.png",
+      "emoji": "flag-mx"
+    },
+    {
+      "index": 23,
+      "name": "Sweden",
+      "iso2": "se",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1600px-Flag_of_Sweden.png",
+      "emoji": "flag-se"
+    },
+    {
+      "index": 24,
+      "name": "South Korea",
+      "iso2": "kr",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/900px-Flag_of_South_Korea.png",
+      "emoji": "flag-kr"
+    },
+    {
+      "index": 25,
+      "name": "Belgium",
+      "iso2": "be",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/450px-Flag_of_Belgium.png",
+      "emoji": "flag-be"
+    },
+    {
+      "index": 26,
+      "name": "Panama",
+      "iso2": "pa",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/450px-Flag_of_Panama.png",
+      "emoji": "flag-pa"
+    },
+    {
+      "index": 27,
+      "name": "Tunisia",
+      "iso2": "tn",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/1200px-Flag_of_Tunisia.png",
+      "emoji": "flag-tn"
+    },
+    {
+      "index": 28,
+      "name": "England",
+      "iso2": "gb-eng",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png",
+      "emoji": "flag-england"
+    },
+    {
+      "index": 29,
+      "name": "Poland",
+      "iso2": "pl",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1280px-Flag_of_Poland.png",
+      "emoji": "flag-pl"
+    },
+    {
+      "index": 30,
+      "name": "Senegal",
+      "iso2": "sn",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg",
+      "emoji": "flag-sn"
+    },
+    {
+      "index": 31,
+      "name": "Colombia",
+      "iso2": "co",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/450px-Flag_of_Colombia.png",
+      "emoji": "flag-co"
+    },
+    {
+      "index": 32,
+      "name": "Japan",
+      "iso2": "jp",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/900px-Flag_of_Japan.png",
+      "emoji": "flag-jp"
+    }
+  ],
+  "matches": [
+    {
+      "index": 1,
+      "home": 1,
+      "away": 2,
+      "date": "2018-06-14T18:00:00+03:00",
+      "data": {
+        "group": "A"
+      }
+    },
+    {
+      "index": 2,
+      "home": 3,
+      "away": 4,
+      "date": "2018-06-15T17:00:00+05:00",
+      "data": {
+        "group": "A"
+      }
+    },
+    {
+      "index": 17,
+      "home": 1,
+      "away": 3,
+      "date": "2018-06-19T21:00:00+03:00",
+      "data": {
+        "group": "A"
+      }
+    },
+    {
+      "index": 18,
+      "home": 4,
+      "away": 2,
+      "date": "2018-06-20T18:00:00+03:00",
+      "data": {
+        "group": "A"
+      }
+    },
+    {
+      "index": 33,
+      "home": 4,
+      "away": 1,
+      "date": "2018-06-25T18:00:00+04:00",
+      "data": {
+        "group": "A"
+      }
+    },
+    {
+      "index": 34,
+      "home": 2,
+      "away": 3,
+      "date": "2018-06-25T17:00:00+03:00",
+      "data": {
+        "group": "A"
+      }
+    },
+    {
+      "index": 3,
+      "home": 5,
+      "away": 6,
+      "date": "2018-06-15T21:00:00+03:00",
+      "data": {
+        "group": "B"
+      }
+    },
+    {
+      "index": 4,
+      "home": 7,
+      "away": 8,
+      "date": "2018-06-15T18:00:00+03:00",
+      "data": {
+        "group": "B"
+      }
+    },
+    {
+      "index": 19,
+      "home": 5,
+      "away": 7,
+      "date": "2018-06-20T15:00:00+03:00",
+      "data": {
+        "group": "B"
+      }
+    },
+    {
+      "index": 20,
+      "home": 8,
+      "away": 6,
+      "date": "2018-06-20T21:00:00+03:00",
+      "data": {
+        "group": "B"
+      }
+    },
+    {
+      "index": 35,
+      "home": 8,
+      "away": 5,
+      "date": "2018-06-25T21:00:00+03:00",
+      "data": {
+        "group": "B"
+      }
+    },
+    {
+      "index": 36,
+      "home": 6,
+      "away": 7,
+      "date": "2018-06-25T20:00:00+02:00",
+      "data": {
+        "group": "B"
+      }
+    },
+    {
+      "index": 5,
+      "home": 9,
+      "away": 10,
+      "date": "2018-06-16T13:00:00+03:00",
+      "data": {
+        "group": "C"
+      }
+    },
+    {
+      "index": 6,
+      "home": 11,
+      "away": 12,
+      "date": "2018-06-16T19:00:00+03:00",
+      "data": {
+        "group": "C"
+      }
+    },
+    {
+      "index": 21,
+      "home": 9,
+      "away": 11,
+      "date": "2018-06-21T20:00:00+05:00",
+      "data": {
+        "group": "C"
+      }
+    },
+    {
+      "index": 22,
+      "home": 12,
+      "away": 10,
+      "date": "2018-06-21T16:00:00+04:00",
+      "data": {
+        "group": "C"
+      }
+    },
+    {
+      "index": 37,
+      "home": 12,
+      "away": 9,
+      "date": "2018-06-26T17:00:00+03:00",
+      "data": {
+        "group": "C"
+      }
+    },
+    {
+      "index": 38,
+      "home": 10,
+      "away": 11,
+      "date": "2018-06-26T17:00:00+02:00",
+      "data": {
+        "group": "C"
+      }
+    },
+    {
+      "index": 7,
+      "home": 13,
+      "away": 14,
+      "date": "2018-06-16T16:00:00+03:00",
+      "data": {
+        "group": "D"
+      }
+    },
+    {
+      "index": 8,
+      "home": 15,
+      "away": 16,
+      "date": "2018-06-16T21:00:00+02:00",
+      "data": {
+        "group": "D"
+      }
+    },
+    {
+      "index": 23,
+      "home": 13,
+      "away": 15,
+      "date": "2018-06-21T21:00:00+03:00",
+      "data": {
+        "group": "D"
+      }
+    },
+    {
+      "index": 24,
+      "home": 16,
+      "away": 14,
+      "date": "2018-06-22T18:00:00+03:00",
+      "data": {
+        "group": "D"
+      }
+    },
+    {
+      "index": 39,
+      "home": 16,
+      "away": 13,
+      "date": "2018-06-26T21:00:00+03:00",
+      "data": {
+        "group": "D"
+      }
+    },
+    {
+      "index": 40,
+      "home": 14,
+      "away": 15,
+      "date": "2018-06-26T21:00:00+03:00",
+      "data": {
+        "group": "D"
+      }
+    },
+    {
+      "index": 9,
+      "home": 17,
+      "away": 18,
+      "date": "2018-06-17T21:00:00+03:00",
+      "data": {
+        "group": "E"
+      }
+    },
+    {
+      "index": 10,
+      "home": 19,
+      "away": 20,
+      "date": "2018-06-17T16:00:00+04:00",
+      "data": {
+        "group": "E"
+      }
+    },
+    {
+      "index": 25,
+      "home": 17,
+      "away": 19,
+      "date": "2018-06-22T15:00:00+03:00",
+      "data": {
+        "group": "E"
+      }
+    },
+    {
+      "index": 26,
+      "home": 20,
+      "away": 18,
+      "date": "2018-06-22T20:00:00+02:00",
+      "data": {
+        "group": "E"
+      }
+    },
+    {
+      "index": 41,
+      "home": 20,
+      "away": 17,
+      "date": "2018-06-27T21:00:00+03:00",
+      "data": {
+        "group": "E"
+      }
+    },
+    {
+      "index": 42,
+      "home": 18,
+      "away": 19,
+      "date": "2018-06-27T21:00:00+03:00",
+      "data": {
+        "group": "E"
+      }
+    },
+    {
+      "index": 11,
+      "home": 21,
+      "away": 22,
+      "date": "2018-06-17T18:00:00+03:00",
+      "data": {
+        "group": "F"
+      }
+    },
+    {
+      "index": 12,
+      "home": 23,
+      "away": 24,
+      "date": "2018-06-18T15:00:00+03:00",
+      "data": {
+        "group": "F"
+      }
+    },
+    {
+      "index": 27,
+      "home": 21,
+      "away": 23,
+      "date": "2018-06-23T21:00:00+03:00",
+      "data": {
+        "group": "F"
+      }
+    },
+    {
+      "index": 28,
+      "home": 24,
+      "away": 22,
+      "date": "2018-06-23T18:00:00+03:00",
+      "data": {
+        "group": "F"
+      }
+    },
+    {
+      "index": 43,
+      "home": 24,
+      "away": 21,
+      "date": "2018-06-27T17:00:00+03:00",
+      "data": {
+        "group": "F"
+      }
+    },
+    {
+      "index": 44,
+      "home": 22,
+      "away": 23,
+      "date": "2018-06-27T19:00:00+05:00",
+      "data": {
+        "group": "F"
+      }
+    },
+    {
+      "index": 13,
+      "home": 25,
+      "away": 26,
+      "date": "2018-06-18T18:00:00+03:00",
+      "data": {
+        "group": "G"
+      }
+    },
+    {
+      "index": 14,
+      "home": 27,
+      "away": 28,
+      "date": "2018-06-18T21:00:00+03:00",
+      "data": {
+        "group": "G"
+      }
+    },
+    {
+      "index": 29,
+      "home": 25,
+      "away": 27,
+      "date": "2018-06-23T15:00:00+03:00",
+      "data": {
+        "group": "G"
+      }
+    },
+    {
+      "index": 30,
+      "home": 28,
+      "away": 26,
+      "date": "2018-06-24T15:00:00+03:00",
+      "data": {
+        "group": "G"
+      }
+    },
+    {
+      "index": 45,
+      "home": 28,
+      "away": 25,
+      "date": "2018-06-28T20:00:00+02:00",
+      "data": {
+        "group": "G"
+      }
+    },
+    {
+      "index": 46,
+      "home": 26,
+      "away": 27,
+      "date": "2018-06-28T21:00:00+03:00",
+      "data": {
+        "group": "G"
+      }
+    },
+    {
+      "index": 15,
+      "home": 29,
+      "away": 30,
+      "date": "2018-06-19T18:00:00+03:00",
+      "data": {
+        "group": "H"
+      }
+    },
+    {
+      "index": 16,
+      "home": 31,
+      "away": 32,
+      "date": "2018-06-19T15:00:00+03:00",
+      "data": {
+        "group": "H"
+      }
+    },
+    {
+      "index": 31,
+      "home": 29,
+      "away": 31,
+      "date": "2018-06-24T20:00:00+05:00",
+      "data": {
+        "group": "H"
+      }
+    },
+    {
+      "index": 32,
+      "home": 32,
+      "away": 30,
+      "date": "2018-06-24T21:00:00+03:00",
+      "data": {
+        "group": "H"
+      }
+    },
+    {
+      "index": 47,
+      "home": 32,
+      "away": 29,
+      "date": "2018-06-28T17:00:00+03:00",
+      "data": {
+        "group": "H"
+      }
+    },
+    {
+      "index": 48,
+      "home": 30,
+      "away": 31,
+      "date": "2018-06-28T18:00:00+04:00",
+      "data": {
+        "group": "H"
+      }
+    }
+  ]
 }
-  
