@@ -41,4 +41,10 @@ export const actionTypes = {
     SAVE_PREDICTIONS_REQUEST: 'save_prediction_request',
     SAVE_PREDICTIONS_SUCCESS: 'save_prediction_success',
     SAVE_PREDICTIONS_FAIL: 'save_prediction_fail',
+    
+    /** Fetch Pools actions*/
+    FETCH_POOLS_REQUEST: 'fetch_pools_request',
+    FETCH_POOLS_SUCCESS: 'fetch_pools_success',
+    FETCH_POOLS_FAIL: 'fetch_pools_fail',
+
 }

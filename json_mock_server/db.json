@@ -9,6 +9,164 @@
     "languages": [
       { "code": "en", "name": "English" },
       { "code": "es", "name": "Español" }
+    ],
+    "pools": [
+      { 
+        "address":"0x0bbdbdbdbd2121200231",
+        "contestName": "Rusia2018",  
+        "manager": "0x02332212121212121200231",
+        "startTime": "2018-06-14T08:40:51.620Z",
+        "endTime": "2018-07-16T08:40:51.620Z",
+        "graceTimeInHours": "24",
+        "amountToPlay": "0.0000001",
+        "managerFeePercentage": "10",
+        "ownerFeePercentage": 10,
+        "totalBalance": "1",
+        "highScore": "32",
+        "firstPlacePlayer": "0x01",
+        "status": "IN_PROGRESS",
+        "results": [8,3,111,3,5],
+        "gamesPlayed": 5,
+        "published_at": "2015-08-05T08:40:51.620Z",
+        "totalPlayer": 4,
+        "players": [
+            {
+                "address": "0x01",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 32
+            }, {
+                "address": "0x02",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 28
+            }, {
+                "address": "0x03",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 21
+            }, {
+                "address": "0x04",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 11
+            }
+        ],
+        "winner" : []
+    },
+    { 
+        "address":"0x0bbdbdbdbd2121200231",
+        "contestName": "RusiaABC2018",  
+        "manager": "0x02332212121212121200231",
+        "startTime": "2018-06-14T08:40:51.620Z",
+        "endTime": "2018-07-16T08:40:51.620Z",
+        "graceTimeInHours": "24",
+        "amountToPlay": "0.0000001",
+        "managerFeePercentage": "10",
+        "ownerFeePercentage": 10,
+        "totalBalance": "1",
+        "highScore": "32",
+        "firstPlacePlayer": "0x01",
+        "status": "IN_PROGRESS",
+        "results": [8,3,111,3,5],
+        "gamesPlayed": 5,
+        "published_at": "2015-08-05T08:40:51.620Z",
+        "totalPlayer": 29,
+        "players": [
+            {
+                "address": "0x01",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 32
+            }, {
+                "address": "0x02",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 28
+            }, {
+                "address": "0x03",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 21
+            }, {
+                "address": "0x04",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 11
+            }
+        ],
+        "winner" : []
+    },
+    { 
+        "address":"0x0bbdbdbdbd2121200231",
+        "contestName": "RusiaTest2018",  
+        "manager": "0x02332212121212121200231",
+        "startTime": "2018-06-14T08:40:51.620Z",
+        "endTime": "2018-07-16T08:40:51.620Z",
+        "graceTimeInHours": "24",
+        "amountToPlay": "0.0000001",
+        "managerFeePercentage": "10",
+        "ownerFeePercentage": 10,
+        "totalBalance": "1",
+        "highScore": "32",
+        "firstPlacePlayer": "0x01",
+        "status": "IN_PROGRESS",
+        "results": [8,3,111,3,5],
+        "gamesPlayed": 5,
+        "published_at": "2015-08-05T08:40:51.620Z",
+        "totalPlayer": 29,
+        "players": [
+            {
+                "address": "0x01",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 32
+            }, {
+                "address": "0x02",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 28
+            }, {
+                "address": "0x03",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 21
+            }, {
+                "address": "0x04",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 11
+            }
+        ],
+        "winner" : []
+    },    
+    { 
+        "address":"0x0bbdbdbdbd2121200231",
+        "contestName": "RusiaPrueba2018",  
+        "manager": "0x02332212121212121200231",
+        "startTime": "2018-06-14T08:40:51.620Z",
+        "endTime": "2018-07-16T08:40:51.620Z",
+        "graceTimeInHours": "24",
+        "amountToPlay": "0.0000001",
+        "managerFeePercentage": "10",
+        "ownerFeePercentage": 10,
+        "totalBalance": "1",
+        "highScore": "32",
+        "firstPlacePlayer": "0x01",
+        "status": "IN_PROGRESS",
+        "results": [8,3,111,3,5],
+        "gamesPlayed": 5,
+        "published_at": "2015-08-05T08:40:51.620Z",
+        "totalPlayer": 29,
+        "players": [
+            {
+                "address": "0x01",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 32
+            }, {
+                "address": "0x02",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 28
+            }, {
+                "address": "0x03",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 21
+            }, {
+                "address": "0x04",
+                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
+                "score": 11
+            }
+        ],
+        "winner" : []
+    }   
     ]
 }
   
