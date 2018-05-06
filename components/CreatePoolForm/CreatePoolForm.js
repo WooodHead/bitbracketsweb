@@ -15,6 +15,7 @@ import PoolSetupForm from './PoolSetupForm';
 import ReviewDetailsForm from './ReviewDetailsForm';
 import PaymentForm from './PaymentForm';
 import withMetaMask from '../HOC/withMetaMask';
+import { Router } from '../../routes';
 
 const styles = theme => ({
   root: {
@@ -125,9 +126,10 @@ class CreatePoolForm extends Component {
     }
   }
 
-    handleNext = () => {
+    handleNext = async (event) => {
+      event.preventDefault();
       const { activeStep } = this.state;
-      const { pool, form } = this.props;
+      const { pool, form, contest } = this.props;
       const lastStep = this.getSteps().length;
 
       switch (activeStep) {
@@ -142,7 +144,10 @@ class CreatePoolForm extends Component {
           if (form.$form.valid) this.setState({ activeStep: activeStep + 1 });
           break;
         case lastStep:
-          this.props.onSubmit(pool);
+          pool.contestName = contest;
+          pool.fee = '10000000000000000';
+          this.props.onSubmit(pool)
+            .then(tx => Router.pushRoute('/'));
           break;
         default:
           break;
@@ -223,9 +228,12 @@ class CreatePoolForm extends Component {
 
 CreatePoolForm.propTypes = {
   contest: PropTypes.string.isRequired,
+  intl: PropTypes.object.isRequired,
+  form: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
-
-
+  onSubmit: PropTypes.func.isRequired,
+  onNext: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 

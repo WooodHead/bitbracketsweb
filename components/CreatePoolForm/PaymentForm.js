@@ -8,11 +8,11 @@ import TextField from 'material-ui/TextField';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
 // import { FormLabel } from 'material-ui/Form';
-import ExpansionPanel, {
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
-} from 'material-ui/ExpansionPanel';
-import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
+// import ExpansionPanel, {
+//   ExpansionPanelSummary,
+//   ExpansionPanelDetails,
+// } from 'material-ui/ExpansionPanel';
+// import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
@@ -70,7 +70,7 @@ const messages = defineMessages({
 
 class PaymentForm extends Component {
   renderPaymentDetails() {
-    const { classes, intl, forms } = this.props;
+    const { classes, intl, forms, contest } = this.props;
 
     return (
       <Form

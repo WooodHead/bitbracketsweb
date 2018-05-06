@@ -1,15 +1,17 @@
 import Web3 from 'web3';
-import KEYS from '../conf/keys';
+import conf from '../conf/';
 
-let web3;
+let web3temp;
 
 if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
   // We are in the browser and metamask is running.
-  web3 = new Web3(window.web3.currentProvider);
+  web3temp = new Web3(window.web3.currentProvider);
 } else {
   // We are on the server *OR* the user is not running metamask
-  const provider = new Web3.providers.HttpProvider(KEYS.infuraUrl);
-  web3 = new Web3(provider);
+  const provider = new Web3.providers.HttpProvider(conf.web3.infuraUrl);
+  web3temp = new Web3(provider);
 }
+
+const web3 = web3temp;
 
 export default web3;

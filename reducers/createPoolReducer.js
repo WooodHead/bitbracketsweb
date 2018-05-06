@@ -22,7 +22,7 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state, ...action.payload, loading: false, error: undefined,
       };
-    case actionTypes.CREATE_POOL_FAIL:
+    case actionTypes.CREATE_POOL_FAILED:
       return { ...state, loading: false, error: action.payload };
 
     case actionTypes.POOL_DETAIL_REQUEST:
@@ -31,7 +31,7 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state, ...action.payload, loading: false, error: undefined,
       };
-    case actionTypes.POOL_DETAIL_FAIL:
+    case actionTypes.POOL_DETAIL_FAILED:
       return { ...state, loading: false, error: action.payload };
 
     default: return state;
