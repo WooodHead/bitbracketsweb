@@ -42,3 +42,20 @@ export const actionTypes = {
   SAVE_PREDICTIONS_SUCCESS: 'save_prediction_success',
   SAVE_PREDICTIONS_FAIL: 'save_prediction_fail',
 };
+    // /** Predictions actions. */
+    // FETCH_PREDICTIONS_REQUEST: 'fetch_predictions_request',
+    // FETCH_PREDICTIONS_SUCCESS: 'fetch_predictions_success',
+    // FETCH_PREDICTIONS_FAIL: 'fetch_predictions_fail',
+    // UPDATE_PREDICTION_REQUEST: 'update_prediction_request',
+    // UPDATE_PREDICTION_SUCCESS: 'update_prediction_success',
+    // UPDATE_PREDICTION_FAIL: 'update_prediction_fail',
+    // SAVE_PREDICTIONS_REQUEST: 'save_prediction_request',
+    // SAVE_PREDICTIONS_SUCCESS: 'save_prediction_success',
+    // SAVE_PREDICTIONS_FAIL: 'save_prediction_fail',
+    
+    /** Fetch Pools actions*/
+    FETCH_POOLS_REQUEST: 'fetch_pools_request',
+    FETCH_POOLS_SUCCESS: 'fetch_pools_success',
+    FETCH_POOLS_FAIL: 'fetch_pools_fail',
+
+}
