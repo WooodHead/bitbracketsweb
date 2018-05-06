@@ -11,6 +11,7 @@ import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import { CircularProgress } from 'material-ui/Progress';
 
+import web3 from '../../ethereum/web3';
 import PoolSetupForm from './PoolSetupForm';
 import ReviewDetailsForm from './ReviewDetailsForm';
 import PaymentForm from './PaymentForm';
@@ -90,12 +91,18 @@ const messages = defineMessages({
   },
 });
 
+const FEE = '10000000000000000';
+
 class CreatePoolForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       activeStep: 1,
     };
+  }
+
+  componentWillMount() {
+    this.props.dispatch(actions.change('createPool.entryFee', web3.utils.fromWei(FEE, 'ether')));
   }
 
   getSteps() {
@@ -145,7 +152,7 @@ class CreatePoolForm extends Component {
           break;
         case lastStep:
           pool.contestName = contest;
-          pool.fee = '10000000000000000';
+          pool.fee = FEE;
           // TODO: Message to tell user it will be redirected in a few moments
           // TODO: update state on error
           this.props.onSubmit(pool)

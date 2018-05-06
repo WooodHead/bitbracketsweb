@@ -58,7 +58,7 @@ const messages = defineMessages({
   },
   feeLabel: {
     id: 'feeLabel',
-    defaultMessage: 'Entry Fee',
+    defaultMessage: 'Pool Creation Fee',
     description: '',
   },
   totalLabel: {
@@ -70,31 +70,18 @@ const messages = defineMessages({
 
 class PaymentForm extends Component {
   renderPaymentDetails() {
-    const { classes, intl, forms, contest } = this.props;
+    const {
+ classes, intl, forms, contest 
+} = this.props;
 
     return (
       <Form
         className={classes.formBox}
-        model="pool"
+        model="createPool"
       >
         <Typography className={classes.headingTertiary} variant="subheading">
           {intl.formatMessage(messages.headingTertiary2)}
         </Typography>
-        <Grid container alignItems="baseline">
-          <Grid item xs={3}>
-            <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
-          </Grid>
-          <Grid item xs={9}>
-            <Control.text
-              className={classes.textField}
-              model=".entryPrice"
-              component={TextField}
-              disabled
-              InputProps={{ disableUnderline: true }}
-            />
-          </Grid>
-        </Grid>
-
         <Grid container alignItems="baseline">
           <Grid item xs={3}>
             <Typography>{intl.formatMessage(messages.feeLabel)}</Typography>
@@ -106,6 +93,7 @@ class PaymentForm extends Component {
               component={TextField}
               disabled
               InputProps={{ disableUnderline: true }}
+              helperText="ETH"
             />
           </Grid>
         </Grid>
@@ -119,10 +107,11 @@ class PaymentForm extends Component {
           <Grid item xs={9}>
             <Control.text
               className={classes.textField}
-              model=".entryTotal"
+              model=".entryFee"
               component={TextField}
               disabled
               InputProps={{ disableUnderline: true }}
+              helperText="ETH"
             />
           </Grid>
         </Grid>

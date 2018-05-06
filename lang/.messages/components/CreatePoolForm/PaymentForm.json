@@ -12,7 +12,7 @@
   {
     "id": "feeLabel",
     "description": "",
-    "defaultMessage": "Entry Fee"
+    "defaultMessage": "Pool Creation Fee"
   },
   {
     "id": "totalLabel",
