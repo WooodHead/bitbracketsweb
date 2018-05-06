@@ -1,21 +1,20 @@
-import React from "react";
-import { bindActionCreators } from "redux";
-import withRedux from "next-redux-wrapper";
+import React from 'react';
 
-import Layout from "../components/Layout";
-import IndexDashboard from "../components/Dashboard/IndexDashboard";
+import { bindActionCreators } from 'redux';
+import withRedux from 'next-redux-wrapper';
 
-import withRoot from "../components/HOC/md/withRoot";
-import { initStore } from "../store";
+import Layout from '../components/Layout';
+import IndexDashboard from '../components/Dashboard/IndexDashboard';
 
-class poolDashboard extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <IndexDashboard />
-      </Layout>
-    );
-  }
+import withRoot from '../components/HOC/md/withRoot';
+import { initStore } from '../store';
+
+function poolDashboard() {
+  return (
+    <Layout>
+      <IndexDashboard />
+    </Layout>
+  );
 }
 
 function mapStateToProps(state) {
@@ -25,12 +24,8 @@ function mapStateToProps(state) {
   };
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    // changeLanguage: bindActionCreators(changeLanguage, dispatch),
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  // changeLanguage: bindActionCreators(changeLanguage, dispatch),
+});
 
-export default withRoot(
-  withRedux(initStore, mapStateToProps, mapDispatchToProps)(poolDashboard)
-);
+export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(poolDashboard));
