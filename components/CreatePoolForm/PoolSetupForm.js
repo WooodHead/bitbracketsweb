@@ -77,7 +77,7 @@ const messages = defineMessages({
   },
   entryLabel: {
     id: 'entryLabel',
-    defaultMessage: 'Entry Price',
+    defaultMessage: 'Entry Amount',
     description: '',
   },
   entryTextbox: {
@@ -134,121 +134,121 @@ class PoolSetupForm extends Component {
         model="createPool"
       >
         <Typography className={classes.headingTertiary} variant="subheading">
-              {intl.formatMessage(messages.headingTertiary1)}
-            </Typography>
+          {intl.formatMessage(messages.headingTertiary1)}
+        </Typography>
 
         <Grid container alignItems="baseline">
-              <Grid item xs={3}>
-                  <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
-                </Grid>
-              <Grid item xs={9}>
-                  <Control.text
-                      className={classes.textField}
-                      model=".adminName"
-                      component={TextField}
-                      placeholder={intl.formatMessage(messages.adminNameTextbox)}
-                      validators={{
+          <Grid item xs={3}>
+                <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
+              </Grid>
+          <Grid item xs={9}>
+                <Control.text
+                    className={classes.textField}
+                    model=".adminName"
+                    component={TextField}
+                    placeholder={intl.formatMessage(messages.adminNameTextbox)}
+                    validators={{
                                 required,
                             }}
-                      validateOn="blur"
-                      error={hasError(form.adminName)}
-                      helperText={getError(form.adminName, intl)}
-                    />
-                </Grid>
-            </Grid>
+                    validateOn="blur"
+                    error={hasError(form.adminName)}
+                    helperText={getError(form.adminName, intl)}
+                  />
+              </Grid>
+        </Grid>
 
         <Grid container alignItems="baseline">
-              <Grid item xs={3}>
-                  <Typography>{intl.formatMessage(messages.emailLabel)}</Typography>
-                </Grid>
-              <Grid item xs={9}>
-                  <Control.text
-                      className={classes.textField}
-                      model=".adminEmail"
-                      component={TextField}
-                      placeholder={intl.formatMessage(messages.emailTextbox)}
-                      validators={{
+          <Grid item xs={3}>
+                <Typography>{intl.formatMessage(messages.emailLabel)}</Typography>
+              </Grid>
+          <Grid item xs={9}>
+                <Control.text
+                    className={classes.textField}
+                    model=".adminEmail"
+                    component={TextField}
+                    placeholder={intl.formatMessage(messages.emailTextbox)}
+                    validators={{
                                 required,
                             }}
-                      validateOn="blur"
-                      error={hasError(form.adminEmail)}
-                      helperText={getError(form.adminEmail, intl)}
-                    />
-                </Grid>
-            </Grid>
+                    validateOn="blur"
+                    error={hasError(form.adminEmail)}
+                    helperText={getError(form.adminEmail, intl)}
+                  />
+              </Grid>
+        </Grid>
 
         <Divider className={classes.division} />
 
         <Typography className={classes.headingTertiary} variant="subheading">
-              {intl.formatMessage(messages.headingTertiary2)}
-            </Typography>
+          {intl.formatMessage(messages.headingTertiary2)}
+        </Typography>
         <Grid container alignItems="baseline">
-              <Grid item xs={3}>
-                  <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
-                </Grid>
-              <Grid item xs={9}>
-                  <Control.text
-                      className={classes.textField}
-                      model=".poolName"
-                      component={TextField}
-                      placeholder={intl.formatMessage(messages.poolNameTextbox)}
-                      validators={{
+          <Grid item xs={3}>
+                <Typography>{intl.formatMessage(messages.nameLabel)}</Typography>
+              </Grid>
+          <Grid item xs={9}>
+                <Control.text
+                    className={classes.textField}
+                    model=".poolName"
+                    component={TextField}
+                    placeholder={intl.formatMessage(messages.poolNameTextbox)}
+                    validators={{
                                 required,
                             }}
-                      validateOn="blur"
-                      error={hasError(form.poolName)}
-                      helperText={getError(form.poolName, intl)}
-                    />
-                </Grid>
-            </Grid>
+                    validateOn="blur"
+                    error={hasError(form.poolName)}
+                    helperText={getError(form.poolName, intl)}
+                  />
+              </Grid>
+        </Grid>
 
         <Grid container alignItems="baseline">
-              <Grid item xs={3}>
-                  <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
-                </Grid>
-              <Grid item xs={9}>
-                  <Control.text
-                      className={classes.textField}
-                      model=".entryPrice"
-                      component={TextField}
-                      placeholder={intl.formatMessage(messages.entryTextbox)}
-                      validators={{
+          <Grid item xs={3}>
+                <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
+              </Grid>
+          <Grid item xs={9}>
+                <Control.text
+                    className={classes.textField}
+                    model=".entryPrice"
+                    component={TextField}
+                    placeholder={intl.formatMessage(messages.entryTextbox)}
+                    validators={{
                                 required,
                             }}
-                      validateOn="blur"
-                      error={hasError(form.entryPrice)}
-                      helperText={getError(form.entryPrice, intl)}
-                    />
-                </Grid>
-            </Grid>
+                    validateOn="blur"
+                    error={hasError(form.entryPrice)}
+                    helperText={getError(form.entryPrice, intl) || 'ETH'}
+                  />
+              </Grid>
+        </Grid>
         <Divider className={classes.division} />
 
         <Grid container alignItems="baseline">
-              <Grid item>
-                  <Control.checkbox
-                      model=".terms"
-                      component={Checkbox}
-                    />
-                </Grid>
-              <Grid item>
-                  <Typography>
-                      {intl.formatMessage(messages.termsCheckbox)}
-                    </Typography>
-                </Grid>
-            </Grid>
+          <Grid item>
+                <Control.checkbox
+                    model=".terms"
+                    component={Checkbox}
+                  />
+              </Grid>
+          <Grid item>
+                <Typography>
+                    {intl.formatMessage(messages.termsCheckbox)}
+                  </Typography>
+              </Grid>
+        </Grid>
 
         <Grid container alignItems="baseline">
-              <Grid item>
-                  <Control.checkbox
-                      model=".rules"
-                      component={Checkbox}
-                    />
-                </Grid>
-              <Grid item>
-                  <Typography>
-                      {intl.formatMessage(messages.rulesCheckbox)}
-                    </Typography>
-                </Grid>
+          <Grid item>
+                <Control.checkbox
+                    model=".rules"
+                    component={Checkbox}
+                  />
+              </Grid>
+          <Grid item>
+                <Typography>
+                    {intl.formatMessage(messages.rulesCheckbox)}
+                  </Typography>
+          </Grid>
         </Grid>
 
       </Form>

@@ -32,11 +32,11 @@
   {
     "id": "entryLabel",
     "description": "",
-    "defaultMessage": "Entry Price"
+    "defaultMessage": "Entry Amount"
   },
   {
     "id": "feeLabel",
     "description": "",
-    "defaultMessage": "Entry Fee"
+    "defaultMessage": "Pool Creation Fee"
   }
 ]
