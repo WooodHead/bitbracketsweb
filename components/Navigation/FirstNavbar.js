@@ -8,8 +8,7 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
-import IconButton from 'material-ui/IconButton';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+
 import pink from 'material-ui/colors/pink';
 
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
@@ -27,12 +26,6 @@ const styles = {
     marginRight: 20,
   },
 };
-
-const theme = createMuiTheme({
-  palette: {
-    primary: { main: pink[500] },
-  },
-});
 
 const messages = defineMessages({
   navigationNavbarlink1: {
@@ -81,11 +74,14 @@ function FirstNavbar(props) {
           <Button href="/howDoesItWork" color="inherit">
             {intl.formatMessage(messages.navigationNavbarlink3)}
           </Button>
-          <MuiThemeProvider theme={theme}>
-            <Button href="/contest/Russia2018/pools/new" variant="raised" color="primary">
-              {intl.formatMessage(messages.navigationNavbarlink4)}
-            </Button>
-          </MuiThemeProvider>
+
+          <Button
+            href="/contest/Russia2018/pools/new"
+            variant="raised"
+            style={{ backgroundColor: '#E91E63', color: '#fff' }}
+          >
+            {intl.formatMessage(messages.navigationNavbarlink4)}
+          </Button>
         </Toolbar>
       </AppBar>
     </div>

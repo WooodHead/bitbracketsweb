@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import { bindActionCreators } from 'redux';
 
@@ -5,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import en from 'react-intl/locale-data/en';
 import es from 'react-intl/locale-data/es';
 import { IntlProvider, addLocaleData } from 'react-intl';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import withRedux from 'next-redux-wrapper';
 
 import Layout from '../components/Layout';
@@ -20,7 +21,7 @@ addLocaleData(en);
 addLocaleData(es);
 
 function faq(props) {
-  const { language } = props;
+  // const { language } = props;
   const lang = 'es';
 
   return (
@@ -36,7 +37,7 @@ function faq(props) {
   );
 }
 faq.propTypes = {
-  language: PropTypes.func.isRequired,
+  // language: PropTypes.func,
 };
 function mapStateToProps(state) {
   return {
