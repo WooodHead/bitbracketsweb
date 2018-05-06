@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 
 import PropTypes from 'prop-types';
@@ -6,12 +8,12 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
-
+import IconButton from 'material-ui/IconButton';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import pink from 'material-ui/colors/pink';
 
-import { injectIntl, defineMessages } from 'react-intl';
-// import navigation from '../../intl/navigation';
+import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
+import navigation from '../../intl/navigation';
 
 const styles = {
   root: {
@@ -60,12 +62,7 @@ function FirstNavbar(props) {
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Toolbar>
-          <img
-            src="/static/logo.png"
-            alt="cryptocurrency-pool"
-            width="30"
-            height="30"
-          />
+          <img src="/static/logo.png" alt="cryptocurrency-pool" width="30" height="30" />
           <Typography variant="title" color="inherit" className={classes.flex}>
             <Button href="/" color="inherit">
               {' '}
@@ -97,7 +94,7 @@ function FirstNavbar(props) {
 
 FirstNavbar.propTypes = {
   classes: PropTypes.object.isRequired,
-  intl: PropTypes.func.isRequired,
+  intl: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(injectIntl(FirstNavbar));
