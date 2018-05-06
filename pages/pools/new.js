@@ -1,10 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import withRedux from 'next-redux-wrapper';
 // import Link from 'next/link';
-
+// import util from 'ethereumjs-util';
+// import web3 from '../../ethereum/web3';
+// import factory from '../../ethereum/contestPoolFactory';
 import withRoot from '../../components/HOC/md/withRoot';
 import { initStore } from '../../store';
 import CreatePoolForm from '../../components/CreatePoolForm/CreatePoolForm';
@@ -31,8 +34,30 @@ function mapStateToProps(state) {
   };
 }
 
-CreatePoolPage.getInitialProps = (props) => {
+// function stringToBytes32(text) {
+//   return util.bufferToHex(util.setLengthRight(text, 32));
+// }
+
+// async function loadDefinitionInfo(contestName) {
+//   // el definition Rusia2018Prueba dice que este es el fee en wei
+//   // pool.fee = '10000000000000000';
+//   // const accounts = await web3.eth.getAccounts();
+//   console.log('contestName', stringToBytes32(contestName));
+//   console.log('contestName ascii to hex', web3.utils.stringToHex(contestName));
+//   const res = await factory.methods
+//     .definitions(stringToBytes32(contestName))
+//     .call();
+//   console.log('res', res);
+//   // dispatch({ type: actionTypes.POOL_DETAIL_SUCCESS, payload: pool });
+//   return res;
+// }
+
+
+CreatePoolPage.getInitialProps = async (props) => {
   const { contest } = props.query;
+
+  // const res = await loadDefinitionInfo(contest);
+
   return { contest };
 };
 
