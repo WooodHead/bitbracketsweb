@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import Typography from "material-ui/Typography";
-import Divider from "material-ui/Divider";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import Typography from 'material-ui/Typography';
+import Divider from 'material-ui/Divider';
 
-import Grid from "material-ui/Grid";
+import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
   root: {
-    width: "100%",
+    width: '100%',
     marginTop: theme.spacing.unit * 2,
-    overflowX: "auto"
+    overflowX: 'auto',
   },
-  table: {}
+  table: {},
 });
 
 function ResponsiveListTableParticipant(props) {
@@ -21,86 +21,68 @@ function ResponsiveListTableParticipant(props) {
   return (
     <div>
       <div>
-        {list.players.map(n => {
-          return (
-            <div key={Math.random()}>
-              <Grid container spacing={24}>
-                <Grid item xs={6}>
-                  <Typography
-                    style={{ color: "grey", fontWeight: "500" }}
-                    variant="title"
-                    gutterBottom
-                  >
-                    Name:
-                  </Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography
-                    display="flex"
-                    justify-content="flex-end"
-                    style={{ fontWeight: "500" }}
-                    variant="headline"
-                    gutterBottom
-                  >
-                    {n.playerName}
-                  </Typography>
-                </Grid>
+        {list.players.map(n => (
+          <div key={Math.random()}>
+            <Grid container spacing={24}>
+              <Grid item xs={6}>
+                <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
+                  Name:
+                </Typography>
               </Grid>
-              <Grid container spacing={24}>
-                <Grid item xs={6}>
-                  <Typography
-                    style={{ color: "grey", fontWeight: "500" }}
-                    variant="title"
-                    gutterBottom
-                  >
-                    Predictions
-                  </Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography
-                    display="flex"
-                    justify-content="flex-end"
-                    style={{ fontWeight: "500" }}
-                    variant="headline"
-                    gutterBottom
-                  >
-                    view predictions {n.status}
-                  </Typography>
-                </Grid>
+              <Grid item xs={6}>
+                <Typography
+                  display="flex"
+                  justify-content="flex-end"
+                  style={{ fontWeight: '500' }}
+                  variant="subheading"
+                  gutterBottom
+                >
+                  {n.playerName}
+                </Typography>
               </Grid>
-              <Grid container spacing={24}>
-                <Grid item xs={6}>
-                  <Typography
-                    style={{ color: "grey", fontWeight: "500" }}
-                    variant="title"
-                    gutterBottom
-                  >
-                    Score:
-                  </Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography
-                    display="flex"
-                    justify-content="flex-end"
-                    style={{ fontWeight: "500" }}
-                    variant="headline"
-                    gutterBottom
-                  >
-                    {n.score}
-                  </Typography>
-                </Grid>
+            </Grid>
+            <Grid container spacing={24}>
+              <Grid item xs={6}>
+                <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
+                  Predictions
+                </Typography>
               </Grid>
+              <Grid item xs={6}>
+                <Typography
+                  display="flex"
+                  justify-content="flex-end"
+                  style={{ fontWeight: '500' }}
+                  variant="subheading"
+                  gutterBottom
+                >
+                  view predictions {n.status}
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid container spacing={24}>
+              <Grid item xs={6}>
+                <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
+                  Score:
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography
+                  display="flex"
+                  justify-content="flex-end"
+                  style={{ fontWeight: '500' }}
+                  variant="subheading"
+                  gutterBottom
+                >
+                  {n.score}
+                </Typography>
+              </Grid>
+            </Grid>
 
-              <Divider />
-            </div>
-          );
-        })}
+            <Divider />
+          </div>
+        ))}
       </div>
-      <Typography
-        style={{ fontWeight: "500", color: "grey" }}
-        variant="headline"
-        gutterBottom
-      >
+      <Typography style={{ fontWeight: '500', color: 'grey' }} variant="headline" gutterBottom>
         It’s a little bit lonely here... Invite some friends
       </Typography>
     </div>
@@ -108,8 +90,8 @@ function ResponsiveListTableParticipant(props) {
 }
 
 ResponsiveListTableParticipant.propTypes = {
-  classes: PropTypes.object.isRequired,
-  list: PropTypes.object.isRequired
+  classes: PropTypes.func.isRequired,
+  list: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(ResponsiveListTableParticipant);

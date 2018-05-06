@@ -1,58 +1,58 @@
-import React from "react";
+import React from 'react';
 
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import AppBar from "material-ui/AppBar";
-import Toolbar from "material-ui/Toolbar";
-import Typography from "material-ui/Typography";
-import Button from "material-ui/Button";
-import IconButton from "material-ui/IconButton";
-import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
-import pink from "material-ui/colors/pink";
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import AppBar from 'material-ui/AppBar';
+import Toolbar from 'material-ui/Toolbar';
+import Typography from 'material-ui/Typography';
+import Button from 'material-ui/Button';
 
-import { injectIntl, defineMessages, FormattedMessage } from "react-intl";
-import navigation from "../../intl/navigation";
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import pink from 'material-ui/colors/pink';
+
+import { injectIntl, defineMessages } from 'react-intl';
+// import navigation from '../../intl/navigation';
 
 const styles = {
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   flex: {
-    flex: 1
+    flex: 1,
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20
-  }
+    marginRight: 20,
+  },
 };
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: pink[500] }
-  }
+    primary: { main: pink[500] },
+  },
 });
 
 const messages = defineMessages({
   navigationNavbarlink1: {
-    id: "navigation.navbarlink1",
-    defaultMessage: "How does it works?",
-    description: "Navigation link How does it works?"
+    id: 'navigation.navbarlink1',
+    defaultMessage: 'How does it works?',
+    description: 'Navigation link How does it works?',
   },
   navigationNavbarlink2: {
-    id: "navigation.navbarlink2",
-    defaultMessage: "rules",
-    description: "Navigation link rules"
+    id: 'navigation.navbarlink2',
+    defaultMessage: 'rules',
+    description: 'Navigation link rules',
   },
   navigationNavbarlink3: {
-    id: "navigation.navbarlink3",
-    defaultMessage: "My Pools",
-    description: "Navigation link My Pools"
+    id: 'navigation.navbarlink3',
+    defaultMessage: 'My Pools',
+    description: 'Navigation link My Pools',
   },
   navigationNavbarlink4: {
-    id: "navigation.navbarlink4",
-    defaultMessage: "start pool",
-    description: "Navigation link start pool"
-  }
+    id: 'navigation.navbarlink4',
+    defaultMessage: 'start pool',
+    description: 'Navigation link start pool',
+  },
 });
 function FirstNavbar(props) {
   const { classes, intl } = props;
@@ -60,15 +60,10 @@ function FirstNavbar(props) {
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Toolbar>
-          <img
-            src="../../static/logo.png"
-            alt="cryptocurrency-pool"
-            width="30"
-            height="30"
-          />
+          <img src="../../static/logo.png" alt="cryptocurrency-pool" width="30" height="30" />
           <Typography variant="title" color="inherit" className={classes.flex}>
             <Button href="/" color="inherit">
-              {" "}
+              {' '}
               &nbsp;&nbsp;BitBrackets
             </Button>
           </Typography>
@@ -96,7 +91,8 @@ function FirstNavbar(props) {
 }
 
 FirstNavbar.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  intl: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(injectIntl(FirstNavbar));
