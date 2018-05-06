@@ -1,4 +1,5 @@
 import util from 'ethereumjs-util';
+import _ from 'lodash';
 import CONF from '../conf';
 import { actionTypes } from '../actions/types';
 import factory from '../ethereum/contestPoolFactory';
@@ -30,7 +31,7 @@ export const createPool = pool => dispatch =>
       console.log('Amount per player', entryPrice);
       console.log('ContestPool', contestName);
       console.log('Account', accounts[0]);
-/*
+      /*
 Contest Name: Rusia2018Test11
 0: bytes32: contestName 0x5275736961323031385465737431310000000000000000000000000000000000
 1: uint256: startTime 1527811200
@@ -57,8 +58,16 @@ Contest Name: Rusia2018Test11
           value: pool.fee,
         });
       console.log('tx', tx);
-      dispatch({ type: actionTypes.CREATE_POOL_SUCCESS, payload: tx });
-      resolve(tx);
+      const poolAddress = _.get(tx, 'events.ContestPoolCreated.returnValues.contestPoolAddress');
+      console.log('poolAddress', poolAddress);
+      if (poolAddress) {
+        dispatch({ type: actionTypes.CREATE_POOL_SUCCESS, payload: tx });
+        resolve(poolAddress);
+      } else {
+        const error = Error('Unexpected error while creating ContestPool');
+        dispatch({ type: actionTypes.CREATE_POOL_FAILED, payload: error });
+        reject(error);
+      }
     } catch (error) {
       dispatch({ type: actionTypes.CREATE_POOL_FAILED, payload: error });
       reject(error);

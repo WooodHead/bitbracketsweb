@@ -146,8 +146,11 @@ class CreatePoolForm extends Component {
         case lastStep:
           pool.contestName = contest;
           pool.fee = '10000000000000000';
+          // TODO: Message to tell user it will be redirected in a few moments
+          // TODO: update state on error
           this.props.onSubmit(pool)
-            .then(tx => Router.pushRoute('/'));
+            .then(poolAddress => Router.pushRoute(`/pools/${poolAddress}`))
+            .catch(err => console.err('Error: ', err));
           break;
         default:
           break;
