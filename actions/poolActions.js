@@ -22,19 +22,39 @@ export const createPool = pool => dispatch =>
       console.info('CreatePool state', pool);
       const { poolName, contestName, entryPrice } = pool;
       const accounts = await web3.eth.getAccounts();
-      console.log('poolName', stringToBytes32(poolName));
+      console.log('poolName', poolName);
+      console.log('poolName bytes32', stringToBytes32(poolName));
       console.log('poolName ascii to hex', web3.utils.stringToHex(poolName));
       console.log('contestName', stringToBytes32(contestName));
       console.log('contestName ascii to hex', web3.utils.stringToHex(contestName));
+      console.log('Amount per player', entryPrice);
+      console.log('ContestPool', contestName);
+      console.log('Account', accounts[0]);
+/*
+Contest Name: Rusia2018Test11
+0: bytes32: contestName 0x5275736961323031385465737431310000000000000000000000000000000000
+1: uint256: startTime 1527811200
+2: uint256: endTime 1530403200
+3: uint256: graceTime 345600
+4: uint256: maxBalance 10000000000000000000
+5: uint256: fee 10000000000000000
+6: bool: exists true
+7: uint256: ownerFee 10
+8: uint256: managerFee 10
+9: bool: enabled true
+
+*/
+
       const tx = await factory.methods
         .createContestPool(
           stringToBytes32(poolName),
-          stringToBytes32(contestName),
-          web3.utils.toWei(entryPrice, 'ether'),
+          stringToBytes32('Rusia2018Test11'),
+          //web3.utils.toWei(entryPrice, 'ether')
+          '10000000000000000'
         )
         .send({
           from: accounts[0],
-          value: web3.utils.toWei('0.01', 'ether'),
+          value: '10000000000000000'
         });
       console.log('tx', tx);
       dispatch({ type: actionTypes.CREATE_POOL_SUCCESS, payload: tx });
