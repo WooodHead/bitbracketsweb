@@ -43,18 +43,18 @@ Contest Name: Rusia2018Test11
 8: uint256: managerFee 10
 9: bool: enabled true
 
+// contestname test: Rusia2018Test11
 */
 
       const tx = await factory.methods
         .createContestPool(
           stringToBytes32(poolName),
-          stringToBytes32('Rusia2018Test11'),
-          //web3.utils.toWei(entryPrice, 'ether')
-          '10000000000000000'
+          stringToBytes32(contestName),
+          web3.utils.toWei(entryPrice, 'ether'),
         )
         .send({
           from: accounts[0],
-          value: '10000000000000000'
+          value: pool.fee,
         });
       console.log('tx', tx);
       dispatch({ type: actionTypes.CREATE_POOL_SUCCESS, payload: tx });
