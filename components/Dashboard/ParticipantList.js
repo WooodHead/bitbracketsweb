@@ -1,22 +1,13 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 
-import Typography from 'material-ui/Typography';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import grey from 'material-ui/colors/grey';
-
 import Grid from 'material-ui/Grid';
-import Button from 'material-ui/Button';
+
 import ListTableParticipant from './ListTableParticipant';
 import ResponsiveListTableParticipant from './ResponsiveListTableParticipant';
 import HeaderParticipantList from './HeaderParticipantList';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: { main: grey[900] },
-  },
-});
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -73,8 +64,8 @@ function ParticipantList(props) {
 }
 
 ParticipantList.propTypes = {
-  classes: PropTypes.func.isRequired,
-  list: PropTypes.func.isRequired,
+  classes: PropTypes.object.isRequired,
+  list: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(ParticipantList);

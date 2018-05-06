@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -37,7 +39,7 @@ function mapStateToProps(state) {
 }
 
 IndexDashboard.propTypes = {
-  list: PropTypes.func.isRequired,
-  classes: PropTypes.func.isRequired,
+  list: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
 };
 export default connect(mapStateToProps)(withStyles(styles)(IndexDashboard));

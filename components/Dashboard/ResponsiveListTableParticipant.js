@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
@@ -90,8 +91,8 @@ function ResponsiveListTableParticipant(props) {
 }
 
 ResponsiveListTableParticipant.propTypes = {
-  classes: PropTypes.func.isRequired,
-  list: PropTypes.func.isRequired,
+  classes: PropTypes.object.isRequired,
+  list: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(ResponsiveListTableParticipant);
