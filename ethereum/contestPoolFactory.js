@@ -1,10 +1,10 @@
 import web3 from './web3';
 import ContestPoolFactory from './contracts/abi/ContestPoolFactory.json';
-import KEYS from '../conf/keys';
+import CONF from '../conf/';
 
 const instance = new web3.eth.Contract(
-  JSON.parse(ContestPoolFactory),
-  KEYS.address,
+  ContestPoolFactory.abi,
+  CONF.web3.factoryAddress,
 );
 
 export default instance;

@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -37,7 +38,7 @@ CreatePoolPage.getInitialProps = (props) => {
 
 CreatePoolPage.propTypes = {
   contest: PropTypes.string.isRequired,
-  pool: PropTypes.func.isRequired,
+  pool: PropTypes.object.isRequired,
   createPoolAction: PropTypes.func.isRequired,
   fetchPoolDetailsAction: PropTypes.func.isRequired,
 };

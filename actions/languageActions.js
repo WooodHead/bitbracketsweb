@@ -1,14 +1,15 @@
 import axios from 'axios';
+import CONF from '../conf';
 import { actionTypes } from '../actions/types';
 
-const API = process.env.BACKEND_URL;
+const API_BASE_URL = CONF.endpoint.url;
 
-export const changeLanguage = (language) => dispatch => {
+export const changeLanguage = language => (dispatch) => {
   dispatch({ type: actionTypes.CHANGE_LANGUAGE_REQUEST });
   return dispatch({ type: actionTypes.CHANGE_LANGUAGE_SUCCESS, payload: language });
-}
+};
 
-export const fetchLanguages = () => async dispatch => {
+export const fetchLanguages = () => async (dispatch) => {
   dispatch({ type: actionTypes.FETCH_LANGUAGES_REQUEST });
 
   try {

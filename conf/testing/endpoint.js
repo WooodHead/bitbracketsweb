@@ -1,6 +1,6 @@
-//Configutation for Testing
+// Configuration for Testing
 const ENDPOINT = {
-    url: ''
+  url: '',
 };
 
 module.exports = ENDPOINT;
