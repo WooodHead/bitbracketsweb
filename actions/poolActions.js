@@ -1,3 +1,4 @@
+import util from 'ethereumjs-util';
 import CONF from '../conf';
 import { actionTypes } from '../actions/types';
 import factory from '../ethereum/contestPoolFactory';
@@ -6,6 +7,10 @@ import web3 from '../ethereum/web3';
 const API_BASE_URL = CONF.endpoint.url;
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+function stringToBytes32(text) {
+  return util.bufferToHex(util.setLengthRight(text, 32));
+}
 
 export const createPool = pool => dispatch =>
   new Promise(async (resolve, reject) => {
@@ -17,17 +22,19 @@ export const createPool = pool => dispatch =>
       console.info('CreatePool state', pool);
       const { poolName, contestName, entryPrice } = pool;
       const accounts = await web3.eth.getAccounts();
-      console.log('poolName', web3.utils.asciiToHex(poolName));
-      console.log('contestName', web3.utils.asciiToHex(contestName));
+      console.log('poolName', stringToBytes32(poolName));
+      console.log('poolName ascii to hex', web3.utils.toAscii(poolName));
+      console.log('contestName', stringToBytes32(contestName));
+      console.log('contestName ascii to hex', web3.utils.toAscii(contestName));
       const tx = await factory.methods
         .createContestPool(
-          web3.utils.asciiToHex(poolName),
-          web3.utils.asciiToHex(contestName),
+          stringToBytes32(poolName),
+          stringToBytes32(contestName),
           web3.utils.toWei(entryPrice, 'ether'),
         )
         .send({
           from: accounts[0],
-          value: web3.utils.toWei(pool.fee, 'wei'),
+          value: web3.toWei(0.01, 'ether'),
         });
       console.log('tx', tx);
       dispatch({ type: actionTypes.CREATE_POOL_SUCCESS, payload: tx });
