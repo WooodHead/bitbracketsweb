@@ -12,6 +12,8 @@ export const createPool = pool => dispatch =>
     // await delay(5000);
     dispatch({ type: actionTypes.CREATE_POOL_REQUEST });
     try {
+      // el definition Rusia2018Prueba dice que este es el fee en wei
+      // pool.fee = '10000000000000000';
       console.info('CreatePool state', pool);
       const { poolName, contestName, entryPrice } = pool;
       const accounts = await web3.eth.getAccounts();
