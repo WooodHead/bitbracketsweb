@@ -9,11 +9,7 @@ const defaultOGImage = '';
 const Header = props => (
   <NextHead>
     <meta charSet="UTF-8" />
-<<<<<<< HEAD
-    <title>{props.title || ""}</title>
-=======
     <title>{props.title || ''}</title>
->>>>>>> add routes for new pools
     <meta
       name="description"
       content={props.description || defaultDescription}
