@@ -57,7 +57,6 @@ Contest Name: Rusia2018Test11
           from: accounts[0],
           value: pool.fee,
         });
-      console.log('tx', tx);
       const poolAddress = _.get(tx, 'events.ContestPoolCreated.returnValues.contestPoolAddress');
       console.log('poolAddress', poolAddress);
       if (poolAddress) {
@@ -80,13 +79,12 @@ export const fetchPoolDetails = pool => async (dispatch) => {
   dispatch({ type: actionTypes.POOL_DETAIL_SUCCESS, payload: pool });
 };
 
+// TODO: NOTE: does not work yet
 export const fetchPoolDefinition = pool => dispatch =>
   new Promise(async (resolve, reject) => {
     // await delay(5000);
     dispatch({ type: actionTypes.POOL_DETAIL_REQUEST });
     try {
-      // el definition Rusia2018Prueba dice que este es el fee en wei
-      // pool.fee = '10000000000000000';
       console.info('CreatePool state', pool);
       const { poolName, contestName } = pool;
       // const accounts = await web3.eth.getAccounts();
