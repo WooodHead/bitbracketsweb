@@ -1,0 +1,62 @@
+[
+  {
+    "id": "headingTertiary1",
+    "description": "",
+    "defaultMessage": "You Need To Install MetaMask to Continue"
+  },
+  {
+    "id": "help",
+    "description": "",
+    "defaultMessage": "Here some help:"
+  },
+  {
+    "id": "installHeader",
+    "description": "",
+    "defaultMessage": "How to Install MetaMask"
+  },
+  {
+    "id": "installDescription",
+    "description": "",
+    "defaultMessage": "..."
+  },
+  {
+    "id": "etherHeader",
+    "description": "",
+    "defaultMessage": "Getting Ether Your Digital Currency"
+  },
+  {
+    "id": "etherDescription",
+    "description": "",
+    "defaultMessage": "..."
+  },
+  {
+    "id": "sendHeader",
+    "description": "",
+    "defaultMessage": "How to Send ETH to MetaMask"
+  },
+  {
+    "id": "sendDescription",
+    "description": "",
+    "defaultMessage": "..."
+  },
+  {
+    "id": "headingTertiary2",
+    "description": "",
+    "defaultMessage": "Payment Details"
+  },
+  {
+    "id": "entryLabel",
+    "description": "",
+    "defaultMessage": "Entry Price"
+  },
+  {
+    "id": "feeLabel",
+    "description": "",
+    "defaultMessage": "Entry Fee"
+  },
+  {
+    "id": "totalLabel",
+    "description": "",
+    "defaultMessage": "TOTAL"
+  }
+]

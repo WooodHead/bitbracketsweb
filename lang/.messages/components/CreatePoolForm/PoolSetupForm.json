@@ -37,7 +37,7 @@
   {
     "id": "entryLabel",
     "description": "",
-    "defaultMessage": "Entry Price"
+    "defaultMessage": "Entry Amount"
   },
   {
     "id": "entryTextbox",

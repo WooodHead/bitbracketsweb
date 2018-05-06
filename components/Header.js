@@ -1,15 +1,15 @@
-import React from "react";
-import NextHead from "next/head";
-import { string } from "prop-types";
+import React from 'react';
+import NextHead from 'next/head';
+import { string } from 'prop-types';
 
-const defaultDescription = "";
-const defaultOGURL = "";
-const defaultOGImage = "";
+const defaultDescription = '';
+const defaultOGURL = '';
+const defaultOGImage = '';
 
 const Header = props => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{props.title || ""}</title>
+    <title>{props.title || ''}</title>
     <meta
       name="description"
       content={props.description || defaultDescription}
@@ -21,7 +21,7 @@ const Header = props => (
     <link rel="icon" href="/static/favicon.ico" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" />
     <meta property="og:url" content={props.url || defaultOGURL} />
-    <meta property="og:title" content={props.title || ""} />
+    <meta property="og:title" content={props.title || ''} />
     <meta
       property="og:description"
       content={props.description || defaultDescription}
@@ -39,7 +39,7 @@ Header.propTypes = {
   title: string,
   description: string,
   url: string,
-  ogImage: string
+  ogImage: string,
 };
 
 export default Header;

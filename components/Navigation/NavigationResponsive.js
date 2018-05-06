@@ -88,7 +88,7 @@ class TemporaryDrawer extends React.Component {
           </ListItem>
           <Divider />
 
-          <Button href="/howDoesItWork" variant="raised" color="secondary">
+          <Button href="/contest/Russia2018/pools/new" variant="raised" color="secondary">
             {intl.formatMessage(messages.navigationNavbarlink4)}
           </Button>
         </List>
