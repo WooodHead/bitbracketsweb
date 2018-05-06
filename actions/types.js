@@ -12,7 +12,6 @@ export const actionTypes = {
   UNLOCKED_METAMASK_ACCOUNT: 'unlocked_metamask_account',
   CHANGE_METAMASK_NETWORK: 'change_metamask_network',
   CHANGE_METAMASK_ACCOUNT: 'change_metamask_account',
-<<<<<<< HEAD
 
   /** Create Pool actions. */
   CREATE_POOL_REQUEST: 'create_pool_request',
@@ -43,15 +42,3 @@ export const actionTypes = {
   SAVE_PREDICTIONS_SUCCESS: 'save_prediction_success',
   SAVE_PREDICTIONS_FAIL: 'save_prediction_fail',
 };
-
-=======
-
-  /** Create Pool actions. */
-  CREATE_POOL_REQUEST: 'create_pool_request',
-  CREATE_POOL_SUCCESS: 'create_pool_success',
-  CREATE_POOL_FAILED: 'create_pool_fail',
-  POOL_DETAIL_REQUEST: 'pool_detail_request',
-  POOL_DETAIL_SUCCESS: 'pool_detail_success',
-  POOL_DETAIL_FAILED: 'pool_detail_fail',
-};
->>>>>>> b6fc30f618a63c888d136ce844c8ced104b0d053
