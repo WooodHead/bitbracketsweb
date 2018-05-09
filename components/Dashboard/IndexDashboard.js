@@ -39,7 +39,7 @@ function mapStateToProps(state) {
 }
 
 IndexDashboard.propTypes = {
-  list: PropTypes.object.isRequired,
+  pool: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
 };
 export default connect(mapStateToProps)(withStyles(styles)(IndexDashboard));
