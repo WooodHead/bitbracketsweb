@@ -22,19 +22,19 @@ const styles = theme => ({
   },
 });
 function IndexDashboard(props) {
-  const { list, classes } = props;
+  const { pool, classes } = props;
   return (
     <div className={classes.root}>
       <TimeRemaining />
-      <PoolDetails list={list} />
-      <ParticipantList list={list} />
+      <PoolDetails pool={pool} />
+      <ParticipantList players={pool.players} />
     </div>
   );
 }
 
 function mapStateToProps(state) {
   return {
-    list: state.list,
+    // list: state.list,
   };
 }
 

@@ -46,18 +46,18 @@ const styles = theme => ({
 });
 
 function ParticipantList(props) {
-  const { classes, list } = props;
+  const { classes, players } = props;
   return (
     <div className={classes.box}>
-      <HeaderParticipantList list={list} />
+      <HeaderParticipantList players={players} />
 
       <Grid className={classes.list}>
         {' '}
-        <ListTableParticipant list={list} />
+        <ListTableParticipant players={players} />
       </Grid>
 
       <div className={classes.listResponsive}>
-        <ResponsiveListTableParticipant list={list} />
+        <ResponsiveListTableParticipant players={players} />
       </div>
     </div>
   );
@@ -65,7 +65,7 @@ function ParticipantList(props) {
 
 ParticipantList.propTypes = {
   classes: PropTypes.object.isRequired,
-  list: PropTypes.object.isRequired,
+  players: PropTypes.array.isRequired,
 };
 
 export default withStyles(styles)(ParticipantList);

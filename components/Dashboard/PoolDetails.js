@@ -34,7 +34,7 @@ const styles = theme => ({
 });
 
 function PoolDetails(props) {
-  const { classes, list } = props;
+  const { classes, pool } = props;
 
   return (
     <div>
@@ -47,25 +47,25 @@ function PoolDetails(props) {
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
             <span className={classes.paragraph}>Pool Name: &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{list.contestName}</span>
+            <span style={{ fontWeight: '600' }}>{pool.contestName}</span>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
             <span className={classes.paragraph}>Manager: &nbsp;</span>{' '}
-            <span style={{ fontWeight: '600' }}>{list.manager} </span>
+            <span style={{ fontWeight: '600' }}>{pool.manager} </span>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
             <span className={classes.paragraph}>Entry Price: &nbsp;</span>{' '}
-            <span style={{ fontWeight: '600' }}> {list.amountToPlay}ETH</span>
+            <span style={{ fontWeight: '600' }}> {pool.amountToPlay}ETH</span>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
             <span className={classes.paragraph}>Total Balance: &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{list.totalBalance}ETH</span>
+            <span style={{ fontWeight: '600' }}>{pool.totalBalance}ETH</span>
           </Typography>
         </Grid>
       </Grid>
@@ -75,7 +75,7 @@ function PoolDetails(props) {
 
 PoolDetails.propTypes = {
   classes: PropTypes.object.isRequired,
-  list: PropTypes.object.isRequired,
+  pool: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(PoolDetails);
