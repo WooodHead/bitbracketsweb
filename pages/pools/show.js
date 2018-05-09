@@ -28,13 +28,23 @@ function mapStateToProps(state) {
 }
 
 PoolDashboard.getInitialProps = async (props) => {
-  const { address } = props.query;
+  const { address, page } = props.query;
+  console.log(props.query);
   // aqui van llamadas al web3 o API (json mockserver)
-  const { data } = await axios.get(`${API_BASE_URL}/pools/${address}`);
+  let res;
+  try {
+    res = await axios.get(`${API_BASE_URL}/pools/${address}`);
+  } catch (error) {
+    let createPool = false;
+    if (page === 'createpool') {
+      createPool = true;
+    }
+    return { pool: undefined, createPoolPage: createPool };
+  }
 
-  console.log('mi pool: ', data);
+  console.log('mi pool: ', res.data);
 
-  return { pool: data };
+  return { pool: res.data };
 };
 
 const mapDispatchToProps = dispatch => ({
