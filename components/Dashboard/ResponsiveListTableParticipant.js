@@ -17,12 +17,12 @@ const styles = theme => ({
 });
 
 function ResponsiveListTableParticipant(props) {
-  const { classes, list } = props;
+  const { classes, players } = props;
 
   return (
     <div>
       <div>
-        {list.players.map(n => (
+        {players.map(n => (
           <div key={Math.random()}>
             <Grid container spacing={24}>
               <Grid item xs={6}>
@@ -92,7 +92,7 @@ function ResponsiveListTableParticipant(props) {
 
 ResponsiveListTableParticipant.propTypes = {
   classes: PropTypes.object.isRequired,
-  list: PropTypes.object.isRequired,
+  players: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(ResponsiveListTableParticipant);
