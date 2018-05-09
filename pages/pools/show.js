@@ -34,6 +34,9 @@ PoolDashboard.getInitialProps = async (props) => {
   let res;
   try {
     res = await axios.get(`${API_BASE_URL}/pools/${address}`);
+    if (res.status === 404) {
+      throw new Error('pool data not found');
+    }
   } catch (error) {
     let createPool = false;
     if (page === 'createpool') {
