@@ -18,7 +18,7 @@ const styles = theme => ({
 });
 
 function ListTableParticipant(props) {
-  const { classes, list } = props;
+  const { classes, players } = props;
 
   return (
     <div className={classes.root}>
@@ -46,7 +46,7 @@ function ListTableParticipant(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {list.players.map(n => (
+          {players.map(n => (
             <TableRow key={Math.random()}>
               <TableCell>
                 {' '}
@@ -79,7 +79,7 @@ function ListTableParticipant(props) {
 
 ListTableParticipant.propTypes = {
   classes: PropTypes.object.isRequired,
-  list: PropTypes.object.isRequired,
+  players: PropTypes.array.isRequired,
 };
 
 export default withStyles(styles)(ListTableParticipant);
