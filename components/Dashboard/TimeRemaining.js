@@ -12,7 +12,7 @@ const cb = () => {
 };
 
 const OPTIONS = {
-  endDate: '07/16/2018 10:55 AM',
+  endDate: '06/14/2018 9:00 AM',
   cb,
 };
 

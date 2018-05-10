@@ -18,8 +18,12 @@ const styles = theme => ({
 });
 
 function ListTableParticipant(props) {
-  const { classes, players } = props;
+  const { players, classes } = props;
+  if (players.length === 0) {
+    return (null
 
+    );
+  }
   return (
     <div className={classes.root}>
       <Table className={classes.table}>
@@ -28,19 +32,19 @@ function ListTableParticipant(props) {
             <TableCell>
               {' '}
               <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
-                Name
+                   Players Address
               </Typography>
             </TableCell>
             <TableCell>
               {' '}
               <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
-                Predictions
+                    Predictions
               </Typography>
             </TableCell>
             <TableCell>
               {' '}
               <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
-                Score
+                    Score
               </Typography>
             </TableCell>
           </TableRow>
@@ -51,12 +55,12 @@ function ListTableParticipant(props) {
               <TableCell>
                 {' '}
                 <Typography style={{ fontWeight: '500' }} variant="subheading" gutterBottom>
-                  {n.playerName}
+                  {n.address}
                 </Typography>
               </TableCell>
               <TableCell>
                 <Typography style={{ fontWeight: '500' }} variant="subheading" gutterBottom>
-                  view predictions {n.status}
+                      view predictions {n.status}
                 </Typography>
               </TableCell>
               <TableCell>
@@ -67,15 +71,14 @@ function ListTableParticipant(props) {
                 </Typography>
               </TableCell>
             </TableRow>
-          ))}
+              ))}
         </TableBody>
       </Table>
-      <Typography style={{ fontWeight: '500', color: 'grey' }} variant="headline" gutterBottom>
-        It’s a little bit lonely here... Invite some friends
-      </Typography>
+
     </div>
   );
 }
+
 
 ListTableParticipant.propTypes = {
   classes: PropTypes.object.isRequired,

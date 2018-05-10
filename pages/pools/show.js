@@ -14,9 +14,9 @@ import { initStore } from '../../store';
 
 const API_BASE_URL = 'http://localhost:3001';
 
-const PoolDashboard = ({ pool }) => (
+const PoolDashboard = ({ pool, address }) => (
   <Layout>
-    <IndexDashboard pool={pool} />
+    <IndexDashboard pool={pool} address={address} />
   </Layout>
 );
 
@@ -43,7 +43,7 @@ PoolDashboard.getInitialProps = async (props) => {
 
   console.log('mi pool: ', res.data);
 
-  return { pool: res.data, source: page };
+  return { pool: res.data, source: page, address };
 };
 
 const mapDispatchToProps = dispatch => ({
@@ -52,6 +52,7 @@ const mapDispatchToProps = dispatch => ({
 
 PoolDashboard.propTypes = {
   pool: PropTypes.object.isRequired,
+  address: PropTypes.string.isRequired,
 };
 
 export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(PoolDashboard));
