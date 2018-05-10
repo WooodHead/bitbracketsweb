@@ -31,19 +31,22 @@
         "published_at": "2015-08-05T08:40:51.620Z",
         "totalPlayer": 4,
         "players": [
-            {
+            {   "name": "Pedro Gonzales", 
                 "address": "0x01",
                 "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
                 "score": 32
             }, {
+                "name": "Mayra Gonzales", 
                 "address": "0x02",
                 "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
                 "score": 28
             }, {
+                "name": "Oscar Gonzales", 
                 "address": "0x03",
                 "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
                 "score": 21
             }, {
+                "name": "Pedro Gonzales", 
                 "address": "0x04",
                 "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
                 "score": 11

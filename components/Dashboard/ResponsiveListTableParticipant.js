@@ -17,7 +17,7 @@ const styles = theme => ({
 });
 
 function ResponsiveListTableParticipant(props) {
-  const { classes, players } = props;
+  const { players } = props;
 
   return (
     <div>
@@ -38,7 +38,7 @@ function ResponsiveListTableParticipant(props) {
                   variant="subheading"
                   gutterBottom
                 >
-                  {n.playerName}
+                  {n.name}
                 </Typography>
               </Grid>
             </Grid>
@@ -83,16 +83,14 @@ function ResponsiveListTableParticipant(props) {
           </div>
         ))}
       </div>
-      <Typography style={{ fontWeight: '500', color: 'grey' }} variant="headline" gutterBottom>
-        It’s a little bit lonely here... Invite some friends
-      </Typography>
+    
     </div>
   );
 }
 
 ResponsiveListTableParticipant.propTypes = {
   classes: PropTypes.object.isRequired,
-  players: PropTypes.object.isRequired,
+  players: PropTypes.array.isRequired,
 };
 
 export default withStyles(styles)(ResponsiveListTableParticipant);
