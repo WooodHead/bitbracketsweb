@@ -2,7 +2,7 @@ import { actionTypes } from "../actions/types";
 
 const INITIAL_STATE = {
   languages: [],
-  current: "en",
+  current: "es",
   loading: false,
   error: undefined
 };
