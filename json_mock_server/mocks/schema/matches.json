@@ -1,0 +1,75 @@
+{
+    "contestName": "Russia2018",
+    "matches": [
+      {
+        "tournament": "Russia2018",
+        "order": 0,
+        "home": "TuhHviLJDv5JDQQ6FwPr",
+        "away": "NAiCXvoZgNIL860DAbAV",
+        "date": 1529010000000,
+        "data": {
+            "group": "A"
+        }
+      },
+      {
+        "tournament": "Russia2018",
+        "order": 1,
+        "home": "gjMU3P3kEOP3qBEbzksQ",
+        "away": "anuh2go5bltW0mrn2lia",
+        "date": 1529092800000,
+        "data": {
+            "group": "A"
+        }
+      },
+      {
+        "tournament": "Russia2018",
+        "order": 2,
+        "home": "OB9YmpLN0izkkjNQCBRL",
+        "away": "cqf3Cd2HwMouIvFFjiN9",
+        "date": 1529096400000,
+        "data": {
+            "group": "B"
+        }
+      },
+      {
+        "tournament": "Russia2018",
+        "order": 3,
+        "home": "BQB9lZ96Q1MNuLlIm5wv",
+        "away": "IZwLi2JdjhZYZTxVwFvI",
+        "date": 1529107200000,
+        "data": {
+            "group": "B"
+        }
+      },
+      {
+        "tournament": "Russia2018",
+        "order": 4,
+        "home": "rORIBvjrz11V2g3R5mu9",
+        "away": "o8fLJNoXjzZ0CxeMgx1i",
+        "date": 1528905600000,
+        "data": {
+            "group": "C"
+        }
+      },
+      {
+        "tournament": "Russia2018",
+        "order": 5,
+        "home": "K5YPmLiXvJUdxSuPIHAL",
+        "away": "rG2nEFIZk1i2JOQ5a50a",
+        "date": 1528916400000,
+        "data": {
+            "group": "D"
+        }
+      },
+      {
+        "tournament": "Russia2018",
+        "order": 6,
+        "home": "OnMaq5pejVZkLoKqyzOY",
+        "away": "dqKtQswORyisPQAXVHyD",
+        "date": 1528927200000,
+        "data": {
+            "group": "C"
+        }
+      }
+    ]
+  }
