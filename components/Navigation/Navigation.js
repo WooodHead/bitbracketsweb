@@ -10,13 +10,14 @@ function Navigation(props) {
   const { languageSelect } = props;
   return (
     <div>
-      <div className="navbarResponsive">
-        <NavigationResponsive />
-      </div>
-      <div className="navbar">
+      {/* <div className="navbarResponsive">
+        <NavigationResponsive languageSelect={languageSelect} />
+      </div> */}
+      {/* <div className="navbar">
         <FirstNavbar languageSelect={languageSelect} />
 
-      </div>
+      </div> */}
+      <FirstNavbar languageSelect={languageSelect} />
 
       <style jsx>
         {`
