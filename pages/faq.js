@@ -20,9 +20,9 @@ import Qa from '../components/faq/Qa';
 addLocaleData(en);
 addLocaleData(es);
 
-function faq(props) {
+function faq() {
   // const { language } = props;
-  const lang = 'es';
+  const lang = 'en';
 
   return (
     <IntlProvider locale={lang}>
@@ -32,6 +32,7 @@ function faq(props) {
             <Qa faqText={faqQ[lang]} />
           </div>
         </div>
+        <hr />
       </Layout>
     </IntlProvider>
   );

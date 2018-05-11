@@ -6,7 +6,8 @@ const API_BASE_URL = CONF.endpoint.url;
 
 export const changeLanguage = language => (dispatch) => {
   dispatch({ type: actionTypes.CHANGE_LANGUAGE_REQUEST });
-  return dispatch({ type: actionTypes.CHANGE_LANGUAGE_SUCCESS, payload: language });
+
+  dispatch({ type: actionTypes.CHANGE_LANGUAGE_SUCCESS, payload: language });
 };
 
 export const fetchLanguages = () => async (dispatch) => {

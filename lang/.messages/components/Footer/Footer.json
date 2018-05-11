@@ -23,5 +23,10 @@
     "id": "navigation.navbarlink5",
     "description": "Navigation link start pool",
     "defaultMessage": "Terms & conditions"
+  },
+  {
+    "id": "navigation.navbarlink6",
+    "description": "Navigation link telegram",
+    "defaultMessage": "Join to Telegram"
   }
 ]

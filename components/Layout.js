@@ -1,5 +1,7 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { Component } from 'react';
 import { IntlProvider, addLocaleData } from 'react-intl';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -48,11 +50,12 @@ class Layout extends Component {
           {this.props.children}
 
           <Footer>
-            <LanguageSelect
+            {/* <LanguageSelect
               languages={this.props.languages} // {["en", "es"]}
               current={language}
               onChange={value => this.props.changeLanguage(value)}
-            />
+            /> */}
+            
           </Footer>
         </div>
       </IntlProvider>
@@ -72,4 +75,10 @@ const mapDispatchToProps = dispatch => ({
   fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
 });
 
+Layout.propTypes = {
+  languages: PropTypes.array.isRequired,
+  changeLanguage: PropTypes.func.isRequired,
+  current: PropTypes.string.isRequired,
+  fetchLanguages: PropTypes.func.isRequired,
+};
 export default withRoot(connect(mapStateToProps, mapDispatchToProps)(Layout));
