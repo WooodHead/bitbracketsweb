@@ -148,33 +148,39 @@ Api for Contest Pools
           "last_updated": "2015-08-05T08:40:51.620Z",
       }  
   
-## user pools resource [/user/100001/pools]
-## fetch player information, restricted to player only
+## User pools resource
 
-    # list user current active pools [GET]
+    # Description: list user current active pools. Fetch player information, restricted to player only
+    # Method: GET
+    # URL: /api/users/:address/pools
     # only active pools, can send parameter for other status (?status=all)
-
     + Response 200 (application/json)
+    # Sample:
+        - Request:  
+        - Response: ./mocks/endpoints/get_users_ADDRESS_pools_responsejson
+      
+## Build prediction array to send to the blockchain.
 
-      {
-          "email": "demo@bb.co",
-          "managerOf": [
-            {
-              "address": "0x02q123123131231",
-              "status" : "IN_PROGRESS"
-            }
-            
-          ],
-          "playerOf": [
-            {
-              "address": "0x03bcbcbcbcbcbcb",
-              "status" : "IN_PROGRESS"
-            }
-          ],
-          "totalPlayed" : "0.02",
-          "totalEarnFees" : "1",
-          "last_login": "2015-08-05T08:40:51.620Z",
-          "last_updated": "2015-08-05T08:40:51.620Z",
-      }        
-      
-      
+      # Method: GET
+      # URL: /api/predictions/:name/build
+      # Parameters:
+        - name: contest name.
+      # Sample:
+        - Request: ./mocks/endpoints/get_predictions_NAME_build.json
+        - Response: ./mocks/endpoints/get_predictions_NAME_build_response.json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
