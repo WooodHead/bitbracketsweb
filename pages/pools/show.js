@@ -11,6 +11,7 @@ import IndexDashboard from '../../components/Dashboard/IndexDashboard';
 
 import withRoot from '../../components/HOC/md/withRoot';
 import { initStore } from '../../store';
+import { getPoolDetails } from '../actions';
 
 const API_BASE_URL = 'http://localhost:3001';
 
@@ -45,6 +46,25 @@ PoolDashboard.getInitialProps = async (props) => {
 
   return { pool: res.data, source: page, address };
 };
+
+// PoolDashboard.getInitialProps = async (props) => {
+//   const { address, page } = props.query;
+//   console.log(props.query);
+//   // aqui van llamadas al web3 o API (json mockserver)
+//   let res;
+//   try {
+//     res = await axios.get(`${API_BASE_URL}/pools/${address}`);
+//     if (res.status === 404) {
+//       throw new Error('pool data not');
+//     }
+//   } catch (error) {
+//     return { pool: undefined, source: page };
+//   }
+
+//   console.log('mi pool: ', res.data);
+
+//   return { pool: res.data, source: page };
+// };
 
 const mapDispatchToProps = dispatch => ({
   // changeLanguage: bindActionCreators(changeLanguage, dispatch),
