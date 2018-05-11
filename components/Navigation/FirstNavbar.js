@@ -19,6 +19,7 @@ const styles = theme => ({
   },
   flex: {
     flex: 1,
+    
     [theme.breakpoints.down('sm')]: {
       visibility: 'hidden',
       display: 'none',
@@ -40,7 +41,15 @@ const styles = theme => ({
       display: 'none',
     },
   },
+  brandname: {
+    textDecoration: 'none',
+    color: 'rgb(42, 40, 37)',
+    fontWeight: '500',
+    lineHeight: '24px',
+    fontSize: '20px',
+  },
 });
+
 
 const messages = defineMessages({
   navigationNavbarlink1: {
@@ -73,11 +82,14 @@ function FirstNavbar(props) {
         <a href="/" >  <img src="/static/logo.png" alt="cryptocurrency-pool" width="30" height="30" /></a>
 
         <Typography variant="title" color="inherit" className={classes.flex}>
-          <Button href="/" color="inherit">
-            {' '}
-             BitBrackets
-          </Button>
-        </Typography>
+          <a href="/" className={classes.brandname}>
+         
+          &nbsp;&nbsp; BitBrackets
+    
+           
+          </a>
+         
+        </Typography> 
         <div className={classes.responsive}>
           <Toolbar>
 
