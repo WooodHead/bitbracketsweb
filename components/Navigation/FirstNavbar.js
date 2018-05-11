@@ -4,15 +4,13 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import AppBar from 'material-ui/AppBar';
+
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 
-import pink from 'material-ui/colors/pink';
 
-import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
-import navigation from '../../intl/navigation';
+import { injectIntl, defineMessages } from 'react-intl';
 
 const styles = {
   root: {
@@ -50,40 +48,42 @@ const messages = defineMessages({
   },
 });
 function FirstNavbar(props) {
-  const { classes, intl } = props;
+  const { classes, intl, languageSelect } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Toolbar>
-          <img src="/static/logo.png" alt="cryptocurrency-pool" width="30" height="30" />
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            <Button href="/" color="inherit">
-              {' '}
-              &nbsp;&nbsp;BitBrackets
-            </Button>
-          </Typography>
-          <Button href="#section3" color="inherit">
-            {intl.formatMessage(messages.navigationNavbarlink1)}
-          </Button>
-          <Button href="/rules" color="inherit">
-            {intl.formatMessage(messages.navigationNavbarlink2)}
-          </Button>
-          <Button href="/faq" color="inherit">
-            FAQs
-          </Button>
-          <Button href="/howDoesItWork" color="inherit">
-            {intl.formatMessage(messages.navigationNavbarlink3)}
-          </Button>
 
-          <Button
-            href="/contest/Russia2018/pools/new"
-            variant="raised"
-            style={{ backgroundColor: '#E91E63', color: '#fff' }}
-          >
-            {intl.formatMessage(messages.navigationNavbarlink4)}
+      <Toolbar>
+        <img src="/static/logo.png" alt="cryptocurrency-pool" width="30" height="30" />
+        <Typography variant="title" color="inherit" className={classes.flex}>
+          <Button href="/" color="inherit">
+            {' '}
+              &nbsp;&nbsp;BitBrackets
           </Button>
-        </Toolbar>
-      </AppBar>
+        </Typography>
+        <Button href="#section3" color="inherit">
+          {intl.formatMessage(messages.navigationNavbarlink1)}
+        </Button>
+        <Button href="/rules" color="inherit">
+          {intl.formatMessage(messages.navigationNavbarlink2)}
+        </Button>
+        <Button href="/faq" color="inherit">
+            FAQs
+        </Button>
+        <Button href="/howDoesItWork" color="inherit">
+          {intl.formatMessage(messages.navigationNavbarlink3)}
+        </Button>
+
+        <Button
+          href="/contest/Russia2018/pools/new"
+          variant="raised"
+          style={{ backgroundColor: '#E91E63', color: '#fff' }}
+        >
+          {intl.formatMessage(messages.navigationNavbarlink4)}
+        </Button>
+       
+        {languageSelect}
+      </Toolbar>
+
     </div>
   );
 }
@@ -91,6 +91,31 @@ function FirstNavbar(props) {
 FirstNavbar.propTypes = {
   classes: PropTypes.object.isRequired,
   intl: PropTypes.object.isRequired,
+  languageSelect: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(injectIntl(FirstNavbar));
+
+
+{/* <a
+href="/"
+role="button"
+    // onClick={() => this.props.setLocale("en")}
+style={{ textDecoration: 'none', cursor: 'pointer' }}
+>
+<Typography variant="body1" gutterBottom align="right">
+    &nbsp;&nbsp; EN
+</Typography>
+
+</a>&nbsp;|&nbsp;
+<a
+role="button"
+href="/"
+    // onClick={() => this.props.setLocale("es")}
+style={{ textDecoration: 'none', cursor: 'pointer' }}
+>
+<Typography variant="body1" gutterBottom align="right">
+    &nbsp;&nbsp; ES
+</Typography>
+
+</a> */}

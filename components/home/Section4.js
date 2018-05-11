@@ -39,7 +39,7 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 2,
-    textAlign: 'center',
+   
     color: theme.palette.text.secondary,
   },
 });
@@ -68,7 +68,7 @@ function Section4(props) {
               {intl.formatMessage(messages.homeSection4Title1)}
             </Typography>
             <Typography
-              classesName={classes.paper}
+              className={classes.paper}
               variant="headline"
               align="justify"
               style={{
