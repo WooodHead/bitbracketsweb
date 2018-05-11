@@ -62,7 +62,7 @@ function Footer(props) {
   const { intl, classes } = props;
   return (
 
-    <div>
+    <div styles={{ backgroundColor: '#fff' }}>
       <Grid container spacing={24} >
         <Grid item xs={6} sm={3} className={classes.paper} >
           <ul className={classes.list}>

@@ -6,8 +6,9 @@ import { bindActionCreators } from 'redux';
 import en from 'react-intl/locale-data/en';
 import es from 'react-intl/locale-data/es';
 import { IntlProvider, addLocaleData } from 'react-intl';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import withRedux from 'next-redux-wrapper';
+import initMessages from '../intl/';
 
 import Layout from '../components/Layout';
 
@@ -19,17 +20,17 @@ import Qa from '../components/faq/Qa';
 
 addLocaleData(en);
 addLocaleData(es);
-
-function faq() {
+const messages = initMessages();
+function faq(props) {
   // const { language } = props;
-  const lang = 'en';
+  const language = props.current;
 
   return (
-    <IntlProvider locale={lang}>
+    <IntlProvider locale={language} messages={messages[language]}>
       <Layout>
         <div className="container">
           <div style={{ padding: '1.5em' }}>
-            <Qa faqText={faqQ[lang]} />
+            <Qa faqText={faqQ[language]} />
           </div>
         </div>
         <hr />
@@ -38,11 +39,14 @@ function faq() {
   );
 }
 faq.propTypes = {
-  // language: PropTypes.func,
+ 
+
+  current: PropTypes.string.isRequired,
+
 };
 function mapStateToProps(state) {
   return {
-    // current: state.language.current,
+    current: state.language.current,
     languages: state.language.languages,
   };
 }

@@ -44,6 +44,8 @@ const messages = defineMessages({
 const styles = theme => ({
   root: {
     flexGrow: 1,
+    backgroundColor: '#fff',
+
   },
   paper: {
     display: 'flex',

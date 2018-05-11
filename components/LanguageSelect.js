@@ -23,7 +23,7 @@ class LanguageSelect extends Component {
 }
 LanguageSelect.propTypes = {
   languages: PropTypes.array.isRequired,
-  current: PropTypes.string.isRequired,
+  // current: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 
 };

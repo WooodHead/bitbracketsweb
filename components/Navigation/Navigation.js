@@ -3,20 +3,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import NavigationResponsive from './NavigationResponsive';
+
 import FirstNavbar from './FirstNavbar';
 
 function Navigation(props) {
   const { languageSelect } = props;
   return (
     <div>
-      <div className="navbarResponsive">
-        <NavigationResponsive />
-      </div>
-      <div className="navbar">
-        <FirstNavbar languageSelect={languageSelect} />
-
-      </div>
+    
+      <FirstNavbar languageSelect={languageSelect} />
 
       <style jsx>
         {`
