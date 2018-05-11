@@ -12,7 +12,7 @@ export default {
     'navigation.navbarlink1': 'Cómo funciona?',
     'navigation.navbarlink2': 'Reglas',
     'navigation.navbarlink3': 'Mis quinielas',
-    'navigation.navbarlink4': 'Crear quinela',
+    'navigation.navbarlink4': 'Crear quiniela',
     'navigation.navbarlink5': 'Terminos & Condiciones',
     'navigation.navbarlink6': 'Unirse al Telegram',
   },

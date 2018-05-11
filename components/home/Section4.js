@@ -5,7 +5,7 @@ import Typography from 'material-ui/Typography';
 import PropTypes from 'prop-types';
 import Grid from 'material-ui/Grid';
 import { injectIntl, defineMessages } from 'react-intl';
-import Paper from 'material-ui/Paper';
+
 
 import { withStyles } from 'material-ui/styles';
 
@@ -36,10 +36,15 @@ const messages = defineMessages({
 const styles = theme => ({
   root: {
     flexGrow: 1,
+    backgroundColor: '#fff',
+    paddingTop: '8em',
+    paddingBottom: '8em',
+
+
   },
   paper: {
     padding: theme.spacing.unit * 2,
-   
+
     color: theme.palette.text.secondary,
   },
 });
@@ -47,7 +52,7 @@ function Section4(props) {
   const { intl, classes } = props;
   return (
 
-    <div className={classes.root} style={{ marginTop: '6em', marginBottom: '6em', marginLeft: '1em' }}>
+    <div className={classes.root} >
       <Grid container spacing={24}>
 
         <Grid item xs={12} sm={6} align="center">

@@ -136,25 +136,3 @@ FirstNavbar.propTypes = {
 export default withStyles(styles)(injectIntl(FirstNavbar));
 
 
-{ /* <a
-href="/"
-role="button"
-    // onClick={() => this.props.setLocale("en")}
-style={{ textDecoration: 'none', cursor: 'pointer' }}
->
-<Typography variant="body1" gutterBottom align="right">
-    &nbsp;&nbsp; EN
-</Typography>
-
-</a>&nbsp;|&nbsp;
-<a
-role="button"
-href="/"
-    // onClick={() => this.props.setLocale("es")}
-style={{ textDecoration: 'none', cursor: 'pointer' }}
->
-<Typography variant="body1" gutterBottom align="right">
-    &nbsp;&nbsp; ES
-</Typography>
-
-</a> */ }

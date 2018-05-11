@@ -23,7 +23,7 @@ class Index extends React.Component {
 
         <Home />
         <ScrollToTop showUnder={160}>
-          <Button variant="fab" mini color="secondary" aria-label="edit">
+          <Button variant="fab" mini  aria-label="edit" style={{ backgroundColor: '#E91E63', color: '#fff' }}>
             <i className="fas fa-arrow-up" />
           </Button>
         </ScrollToTop>

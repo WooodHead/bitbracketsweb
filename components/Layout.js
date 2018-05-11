@@ -49,14 +49,7 @@ class Layout extends Component {
 
           {this.props.children}
 
-          <Footer>
-            {/* <LanguageSelect
-              languages={this.props.languages} // {["en", "es"]}
-              current={language}
-              onChange={value => this.props.changeLanguage(value)}
-            /> */}
-            
-          </Footer>
+          <Footer />
         </div>
       </IntlProvider>
     );
