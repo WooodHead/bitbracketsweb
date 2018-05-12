@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 
 import React from 'react';
-import { connect } from 'react-redux';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 
@@ -21,25 +21,22 @@ const styles = theme => ({
     },
   },
 });
-function IndexDashboard(props) {
-  const { list, classes } = props;
+
+const IndexDashboard = (props) => {
+  const { pool, classes } = props;
+  console.log('pool indexdashboard', pool);
+  const dateStartTime = moment.unix(pool.startTime).toISOString();
   return (
     <div className={classes.root}>
-      <TimeRemaining />
-      <PoolDetails list={list} />
-      <ParticipantList list={list} />
+      <TimeRemaining date={dateStartTime} />
+      <PoolDetails pool={pool} />
+      <ParticipantList pool={pool} />
     </div>
   );
-}
-
-function mapStateToProps(state) {
-  return {
-    list: state.list,
-  };
-}
+};
 
 IndexDashboard.propTypes = {
-  list: PropTypes.object.isRequired,
+  pool: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
 };
-export default connect(mapStateToProps)(withStyles(styles)(IndexDashboard));
+export default withStyles(styles)(IndexDashboard);

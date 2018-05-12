@@ -7,10 +7,8 @@ import joinPoolReducer from './joinPoolReducer';
 import poolReducer from './poolReducer';
 import matchesReducer from './matchesReducer';
 import predictionsReducer from './predictionsReducer';
-import listParticipantReducer from './listParticipantReducer';
 
 export default combineReducers({
-  list: listParticipantReducer,
   language: languageReducer,
   metamask: metamaskReducer,
   pool: poolReducer,

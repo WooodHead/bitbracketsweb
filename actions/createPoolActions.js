@@ -73,9 +73,10 @@ Contest Name: Rusia2018Test11
     }
   });
 
+  // this should be named fetchContestDetails
 export const fetchPoolDetails = pool => async (dispatch) => {
   dispatch({ type: actionTypes.POOL_DETAIL_REQUEST });
-  await delay(500);
+  // await delay(500);
   dispatch({ type: actionTypes.POOL_DETAIL_SUCCESS, payload: pool });
 };
 
