@@ -1,78 +1,69 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import ErrorPage from 'next/error';
 // import { bindActionCreators } from 'redux';
 import withRedux from 'next-redux-wrapper';
-
-import axios from 'axios';
 import Layout from '../../components/Layout';
 import IndexDashboard from '../../components/Dashboard/IndexDashboard';
 
 import withRoot from '../../components/HOC/md/withRoot';
 import { initStore } from '../../store';
-import { getPoolDetails } from '../actions';
+import { getPoolDetails } from '../../actions';
 
 const API_BASE_URL = 'http://localhost:3001';
 
-const PoolDashboard = ({ pool, address }) => (
-  <Layout>
-    <IndexDashboard pool={pool} address={address} />
-  </Layout>
-);
-
-function mapStateToProps(state) {
-  return {
-    // current: state.language.current,
-    // languages: state.language.languages,
-  };
-}
-
-PoolDashboard.getInitialProps = async (props) => {
-  const { address, page } = props.query;
-  console.log(props.query);
-  // aqui van llamadas al web3 o API (json mockserver)
-  let res;
-  try {
-    res = await axios.get(`${API_BASE_URL}/pools/${address}`);
-    if (res.status === 404) {
-      throw new Error('pool data not');
-    }
-  } catch (error) {
-    return { pool: undefined, source: page };
+const PoolDashboard = ({ address, pool, errorStatus }) => {
+  if (errorStatus) {
+    return (
+      <div>
+        <Layout>
+          <ErrorPage statusCode={errorStatus} />
+        </Layout>
+      </div>
+    );
   }
-
-  console.log('mi pool: ', res.data);
-
-  return { pool: res.data, source: page, address };
+  return (
+    <div>
+      <Layout>
+        <IndexDashboard address={address} pool={pool} />
+      </Layout>
+    </div>
+  );
 };
 
-// PoolDashboard.getInitialProps = async (props) => {
-//   const { address, page } = props.query;
-//   console.log(props.query);
-//   // aqui van llamadas al web3 o API (json mockserver)
-//   let res;
-//   try {
-//     res = await axios.get(`${API_BASE_URL}/pools/${address}`);
-//     if (res.status === 404) {
-//       throw new Error('pool data not');
-//     }
-//   } catch (error) {
-//     return { pool: undefined, source: page };
-//   }
 
-//   console.log('mi pool: ', res.data);
+const getStatusFromError = (error) => {
+  const msg = error.message;
+  if (msg.includes('Invalid address provided')) {
+    return 400;
+  } else if (msg.includes('ABI')) {
+    return 404;
+  }
 
-//   return { pool: res.data, source: page };
-// };
+  return 500;
+};
 
-const mapDispatchToProps = dispatch => ({
-  // changeLanguage: bindActionCreators(changeLanguage, dispatch),
-});
+PoolDashboard.getInitialProps = async ({ query, store }) => {
+  const { address } = query;
+
+  try {
+    const pool = await store.dispatch(getPoolDetails(address));
+    return { address, pool };
+  } catch (error) {
+    // console.error('Error while loading page: ', error);
+    return { address, errorStatus: getStatusFromError(error) };
+  }
+};
+
+PoolDashboard.defaultProps = {
+  errorStatus: undefined,
+};
 
 PoolDashboard.propTypes = {
   pool: PropTypes.object.isRequired,
   address: PropTypes.string.isRequired,
+  errorStatus: PropTypes.string,
 };
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(PoolDashboard));
+export default withRoot(withRedux(initStore)(PoolDashboard));

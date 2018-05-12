@@ -2,9 +2,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-
+import { connect } from 'react-redux';
 import Grid from 'material-ui/Grid';
 
+import * as actions from '../../actions';
 import ListTableParticipant from './ListTableParticipant';
 import ResponsiveListTableParticipant from './ResponsiveListTableParticipant';
 import HeaderParticipantList from './HeaderParticipantList';
@@ -45,27 +46,46 @@ const styles = theme => ({
   },
 });
 
-function ParticipantList(props) {
-  const { classes, players } = props;
-  return (
-    <div className={classes.box}>
-      <HeaderParticipantList players={players} />
+class ParticipantList extends React.Component {
+  componentWillMount() {
+    const { pool } = this.props;
+    this.props.loadPoolParticipants(pool.address);
+  }
 
-      <Grid className={classes.list}>
-        {' '}
-        <ListTableParticipant players={players} />
-      </Grid>
+  render() {
+    const { classes, players } = this.props;
+    return (
+      <div className={classes.box}>
+        <HeaderParticipantList players={players} />
 
-      <div className={classes.listResponsive}>
-        <ResponsiveListTableParticipant players={players} />
+        <Grid className={classes.list}>
+          {' '}
+          <ListTableParticipant players={players} />
+        </Grid>
+
+        <div className={classes.listResponsive}>
+          <ResponsiveListTableParticipant players={players} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+function mapStateToProps({ pool }) {
+  return {
+    players: pool.players,
+  };
+}
+
+ParticipantList.defaultProps = {
+  players: [],
+};
 
 ParticipantList.propTypes = {
   classes: PropTypes.object.isRequired,
-  players: PropTypes.array.isRequired,
+  pool: PropTypes.object.isRequired,
+  loadPoolParticipants: PropTypes.func.isRequired,
+  players: PropTypes.array,
 };
 
-export default withStyles(styles)(ParticipantList);
+export default connect(mapStateToProps, actions)(withStyles(styles)(ParticipantList));

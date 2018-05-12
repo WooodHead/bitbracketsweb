@@ -11,10 +11,10 @@ const cb = () => {
   console.log('expired callback');
 };
 
-const OPTIONS = {
-  endDate: '06/14/2018 9:00 AM',
-  cb,
-};
+// const OPTIONS = {
+//   endDate: '06/14/2018 9:00 AM',
+//   cb,
+// };
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -33,7 +33,11 @@ const styles = theme => ({
   },
 });
 function TimeRemaining(props) {
-  const { classes } = props;
+  const { classes, date } = props;
+  const OPTIONS = {
+    endDate: date,
+    cb,
+  };
   return (
     <div>
       <Paper className={classes.root}>
@@ -48,6 +52,7 @@ function TimeRemaining(props) {
 
 TimeRemaining.propTypes = {
   classes: PropTypes.object.isRequired,
+  date: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(TimeRemaining);

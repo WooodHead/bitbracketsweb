@@ -1,6 +1,6 @@
-// Configutation for Testing
+// Configutation for Production
 const ENDPOINT = {
-  url: '',
+  url: process.env.API_URL,
 };
 
 module.exports = ENDPOINT;

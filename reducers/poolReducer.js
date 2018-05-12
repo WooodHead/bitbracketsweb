@@ -12,7 +12,7 @@ export default function (state = INITIAL_STATE, action) {
       return { ...state, loading: true, error: undefined };
     case actionTypes.FETCH_POOL_SUCCESS:
       return {
-        ...state, pool: action.payload, loading: false, error: undefined,
+        ...state, info: action.payload, loading: false, error: undefined,
       };
     case actionTypes.FETCH_POOL_FAIL:
       return { ...state, loading: false, error: action.payload };

@@ -41,13 +41,13 @@ function PoolDetails(props) {
       <Grid container spacing={24} className={classes.box}>
         <Grid item sm={12}>
           <Typography variant="title" gutterBottom>
-            Pool Details
+            Pool Details for Contest: {pool.contestName}
           </Typography>
         </Grid>
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
             <span className={classes.paragraph}>Pool Name: &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{pool.contestName}</span>
+            <span style={{ fontWeight: '600' }}>{pool.name}</span>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={3}>
@@ -58,14 +58,26 @@ function PoolDetails(props) {
         </Grid>
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Entry Price: &nbsp;</span>{' '}
-            <span style={{ fontWeight: '600' }}> {pool.amountToPlay}ETH</span>
+            <span className={classes.paragraph}>Entry Fee: &nbsp;</span>{' '}
+            <span style={{ fontWeight: '600' }}> {pool.amountPerPlayer} ETH</span>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Total Balance: &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{pool.totalBalance}ETH</span>
+            <span className={classes.paragraph}>Price: &nbsp;</span>
+            <span style={{ fontWeight: '600' }}>{pool.priceBalance} ETH</span>
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={3}>
+          <Typography variant="subheading">
+            <span className={classes.paragraph}>Manager Fee: &nbsp;</span>
+            <span style={{ fontWeight: '600' }}>{pool.managerFee}%</span>
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={3}>
+          <Typography variant="subheading">
+            <span className={classes.paragraph}>Number of Players: &nbsp;</span>
+            <span style={{ fontWeight: '600' }}>{pool.players}</span>
           </Typography>
         </Grid>
       </Grid>
