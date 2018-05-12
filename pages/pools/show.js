@@ -11,8 +11,6 @@ import withRoot from '../../components/HOC/md/withRoot';
 import { initStore } from '../../store';
 import { getPoolDetails } from '../../actions';
 
-const API_BASE_URL = 'http://localhost:3001';
-
 const PoolDashboard = ({ address, pool, errorStatus }) => {
   if (errorStatus) {
     return (

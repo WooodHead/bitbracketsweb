@@ -83,9 +83,13 @@ ParticipantList.defaultProps = {
 
 ParticipantList.propTypes = {
   classes: PropTypes.object.isRequired,
+<<<<<<< HEAD
   pool: PropTypes.object.isRequired,
   loadPoolParticipants: PropTypes.func.isRequired,
   players: PropTypes.array,
+=======
+  players: PropTypes.array.isRequired,
+>>>>>>> 374d4497a2ea36e1050b31445e09632f0c99298e
 };
 
 export default connect(mapStateToProps, actions)(withStyles(styles)(ParticipantList));
