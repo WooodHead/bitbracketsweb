@@ -14,7 +14,7 @@ export default function (state = INITIAL_STATE, action) {
         case actionTypes.FETCH_TEAMS_REQUEST:
             return { ...state, loading: true, error: undefined };
         case actionTypes.FETCH_TEAMS_SUCCESS:
-            return { ...state, teams: _.mapKeys(action.payload, 'index'), loading: false, error: undefined }
+            return { ...state, teams: _.mapKeys(action.payload, 'hash'), loading: false, error: undefined }
         case actionTypes.FETCH_TEAMS_FAIL:
             return { ...state, loading: false, error: action.payload }
 
