@@ -52,7 +52,7 @@ class PredictionLayout extends Component {
                         <Grid item xs={6} key={match.index}>
                             <MatchCard
                                 match={match}
-                                prediction={predictions[match.index] ? predictions[match.index].prediction : ""}
+                                prediction={predictions[match.index] ? predictions[match.index].prediction : undefined}
                                 update={update}
                                 read={read}
                             />

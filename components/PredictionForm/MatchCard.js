@@ -36,23 +36,23 @@ const MatchCard = ({ classes, match, prediction, update, read }) => {
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        color={prediction === "H" ? "primary" : "default" }
-                        onClick={() => update(match.index, "H")}
+                        color={prediction === match.home ? "primary" : "default" }
+                        onClick={() => update(match.index, match.home)}
                         classes={{
-                            disabled: prediction === "H" ? classes.disabled : "",
+                            disabled: prediction === match.home ? classes.disabled : "",
                         }}
                         disabled={read}
                     >
-                        {match.home.match(/\b(\w)/g).join('')}
+                        {match.homeAbbr}
                     </Button>
                 </Grid>
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        color={prediction === "T" ? "primary" : "default" }
-                        onClick={() => update(match.index, "T")}
+                        color={prediction === "" ? "primary" : "default" }
+                        onClick={() => update(match.index, "")}
                         classes={{
-                            disabled: prediction === "T" ? classes.disabled : "",
+                            disabled: prediction === "" ? classes.disabled : "",
                         }}
                         disabled={read}
                     >
@@ -62,26 +62,26 @@ const MatchCard = ({ classes, match, prediction, update, read }) => {
                 <Grid item className={classes.controls} xs={4}>
                     <Button
                         variant="fab"
-                        color={prediction === "A" ? "primary" : "default" }
-                        onClick={() => update(match.index, "A")}
+                        color={prediction === match.away ? "primary" : "default" }
+                        onClick={() => update(match.index, match.away)}
                         classes={{
-                            disabled: prediction === "A" ? classes.disabled : "",
+                            disabled: prediction === match.away ? classes.disabled : "",
                         }}
                         disabled={read}
                     >
-                        {match.away.match(/\b(\w)/g).join('')}
+                        {match.awayAbbr}
                     </Button>
                 </Grid>
             </Grid>
             <Grid container className={classes.container} spacing={16}>
                 <Grid item className={classes.controls} xs={4}>
-                    <Typography>{match.home}</Typography>
+                    <Typography>{match.homeName}</Typography>
                 </Grid>
                 <Grid item className={classes.controls} xs={4}>
                     <Typography>-</Typography>
                 </Grid>
                 <Grid item className={classes.controls} xs={4}>
-                    <Typography>{match.away}</Typography>
+                    <Typography>{match.awayName}</Typography>
                 </Grid>
             </Grid>
         </Card>
