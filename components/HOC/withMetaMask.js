@@ -1,15 +1,16 @@
 import React from 'react';
 import Web3 from 'web3';
 import PropTypes from 'prop-types';
+import { CircularProgress } from 'material-ui/Progress';
 // import { bindActionCreators } from 'redux';
 // import {connect} from "react-redux";
 // import withRedux from 'next-redux-wrapper';
 // import { initStore } from '../store';
 // import { lockedMetamaskAccount, changeMetamaskAccount, changeMetamaskNetwork } from '../actions';
-import MetamaskLocked from '../metamask/MetaMaskLocked';
-// import MetaMaskInvalidNetwork from '../components/metamask/MetaMaskInvalidNetwork';
+import MetaMaskLocked from '../metamask/MetaMaskLocked';
+import MetaMaskInvalidNetwork from '../metamask/MetaMaskInvalidNetwork';
 import MetaMaskNotInstalled from '../metamask/MetaMaskNotInstalled';
-import Loader from '../common/Loader';
+// import Loader from '../common/Loader';
 import conf from '../../conf';
 
 
@@ -28,12 +29,20 @@ const hasAccounts = function hasAccounts(newAccounts) {
   return typeof newAccounts !== 'undefined' && newAccounts.length > 0;
 };
 
-export default function withMetaMask(Component) {
+const progressStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  marginTop: -12,
+  marginLeft: -12,
+};
+
+function withMetaMask(Component) {
   class WithMetaMask extends React.Component {
     constructor(props, context) {
       super(props, context);
 
-      const state = {
+      this.state = {
         metamaskInstalled: undefined,
         metamaskLocked: undefined,
         metamaskNetworkIsValid: undefined,
@@ -43,65 +52,73 @@ export default function withMetaMask(Component) {
       };
     }
 
+    componentWillMount = async () => {
+      this.initMetamaskChecks();
+      // setInterval(this.initMetamaskChecks, conf.web3.interval);
+    }
+
     componentDidMount = async () => {
-      console.log(`Interval:  ${conf.web3.interval}`);
-      let _isMetamaskInstalled = isMetamaskInstalled(window);
-      console.log(`Is Metamask Installed? ${_isMetamaskInstalled}`);
+      this.initMetamaskChecks();
+      setInterval(this.initMetamaskChecks, conf.web3.interval);
+    }
+
+    initMetamaskChecks = async () => {
+      // console.log(`Interval:  ${conf.web3.interval}`);
+      let metamaskInstalled = isMetamaskInstalled(window);
+      // console.log(`Is Metamask Installed? ${isMetamaskInstalled}`);
 
       let web3;
       let accounts;
-      let _hasAccountDefault;
-      let _isMetamaskLocked;
+      let hasAccountDefault;
+      let isMetamaskLocked;
       let defaultAccount;
 
-      if (_isMetamaskInstalled) {
+      if (metamaskInstalled) {
         this.checkNetwork(window);
         web3 = new Web3(window.web3.currentProvider);
 
         accounts = await web3.eth.getAccounts();
-        _hasAccountDefault = hasAccounts(accounts);
-        console.log(`hasAccountDefault? ${_hasAccountDefault}`);
+        hasAccountDefault = hasAccounts(accounts);
+        // console.log(`hasAccountDefault? ${hasAccountDefault}`);
 
-        _isMetamaskLocked = !_hasAccountDefault;
-        console.log(`Metamask locked? ${_isMetamaskLocked}`);
+        isMetamaskLocked = !hasAccountDefault;
+        // console.log(`Metamask locked? ${isMetamaskLocked}`);
 
-        if (!_isMetamaskLocked) {
+        if (!isMetamaskLocked) {
           defaultAccount = accounts[0];
         }
       }
 
-      const _this = this;
+      const self = this;
 
-      setInterval(async () => {
-        _isMetamaskInstalled = isMetamaskInstalled(window);
+      metamaskInstalled = isMetamaskInstalled(window);
 
-        if (_isMetamaskInstalled) {
-          const newAccounts = await web3.eth.getAccounts();
-          _hasAccountDefault = hasAccounts(newAccounts);
-          _isMetamaskLocked = !_hasAccountDefault;
+      if (metamaskInstalled) {
+        const newAccounts = await web3.eth.getAccounts();
+        hasAccountDefault = hasAccounts(newAccounts);
+        isMetamaskLocked = !hasAccountDefault;
 
-          if (_isMetamaskLocked) {
-            console.log('Metamask locked.');
-            defaultAccount = undefined;
-          } else {
-            const newDefaultAccount = newAccounts[0];
-            if (newDefaultAccount !== defaultAccount) {
-              defaultAccount = newDefaultAccount;
-              console.log(`Account changed. New default account: ${defaultAccount}`);
-            }
-          }
+        if (isMetamaskLocked) {
+          // console.log('Metamask locked.');
+          defaultAccount = undefined;
         } else {
-          console.log('Metamask is not installed.');
+          const newDefaultAccount = newAccounts[0];
+          if (newDefaultAccount !== defaultAccount) {
+            defaultAccount = newDefaultAccount;
+            // console.log(`Account changed. New default account: ${defaultAccount}`);
+          }
         }
+      } else {
+        console.error('Metamask is not installed.');
+      }
 
-        _this.setState({
-          metamaskInstalled: _isMetamaskInstalled,
-          metamaskLocked: _isMetamaskLocked,
-          metamaskNetworkIsValid: conf.web3.networks.indexOf(_this.state.network) > -1,
-          loading: false,
-          defaultAccount,
-        });
-      }, conf.web3.interval);
+      self.setState({
+        metamaskInstalled,
+        metamaskLocked: isMetamaskLocked,
+        metamaskNetworkIsValid: conf.web3.networks.indexOf(self.state.network) > -1,
+        loading: false,
+        defaultAccount,
+      });
     }
 
     checkNetwork = (_window) => {
@@ -126,35 +143,35 @@ export default function withMetaMask(Component) {
           default:
             network = 'unknown;';
         }
-        console.log(`This is the ${network} network.`);
+        // console.log(`This is the ${network} network.`);
         this.setState({
           network,
         });
       });
     }
 
-
     render() {
+      let componentToRender;
       if (this.state.loading) {
-        componentToRender = <Loader />;
+        componentToRender = <CircularProgress size={24} className={progressStyle} />;
         return (
           componentToRender
         );
       }
-      if (!this.state.metamaskNetworkIsValid) {
-        return (<MetamaskInvalidNetwork />);
-      }
-
-      let componentToRender;
       if (this.state.metamaskInstalled) {
         if (this.state.metamaskLocked) {
-          componentToRender = <MetamaskLocked />;
+          componentToRender = <MetaMaskLocked />;
         } else {
           componentToRender = <Component {...this.props} />;
         }
       } else {
         componentToRender = <MetaMaskNotInstalled />;
       }
+
+      // if (!this.state.metamaskNetworkIsValid) {
+      //   return (<MetaMaskInvalidNetwork />);
+      // }
+
       return (
         componentToRender
       );
@@ -175,3 +192,5 @@ export default function withMetaMask(Component) {
   // return withRedux(initStore, mapStateToProps, mapDispatchToProps)(WithMetaMask);
   return WithMetaMask;
 }
+
+export default withMetaMask;

@@ -1,23 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import Typography from "material-ui/Typography";
-import Table, {
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow
-} from "material-ui/Table";
+/* eslint-disable react/forbid-prop-types */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import Typography from 'material-ui/Typography';
+import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 
 const styles = theme => ({
   root: {
-    width: "100%",
+    width: '100%',
     marginTop: theme.spacing.unit * 2,
-    overflowX: "auto"
+    overflowX: 'auto',
   },
   table: {
     // minWidth: 200
-  }
+  },
 });
 
 function ListTableParticipant(props) {
@@ -29,81 +26,51 @@ function ListTableParticipant(props) {
         <TableHead>
           <TableRow>
             <TableCell>
-              {" "}
-              <Typography
-                style={{ color: "grey", fontWeight: "500" }}
-                variant="title"
-                gutterBottom
-              >
+              {' '}
+              <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
                 Name
               </Typography>
             </TableCell>
             <TableCell>
-              {" "}
-              <Typography
-                style={{ color: "grey", fontWeight: "500" }}
-                variant="title"
-                gutterBottom
-              >
+              {' '}
+              <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
                 Predictions
               </Typography>
             </TableCell>
             <TableCell>
-              {" "}
-              <Typography
-                style={{ color: "grey", fontWeight: "500" }}
-                variant="title"
-                gutterBottom
-              >
+              {' '}
+              <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
                 Score
               </Typography>
             </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {list.players.map(n => {
-            return (
-              <TableRow key={Math.random()}>
-                <TableCell>
-                  {" "}
-                  <Typography
-                    style={{ fontWeight: "500" }}
-                    variant="headline"
-                    gutterBottom
-                  >
-                    {n.playerName}
-                  </Typography>
-                </TableCell>
-                <TableCell>
-                  <Typography
-                    style={{ fontWeight: "500" }}
-                    variant="headline"
-                    gutterBottom
-                  >
-                    view predictions {n.status}
-                  </Typography>
-                </TableCell>
-                <TableCell>
-                  {" "}
-                  <Typography
-                    style={{ fontWeight: "500" }}
-                    variant="headline"
-                    gutterBottom
-                  >
-                    {n.score}
-                    {/* {n.makePick} */}
-                  </Typography>
-                </TableCell>
-              </TableRow>
-            );
-          })}
+          {list.players.map(n => (
+            <TableRow key={Math.random()}>
+              <TableCell>
+                {' '}
+                <Typography style={{ fontWeight: '500' }} variant="subheading" gutterBottom>
+                  {n.playerName}
+                </Typography>
+              </TableCell>
+              <TableCell>
+                <Typography style={{ fontWeight: '500' }} variant="subheading" gutterBottom>
+                  view predictions {n.status}
+                </Typography>
+              </TableCell>
+              <TableCell>
+                {' '}
+                <Typography style={{ fontWeight: '500' }} variant="subheading" gutterBottom>
+                  {n.score}
+                  {/* {n.makePick} */}
+                </Typography>
+              </TableCell>
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
-      <Typography
-        style={{ fontWeight: "500", color: "grey" }}
-        variant="headline"
-        gutterBottom
-      >
+      <Typography style={{ fontWeight: '500', color: 'grey' }} variant="headline" gutterBottom>
         It’s a little bit lonely here... Invite some friends
       </Typography>
     </div>
@@ -112,7 +79,7 @@ function ListTableParticipant(props) {
 
 ListTableParticipant.propTypes = {
   classes: PropTypes.object.isRequired,
-  list: PropTypes.object.isRequired
+  list: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(ListTableParticipant);

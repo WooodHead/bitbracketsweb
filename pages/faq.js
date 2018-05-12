@@ -1,29 +1,58 @@
-import React from "react";
-import { bindActionCreators } from "redux";
-import withRedux from "next-redux-wrapper";
-
-import Layout from "../components/Layout";
+/* eslint-disable react/forbid-prop-types */
+import React from 'react';
+import { bindActionCreators } from 'redux';
 
 // import withRoot from '../md/withRoot';
-import { initStore } from "../store";
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import PropTypes from 'prop-types';
+import withRedux from 'next-redux-wrapper';
+import initMessages from '../intl/';
 
-class faq extends React.Component {
-  render() {
-    return <Layout>FAQ</Layout>;
-  }
+import Layout from '../components/Layout';
+
+import withRoot from '../components/HOC/md/withRoot';
+import { initStore } from '../store';
+
+import faqQ from './../intl/faqQ';
+import Qa from '../components/faq/Qa';
+
+addLocaleData(en);
+addLocaleData(es);
+const messages = initMessages();
+function faq(props) {
+  // const { language } = props;
+  const language = props.current;
+
+  return (
+    <IntlProvider locale={language} messages={messages[language]}>
+      <Layout>
+        <div className="container">
+          <div style={{ padding: '1.5em' }}>
+            <Qa faqText={faqQ[language]} />
+          </div>
+        </div>
+        <hr />
+      </Layout>
+    </IntlProvider>
+  );
 }
+faq.propTypes = {
+ 
 
+  current: PropTypes.string.isRequired,
+
+};
 function mapStateToProps(state) {
   return {
-    // current: state.language.current,
-    // languages: state.language.languages,
+    current: state.language.current,
+    languages: state.language.languages,
   };
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    // changeLanguage: bindActionCreators(changeLanguage, dispatch),
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  // changeLanguage: bindActionCreators(changeLanguage, dispatch),
+});
 
-export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(faq);
+export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(faq));

@@ -1,27 +1,45 @@
-import React, { Component } from "react";
-import TimeRemaining from "./TimeRemaining";
-import PoolDetails from "./PoolDetails";
-import ParticipantList from "./ParticipantList";
-import ResponsiveListTableParticipant from "./ResponsiveListTableParticipant";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+/* eslint-disable react/forbid-prop-types */
 
-class IndexDashboard extends Component {
-  render() {
-    return (
-      <div className="container">
-        <TimeRemaining />
-        <PoolDetails list={this.props.list} />
-        <ParticipantList list={this.props.list} />
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
 
-        <style jsx>{``}</style>
-      </div>
-    );
-  }
+import TimeRemaining from './TimeRemaining';
+import PoolDetails from './PoolDetails';
+import ParticipantList from './ParticipantList';
+
+const styles = theme => ({
+  root: {
+    padding: '222',
+
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: '200px',
+      paddingRight: '200px',
+      marginBottom: '100px',
+      marginTop: '100px',
+    },
+  },
+});
+function IndexDashboard(props) {
+  const { list, classes } = props;
+  return (
+    <div className={classes.root}>
+      <TimeRemaining />
+      <PoolDetails list={list} />
+      <ParticipantList list={list} />
+    </div>
+  );
 }
+
 function mapStateToProps(state) {
   return {
-    list: state.list
+    list: state.list,
   };
 }
-export default connect(mapStateToProps)(IndexDashboard);
+
+IndexDashboard.propTypes = {
+  list: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+};
+export default connect(mapStateToProps)(withStyles(styles)(IndexDashboard));

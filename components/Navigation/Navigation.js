@@ -1,25 +1,20 @@
-import React, { Component } from "react";
+/* eslint-disable react/forbid-prop-types */
 
-import Navbar from "../common/Navbar";
-import Icon from "../common/Icon";
-import Drawer from "../common/Drawer";
-// import { NavDropdown, MenuItem } from "react-bootstrap";
-import ListDrawer from "../ListDrawer";
-import NavigationResponsive from "./NavigationResponsive";
-import FirstNavbar from "./FirstNavbar";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Navigation extends Component {
-  render() {
-    return (
-      <div>
-        <div className="navbarResponsive">
-          <NavigationResponsive />
-        </div>
-        <div className="navbar">
-          <FirstNavbar languageSelect={this.props.languageSelect} />
-        </div>
 
-        <style jsx>{`
+import FirstNavbar from './FirstNavbar';
+
+function Navigation(props) {
+  const { languageSelect } = props;
+  return (
+    <div>
+    
+      <FirstNavbar languageSelect={languageSelect} />
+
+      <style jsx>
+        {`
           @media (max-width: 425px) {
             .navbar {
               visibility: hidden;
@@ -32,10 +27,13 @@ class Navigation extends Component {
               display: none;
             }
           }
-        `}</style>
-      </div>
-    );
-  }
+        `}
+      </style>
+    </div>
+  );
 }
+Navigation.propTypes = {
+  languageSelect: PropTypes.object.isRequired,
+};
 
 export default Navigation;

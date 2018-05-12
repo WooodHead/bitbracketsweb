@@ -17,32 +17,32 @@ export default {
     "home.section3.title10": `When the event ends the smart contract waits for a given period (day) for someone to publish a higher score, if you have the highest score by the closing date then you are the winner! The smart contract will allow you to take the prize.`,
     "home.section4.title1": `Claim the prize`,
     "home.section4.title2": `The Balance of the pool goes to the winner`,
-    "home.section4.title3": `If you are the pool creator you will win a `,
+    "home.section4.title3": `If you are the pool creator you will win a % `,
     "home.section4.title4": `fee of the pool for helping to spread crypto awareness`,
     "home.section5.title1": `Play your favorite sport events with Cryptocurrency`
   },
   es: {
     "home.section2.title1": `Hazte fan y un Crypto geek`,
     "home.section2.title2": `este mundial 2018`,
-    "home.section2.title3": `Crea tu propia quinela con criptomonedas con tus amigos, mascotas, familiares, personas en su oficina o entusiastas del deporte y comienza a predecir quién ganará cada partido. Las criptomonedas están creciendo, ayuda a la comunidad cripto a crecer invitando a amigos y conocidos a participar en tu quinela.`,
+    "home.section2.title3": `Crea tu propia quiniela con criptomonedas con tus amigos, mascotas, familiares, personas en su oficina o entusiastas del deporte y comienza a predecir quién ganará cada partido. Las criptomonedas están creciendo, ayuda a la comunidad cripto a crecer invitando a tus amigos y conocidos a participar en tu quiniela.`,
     "home.section2.title4": `Facil`,
     "home.section2.title5": `Seguro`,
     "home.section2.title6": `y Divertido`,
     "home.section3.title1": `Como funciona?`,
     "home.section3.title2": `Crea tu propio grupo e invita a tu amigos`,
-    "home.section3.title3": `Crea un nombre a la quinela y determina el monto para ingresar a jugar. Si no tienes una billetera de criptomonedas, aprende aquí.`,
-    "home.section3.title4": `Cuantos más participantes, más grande es el premio. Todo el monto de la quinela estará asegurado por Contratos Inteligentes.`,
+    "home.section3.title3": `Crea un nombre a la quiniela y determina el monto para ingresar a jugar. Si no tienes una billetera de criptomonedas, aprende aquí.`,
+    "home.section3.title4": `Cuantos más participantes, más grande es el premio. Todo el monto de la quiniela estará asegurado por Contratos Inteligentes.`,
     "home.section3.title5": ` Ingresar predicciones`,
     "home.section3.title6": ` ¿Ganará Costa Rica contra Brasil? Tus predicciones se guardarán en el Blockchain. Debes ingresar tus predicciones antes de que comience la copa.`,
-    "home.section3.title7": `Vas ganando esta quinela?`,
-    "home.section3.title8": `Si estás ganando, y no hay posibilidad de que alguien te pueda ganar, publica tu resultado al blockchain! El contrato inteligente validará tu puntaje y se es el mayor pasaras a ser el posible ganador, si nadie mas publica un puntaje mayor el premio sera tuyo. Cuantos más participantes, mayor será el premio. Todo el monto de la quinela estará asegurado por Contratos Inteligentes.`,
+    "home.section3.title7": `Vas ganando esta quiniela?`,
+    "home.section3.title8": `Si estás ganando, y no hay posibilidad de que alguien te pueda ganar, publica tu resultado al blockchain! El contrato inteligente validará tu puntaje y se es el mayor pasaras a ser el posible ganador, si nadie mas publica un puntaje mayor el premio sera tuyo. Cuantos más participantes, mayor será el premio. Todo el monto de la quiniela estará asegurado por Contratos Inteligentes.`,
     "home.section3.title9": `Finge hasta que ... ¡alguien pueda decir lo contrario!`,
     "home.section3.title10": `Al finalizar el torneo existe un periodo de espera para publicar puntajes. Si termina ese periodo y tu tienes el puntaje mayor publicado, ¡entonces tu eres el ganador! El contrato inteligente te permitirá tomar todo el premio.`,
     "home.section4.title1": `Reclama tu Premio`,
     "home.section4.title2": `El pozo sera para el ganador con mayor puntaje de predicciones acertadas
     `,
-    "home.section4.title3": `si creaste la quinela tambien tendras un `,
+    "home.section4.title3": `si creaste la quiniela tambien tendras un % `,
     "home.section4.title4": `del pozo por ser un embajador del cripto.`,
-    "home.section5.title1": `Juega la quinela de tu evento deportivo favorito con criptomonedas`
+    "home.section5.title1": `Juega la quiniela de tu evento deportivo favorito con criptomonedas`
   }
 };
