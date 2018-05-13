@@ -10,7 +10,7 @@ import JoinPoolLayout from '../../components/JoinPoolForm/JoinPoolLayout';
 import Layout from "../../components/Layout";
 import GroupsSelector from '../../selectors/groupsSelector';
 import MatchesSelector from '../../selectors/matchesSelector';
-import { joinPool, updatePrediction, fetchContest } from '../../actions';
+import { joinPool, updatePrediction, savePredictions, fetchContest } from '../../actions';
 
 class JoinPoolPage extends React.Component {
     static async getInitialProps({ store, isServer }) {
@@ -32,6 +32,7 @@ class JoinPoolPage extends React.Component {
                     matches={this.props.matches}
                     predictions={this.props.predictions}
                     update={this.props.updatePrediction}
+                    save={this.props.savePredictions}
                 // read
                 />
             </Layout>
@@ -52,6 +53,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         joinPool: bindActionCreators(joinPool, dispatch),
         updatePrediction: bindActionCreators(updatePrediction, dispatch),
+        savePredictions: bindActionCreators(savePredictions, dispatch),        
         fetchContest: bindActionCreators(fetchContest, dispatch),
     }
 }

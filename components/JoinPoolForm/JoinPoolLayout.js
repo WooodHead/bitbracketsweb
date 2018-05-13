@@ -139,7 +139,7 @@ class JoinPoolLayout extends Component {
     }
 
     renderNavigator(activeStep) {
-        const { classes, intl, form, pool } = this.props;
+        const { classes, intl, form, pool, predictions } = this.props;
 
         return (
             <div className={classes.nav}>
@@ -154,14 +154,14 @@ class JoinPoolLayout extends Component {
                     variant="raised"
                     color="primary"
                     onClick={this.handleNext}
-                    disabled={pool.loading}
-                    // disabled={!(form.terms.value && form.rules.value) || pool.loading}
+                    disabled={predictions.loading || pool.loading}
+                // disabled={!(form.terms.value && form.rules.value) || pool.loading}
                 >
                     {activeStep === this.getSteps().length ?
                         intl.formatMessage(messages.finishButton)
                         : intl.formatMessage(messages.nextButton)}
                 </Button>
-                {pool.loading && <CircularProgress size={24} className={classes.buttonProgress} />}
+                {(predictions.loading || pool.loading) && <CircularProgress size={24} className={classes.buttonProgress} />}
             </div>
         );
     }
@@ -178,7 +178,7 @@ class JoinPoolLayout extends Component {
                     matches={matches}
                     predictions={predictions}
                     update={update}
-                    read={read}
+                    read={read || predictions.loading}
                 />
             case 2:
                 return <JoinPaymentForm />;
@@ -202,8 +202,10 @@ class JoinPoolLayout extends Component {
             case 1:
                 const numberMatches = _.filter(matches, match => _.isObject(match)).length;
                 const numberPredictions = _.filter(predictions, prediction => _.isObject(prediction)).length;
-                if ( numberMatches === numberPredictions ) {
-                    this.setState({ activeStep: activeStep + 1, error: '' });
+                if (numberMatches === numberPredictions) {
+                    this.props.save(pool, predictions)
+                        .then(() => this.setState({ activeStep: activeStep + 1, error: '' }))
+                        .catch(err => console.log('Error: ', err));
                 } else {
                     this.setState({ error: intl.formatMessage(messages.predictionError) });
                 }
