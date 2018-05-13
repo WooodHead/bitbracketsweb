@@ -19,7 +19,7 @@ import ExpansionPanel, {
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import { CircularProgress } from 'material-ui/Progress';
 
-import PlayerSetupForm from './PlayerSetupForm';
+// import PlayerSetupForm from './PlayerSetupForm';
 import JoinPaymentForm from './JoinPaymentForm';
 import PredictionForm from '../PredictionForm/PredictionForm';
 
@@ -118,7 +118,7 @@ class JoinPoolLayout extends Component {
         const { intl } = this.props;
 
         return [
-            intl.formatMessage(messages.userSetupStep),
+            // intl.formatMessage(messages.userSetupStep),
             intl.formatMessage(messages.predictionsStep),
             intl.formatMessage(messages.paymentStep),
         ];
@@ -154,7 +154,8 @@ class JoinPoolLayout extends Component {
                     variant="raised"
                     color="primary"
                     onClick={this.handleNext}
-                    disabled={!(form.terms.value && form.rules.value) || pool.loading}
+                    disabled={pool.loading}
+                    // disabled={!(form.terms.value && form.rules.value) || pool.loading}
                 >
                     {activeStep === this.getSteps().length ?
                         intl.formatMessage(messages.finishButton)
@@ -169,9 +170,9 @@ class JoinPoolLayout extends Component {
         const { groups, matches, predictions, update, read } = this.props;
 
         switch (stepIndex) {
+            // case 1:
+            //     return <PlayerSetupForm />;
             case 1:
-                return <PlayerSetupForm />;
-            case 2:
                 return <PredictionForm
                     groups={groups}
                     matches={matches}
@@ -179,7 +180,7 @@ class JoinPoolLayout extends Component {
                     update={update}
                     read={read}
                 />
-            case 3:
+            case 2:
                 return <JoinPaymentForm />;
             default:
                 return 'Unknown stepIndex';
@@ -192,13 +193,13 @@ class JoinPoolLayout extends Component {
         const lastStep = this.getSteps().length;
 
         switch (activeStep) {
+            // case 1:
+            //     this.props.dispatch(actions.submit('joinPool'));
+            //     if (form.$form.valid) {
+            //         this.setState({ activeStep: activeStep + 1 });
+            //     }
+            //     break;
             case 1:
-                this.props.dispatch(actions.submit('joinPool'));
-                if (form.$form.valid) {
-                    this.setState({ activeStep: activeStep + 1 });
-                }
-                break;
-            case 2:
                 const numberMatches = _.filter(matches, match => _.isObject(match)).length;
                 const numberPredictions = _.filter(predictions, prediction => _.isObject(prediction)).length;
                 if ( numberMatches === numberPredictions ) {
