@@ -3,15 +3,25 @@ import { bindActionCreators } from "redux";
 import withRedux from "next-redux-wrapper";
 import Link from "next/link";
 
-import withRoot from '../components/HOC/md/withRoot';
-import withPersistGate from '../components/HOC/withPersistGate';
-import { initStore } from '../store';
-import JoinPoolLayout from '../components/JoinPoolForm/JoinPoolLayout';
-import Layout from "../components/Layout";
-import GroupsSelector from '../selectors/groupsSelector';
-import { joinPool, updatePrediction, savePredictions } from '../actions';
+import withRoot from '../../components/HOC/md/withRoot';
+import withPersistGate from '../../components/HOC/withPersistGate';
+import { initStore } from '../../store';
+import JoinPoolLayout from '../../components/JoinPoolForm/JoinPoolLayout';
+import Layout from "../../components/Layout";
+import GroupsSelector from '../../selectors/groupsSelector';
+import MatchesSelector from '../../selectors/matchesSelector';
+import { joinPool, updatePrediction, savePredictions, fetchContest } from '../../actions';
 
 class JoinPoolPage extends React.Component {
+    static async getInitialProps({ store, isServer }) {
+        await store.dispatch(fetchContest('Russia2018'));
+        return { isServer }
+    }
+
+    componentWillMount() {
+        this.props.fetchContest('Russia2018');
+    }
+
     render() {
         return (
             <Layout>
@@ -22,6 +32,7 @@ class JoinPoolPage extends React.Component {
                     matches={this.props.matches}
                     predictions={this.props.predictions}
                     update={this.props.updatePrediction}
+                    save={this.props.savePredictions}
                 // read
                 />
             </Layout>
@@ -32,7 +43,7 @@ class JoinPoolPage extends React.Component {
 function mapStateToProps(state) {
     return {
         pool: state.joinPool,
-        matches: state.matches,
+        matches: MatchesSelector(state),
         groups: GroupsSelector(state),
         predictions: state.predictions,
     };
@@ -42,6 +53,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         joinPool: bindActionCreators(joinPool, dispatch),
         updatePrediction: bindActionCreators(updatePrediction, dispatch),
+        savePredictions: bindActionCreators(savePredictions, dispatch),        
+        fetchContest: bindActionCreators(fetchContest, dispatch),
     }
 }
 

@@ -14,7 +14,7 @@ const styles = theme => ({
         paddingTop: theme.spacing.unit * 2,
     },
     tabs: {
-
+    
     },
     matches: {
         padding: theme.spacing.unit * 2,
@@ -52,7 +52,7 @@ class PredictionLayout extends Component {
                         <Grid item xs={6} key={match.index}>
                             <MatchCard
                                 match={match}
-                                prediction={predictions[match.index] ? predictions[match.index].prediction : ""}
+                                prediction={predictions[match.index] ? predictions[match.index].prediction : undefined}
                                 update={update}
                                 read={read}
                             />
@@ -74,7 +74,8 @@ class PredictionLayout extends Component {
                     onChange={this.handleTabChange}
                     indicatorColor="primary"
                     textColor="primary"
-                    centered
+                    scrollable
+                    scrollButtons="auto"
                 >
                     {groups.map(group => <Tab key={group} label={group} />)}
                 </Tabs>
