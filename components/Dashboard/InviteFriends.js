@@ -9,11 +9,16 @@ import Dialog, {
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 class InviteFriends extends React.Component {
-  state = {
-    value: 'https://bitbrackets.com/pools/address',
-    copied: false,
-    open: false,
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      value: `https://bitbrackets.io${props.url}`,
+      copied: false,
+      open: false,
+    };
+  }
+
 
   handleClickOpen = () => {
     this.setState({ open: true });

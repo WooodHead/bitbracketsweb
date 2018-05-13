@@ -83,13 +83,12 @@ function ResponsiveListTableParticipant(props) {
           </div>
         ))}
       </div>
-    
     </div>
   );
 }
 
 ResponsiveListTableParticipant.propTypes = {
-  classes: PropTypes.object.isRequired,
+  // classes: PropTypes.object.isRequired,
   players: PropTypes.array.isRequired,
 };
 

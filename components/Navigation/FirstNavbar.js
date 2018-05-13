@@ -19,7 +19,7 @@ const styles = theme => ({
   },
   flex: {
     flex: 1,
-    
+
     [theme.breakpoints.down('sm')]: {
       visibility: 'hidden',
       display: 'none',
@@ -83,13 +83,13 @@ function FirstNavbar(props) {
 
         <Typography variant="title" color="inherit" className={classes.flex}>
           <a href="/" className={classes.brandname}>
-         
+
           &nbsp;&nbsp; BitBrackets
-    
-           
+
+
           </a>
-         
-        </Typography> 
+
+        </Typography>
         <div className={classes.responsive}>
           <Toolbar>
 
@@ -146,5 +146,3 @@ FirstNavbar.propTypes = {
 };
 
 export default withStyles(styles)(injectIntl(FirstNavbar));
-
-

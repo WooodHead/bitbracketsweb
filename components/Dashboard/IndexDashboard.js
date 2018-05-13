@@ -24,7 +24,6 @@ const styles = theme => ({
 
 const IndexDashboard = (props) => {
   const { pool, classes } = props;
-  console.log('pool indexdashboard', pool);
   const dateStartTime = moment.unix(pool.startTime).toISOString();
   return (
     <div className={classes.root}>

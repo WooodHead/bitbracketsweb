@@ -4,6 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
+import Grid from 'material-ui/Grid';
+import Button from 'material-ui/Button';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 
 const styles = theme => ({
@@ -20,10 +22,16 @@ const styles = theme => ({
 function ListTableParticipant(props) {
   const { players, classes } = props;
   if (players.length === 0) {
-    return (null
-
-    );
+    return (
+      <Grid container spacing={24}>
+        <Grid item xs={12} sm={4}>
+          <Typography style={{ fontWeight: '500', color: 'grey' }} variant="headline" gutterBottom>
+      It’s a little bit lonely here... Invite some friends
+          </Typography>
+        </Grid>
+      </Grid>);
   }
+
   return (
     <div className={classes.root}>
       <Table className={classes.table}>
@@ -79,10 +87,13 @@ function ListTableParticipant(props) {
   );
 }
 
+ListTableParticipant.defaultProps = {
+  players: [],
+};
 
 ListTableParticipant.propTypes = {
   classes: PropTypes.object.isRequired,
-  players: PropTypes.array.isRequired,
+  players: PropTypes.array,
 };
 
 export default withStyles(styles)(ListTableParticipant);

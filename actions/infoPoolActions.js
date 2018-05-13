@@ -11,13 +11,15 @@ const API_BASE_URL = CONF.endpoint.url;
 //   return util.bufferToHex(util.setLengthRight(text, 32));
 // }
 
+// const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 export const loadPoolParticipants = address => (dispatch) => {
   dispatch({ type: actionTypes.FETCH_POOL_PARTICIPANTS_REQUEST });
 
   axios.get(`${API_BASE_URL}/pools/${address}`)
-    .then(pool => dispatch({
+    .then(res => dispatch({
       type: actionTypes.FETCH_POOL_PARTICIPANTS_SUCCESS,
-      payload: pool.players,
+      payload: res.data,
     }))
     .catch(err => dispatch({ type: actionTypes.FETCH_POOL_PARTICIPANTS_FAIL, payload: err }));
 };
@@ -37,7 +39,7 @@ export const getPoolDetails = address => dispatch =>
       const startTime = poolInstance.methods.startTime().call();
       const endTime = poolInstance.methods.endTime().call();
       const amountPerPlayer = poolInstance.methods.amountPerPlayer().call();
-      const players = poolInstance.methods.players().call();
+      const numPlayers = poolInstance.methods.players().call();
       const managerFee = poolInstance.methods.managerFee().call();
       const fee = poolInstance.methods.ownerFee().call();
       const amountPaid = poolInstance.methods.amountPaid().call();
@@ -51,7 +53,7 @@ export const getPoolDetails = address => dispatch =>
         startTime,
         endTime,
         amountPerPlayer,
-        players,
+        numPlayers,
         managerFee,
         fee,
         amountPaid,
@@ -67,7 +69,7 @@ export const getPoolDetails = address => dispatch =>
         startTime: res[3],
         endTime: res[4],
         amountPerPlayer: web3.utils.fromWei(res[5], 'ether'),
-        players: res[6],
+        numPlayers: res[6],
         managerFee: res[7],
         fee: res[8],
         amountPaid: web3.utils.fromWei(res[9], 'ether'),
@@ -76,7 +78,7 @@ export const getPoolDetails = address => dispatch =>
         totalBalance: res[12],
         address,
       };
-      const balanceEntries = (pool.amountPerPlayer * pool.players);
+      const balanceEntries = (pool.amountPerPlayer * pool.numPlayers);
       const feeTotal = balanceEntries * (pool.fee / 100);
       const managerTotal = balanceEntries * (pool.managerFee / 100);
       pool.priceBalance = balanceEntries - feeTotal - managerTotal - pool.amountPaid;

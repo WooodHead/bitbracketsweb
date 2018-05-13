@@ -64,7 +64,7 @@ function PoolDetails(props) {
         </Grid>
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Price: &nbsp;</span>
+            <span className={classes.paragraph}>Price Pool: &nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.priceBalance} ETH</span>
           </Typography>
         </Grid>
@@ -77,7 +77,7 @@ function PoolDetails(props) {
         <Grid item xs={12} sm={3}>
           <Typography variant="subheading">
             <span className={classes.paragraph}>Number of Players: &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{pool.players}</span>
+            <span style={{ fontWeight: '600' }}>{pool.numPlayers}</span>
           </Typography>
         </Grid>
       </Grid>
