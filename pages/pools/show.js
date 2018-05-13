@@ -44,7 +44,6 @@ const getStatusFromError = (error) => {
 
 PoolDashboard.getInitialProps = async ({ query, store }) => {
   const { address } = query;
-
   try {
     const pool = await store.dispatch(getPoolDetails(address));
     return { address, pool };
