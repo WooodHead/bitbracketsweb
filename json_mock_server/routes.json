@@ -4,5 +4,6 @@
     "/posts/:category": "/posts?category=:category",
     "/articles\\?id=:id": "/posts/:id",
     "/contests/Russia2018/matches": "/matches",
-    "/contests/Russia2018/teams": "/teams"            
+    "/contests/Russia2018/teams": "/teams",
+    "/pools/*": "/pools/1"
   }
