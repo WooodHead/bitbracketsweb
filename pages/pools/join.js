@@ -3,14 +3,14 @@ import { bindActionCreators } from "redux";
 import withRedux from "next-redux-wrapper";
 import Link from "next/link";
 
-import withRoot from '../components/HOC/md/withRoot';
-import withPersistGate from '../components/HOC/withPersistGate';
-import { initStore } from '../store';
-import JoinPoolLayout from '../components/JoinPoolForm/JoinPoolLayout';
-import Layout from "../components/Layout";
-import GroupsSelector from '../selectors/groupsSelector';
-import MatchesSelector from '../selectors/matchesSelector';
-import { joinPool, updatePrediction, fetchContest } from '../actions';
+import withRoot from '../../components/HOC/md/withRoot';
+import withPersistGate from '../../components/HOC/withPersistGate';
+import { initStore } from '../../store';
+import JoinPoolLayout from '../../components/JoinPoolForm/JoinPoolLayout';
+import Layout from "../../components/Layout";
+import GroupsSelector from '../../selectors/groupsSelector';
+import MatchesSelector from '../../selectors/matchesSelector';
+import { joinPool, updatePrediction, fetchContest } from '../../actions';
 
 class JoinPoolPage extends React.Component {
     static async getInitialProps({ store, isServer }) {
