@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import { connect } from 'react-redux';
+import { CircularProgress } from 'material-ui/Progress';
 import Grid from 'material-ui/Grid';
 
 import * as actions from '../../actions';
@@ -52,12 +53,28 @@ class ParticipantList extends React.Component {
     this.props.loadPoolParticipants(pool.address);
   }
 
-  render() {
-    const { classes, players } = this.props;
-    return (
-      <div className={classes.box}>
-        <HeaderParticipantList players={players} />
+  renderParticipantList = () => {
+    const {
+      classes,
+      players,
+      loadingPlayers,
+      error,
+    } = this.props;
 
+    if (loadingPlayers) {
+      return <CircularProgress />;
+    }
+
+    if (error) {
+      return (
+        <div className={classes.box}>
+          An error ocurred while loading players list. Please try refreshing your browser
+        </div>
+      );
+    }
+
+    return (
+      <div>
         <Grid className={classes.list}>
           {' '}
           <ListTableParticipant players={players} />
@@ -68,17 +85,36 @@ class ParticipantList extends React.Component {
         </div>
       </div>
     );
+  };
+
+  render() {
+    const {
+      classes,
+      players,
+      pool,
+    } = this.props;
+
+    return (
+      <div className={classes.box}>
+        <HeaderParticipantList pool={pool} players={players} />
+        {this.renderParticipantList()}
+      </div>
+    );
   }
 }
 
 function mapStateToProps({ pool }) {
   return {
-    players: pool.players,
+    players: pool.info.players,
+    loadingPlayers: pool.loadingPlayers,
+    error: pool.error,
   };
 }
 
 ParticipantList.defaultProps = {
   players: [],
+  loadingPlayers: true,
+  error: undefined,
 };
 
 ParticipantList.propTypes = {
@@ -86,6 +122,8 @@ ParticipantList.propTypes = {
   pool: PropTypes.object.isRequired,
   loadPoolParticipants: PropTypes.func.isRequired,
   players: PropTypes.array,
+  loadingPlayers: PropTypes.bool,
+  error: PropTypes.object,
 };
 
 export default connect(mapStateToProps, actions)(withStyles(styles)(ParticipantList));

@@ -10,7 +10,6 @@ function Navigation(props) {
   const { languageSelect } = props;
   return (
     <div>
-    
       <FirstNavbar languageSelect={languageSelect} />
 
       <style jsx>
