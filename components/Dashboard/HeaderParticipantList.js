@@ -1,4 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,10 +8,13 @@ import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import InviteFriends from './InviteFriends';
+import { Link } from '../../routes';
 
 class HeaderParticipantList extends Component {
   showButtonJoinPool() {
     const { pool } = this.props;
+
+    const joinUrl = `/pools/${pool.address}/join`;
 
     return (
       <Grid container spacing={24}>
@@ -24,9 +28,11 @@ class HeaderParticipantList extends Component {
           <InviteFriends url={`/pools/${pool.address}`} />
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Button variant="raised" style={{ backgroundColor: '#E91E63', color: '#fff' }}>
-            Join the Pool
-          </Button>
+          <Link route={joinUrl}>
+            <Button variant="raised" style={{ backgroundColor: '#E91E63', color: '#fff' }}>
+              Join the Pool
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     );
