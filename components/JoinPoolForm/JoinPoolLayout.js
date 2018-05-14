@@ -218,7 +218,7 @@ class JoinPoolLayout extends Component {
         case lastStep:
           this.props.onSubmit(pool, predictions)
             .then(poolAddress => Router.pushRoute(`/pools/${pool.address}?prediction=success`))
-            .catch(err => console.err('Error: ', err));
+            .catch(err => console.error('Error: ', err));
       }
     };
 

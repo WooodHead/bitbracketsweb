@@ -157,7 +157,7 @@ class CreatePoolForm extends Component {
           // TODO: update state on error
           this.props.onSubmit(pool)
             .then(poolAddress => Router.pushRoute(`/pools/${poolAddress}`))
-            .catch(err => console.err('Error: ', err));
+            .catch(err => console.error('Error: ', err));
           break;
         default:
           break;
