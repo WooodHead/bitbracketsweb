@@ -8,13 +8,27 @@ import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import InviteFriends from './InviteFriends';
-import { Link } from '../../routes';
+import { Link, Router } from '../../routes';
 
 class HeaderParticipantList extends Component {
-  showButtonJoinPool() {
+  getJoinUrl = () => {
     const { pool } = this.props;
 
     const joinUrl = `/pools/${pool.address}/join`;
+
+    return joinUrl;
+  }
+
+  handleClickJoin = () => {
+    const url = this.getJoinUrl();
+    console.log('click url', url);
+    Router.pushRoute(url);
+  }
+
+  showButtonJoinPool() {
+    const { pool } = this.props;
+
+    const joinUrl = this.getJoinUrl();
 
     return (
       <Grid container spacing={24}>
@@ -28,11 +42,13 @@ class HeaderParticipantList extends Component {
           <InviteFriends url={`/pools/${pool.address}`} />
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Link route={joinUrl}>
-            <Button variant="raised" style={{ backgroundColor: '#E91E63', color: '#fff' }}>
+          <Button
+            variant="raised"
+            style={{ backgroundColor: '#E91E63', color: '#fff' }}
+            onClick={this.handleClickJoin}
+          >
               Join the Pool
-            </Button>
-          </Link>
+          </Button>
         </Grid>
       </Grid>
     );
