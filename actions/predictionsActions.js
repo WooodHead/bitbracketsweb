@@ -29,14 +29,13 @@ export const savePredictions = (pool, predictions) => async dispatch => {
     const integers = [];
     for(var i in predictionArray) {
         integers.push({
-            "order": i,
+            "index": parseInt(i),
             "selection": predictionArray[i]
         });
     }
 
     //TODO Pass this value as parameter in this action.
-    const contestName = "Russia2018Test11";
-
+    const contestName = "Rusia2018Test11";
     const data = {
         name: contestName,
         matches: integers
