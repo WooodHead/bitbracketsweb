@@ -2,494 +2,628 @@
     "contestName": "Russia2018",
     "matches": [
       {
-        "tournament": "Russia2018",
-        "index": 0,
-        "home": "TuhHviLJDv5JDQQ6FwPr",
-        "away": "NAiCXvoZgNIL860DAbAV",
-        "date": 1529010000000,
-        "data": {
-            "group": "A"
-        }
-      },
-      {
-        "tournament": "Russia2018",
         "index": 1,
-        "home": "gjMU3P3kEOP3qBEbzksQ",
-        "away": "anuh2go5bltW0mrn2lia",
-        "date": 1529092800000,
+        "tournament": "Russia2018",
+        "home": "f4be7de4631f06baa30e9b89e6dd3552",
+        "away": "2fed2fd04f236dc052ae92ab808bb9db",
+        "date": 1528988400000,
         "data": {
-            "group": "A"
+          "group": "A",
+          "stadium": "Luzhniki Stadium",
+          "city": "Moscow",
+          "location": { "lng": 37.5515217, "lat": 55.715765 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 2,
-        "home": "OB9YmpLN0izkkjNQCBRL",
-        "away": "cqf3Cd2HwMouIvFFjiN9",
-        "date": 1529096400000,
+        "tournament": "Russia2018",
+        "home": "64407f762c49409b80a32f4a40308af7",
+        "away": "013d3c562e765282116babcf4621de1c",
+        "date": 1529064000000,
         "data": {
-            "group": "B"
+          "group": "A",
+          "stadium": "Central Stadium",
+          "city": "Yekaterinburg",
+          "location": { "lng": 60.573585, "lat": 56.83249 }
         }
       },
       {
-        "tournament": "Russia2018",
-        "index": 3,
-        "home": "BQB9lZ96Q1MNuLlIm5wv",
-        "away": "IZwLi2JdjhZYZTxVwFvI",
-        "date": 1529107200000,
-        "data": {
-            "group": "B"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 4,
-        "home": "rORIBvjrz11V2g3R5mu9",
-        "away": "o8fLJNoXjzZ0CxeMgx1i",
-        "date": 1528905600000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 5,
-        "home": "K5YPmLiXvJUdxSuPIHAL",
-        "away": "rG2nEFIZk1i2JOQ5a50a",
-        "date": 1528916400000,
-        "data": {
-            "group": "D"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 6,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 7,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 8,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 9,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 10,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 11,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 12,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 13,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 14,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 15,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 16,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
         "index": 17,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "f4be7de4631f06baa30e9b89e6dd3552",
+        "away": "64407f762c49409b80a32f4a40308af7",
+        "date": 1529431200000,
         "data": {
-            "group": "C"
+          "group": "A",
+          "stadium": "Krestovsky Stadium",
+          "city": "Saint Petersburg",
+          "location": { "lng": 30.221408, "lat": 59.97274 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 18,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "013d3c562e765282116babcf4621de1c",
+        "away": "2fed2fd04f236dc052ae92ab808bb9db",
+        "date": 1529506800000,
         "data": {
-            "group": "C"
+          "group": "A",
+          "stadium": "Rostov Arena",
+          "city": "Rostov-on-Don",
+          "location": { "lng": 39.738424, "lat": 47.209581 }
         }
       },
       {
-        "tournament": "Russia2018",
-        "index": 19,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 20,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 21,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 22,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 23,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 24,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 25,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 26,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 27,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 28,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 29,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 30,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 31,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
-        "index": 32,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
-        "data": {
-            "group": "C"
-        }
-      },
-      {
-        "tournament": "Russia2018",
         "index": 33,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "013d3c562e765282116babcf4621de1c",
+        "away": "f4be7de4631f06baa30e9b89e6dd3552",
+        "date": 1529935200000,
         "data": {
-            "group": "C"
+          "group": "A",
+          "stadium": "Cosmos Arena",
+          "city": "Samara",
+          "location": { "lng": 50.238854, "lat": 53.278146 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 34,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "2fed2fd04f236dc052ae92ab808bb9db",
+        "away": "64407f762c49409b80a32f4a40308af7",
+        "date": 1529935200000,
         "data": {
-            "group": "C"
+          "group": "A",
+          "stadium": "Volgograd Arena",
+          "city": "Volgograd",
+          "location": { "lng": 44.548345, "lat": 48.734195 }
         }
       },
       {
+        "index": 3,
         "tournament": "Russia2018",
+        "home": "e4bf3e594d785f7362154a56b70dbb43",
+        "away": "30d9d7ab338b02ce27499924ca282189",
+        "date": 1529085600000,
+        "data": {
+          "group": "B",
+          "stadium": "Fisht Olympic Stadium",
+          "city": "Sochi",
+          "location": { "lng": 39.955709, "lat": 43.402011 }
+        }
+      },
+      {
+        "index": 4,
+        "tournament": "Russia2018",
+        "home": "b962f9cb7c3bf8c21ed573d32a173cfb",
+        "away": "d251e3d2a4fc328af66d26e49123b2be",
+        "date": 1529074800000,
+        "data": {
+          "group": "B",
+          "stadium": "Krestovsky Stadium",
+          "city": "Saint Petersburg",
+          "location": { "lng": 30.221408, "lat": 59.97274 }
+        }
+      },
+      {
+        "index": 19,
+        "tournament": "Russia2018",
+        "home": "e4bf3e594d785f7362154a56b70dbb43",
+        "away": "b962f9cb7c3bf8c21ed573d32a173cfb",
+        "date": 1529496000000,
+        "data": {
+          "group": "B",
+          "stadium": "Luzhniki Stadium",
+          "city": "Moscow",
+          "location": { "lng": 37.5515217, "lat": 55.715765 }
+        }
+      },
+      {
+        "index": 20,
+        "tournament": "Russia2018",
+        "home": "d251e3d2a4fc328af66d26e49123b2be",
+        "away": "30d9d7ab338b02ce27499924ca282189",
+        "date": 1529517600000,
+        "data": {
+          "group": "B",
+          "stadium": "Kazan Arena",
+          "city": "Kazan",
+          "location": { "lng": 49.160966, "lat": 55.820983 }
+        }
+      },
+      {
         "index": 35,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "d251e3d2a4fc328af66d26e49123b2be",
+        "away": "e4bf3e594d785f7362154a56b70dbb43",
+        "date": 1529949600000,
         "data": {
-            "group": "C"
+          "group": "B",
+          "stadium": "Mordovia Arena",
+          "city": "Saransk",
+          "location": { "lng": 45.203851, "lat": 54.181795 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 36,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "30d9d7ab338b02ce27499924ca282189",
+        "away": "b962f9cb7c3bf8c21ed573d32a173cfb",
+        "date": 1529949600000,
         "data": {
-            "group": "C"
+          "group": "B",
+          "stadium": "Kaliningrad Stadium",
+          "city": "Kaliningrad",
+          "location": { "lng": 20.533859, "lat": 54.698157 }
         }
       },
       {
+        "index": 5,
         "tournament": "Russia2018",
+        "home": "dcea6125b94a8ef025d8592da50461b3",
+        "away": "d18b6482ae33aedd9b0783eabed2ae59",
+        "date": 1529143200000,
+        "data": {
+          "group": "C",
+          "stadium": "Kazan Arena",
+          "city": "Kazan",
+          "location": { "lng": 49.160966, "lat": 55.820983 }
+        }
+      },
+      {
+        "index": 6,
+        "tournament": "Russia2018",
+        "home": "feb8f7a802628d2faa47c09784afde02",
+        "away": "267d33ab86d6b3e45f9123ca3ca50284",
+        "date": 1529164800000,
+        "data": {
+          "group": "C",
+          "stadium": "Mordovia Arena",
+          "city": "Saransk",
+          "location": { "lng": 45.203851, "lat": 54.181795 }
+        }
+      },
+      {
+        "index": 21,
+        "tournament": "Russia2018",
+        "home": "dcea6125b94a8ef025d8592da50461b3",
+        "away": "feb8f7a802628d2faa47c09784afde02",
+        "date": 1529593200000,
+        "data": {
+          "group": "C",
+          "stadium": "Central Stadium",
+          "city": "Yekaterinburg",
+          "location": { "lng": 60.573585, "lat": 56.83249 }
+        }
+      },
+      {
+        "index": 22,
+        "tournament": "Russia2018",
+        "home": "267d33ab86d6b3e45f9123ca3ca50284",
+        "away": "d18b6482ae33aedd9b0783eabed2ae59",
+        "date": 1529582400000,
+        "data": {
+          "group": "C",
+          "stadium": "Cosmos Arena",
+          "city": "Samara",
+          "location": { "lng": 50.238854, "lat": 53.278146 }
+        }
+      },
+      {
         "index": 37,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "267d33ab86d6b3e45f9123ca3ca50284",
+        "away": "dcea6125b94a8ef025d8592da50461b3",
+        "date": 1530021600000,
         "data": {
-            "group": "C"
+          "group": "C",
+          "stadium": "Luzhniki Stadium",
+          "city": "Moscow",
+          "location": { "lng": 37.5515217, "lat": 55.715765 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 38,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "d18b6482ae33aedd9b0783eabed2ae59",
+        "away": "feb8f7a802628d2faa47c09784afde02",
+        "date": 1530025200000,
         "data": {
-            "group": "C"
+          "group": "C",
+          "stadium": "Fisht Olympic Stadium",
+          "city": "Sochi",
+          "location": { "lng": 39.955709, "lat": 43.402011 }
         }
       },
       {
+        "index": 7,
         "tournament": "Russia2018",
+        "home": "f9f1549e6d42a9813ff5518652212ecb",
+        "away": "0814943139525917eb60c2e104b3fdf6",
+        "date": 1529154000000,
+        "data": {
+          "group": "D",
+          "stadium": "Otkrytiye Arena",
+          "city": "Moscow",
+          "location": { "lng": 37.440363, "lat": 55.817765 }
+        }
+      },
+      {
+        "index": 8,
+        "tournament": "Russia2018",
+        "home": "cdcdd36403069ff2cf11db969ee93d30",
+        "away": "86e47997254714426eb5a2aff6cff8be",
+        "date": 1529175600000,
+        "data": {
+          "group": "D",
+          "stadium": "Kaliningrad Stadium",
+          "city": "Kaliningrad",
+          "location": { "lng": 20.533859, "lat": 54.698157 }
+        }
+      },
+      {
+        "index": 23,
+        "tournament": "Russia2018",
+        "home": "f9f1549e6d42a9813ff5518652212ecb",
+        "away": "cdcdd36403069ff2cf11db969ee93d30",
+        "date": 1529604000000,
+        "data": {
+          "group": "D",
+          "stadium": "Nizhny Novgorod Stadium",
+          "city": "Nizhny Novgorod",
+          "location": { "lng": 43.963251, "lat": 56.337287 }
+        }
+      },
+      {
+        "index": 24,
+        "tournament": "Russia2018",
+        "home": "86e47997254714426eb5a2aff6cff8be",
+        "away": "0814943139525917eb60c2e104b3fdf6",
+        "date": 1529679600000,
+        "data": {
+          "group": "D",
+          "stadium": "Volgograd Arena",
+          "city": "Volgograd",
+          "location": { "lng": 44.548345, "lat": 48.734195 }
+        }
+      },
+      {
         "index": 39,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "86e47997254714426eb5a2aff6cff8be",
+        "away": "f9f1549e6d42a9813ff5518652212ecb",
+        "date": 1530036000000,
         "data": {
-            "group": "C"
+          "group": "D",
+          "stadium": "Krestovsky Stadium",
+          "city": "Saint Petersburg",
+          "location": { "lng": 30.221408, "lat": 59.97274 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 40,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "0814943139525917eb60c2e104b3fdf6",
+        "away": "cdcdd36403069ff2cf11db969ee93d30",
+        "date": 1530036000000,
         "data": {
-            "group": "C"
+          "group": "D",
+          "stadium": "Rostov Arena",
+          "city": "Rostov-on-Don",
+          "location": { "lng": 39.738424, "lat": 47.209581 }
         }
       },
       {
+        "index": 9,
         "tournament": "Russia2018",
+        "home": "8580d56250dba86b75a149e0ef84653e",
+        "away": "dcddebe06af6bdad133fc5e887584f95",
+        "date": 1529258400000,
+        "data": {
+          "group": "E",
+          "stadium": "Rostov Arena",
+          "city": "Rostov-on-Don",
+          "location": { "lng": 39.738424, "lat": 47.209581 }
+        }
+      },
+      {
+        "index": 10,
+        "tournament": "Russia2018",
+        "home": "36bf57aa51897943d3cbf80928844b9e",
+        "away": "eef219aa39f2b202bd94c779efa800a2",
+        "date": 1529236800000,
+        "data": {
+          "group": "E",
+          "stadium": "Cosmos Arena",
+          "city": "Samara",
+          "location": { "lng": 50.238854, "lat": 53.278146 }
+        }
+      },
+      {
+        "index": 25,
+        "tournament": "Russia2018",
+        "home": "8580d56250dba86b75a149e0ef84653e",
+        "away": "36bf57aa51897943d3cbf80928844b9e",
+        "date": 1529668800000,
+        "data": {
+          "group": "E",
+          "stadium": "Krestovsky Stadium",
+          "city": "Saint Petersburg",
+          "location": { "lng": 30.221408, "lat": 59.97274 }
+        }
+      },
+      {
+        "index": 26,
+        "tournament": "Russia2018",
+        "home": "eef219aa39f2b202bd94c779efa800a2",
+        "away": "dcddebe06af6bdad133fc5e887584f95",
+        "date": 1529690400000,
+        "data": {
+          "group": "E",
+          "stadium": "Kaliningrad Stadium",
+          "city": "Kaliningrad",
+          "location": { "lng": 20.533859, "lat": 54.698157 }
+        }
+      },
+      {
         "index": 41,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "eef219aa39f2b202bd94c779efa800a2",
+        "away": "8580d56250dba86b75a149e0ef84653e",
+        "date": 1530122400000,
         "data": {
-            "group": "C"
+          "group": "E",
+          "stadium": "Otkrytiye Arena",
+          "city": "Moscow",
+          "location": { "lng": 37.440363, "lat": 55.817765 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 42,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "dcddebe06af6bdad133fc5e887584f95",
+        "away": "36bf57aa51897943d3cbf80928844b9e",
+        "date": 1530122400000,
         "data": {
-            "group": "C"
+          "group": "E",
+          "stadium": "Nizhny Novgorod Stadium",
+          "city": "Nizhny Novgorod",
+          "location": { "lng": 43.963251, "lat": 56.337287 }
         }
       },
       {
+        "index": 11,
         "tournament": "Russia2018",
+        "home": "d5e04fa343d96a13d08eebc2eba4285f",
+        "away": "7a63b1138a9d76f0c8322515e841b787",
+        "date": 1529247600000,
+        "data": {
+          "group": "F",
+          "stadium": "Luzhniki Stadium",
+          "city": "Moscow",
+          "location": { "lng": 37.5515217, "lat": 55.715765 }
+        }
+      },
+      {
+        "index": 12,
+        "tournament": "Russia2018",
+        "home": "35ac263b2661b30ad65d10517068c7a8",
+        "away": "67b3ae0d4ec3ff5a609cee6f0c3154e4",
+        "date": 1529323200000,
+        "data": {
+          "group": "F",
+          "stadium": "Nizhny Novgorod Stadium",
+          "city": "Nizhny Novgorod",
+          "location": { "lng": 43.963251, "lat": 56.337287 }
+        }
+      },
+      {
+        "index": 27,
+        "tournament": "Russia2018",
+        "home": "d5e04fa343d96a13d08eebc2eba4285f",
+        "away": "35ac263b2661b30ad65d10517068c7a8",
+        "date": 1529776800000,
+        "data": {
+          "group": "F",
+          "stadium": "Fisht Olympic Stadium",
+          "city": "Sochi",
+          "location": { "lng": 39.955709, "lat": 43.402011 }
+        }
+      },
+      {
+        "index": 28,
+        "tournament": "Russia2018",
+        "home": "67b3ae0d4ec3ff5a609cee6f0c3154e4",
+        "away": "7a63b1138a9d76f0c8322515e841b787",
+        "date": 1529766000000,
+        "data": {
+          "group": "F",
+          "stadium": "Rostov Arena",
+          "city": "Rostov-on-Don",
+          "location": { "lng": 39.738424, "lat": 47.209581 }
+        }
+      },
+      {
         "index": 43,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "67b3ae0d4ec3ff5a609cee6f0c3154e4",
+        "away": "d5e04fa343d96a13d08eebc2eba4285f",
+        "date": 1530108000000,
         "data": {
-            "group": "C"
+          "group": "F",
+          "stadium": "Kazan Arena",
+          "city": "Kazan",
+          "location": { "lng": 49.160966, "lat": 55.820983 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 44,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "7a63b1138a9d76f0c8322515e841b787",
+        "away": "35ac263b2661b30ad65d10517068c7a8",
+        "date": 1530108000000,
         "data": {
-            "group": "C"
+          "group": "F",
+          "stadium": "Central Stadium",
+          "city": "Yekaterinburg",
+          "location": { "lng": 60.573585, "lat": 56.83249 }
         }
       },
       {
+        "index": 13,
         "tournament": "Russia2018",
+        "home": "71df225a633709bcd9cbd5963a9cd8cb",
+        "away": "5be28c36b543dcd5501d19fdbb8bf07d",
+        "date": 1529334000000,
+        "data": {
+          "group": "G",
+          "stadium": "Fisht Olympic Stadium",
+          "city": "Sochi",
+          "location": { "lng": 39.955709, "lat": 43.402011 }
+        }
+      },
+      {
+        "index": 14,
+        "tournament": "Russia2018",
+        "home": "3aefeeb7e385fca8c3b42afbc6469377",
+        "away": "a9e3c02248c70a65c89a5ad90c19ffc6",
+        "date": 1529344800000,
+        "data": {
+          "group": "G",
+          "stadium": "Volgograd Arena",
+          "city": "Volgograd",
+          "location": { "lng": 44.548345, "lat": 48.734195 }
+        }
+      },
+      {
+        "index": 29,
+        "tournament": "Russia2018",
+        "home": "71df225a633709bcd9cbd5963a9cd8cb",
+        "away": "3aefeeb7e385fca8c3b42afbc6469377",
+        "date": 1529755200000,
+        "data": {
+          "group": "G",
+          "stadium": "Otkrytiye Arena",
+          "city": "Moscow",
+          "location": { "lng": 37.440363, "lat": 55.817765 }
+        }
+      },
+      {
+        "index": 30,
+        "tournament": "Russia2018",
+        "home": "a9e3c02248c70a65c89a5ad90c19ffc6",
+        "away": "5be28c36b543dcd5501d19fdbb8bf07d",
+        "date": 1529841600000,
+        "data": {
+          "group": "G",
+          "stadium": "Nizhny Novgorod Stadium",
+          "city": "Nizhny Novgorod",
+          "location": { "lng": 43.963251, "lat": 56.337287 }
+        }
+      },
+      {
         "index": 45,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "a9e3c02248c70a65c89a5ad90c19ffc6",
+        "away": "71df225a633709bcd9cbd5963a9cd8cb",
+        "date": 1530208800000,
         "data": {
-            "group": "C"
+          "group": "G",
+          "stadium": "Kaliningrad Stadium",
+          "city": "Kaliningrad",
+          "location": { "lng": 20.533859, "lat": 54.698157 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 46,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "5be28c36b543dcd5501d19fdbb8bf07d",
+        "away": "3aefeeb7e385fca8c3b42afbc6469377",
+        "date": 1530208800000,
         "data": {
-            "group": "C"
+          "group": "G",
+          "stadium": "Mordovia Arena",
+          "city": "Saransk",
+          "location": { "lng": 45.203851, "lat": 54.181795 }
         }
       },
       {
+        "index": 15,
         "tournament": "Russia2018",
+        "home": "888e0d61470c83c0e87eb24f1e0b74fd",
+        "away": "53e1d8d8a21929f0a4439d33cf196af5",
+        "date": 1529420400000,
+        "data": {
+          "group": "H",
+          "stadium": "Otkrytiye Arena",
+          "city": "Moscow",
+          "location": { "lng": 37.440363, "lat": 55.817765 }
+        }
+      },
+      {
+        "index": 16,
+        "tournament": "Russia2018",
+        "home": "f9f7261ebeecdec0306eed63d585bfde",
+        "away": "d4868023ec902cfb3bc7c932221e1c32",
+        "date": 1529409600000,
+        "data": {
+          "group": "H",
+          "stadium": "Mordovia Arena",
+          "city": "Saransk",
+          "location": { "lng": 45.203851, "lat": 54.181795 }
+        }
+      },
+      {
+        "index": 31,
+        "tournament": "Russia2018",
+        "home": "888e0d61470c83c0e87eb24f1e0b74fd",
+        "away": "f9f7261ebeecdec0306eed63d585bfde",
+        "date": 1529852400000,
+        "data": {
+          "group": "H",
+          "stadium": "Kazan Arena",
+          "city": "Kazan",
+          "location": { "lng": 49.160966, "lat": 55.820983 }
+        }
+      },
+      {
+        "index": 32,
+        "tournament": "Russia2018",
+        "home": "d4868023ec902cfb3bc7c932221e1c32",
+        "away": "53e1d8d8a21929f0a4439d33cf196af5",
+        "date": 1529863200000,
+        "data": {
+          "group": "H",
+          "stadium": "Central Stadium",
+          "city": "Yekaterinburg",
+          "location": { "lng": 60.573585, "lat": 56.83249 }
+        }
+      },
+      {
         "index": 47,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "d4868023ec902cfb3bc7c932221e1c32",
+        "away": "888e0d61470c83c0e87eb24f1e0b74fd",
+        "date": 1530194400000,
         "data": {
-            "group": "C"
+          "group": "H",
+          "stadium": "Volgograd Arena",
+          "city": "Volgograd",
+          "location": { "lng": 44.548345, "lat": 48.734195 }
         }
       },
       {
-        "tournament": "Russia2018",
         "index": 48,
-        "home": "OnMaq5pejVZkLoKqyzOY",
-        "away": "dqKtQswORyisPQAXVHyD",
-        "date": 1528927200000,
+        "tournament": "Russia2018",
+        "home": "53e1d8d8a21929f0a4439d33cf196af5",
+        "away": "f9f7261ebeecdec0306eed63d585bfde",
+        "date": 1530194400000,
         "data": {
-            "group": "C"
+          "group": "H",
+          "stadium": "Cosmos Arena",
+          "city": "Samara",
+          "location": { "lng": 50.238854, "lat": 53.278146 }
         }
       }
-    ]
+    ]    
   }

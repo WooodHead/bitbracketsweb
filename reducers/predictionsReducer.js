@@ -4,29 +4,35 @@ import { actionTypes } from '../actions/types';
 const INITIAL_STATE = {
     loading: false,
     error: undefined,
+    apiPredictions: undefined,
+    predictions: undefined
 };
 
 export default function (state = INITIAL_STATE, action) {
+    console.log('predictionsReducer ', action.type);
     switch (action.type) {
-
+/*
         case actionTypes.FETCH_PREDICTIONS_REQUEST:
             return { ...state, loading: true, error: undefined };
         case actionTypes.FETCH_PREDICTIONS_SUCCESS:
             return { ...state, predictions: _.mapKeys(action.payload, 'index'), loading: false, error: undefined }
         case actionTypes.FETCH_PREDICTIONS_FAIL:
             return { ...state, loading: false, error: action.payload }
-
+*/
         case actionTypes.UPDATE_PREDICTION_REQUEST:
+            console.log('predictionsReducer updatePredictionRequest', action);
             return { ...state, loading: true, error: undefined };
         case actionTypes.UPDATE_PREDICTION_SUCCESS:
-            return { ...state, [action.payload.index]: action.payload, loading: false, error: undefined }
+            console.log('predictionsReducer updatePredictionSuccess', action.payload);
+            console.log('Reducer', state);
+            return {predictions: {...state.predictions, [action.payload.index]: action.payload}, loading: false, error: undefined };
         case actionTypes.UPDATE_PREDICTION_FAIL:
             return { ...state, loading: false, error: action.payload }
 
         case actionTypes.SAVE_PREDICTIONS_REQUEST:
             return { ...state, loading: true, error: undefined };
         case actionTypes.SAVE_PREDICTIONS_SUCCESS:
-            return { ...action.payload, loading: false, error: undefined }
+            return { ...state, apiPredictions: action.payload, loading: false, error: undefined }
         case actionTypes.SAVE_PREDICTIONS_FAIL:
             return { ...state, loading: false, error: action.payload }
 

@@ -142,6 +142,8 @@ class JoinPoolLayout extends Component {
     const {
       classes, intl, form, pool, predictions,
     } = this.props;
+    console.log('JoinPoolLayout', 'Pool ', pool);
+    console.log('JoinPoolLayout', 'predictions ', predictions);
 
     return (
       <div className={classes.nav}>
@@ -180,7 +182,7 @@ class JoinPoolLayout extends Component {
           team={team}
           groups={groups}
           matches={matches}
-          predictions={predictions}
+          predictions={predictions.predictions}
           update={update}
           read={read || predictions.loading}
         />);
@@ -194,8 +196,11 @@ class JoinPoolLayout extends Component {
     handleNext = () => {
       const { activeStep } = this.state;
       const {
-        intl, pool, form, predictions, matches,
+        intl, pool, form, predictions, apiPredictions, matches,
       } = this.props;
+      console.log('JoinPoolLayout', 'handleNext ', pool);
+      console.log('JoinPoolLayout', 'handleNext ', predictions);
+      console.log('JoinPoolLayout', 'handleNext ', apiPredictions);
       const lastStep = this.getSteps().length;
 
       switch (activeStep) {
@@ -206,10 +211,13 @@ class JoinPoolLayout extends Component {
         //     }
         //     break;
         case 1:
+          console.log("predictions ", predictions);
           const numberMatches = _.filter(matches, match => _.isObject(match)).length;
-          const numberPredictions = _.filter(predictions, prediction => _.isObject(prediction)).length;
+          const numberPredictions = _.filter(predictions.predictions, prediction => _.isObject(prediction)).length;
+          console.log("numberMatches", numberMatches);
+          console.log("numberPredictions", numberPredictions);
           if (numberMatches === numberPredictions) {
-            this.props.save(pool, predictions)
+            this.props.save(pool, predictions.predictions)
               .then(() => this.setState({ activeStep: activeStep + 1, error: '' }))
               .catch(err => console.log('Error: ', err));
           } else {
@@ -217,7 +225,8 @@ class JoinPoolLayout extends Component {
           }
           break;
         case lastStep:
-          this.props.onSubmit(pool, predictions)
+          console.log('JoinPoolLayout', 'lastStep', apiPredictions);
+          this.props.onSubmit(pool.info, apiPredictions)
             .then(poolAddress => Router.pushRoute(`/pools/${pool.address}?prediction=success`))
             .catch(err => console.error('Error: ', err));
       }
@@ -258,6 +267,7 @@ class JoinPoolLayout extends Component {
 
 const mapStateToProps = state => ({
   form: state.forms.joinPool,
+  apiPredictions: state.predictions.apiPredictions ? state.predictions.apiPredictions: [] 
 });
 
 export default withStyles(styles)(injectIntl(connect(mapStateToProps)(JoinPoolLayout)));
