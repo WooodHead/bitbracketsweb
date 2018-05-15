@@ -59,8 +59,8 @@ const messages = defineMessages({
   },
   navigationNavbarlink2: {
     id: 'navigation.navbarlink2',
-    defaultMessage: 'rules',
-    description: 'Navigation link rules',
+    defaultMessage: 'Roadmap',
+    description: 'Navigation link roadmap',
   },
   navigationNavbarlink3: {
     id: 'navigation.navbarlink3',
@@ -96,7 +96,7 @@ function FirstNavbar(props) {
             <Button href="#section3" color="inherit">
               {intl.formatMessage(messages.navigationNavbarlink1)}
             </Button>
-            <Button href="/rules" color="inherit">
+            <Button href="/roadmap" color="inherit">
               {intl.formatMessage(messages.navigationNavbarlink2)}
             </Button>
             <Button href="/faq" color="inherit">

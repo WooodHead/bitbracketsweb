@@ -1,0 +1,52 @@
+[
+  {
+    "id": "roadmap.roadmapdate1",
+    "description": "roadmap June 2018",
+    "defaultMessage": "June 2018"
+  },
+  {
+    "id": "roadmap.roadmapdate2",
+    "description": "roadmap September 2018",
+    "defaultMessage": "September 2018"
+  },
+  {
+    "id": "roadmap.roadmapdate3",
+    "description": "March 2019",
+    "defaultMessage": "March 2019"
+  },
+  {
+    "id": "roadmap.roadmaptext1",
+    "description": "roadmap",
+    "defaultMessage": "Launch of Beta platform for World Cup pools in Rinkeby test net."
+  },
+  {
+    "id": "roadmap.roadmaptext2",
+    "description": "roadmap",
+    "defaultMessage": "Add support for NFL weekly pools."
+  },
+  {
+    "id": "roadmap.roadmaptext3",
+    "description": "roadmap",
+    "defaultMessage": "Launch in main net."
+  },
+  {
+    "id": "roadmap.roadmaptext4",
+    "description": "roadmap",
+    "defaultMessage": "Add support for Tennis Grand Slam tournaments."
+  },
+  {
+    "id": "roadmap.roadmaptext5",
+    "description": "roadmap",
+    "defaultMessage": "Add support for March Madness Bracket pools."
+  },
+  {
+    "id": "roadmap.roadmaptext6",
+    "description": "roadmap",
+    "defaultMessage": "Decentralize results using oraclize or prediction market contracts (Augur)."
+  },
+  {
+    "id": "roadmap.roadmaptext7",
+    "description": "roadmap",
+    "defaultMessage": "Launch desktop client to allow building user customize tournaments/leagues and personalize pools."
+  }
+]
