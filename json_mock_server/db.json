@@ -78,7 +78,7 @@
       "name": "Russia",
       "hash": "TuhHviLJDv5JDQQ6FwPr",
       "group": "A",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/510px-Flag_of_Russia.svg.png"
     },
     {
       "index": 14,
@@ -86,7 +86,7 @@
       "name": "Egypt",
       "hash": "gjMU3P3kEOP3qBEbzksQ",
       "group": "A",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/510px-Flag_of_Egypt.svg.png"
     },
     {
       "index": 7,
@@ -94,7 +94,7 @@
       "name": "Saudi Arabia",
       "hash": "NAiCXvoZgNIL860DAbAV",
       "group": "A",
-      "image": ""
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/510px-Flag_of_Saudi_Arabia.svg.png" 
     },
     {
       "index": 22,
@@ -102,7 +102,7 @@
       "name": "Uruguay",
       "hash": "anuh2go5bltW0mrn2lia",
       "group": "A",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/510px-Flag_of_Uruguay.svg.png"
     },
     {
       "index": 24,
@@ -110,7 +110,7 @@
       "name": "Morocco",
       "hash": "OB9YmpLN0izkkjNQCBRL",
       "group": "B",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/510px-Flag_of_Morocco.svg.png"
     },
     {
       "index": 18,
@@ -118,7 +118,7 @@
       "name": "Portugal",
       "hash": "BQB9lZ96Q1MNuLlIm5wv",
       "group": "B",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/510px-Flag_of_Portugal.svg.png"
     },
     {
       "index": 10,
@@ -126,7 +126,7 @@
       "name": "Spain",
       "hash": "IZwLi2JdjhZYZTxVwFvI",
       "group": "B",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/400px-Flag_of_Spain.svg.png"
     },
     {
       "index": 2,
@@ -134,7 +134,7 @@
       "name": "Iran",
       "hash": "cqf3Cd2HwMouIvFFjiN9",
       "group": "B",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/510px-Flag_of_Iran.svg.png"
     },
     {
       "index": 17,
@@ -142,7 +142,7 @@
       "name": "France",
       "hash": "rORIBvjrz11V2g3R5mu9",
       "group": "C",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/510px-Flag_of_France.svg.png"
     },
     {
       "index": 29,
@@ -150,7 +150,7 @@
       "name": "Denmark",
       "hash": "dqKtQswORyisPQAXVHyD",
       "group": "C",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/449px-Flag_of_Denmark.svg.png"
     },
     {
       "index": 30,
@@ -158,7 +158,7 @@
       "name": "Australia",
       "hash": "o8fLJNoXjzZ0CxeMgx1i",
       "group": "C",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/510px-Flag_of_Australia.svg.png"
     },
     {
       "index": 31,
@@ -166,7 +166,7 @@
       "name": "Peru",
       "hash": "OnMaq5pejVZkLoKqyzOY",
       "group": "C",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/510px-Flag_of_Peru_%28state%29.svg.png"
     },
     {
       "index": 11,
@@ -174,7 +174,7 @@
       "name": "Nigeria",
       "hash": "xrQP1dbYOxntRm6AaVKv",
       "group": "D",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/510px-Flag_of_Nigeria.svg.png"
     },
     {
       "index": 15,
@@ -182,7 +182,7 @@
       "name": "Iceland",
       "hash": "rG2nEFIZk1i2JOQ5a50a",
       "group": "D",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/472px-Flag_of_Iceland.svg.png"
     },
     {
       "index": 20,
@@ -190,7 +190,7 @@
       "name": "Argentina",
       "hash": "K5YPmLiXvJUdxSuPIHAL",
       "group": "D",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/510px-Flag_of_Argentina.svg.png"
     },
     {
       "index": 27,
@@ -206,7 +206,7 @@
       "name": "Brazil",
       "hash": "9BEOziNBxuTc3vMGKWDA",
       "group": "E",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/510px-Flag_of_Croatia.svg.png"
     },
     {
       "index": 16,
@@ -214,7 +214,7 @@
       "name": "Serbia",
       "hash": "y1SdpBxmx74y6oXTMgpT",
       "group": "E",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/510px-Flag_of_Serbia.svg.png"
     },
     {
       "index": 12,
@@ -222,7 +222,7 @@
       "name": "Costa Rica",
       "hash": "5htUqOztNHatKXu5HIyR",
       "group": "E",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Costa_Rica_%28state%29.svg/510px-Flag_of_Costa_Rica_%28state%29.svg.png"
     },
     {
       "index": 26,
@@ -230,7 +230,7 @@
       "name": "Switzerland",
       "hash": "8VZe7369IrYK3xyl2ceN",
       "group": "E",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/340px-Flag_of_Switzerland_%28Pantone%29.svg.png"
     },
     {
       "index": 6,
@@ -238,7 +238,7 @@
       "name": "Korea",
       "hash": "fAtGIbUtW7Znl0bzx8Qf",
       "group": "F",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/510px-Flag_of_South_Korea.svg.png"
     },
     {
       "index": 4,
@@ -246,7 +246,7 @@
       "name": "Mexico",
       "hash": "QlSCqwa8ZrZSA400jZPt",
       "group": "F",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/510px-Flag_of_Mexico.svg.png"
     },
     {
       "index": 8,
@@ -254,7 +254,7 @@
       "name": "Germany",
       "hash": "DjaqOjvl7K11VqJU2Buz",
       "group": "F",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/510px-Flag_of_Germany.svg.png"
     },
     {
       "index": 28,
@@ -262,7 +262,7 @@
       "name": "Sweden",
       "hash": "NFY6HkExo1qo00ysuWpo",
       "group": "F",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/510px-Flag_of_Sweden.svg.png"
     },
     {
       "index": 5,
@@ -270,7 +270,7 @@
       "name": "Belgium",
       "hash": "7zyuoxgFrGEYJwQjZrEJ",
       "group": "G",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/196px-Flag_of_Belgium.svg.png"
     },
     {
       "index": 9,
@@ -278,7 +278,7 @@
       "name": "England",
       "hash": "7ooPAI8KJYtQkDIcXyPG",
       "group": "G",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/510px-Flag_of_England.svg.png"
     },
     {
       "index": 19,
@@ -286,7 +286,7 @@
       "name": "Panama",
       "hash": "6h1vkdJEuMmDbAUtfUOh",
       "group": "G",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/400px-Flag_of_Panama.svg.png"
     },
     {
       "index": 25,
@@ -294,7 +294,7 @@
       "name": "Tunisia",
       "hash": "FmyPk59DZTee6QZtKQdP",
       "group": "G",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/450px-Flag_of_Tunisia.svg.png"
     },
     {
       "index": 3,
@@ -302,7 +302,7 @@
       "name": "Japan",
       "hash": "tJ1fDhnAJzRmjpiSOHjX",
       "group": "H",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/510px-Flag_of_Japan.svg.png"
     },
     {
       "index": 13,
@@ -310,7 +310,7 @@
       "name": "Poland",
       "hash": "78unOTUv445lVDgHaHgv",
       "group": "H",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/510px-Flag_of_Poland.svg.png"
     },
     {
       "index": 21,
@@ -318,7 +318,7 @@
       "name": "Colombia",
       "hash": "4m9KVvut5SVkQTlz3kXt",
       "group": "H",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/510px-Flag_of_Colombia.svg.png"
     },
     {
       "index": 23,
@@ -326,7 +326,7 @@
       "name": "Senegal",
       "hash": "cOVha2RLw28ULykdPZFz",
       "group": "H",
-      "image": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/510px-Flag_of_Senegal.svg.png"
     }
   ],
   "matches": [
@@ -339,6 +339,7 @@
       "data": {
         "group": "A"
       }
+
     },
     {
       "tournament": "Russia2018",
@@ -348,8 +349,8 @@
       "date": 1529092800000,
       "data": {
         "group": "A"
-      }
-    },
+      } 
+       },
     {
       "tournament": "Russia2018",
       "index": 2,

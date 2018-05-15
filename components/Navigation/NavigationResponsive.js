@@ -17,7 +17,7 @@ import Divider from 'material-ui/Divider';
 
 import { injectIntl, defineMessages } from 'react-intl';
 
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+// import MoreVertIcon from 'material-ui/icons/MoreVert';
 
 const messages = defineMessages({
   navigationNavbarlink1: {
@@ -88,7 +88,8 @@ class ResponsiveNavbar extends React.Component {
                 aria-haspopup="true"
                 onClick={this.handleToggle}
               >
-                <MoreVertIcon />
+                <i className="fas fa-ellipsis-v" />
+                {/* <MoreVertIcon /> */}
               </IconButton>
             </div>
           </Target>
