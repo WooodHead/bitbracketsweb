@@ -34,6 +34,7 @@ class JoinPoolPage extends React.Component {
     return (
       <Layout>
         <JoinPoolLayout
+         
           poolInfo={this.props.poolInfo}
           pool={this.props.pool}
           onSubmit={this.props.joinPool}

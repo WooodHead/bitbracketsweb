@@ -129,12 +129,12 @@ class JoinPoolLayout extends Component {
   renderStepper(steps, activeStep) {
     return (
       <Stepper activeStep={activeStep - 1} alternativeLabel>
-            {steps.map(label => (
-                <Step key={label}>
-                          <StepLabel>{label}</StepLabel>
-                        </Step>
+        {steps.map(label => (
+          <Step key={label}>
+            <StepLabel>{label}</StepLabel>
+          </Step>
                     ))}
-          </Stepper>
+      </Stepper>
     );
   }
 
@@ -145,31 +145,31 @@ class JoinPoolLayout extends Component {
 
     return (
       <div className={classes.nav}>
-            <Button
-                onClick={this.handleBack}
-                className={classes.backButton}
-                disabled={activeStep === 1 || pool.loading}
-              >
-                {intl.formatMessage(messages.backButton)}
-              </Button>
-            <Button
-                variant="raised"
-                color="primary"
-                onClick={this.handleNext}
-                disabled={predictions.loading || pool.loading}
-              >
-                {activeStep === this.getSteps().length ?
+        <Button
+          onClick={this.handleBack}
+          className={classes.backButton}
+          disabled={activeStep === 1 || pool.loading}
+        >
+          {intl.formatMessage(messages.backButton)}
+        </Button>
+        <Button
+          variant="raised"
+          color="primary"
+          onClick={this.handleNext}
+          disabled={predictions.loading || pool.loading}
+        >
+          {activeStep === this.getSteps().length ?
                         intl.formatMessage(messages.finishButton)
                         : intl.formatMessage(messages.nextButton)}
-              </Button>
-            {(predictions.loading || pool.loading) && <CircularProgress size={24} className={classes.buttonProgress} />}
-          </div>
+        </Button>
+        {(predictions.loading || pool.loading) && <CircularProgress size={24} className={classes.buttonProgress} />}
+      </div>
     );
   }
 
   getStepContent(stepIndex) {
     const {
-      groups, matches, predictions, update, read,
+      groups, matches, predictions, update, read, team,
     } = this.props;
 
     switch (stepIndex) {
@@ -177,6 +177,7 @@ class JoinPoolLayout extends Component {
       //     return <PlayerSetupForm />;
       case 1:
         return (<PredictionForm
+          team={team}
           groups={groups}
           matches={matches}
           predictions={predictions}
@@ -235,21 +236,21 @@ class JoinPoolLayout extends Component {
 
       return (
         <div className={classes.root}>
-            <Typography className={classes.headingPrimary} variant="headline" align="center" gutterBottom>
-                {intl.formatMessage(messages.headingPrimary)}
-              </Typography>
-            <div className={classes.stepper}>
-                {this.renderStepper(this.getSteps(), activeStep)}
-              </div>
-            <Typography className={classes.headingSecondary} variant="title" gutterBottom>
-                {`${activeStep}. ${this.getSteps()[activeStep - 1]}`}
-              </Typography>
-            {this.getStepContent(activeStep)}
-            <Typography className={classes.errorMessage} variant="caption">
-                {`${error}`}
-              </Typography>
-            {this.renderNavigator(activeStep)}
+          <Typography className={classes.headingPrimary} variant="headline" align="center" gutterBottom>
+            {intl.formatMessage(messages.headingPrimary)}
+          </Typography>
+          <div className={classes.stepper}>
+            {this.renderStepper(this.getSteps(), activeStep)}
           </div>
+          <Typography className={classes.headingSecondary} variant="title" gutterBottom>
+            {`${activeStep}. ${this.getSteps()[activeStep - 1]}`}
+          </Typography>
+          {this.getStepContent(activeStep)}
+          <Typography className={classes.errorMessage} variant="caption">
+            {`${error}`}
+          </Typography>
+          {this.renderNavigator(activeStep)}
+        </div>
       );
     }
 }
