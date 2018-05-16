@@ -29,21 +29,18 @@ export const savePredictions = (pool, predictions) => async dispatch => {
     const integers = [];
     for(var i in predictionArray) {
         integers.push({
-            "index": parseInt(i),
+            "index": parseInt(i) + 1,
             "selection": predictionArray[i]
         });
     }
 
-    //TODO Pass this value as parameter in this action.
-    const contestName = "Rusia2018Test11";
+    const contestName = pool.info.contestName;
     const data = {
         name: contestName,
         matches: integers
-    }; 
-    console.log('data', data);
+    };
     try {
         const res = await axios.post(`${API_BASE_URL}/predictions/${contestName}/build`, data);
-        console.log(res);
         dispatch({ type: actionTypes.SAVE_PREDICTIONS_SUCCESS, payload: res.data });
     } catch (error) {
         console.log('error', error);

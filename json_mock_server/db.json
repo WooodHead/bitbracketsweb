@@ -73,753 +73,919 @@
   ],
   "teams": [
     {
-      "index": 0,
-      "team": "RUS",
+      "index": 1,
       "name": "Russia",
-      "hash": "TuhHviLJDv5JDQQ6FwPr",
-      "group": "A",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/510px-Flag_of_Russia.svg.png"
-    },
-    {
-      "index": 14,
-      "team": "EGY",
-      "name": "Egypt",
-      "hash": "gjMU3P3kEOP3qBEbzksQ",
-      "group": "A",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/510px-Flag_of_Egypt.svg.png"
-    },
-    {
-      "index": 7,
-      "team": "SAU",
-      "name": "Saudi Arabia",
-      "hash": "NAiCXvoZgNIL860DAbAV",
-      "group": "A",
-      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/510px-Flag_of_Saudi_Arabia.svg.png" 
-    },
-    {
-      "index": 22,
-      "team": "URY",
-      "name": "Uruguay",
-      "hash": "anuh2go5bltW0mrn2lia",
-      "group": "A",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/510px-Flag_of_Uruguay.svg.png"
-    },
-    {
-      "index": 24,
-      "team": "MOR",
-      "name": "Morocco",
-      "hash": "OB9YmpLN0izkkjNQCBRL",
-      "group": "B",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/510px-Flag_of_Morocco.svg.png"
-    },
-    {
-      "index": 18,
-      "team": "PRT",
-      "name": "Portugal",
-      "hash": "BQB9lZ96Q1MNuLlIm5wv",
-      "group": "B",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/510px-Flag_of_Portugal.svg.png"
-    },
-    {
-      "index": 10,
-      "team": "ESP",
-      "name": "Spain",
-      "hash": "IZwLi2JdjhZYZTxVwFvI",
-      "group": "B",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/400px-Flag_of_Spain.svg.png"
+      "team": "RUS",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/900px-Flag_of_Russia.png",
+      "hash": "f4be7de4631f06baa30e9b89e6dd3552",
+      "group": ""
     },
     {
       "index": 2,
-      "team": "IRN",
-      "name": "Iran",
-      "hash": "cqf3Cd2HwMouIvFFjiN9",
-      "group": "B",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/510px-Flag_of_Iran.svg.png"
-    },
-    {
-      "index": 17,
-      "team": "FRA",
-      "name": "France",
-      "hash": "rORIBvjrz11V2g3R5mu9",
-      "group": "C",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/510px-Flag_of_France.svg.png"
-    },
-    {
-      "index": 29,
-      "team": "DNK",
-      "name": "Denmark",
-      "hash": "dqKtQswORyisPQAXVHyD",
-      "group": "C",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/449px-Flag_of_Denmark.svg.png"
-    },
-    {
-      "index": 30,
-      "team": "AUS",
-      "name": "Australia",
-      "hash": "o8fLJNoXjzZ0CxeMgx1i",
-      "group": "C",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/510px-Flag_of_Australia.svg.png"
-    },
-    {
-      "index": 31,
-      "team": "PER",
-      "name": "Peru",
-      "hash": "OnMaq5pejVZkLoKqyzOY",
-      "group": "C",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/510px-Flag_of_Peru_%28state%29.svg.png"
-    },
-    {
-      "index": 11,
-      "team": "NGA",
-      "name": "Nigeria",
-      "hash": "xrQP1dbYOxntRm6AaVKv",
-      "group": "D",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/510px-Flag_of_Nigeria.svg.png"
-    },
-    {
-      "index": 15,
-      "team": "ISL",
-      "name": "Iceland",
-      "hash": "rG2nEFIZk1i2JOQ5a50a",
-      "group": "D",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/472px-Flag_of_Iceland.svg.png"
-    },
-    {
-      "index": 20,
-      "team": "ARG",
-      "name": "Argentina",
-      "hash": "K5YPmLiXvJUdxSuPIHAL",
-      "group": "D",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/510px-Flag_of_Argentina.svg.png"
-    },
-    {
-      "index": 27,
-      "team": "HRV",
-      "name": "Croatia",
-      "hash": "IL7ssYqJ6XFnthyAnTdL",
-      "group": "D",
-      "image": ""
-    },
-    {
-      "index": 1,
-      "team": "BRA",
-      "name": "Brazil",
-      "hash": "9BEOziNBxuTc3vMGKWDA",
-      "group": "E",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/510px-Flag_of_Croatia.svg.png"
-    },
-    {
-      "index": 16,
-      "team": "SRB",
-      "name": "Serbia",
-      "hash": "y1SdpBxmx74y6oXTMgpT",
-      "group": "E",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/510px-Flag_of_Serbia.svg.png"
-    },
-    {
-      "index": 12,
-      "team": "CRI",
-      "name": "Costa Rica",
-      "hash": "5htUqOztNHatKXu5HIyR",
-      "group": "E",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Costa_Rica_%28state%29.svg/510px-Flag_of_Costa_Rica_%28state%29.svg.png"
-    },
-    {
-      "index": 26,
-      "team": "CHE",
-      "name": "Switzerland",
-      "hash": "8VZe7369IrYK3xyl2ceN",
-      "group": "E",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/340px-Flag_of_Switzerland_%28Pantone%29.svg.png"
-    },
-    {
-      "index": 6,
-      "team": "KOR",
-      "name": "Korea",
-      "hash": "fAtGIbUtW7Znl0bzx8Qf",
-      "group": "F",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/510px-Flag_of_South_Korea.svg.png"
-    },
-    {
-      "index": 4,
-      "team": "MEX",
-      "name": "Mexico",
-      "hash": "QlSCqwa8ZrZSA400jZPt",
-      "group": "F",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/510px-Flag_of_Mexico.svg.png"
-    },
-    {
-      "index": 8,
-      "team": "GER",
-      "name": "Germany",
-      "hash": "DjaqOjvl7K11VqJU2Buz",
-      "group": "F",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/510px-Flag_of_Germany.svg.png"
-    },
-    {
-      "index": 28,
-      "team": "SWE",
-      "name": "Sweden",
-      "hash": "NFY6HkExo1qo00ysuWpo",
-      "group": "F",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/510px-Flag_of_Sweden.svg.png"
-    },
-    {
-      "index": 5,
-      "team": "BEL",
-      "name": "Belgium",
-      "hash": "7zyuoxgFrGEYJwQjZrEJ",
-      "group": "G",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/196px-Flag_of_Belgium.svg.png"
-    },
-    {
-      "index": 9,
-      "team": "GBR",
-      "name": "England",
-      "hash": "7ooPAI8KJYtQkDIcXyPG",
-      "group": "G",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/510px-Flag_of_England.svg.png"
-    },
-    {
-      "index": 19,
-      "team": "PAN",
-      "name": "Panama",
-      "hash": "6h1vkdJEuMmDbAUtfUOh",
-      "group": "G",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/400px-Flag_of_Panama.svg.png"
-    },
-    {
-      "index": 25,
-      "team": "TUN",
-      "name": "Tunisia",
-      "hash": "FmyPk59DZTee6QZtKQdP",
-      "group": "G",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/450px-Flag_of_Tunisia.svg.png"
+      "name": "Saudi Arabia",
+      "team": "KSA",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/750px-Flag_of_Saudi_Arabia.png",
+      "hash": "2fed2fd04f236dc052ae92ab808bb9db",
+      "group": ""
     },
     {
       "index": 3,
-      "team": "JPN",
-      "name": "Japan",
-      "hash": "tJ1fDhnAJzRmjpiSOHjX",
-      "group": "H",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/510px-Flag_of_Japan.svg.png"
+      "name": "Egypt",
+      "team": "EGY",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/900px-Flag_of_Egypt.png",
+      "hash": "64407f762c49409b80a32f4a40308af7",
+      "group": ""
+    },
+    {
+      "index": 4,
+      "name": "Uruguay",
+      "team": "URU",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/900px-Flag_of_Uruguay.png",
+      "hash": "013d3c562e765282116babcf4621de1c",
+      "group": ""
+    },
+    {
+      "index": 5,
+      "name": "Portugal",
+      "team": "POR",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/600px-Flag_of_Portugal.png",
+      "hash": "e4bf3e594d785f7362154a56b70dbb43",
+      "group": ""
+    },
+    {
+      "index": 6,
+      "name": "Spain",
+      "team": "ESP",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.png",
+      "hash": "30d9d7ab338b02ce27499924ca282189",
+      "group": ""
+    },
+    {
+      "index": 7,
+      "name": "Morocco",
+      "team": "MAR",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/900px-Flag_of_Morocco.png",
+      "hash": "b962f9cb7c3bf8c21ed573d32a173cfb",
+      "group": ""
+    },
+    {
+      "index": 8,
+      "name": "Iran",
+      "team": "IRN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/630px-Flag_of_Iran.png",
+      "hash": "d251e3d2a4fc328af66d26e49123b2be",
+      "group": ""
+    },
+    {
+      "index": 9,
+      "name": "France",
+      "team": "FRA",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/900px-Flag_of_France.png",
+      "hash": "dcea6125b94a8ef025d8592da50461b3",
+      "group": ""
+    },
+    {
+      "index": 10,
+      "name": "Australia",
+      "team": "AUS",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.png",
+      "hash": "d18b6482ae33aedd9b0783eabed2ae59",
+      "group": ""
+    },
+    {
+      "index": 11,
+      "name": "Peru",
+      "team": "PER",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/900px-Flag_of_Peru_%28state%29.png",
+      "hash": "feb8f7a802628d2faa47c09784afde02",
+      "group": ""
+    },
+    {
+      "index": 12,
+      "name": "Denmark",
+      "team": "DEN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/740px-Flag_of_Denmark.png",
+      "hash": "267d33ab86d6b3e45f9123ca3ca50284",
+      "group": ""
     },
     {
       "index": 13,
-      "team": "POL",
-      "name": "Poland",
-      "hash": "78unOTUv445lVDgHaHgv",
-      "group": "H",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/510px-Flag_of_Poland.svg.png"
+      "name": "Argentina",
+      "team": "ARG",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/800px-Flag_of_Argentina.png",
+      "hash": "f9f1549e6d42a9813ff5518652212ecb",
+      "group": ""
+    },
+    {
+      "index": 14,
+      "name": "Iceland",
+      "team": "ISL",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/800px-Flag_of_Iceland.png",
+      "hash": "0814943139525917eb60c2e104b3fdf6",
+      "group": ""
+    },
+    {
+      "index": 15,
+      "name": "Croatia",
+      "team": "CRO",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/800px-Flag_of_Croatia.png",
+      "hash": "cdcdd36403069ff2cf11db969ee93d30",
+      "group": ""
+    },
+    {
+      "index": 16,
+      "name": "Nigeria",
+      "team": "NGA",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/800px-Flag_of_Nigeria.png",
+      "hash": "86e47997254714426eb5a2aff6cff8be",
+      "group": ""
+    },
+    {
+      "index": 17,
+      "name": "Brazil",
+      "team": "BRA",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/720px-Flag_of_Brazil.png",
+      "hash": "8580d56250dba86b75a149e0ef84653e",
+      "group": ""
+    },
+    {
+      "index": 18,
+      "name": "Switzerland",
+      "team": "SUI",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/320px-Flag_of_Switzerland_%28Pantone%29.png",
+      "hash": "dcddebe06af6bdad133fc5e887584f95",
+      "group": ""
+    },
+    {
+      "index": 19,
+      "name": "Costa Rica",
+      "team": "CRC",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Costa_Rica_%28state%29.svg/833px-Flag_of_Costa_Rica_%28state%29.png",
+      "hash": "36bf57aa51897943d3cbf80928844b9e",
+      "group": ""
+    },
+    {
+      "index": 20,
+      "name": "Serbia",
+      "team": "SRB",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1350px-Flag_of_Serbia.png",
+      "hash": "eef219aa39f2b202bd94c779efa800a2",
+      "group": ""
     },
     {
       "index": 21,
-      "team": "COL",
-      "name": "Colombia",
-      "hash": "4m9KVvut5SVkQTlz3kXt",
-      "group": "H",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/510px-Flag_of_Colombia.svg.png"
+      "name": "Germany",
+      "team": "GER",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.png",
+      "hash": "d5e04fa343d96a13d08eebc2eba4285f",
+      "group": ""
+    },
+    {
+      "index": 22,
+      "name": "Mexico",
+      "team": "MEX",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/800px-Flag_of_Mexico.png",
+      "hash": "7a63b1138a9d76f0c8322515e841b787",
+      "group": ""
     },
     {
       "index": 23,
-      "team": "SEN",
+      "name": "Sweden",
+      "team": "SWE",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1600px-Flag_of_Sweden.png",
+      "hash": "35ac263b2661b30ad65d10517068c7a8",
+      "group": ""
+    },
+    {
+      "index": 24,
+      "name": "South Korea",
+      "team": "KOR",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/900px-Flag_of_South_Korea.png",
+      "hash": "67b3ae0d4ec3ff5a609cee6f0c3154e4",
+      "group": ""
+    },
+    {
+      "index": 25,
+      "name": "Belgium",
+      "team": "BEL",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/450px-Flag_of_Belgium.png",
+      "hash": "71df225a633709bcd9cbd5963a9cd8cb",
+      "group": ""
+    },
+    {
+      "index": 26,
+      "name": "Panama",
+      "team": "PAN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/450px-Flag_of_Panama.png",
+      "hash": "5be28c36b543dcd5501d19fdbb8bf07d",
+      "group": ""
+    },
+    {
+      "index": 27,
+      "name": "Tunisia",
+      "team": "TUN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/1200px-Flag_of_Tunisia.png",
+      "hash": "3aefeeb7e385fca8c3b42afbc6469377",
+      "group": ""
+    },
+    {
+      "index": 28,
+      "name": "England",
+      "team": "ENG",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png",
+      "hash": "a9e3c02248c70a65c89a5ad90c19ffc6",
+      "group": ""
+    },
+    {
+      "index": 29,
+      "name": "Poland",
+      "team": "POL",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1280px-Flag_of_Poland.png",
+      "hash": "888e0d61470c83c0e87eb24f1e0b74fd",
+      "group": ""
+    },
+    {
+      "index": 30,
       "name": "Senegal",
-      "hash": "cOVha2RLw28ULykdPZFz",
-      "group": "H",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/510px-Flag_of_Senegal.svg.png"
+      "team": "SEN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg",
+      "hash": "53e1d8d8a21929f0a4439d33cf196af5",
+      "group": ""
+    },
+    {
+      "index": 31,
+      "name": "Colombia",
+      "team": "COL",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/450px-Flag_of_Colombia.png",
+      "hash": "f9f7261ebeecdec0306eed63d585bfde",
+      "group": ""
+    },
+    {
+      "index": 32,
+      "name": "Japan",
+      "team": "JPN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/900px-Flag_of_Japan.png",
+      "hash": "d4868023ec902cfb3bc7c932221e1c32",
+      "group": ""
     }
-  ],
+  ] 
+  ,
   "matches": [
     {
-      "tournament": "Russia2018",
-      "index": 0,
-      "home": "TuhHviLJDv5JDQQ6FwPr",
-      "away": "NAiCXvoZgNIL860DAbAV",
-      "date": 1529010000000,
-      "data": {
-        "group": "A"
-      }
-
-    },
-    {
-      "tournament": "Russia2018",
       "index": 1,
-      "home": "gjMU3P3kEOP3qBEbzksQ",
-      "away": "anuh2go5bltW0mrn2lia",
-      "date": 1529092800000,
-      "data": {
-        "group": "A"
-      } 
-       },
-    {
       "tournament": "Russia2018",
+      "home": "f4be7de4631f06baa30e9b89e6dd3552",
+      "away": "2fed2fd04f236dc052ae92ab808bb9db",
+      "date": 1528988400000,
+      "data": {
+        "group": "A",
+        "stadium": "Luzhniki Stadium",
+        "city": "Moscow",
+        "location": { "lng": 37.5515217, "lat": 55.715765 }
+      }
+    },
+    {
       "index": 2,
-      "home": "OB9YmpLN0izkkjNQCBRL",
-      "away": "cqf3Cd2HwMouIvFFjiN9",
-      "date": 1529096400000,
+      "tournament": "Russia2018",
+      "home": "64407f762c49409b80a32f4a40308af7",
+      "away": "013d3c562e765282116babcf4621de1c",
+      "date": 1529064000000,
       "data": {
-        "group": "A"
+        "group": "A",
+        "stadium": "Central Stadium",
+        "city": "Yekaterinburg",
+        "location": { "lng": 60.573585, "lat": 56.83249 }
       }
     },
     {
-      "tournament": "Russia2018",
-      "index": 3,
-      "home": "BQB9lZ96Q1MNuLlIm5wv",
-      "away": "IZwLi2JdjhZYZTxVwFvI",
-      "date": 1529107200000,
-      "data": {
-        "group": "A"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 4,
-      "home": "rORIBvjrz11V2g3R5mu9",
-      "away": "o8fLJNoXjzZ0CxeMgx1i",
-      "date": 1528905600000,
-      "data": {
-        "group": "A"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 5,
-      "home": "K5YPmLiXvJUdxSuPIHAL",
-      "away": "rG2nEFIZk1i2JOQ5a50a",
-      "date": 1528916400000,
-      "data": {
-        "group": "A"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 6,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "B"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 7,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "B"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 8,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "B"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 9,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "B"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 10,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "B"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 11,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "B"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 12,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "C"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 13,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "C"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 14,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "C"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 15,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "C"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 16,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "C"
-      }
-    },
-    {
-      "tournament": "Russia2018",
       "index": 17,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "f4be7de4631f06baa30e9b89e6dd3552",
+      "away": "64407f762c49409b80a32f4a40308af7",
+      "date": 1529431200000,
       "data": {
-        "group": "C"
+        "group": "A",
+        "stadium": "Krestovsky Stadium",
+        "city": "Saint Petersburg",
+        "location": { "lng": 30.221408, "lat": 59.97274 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 18,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "013d3c562e765282116babcf4621de1c",
+      "away": "2fed2fd04f236dc052ae92ab808bb9db",
+      "date": 1529506800000,
       "data": {
-        "group": "D"
+        "group": "A",
+        "stadium": "Rostov Arena",
+        "city": "Rostov-on-Don",
+        "location": { "lng": 39.738424, "lat": 47.209581 }
       }
     },
     {
-      "tournament": "Russia2018",
-      "index": 19,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "D"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 20,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "D"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 21,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "D"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 22,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "D"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 23,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "D"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 24,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "E"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 25,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "E"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 26,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "E"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 27,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "E"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 28,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "E"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 29,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "E"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 30,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "F"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 31,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "F"
-      }
-    },
-    {
-      "tournament": "Russia2018",
-      "index": 32,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
-      "data": {
-        "group": "F"
-      }
-    },
-    {
-      "tournament": "Russia2018",
       "index": 33,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "013d3c562e765282116babcf4621de1c",
+      "away": "f4be7de4631f06baa30e9b89e6dd3552",
+      "date": 1529935200000,
       "data": {
-        "group": "F"
+        "group": "A",
+        "stadium": "Cosmos Arena",
+        "city": "Samara",
+        "location": { "lng": 50.238854, "lat": 53.278146 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 34,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "2fed2fd04f236dc052ae92ab808bb9db",
+      "away": "64407f762c49409b80a32f4a40308af7",
+      "date": 1529935200000,
       "data": {
-        "group": "F"
+        "group": "A",
+        "stadium": "Volgograd Arena",
+        "city": "Volgograd",
+        "location": { "lng": 44.548345, "lat": 48.734195 }
       }
     },
     {
+      "index": 3,
       "tournament": "Russia2018",
+      "home": "e4bf3e594d785f7362154a56b70dbb43",
+      "away": "30d9d7ab338b02ce27499924ca282189",
+      "date": 1529085600000,
+      "data": {
+        "group": "B",
+        "stadium": "Fisht Olympic Stadium",
+        "city": "Sochi",
+        "location": { "lng": 39.955709, "lat": 43.402011 }
+      }
+    },
+    {
+      "index": 4,
+      "tournament": "Russia2018",
+      "home": "b962f9cb7c3bf8c21ed573d32a173cfb",
+      "away": "d251e3d2a4fc328af66d26e49123b2be",
+      "date": 1529074800000,
+      "data": {
+        "group": "B",
+        "stadium": "Krestovsky Stadium",
+        "city": "Saint Petersburg",
+        "location": { "lng": 30.221408, "lat": 59.97274 }
+      }
+    },
+    {
+      "index": 19,
+      "tournament": "Russia2018",
+      "home": "e4bf3e594d785f7362154a56b70dbb43",
+      "away": "b962f9cb7c3bf8c21ed573d32a173cfb",
+      "date": 1529496000000,
+      "data": {
+        "group": "B",
+        "stadium": "Luzhniki Stadium",
+        "city": "Moscow",
+        "location": { "lng": 37.5515217, "lat": 55.715765 }
+      }
+    },
+    {
+      "index": 20,
+      "tournament": "Russia2018",
+      "home": "d251e3d2a4fc328af66d26e49123b2be",
+      "away": "30d9d7ab338b02ce27499924ca282189",
+      "date": 1529517600000,
+      "data": {
+        "group": "B",
+        "stadium": "Kazan Arena",
+        "city": "Kazan",
+        "location": { "lng": 49.160966, "lat": 55.820983 }
+      }
+    },
+    {
       "index": 35,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "d251e3d2a4fc328af66d26e49123b2be",
+      "away": "e4bf3e594d785f7362154a56b70dbb43",
+      "date": 1529949600000,
       "data": {
-        "group": "F"
+        "group": "B",
+        "stadium": "Mordovia Arena",
+        "city": "Saransk",
+        "location": { "lng": 45.203851, "lat": 54.181795 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 36,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "30d9d7ab338b02ce27499924ca282189",
+      "away": "b962f9cb7c3bf8c21ed573d32a173cfb",
+      "date": 1529949600000,
       "data": {
-        "group": "G"
+        "group": "B",
+        "stadium": "Kaliningrad Stadium",
+        "city": "Kaliningrad",
+        "location": { "lng": 20.533859, "lat": 54.698157 }
       }
     },
     {
+      "index": 5,
       "tournament": "Russia2018",
+      "home": "dcea6125b94a8ef025d8592da50461b3",
+      "away": "d18b6482ae33aedd9b0783eabed2ae59",
+      "date": 1529143200000,
+      "data": {
+        "group": "C",
+        "stadium": "Kazan Arena",
+        "city": "Kazan",
+        "location": { "lng": 49.160966, "lat": 55.820983 }
+      }
+    },
+    {
+      "index": 6,
+      "tournament": "Russia2018",
+      "home": "feb8f7a802628d2faa47c09784afde02",
+      "away": "267d33ab86d6b3e45f9123ca3ca50284",
+      "date": 1529164800000,
+      "data": {
+        "group": "C",
+        "stadium": "Mordovia Arena",
+        "city": "Saransk",
+        "location": { "lng": 45.203851, "lat": 54.181795 }
+      }
+    },
+    {
+      "index": 21,
+      "tournament": "Russia2018",
+      "home": "dcea6125b94a8ef025d8592da50461b3",
+      "away": "feb8f7a802628d2faa47c09784afde02",
+      "date": 1529593200000,
+      "data": {
+        "group": "C",
+        "stadium": "Central Stadium",
+        "city": "Yekaterinburg",
+        "location": { "lng": 60.573585, "lat": 56.83249 }
+      }
+    },
+    {
+      "index": 22,
+      "tournament": "Russia2018",
+      "home": "267d33ab86d6b3e45f9123ca3ca50284",
+      "away": "d18b6482ae33aedd9b0783eabed2ae59",
+      "date": 1529582400000,
+      "data": {
+        "group": "C",
+        "stadium": "Cosmos Arena",
+        "city": "Samara",
+        "location": { "lng": 50.238854, "lat": 53.278146 }
+      }
+    },
+    {
       "index": 37,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "267d33ab86d6b3e45f9123ca3ca50284",
+      "away": "dcea6125b94a8ef025d8592da50461b3",
+      "date": 1530021600000,
       "data": {
-        "group": "G"
+        "group": "C",
+        "stadium": "Luzhniki Stadium",
+        "city": "Moscow",
+        "location": { "lng": 37.5515217, "lat": 55.715765 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 38,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "d18b6482ae33aedd9b0783eabed2ae59",
+      "away": "feb8f7a802628d2faa47c09784afde02",
+      "date": 1530025200000,
       "data": {
-        "group": "G"
+        "group": "C",
+        "stadium": "Fisht Olympic Stadium",
+        "city": "Sochi",
+        "location": { "lng": 39.955709, "lat": 43.402011 }
       }
     },
     {
+      "index": 7,
       "tournament": "Russia2018",
+      "home": "f9f1549e6d42a9813ff5518652212ecb",
+      "away": "0814943139525917eb60c2e104b3fdf6",
+      "date": 1529154000000,
+      "data": {
+        "group": "D",
+        "stadium": "Otkrytiye Arena",
+        "city": "Moscow",
+        "location": { "lng": 37.440363, "lat": 55.817765 }
+      }
+    },
+    {
+      "index": 8,
+      "tournament": "Russia2018",
+      "home": "cdcdd36403069ff2cf11db969ee93d30",
+      "away": "86e47997254714426eb5a2aff6cff8be",
+      "date": 1529175600000,
+      "data": {
+        "group": "D",
+        "stadium": "Kaliningrad Stadium",
+        "city": "Kaliningrad",
+        "location": { "lng": 20.533859, "lat": 54.698157 }
+      }
+    },
+    {
+      "index": 23,
+      "tournament": "Russia2018",
+      "home": "f9f1549e6d42a9813ff5518652212ecb",
+      "away": "cdcdd36403069ff2cf11db969ee93d30",
+      "date": 1529604000000,
+      "data": {
+        "group": "D",
+        "stadium": "Nizhny Novgorod Stadium",
+        "city": "Nizhny Novgorod",
+        "location": { "lng": 43.963251, "lat": 56.337287 }
+      }
+    },
+    {
+      "index": 24,
+      "tournament": "Russia2018",
+      "home": "86e47997254714426eb5a2aff6cff8be",
+      "away": "0814943139525917eb60c2e104b3fdf6",
+      "date": 1529679600000,
+      "data": {
+        "group": "D",
+        "stadium": "Volgograd Arena",
+        "city": "Volgograd",
+        "location": { "lng": 44.548345, "lat": 48.734195 }
+      }
+    },
+    {
       "index": 39,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "86e47997254714426eb5a2aff6cff8be",
+      "away": "f9f1549e6d42a9813ff5518652212ecb",
+      "date": 1530036000000,
       "data": {
-        "group": "G"
+        "group": "D",
+        "stadium": "Krestovsky Stadium",
+        "city": "Saint Petersburg",
+        "location": { "lng": 30.221408, "lat": 59.97274 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 40,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "0814943139525917eb60c2e104b3fdf6",
+      "away": "cdcdd36403069ff2cf11db969ee93d30",
+      "date": 1530036000000,
       "data": {
-        "group": "G"
+        "group": "D",
+        "stadium": "Rostov Arena",
+        "city": "Rostov-on-Don",
+        "location": { "lng": 39.738424, "lat": 47.209581 }
       }
     },
     {
+      "index": 9,
       "tournament": "Russia2018",
+      "home": "8580d56250dba86b75a149e0ef84653e",
+      "away": "dcddebe06af6bdad133fc5e887584f95",
+      "date": 1529258400000,
+      "data": {
+        "group": "E",
+        "stadium": "Rostov Arena",
+        "city": "Rostov-on-Don",
+        "location": { "lng": 39.738424, "lat": 47.209581 }
+      }
+    },
+    {
+      "index": 10,
+      "tournament": "Russia2018",
+      "home": "36bf57aa51897943d3cbf80928844b9e",
+      "away": "eef219aa39f2b202bd94c779efa800a2",
+      "date": 1529236800000,
+      "data": {
+        "group": "E",
+        "stadium": "Cosmos Arena",
+        "city": "Samara",
+        "location": { "lng": 50.238854, "lat": 53.278146 }
+      }
+    },
+    {
+      "index": 25,
+      "tournament": "Russia2018",
+      "home": "8580d56250dba86b75a149e0ef84653e",
+      "away": "36bf57aa51897943d3cbf80928844b9e",
+      "date": 1529668800000,
+      "data": {
+        "group": "E",
+        "stadium": "Krestovsky Stadium",
+        "city": "Saint Petersburg",
+        "location": { "lng": 30.221408, "lat": 59.97274 }
+      }
+    },
+    {
+      "index": 26,
+      "tournament": "Russia2018",
+      "home": "eef219aa39f2b202bd94c779efa800a2",
+      "away": "dcddebe06af6bdad133fc5e887584f95",
+      "date": 1529690400000,
+      "data": {
+        "group": "E",
+        "stadium": "Kaliningrad Stadium",
+        "city": "Kaliningrad",
+        "location": { "lng": 20.533859, "lat": 54.698157 }
+      }
+    },
+    {
       "index": 41,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "eef219aa39f2b202bd94c779efa800a2",
+      "away": "8580d56250dba86b75a149e0ef84653e",
+      "date": 1530122400000,
       "data": {
-        "group": "G"
+        "group": "E",
+        "stadium": "Otkrytiye Arena",
+        "city": "Moscow",
+        "location": { "lng": 37.440363, "lat": 55.817765 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 42,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "dcddebe06af6bdad133fc5e887584f95",
+      "away": "36bf57aa51897943d3cbf80928844b9e",
+      "date": 1530122400000,
       "data": {
-        "group": "H"
+        "group": "E",
+        "stadium": "Nizhny Novgorod Stadium",
+        "city": "Nizhny Novgorod",
+        "location": { "lng": 43.963251, "lat": 56.337287 }
       }
     },
     {
+      "index": 11,
       "tournament": "Russia2018",
+      "home": "d5e04fa343d96a13d08eebc2eba4285f",
+      "away": "7a63b1138a9d76f0c8322515e841b787",
+      "date": 1529247600000,
+      "data": {
+        "group": "F",
+        "stadium": "Luzhniki Stadium",
+        "city": "Moscow",
+        "location": { "lng": 37.5515217, "lat": 55.715765 }
+      }
+    },
+    {
+      "index": 12,
+      "tournament": "Russia2018",
+      "home": "35ac263b2661b30ad65d10517068c7a8",
+      "away": "67b3ae0d4ec3ff5a609cee6f0c3154e4",
+      "date": 1529323200000,
+      "data": {
+        "group": "F",
+        "stadium": "Nizhny Novgorod Stadium",
+        "city": "Nizhny Novgorod",
+        "location": { "lng": 43.963251, "lat": 56.337287 }
+      }
+    },
+    {
+      "index": 27,
+      "tournament": "Russia2018",
+      "home": "d5e04fa343d96a13d08eebc2eba4285f",
+      "away": "35ac263b2661b30ad65d10517068c7a8",
+      "date": 1529776800000,
+      "data": {
+        "group": "F",
+        "stadium": "Fisht Olympic Stadium",
+        "city": "Sochi",
+        "location": { "lng": 39.955709, "lat": 43.402011 }
+      }
+    },
+    {
+      "index": 28,
+      "tournament": "Russia2018",
+      "home": "67b3ae0d4ec3ff5a609cee6f0c3154e4",
+      "away": "7a63b1138a9d76f0c8322515e841b787",
+      "date": 1529766000000,
+      "data": {
+        "group": "F",
+        "stadium": "Rostov Arena",
+        "city": "Rostov-on-Don",
+        "location": { "lng": 39.738424, "lat": 47.209581 }
+      }
+    },
+    {
       "index": 43,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "67b3ae0d4ec3ff5a609cee6f0c3154e4",
+      "away": "d5e04fa343d96a13d08eebc2eba4285f",
+      "date": 1530108000000,
       "data": {
-        "group": "H"
+        "group": "F",
+        "stadium": "Kazan Arena",
+        "city": "Kazan",
+        "location": { "lng": 49.160966, "lat": 55.820983 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 44,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "7a63b1138a9d76f0c8322515e841b787",
+      "away": "35ac263b2661b30ad65d10517068c7a8",
+      "date": 1530108000000,
       "data": {
-        "group": "H"
+        "group": "F",
+        "stadium": "Central Stadium",
+        "city": "Yekaterinburg",
+        "location": { "lng": 60.573585, "lat": 56.83249 }
       }
     },
     {
+      "index": 13,
       "tournament": "Russia2018",
+      "home": "71df225a633709bcd9cbd5963a9cd8cb",
+      "away": "5be28c36b543dcd5501d19fdbb8bf07d",
+      "date": 1529334000000,
+      "data": {
+        "group": "G",
+        "stadium": "Fisht Olympic Stadium",
+        "city": "Sochi",
+        "location": { "lng": 39.955709, "lat": 43.402011 }
+      }
+    },
+    {
+      "index": 14,
+      "tournament": "Russia2018",
+      "home": "3aefeeb7e385fca8c3b42afbc6469377",
+      "away": "a9e3c02248c70a65c89a5ad90c19ffc6",
+      "date": 1529344800000,
+      "data": {
+        "group": "G",
+        "stadium": "Volgograd Arena",
+        "city": "Volgograd",
+        "location": { "lng": 44.548345, "lat": 48.734195 }
+      }
+    },
+    {
+      "index": 29,
+      "tournament": "Russia2018",
+      "home": "71df225a633709bcd9cbd5963a9cd8cb",
+      "away": "3aefeeb7e385fca8c3b42afbc6469377",
+      "date": 1529755200000,
+      "data": {
+        "group": "G",
+        "stadium": "Otkrytiye Arena",
+        "city": "Moscow",
+        "location": { "lng": 37.440363, "lat": 55.817765 }
+      }
+    },
+    {
+      "index": 30,
+      "tournament": "Russia2018",
+      "home": "a9e3c02248c70a65c89a5ad90c19ffc6",
+      "away": "5be28c36b543dcd5501d19fdbb8bf07d",
+      "date": 1529841600000,
+      "data": {
+        "group": "G",
+        "stadium": "Nizhny Novgorod Stadium",
+        "city": "Nizhny Novgorod",
+        "location": { "lng": 43.963251, "lat": 56.337287 }
+      }
+    },
+    {
       "index": 45,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "a9e3c02248c70a65c89a5ad90c19ffc6",
+      "away": "71df225a633709bcd9cbd5963a9cd8cb",
+      "date": 1530208800000,
       "data": {
-        "group": "H"
+        "group": "G",
+        "stadium": "Kaliningrad Stadium",
+        "city": "Kaliningrad",
+        "location": { "lng": 20.533859, "lat": 54.698157 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 46,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "5be28c36b543dcd5501d19fdbb8bf07d",
+      "away": "3aefeeb7e385fca8c3b42afbc6469377",
+      "date": 1530208800000,
       "data": {
-        "group": "H"
+        "group": "G",
+        "stadium": "Mordovia Arena",
+        "city": "Saransk",
+        "location": { "lng": 45.203851, "lat": 54.181795 }
       }
     },
     {
+      "index": 15,
       "tournament": "Russia2018",
+      "home": "888e0d61470c83c0e87eb24f1e0b74fd",
+      "away": "53e1d8d8a21929f0a4439d33cf196af5",
+      "date": 1529420400000,
+      "data": {
+        "group": "H",
+        "stadium": "Otkrytiye Arena",
+        "city": "Moscow",
+        "location": { "lng": 37.440363, "lat": 55.817765 }
+      }
+    },
+    {
+      "index": 16,
+      "tournament": "Russia2018",
+      "home": "f9f7261ebeecdec0306eed63d585bfde",
+      "away": "d4868023ec902cfb3bc7c932221e1c32",
+      "date": 1529409600000,
+      "data": {
+        "group": "H",
+        "stadium": "Mordovia Arena",
+        "city": "Saransk",
+        "location": { "lng": 45.203851, "lat": 54.181795 }
+      }
+    },
+    {
+      "index": 31,
+      "tournament": "Russia2018",
+      "home": "888e0d61470c83c0e87eb24f1e0b74fd",
+      "away": "f9f7261ebeecdec0306eed63d585bfde",
+      "date": 1529852400000,
+      "data": {
+        "group": "H",
+        "stadium": "Kazan Arena",
+        "city": "Kazan",
+        "location": { "lng": 49.160966, "lat": 55.820983 }
+      }
+    },
+    {
+      "index": 32,
+      "tournament": "Russia2018",
+      "home": "d4868023ec902cfb3bc7c932221e1c32",
+      "away": "53e1d8d8a21929f0a4439d33cf196af5",
+      "date": 1529863200000,
+      "data": {
+        "group": "H",
+        "stadium": "Central Stadium",
+        "city": "Yekaterinburg",
+        "location": { "lng": 60.573585, "lat": 56.83249 }
+      }
+    },
+    {
       "index": 47,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "d4868023ec902cfb3bc7c932221e1c32",
+      "away": "888e0d61470c83c0e87eb24f1e0b74fd",
+      "date": 1530194400000,
       "data": {
-        "group": "H"
+        "group": "H",
+        "stadium": "Volgograd Arena",
+        "city": "Volgograd",
+        "location": { "lng": 44.548345, "lat": 48.734195 }
       }
     },
     {
-      "tournament": "Russia2018",
       "index": 48,
-      "home": "OnMaq5pejVZkLoKqyzOY",
-      "away": "dqKtQswORyisPQAXVHyD",
-      "date": 1528927200000,
+      "tournament": "Russia2018",
+      "home": "53e1d8d8a21929f0a4439d33cf196af5",
+      "away": "f9f7261ebeecdec0306eed63d585bfde",
+      "date": 1530194400000,
       "data": {
-        "group": "H"
+        "group": "H",
+        "stadium": "Cosmos Arena",
+        "city": "Samara",
+        "location": { "lng": 50.238854, "lat": 53.278146 }
       }
     }
-  ]
+  ]  
 }

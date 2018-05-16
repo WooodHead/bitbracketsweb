@@ -1,44 +1,293 @@
 {
   "contestName": "Russia2018",
   "teams": [
-    {"index":0, "team": "RUS", "name": "Russia", "hash":"TuhHviLJDv5JDQQ6FwPr", "group": "A", "image": ""},
-    {"index":14, "team": "EGY", "name": "Egypt", "hash":"gjMU3P3kEOP3qBEbzksQ", "group": "A", "image": ""},
-    {"index":7, "team": "SAU", "name": "Saudi Arabia", "hash":"NAiCXvoZgNIL860DAbAV", "group": "A", "image": ""},
-    {"index":22, "team": "URY", "name": "Uruguay", "hash":"anuh2go5bltW0mrn2lia", "group": "A", "image": ""},
-
-    {"index":24, "team": "MOR", "name": "Morocco", "hash":"OB9YmpLN0izkkjNQCBRL", "group": "B", "image": ""},
-    {"index":18, "team": "PRT", "name": "Portugal", "hash":"BQB9lZ96Q1MNuLlIm5wv", "group": "B", "image": ""},
-    {"index":10, "team": "ESP", "name": "Spain", "hash":"IZwLi2JdjhZYZTxVwFvI", "group": "B", "image": ""},
-    {"index":2, "team": "IRN", "name": "Iran", "hash":"cqf3Cd2HwMouIvFFjiN9", "group": "B", "image": ""},
-
-    {"index":17, "team": "FRA", "name": "France", "hash":"rORIBvjrz11V2g3R5mu9", "group": "C", "image": ""},
-    {"index":29, "team": "DNK", "name": "Denmark", "hash":"dqKtQswORyisPQAXVHyD", "group": "C", "image": ""},
-    {"index":30, "team": "AUS", "name": "Australia", "hash":"o8fLJNoXjzZ0CxeMgx1i", "group": "C", "image": ""},
-    {"index":31, "team": "PER", "name": "Peru", "hash":"OnMaq5pejVZkLoKqyzOY", "group": "C", "image": ""},
-
-    {"index":11, "team": "NGA", "name": "Nigeria", "hash":"xrQP1dbYOxntRm6AaVKv", "group": "D", "image": ""},
-    {"index":15, "team": "ISL", "name": "Iceland", "hash":"rG2nEFIZk1i2JOQ5a50a", "group": "D", "image": ""},
-    {"index":20, "team": "ARG", "name": "Argentina", "hash":"K5YPmLiXvJUdxSuPIHAL", "group": "D", "image": ""},
-    {"index":27, "team": "HRV", "name": "Croatia", "hash":"IL7ssYqJ6XFnthyAnTdL", "group": "D", "image": ""},
-
-    {"index":1, "team": "BRA", "name": "Brazil", "hash":"9BEOziNBxuTc3vMGKWDA", "group": "E", "image": ""},
-    {"index":16, "team": "SRB", "name": "Serbia", "hash":"y1SdpBxmx74y6oXTMgpT", "group": "E", "image": ""},
-    {"index":12, "team": "CRI", "name": "Costa Rica", "hash":"5htUqOztNHatKXu5HIyR", "group": "E", "image": ""},       
-    {"index":26, "team": "CHE", "name": "Switzerland", "hash":"8VZe7369IrYK3xyl2ceN", "group": "E", "image": ""},      
-    
-    {"index":6, "team": "KOR", "name": "Korea", "hash":"fAtGIbUtW7Znl0bzx8Qf", "group": "F", "image": ""},
-    {"index":4, "team": "MEX", "name": "Mexico", "hash":"QlSCqwa8ZrZSA400jZPt", "group": "F", "image": ""},
-    {"index":8, "team": "GER", "name": "Germany", "hash":"DjaqOjvl7K11VqJU2Buz", "group": "F", "image": ""},
-    {"index":28, "team": "SWE", "name": "Sweden", "hash":"NFY6HkExo1qo00ysuWpo", "group": "F", "image": ""},
-
-    {"index":5, "team": "BEL", "name": "Belgium", "hash":"7zyuoxgFrGEYJwQjZrEJ", "group": "G", "image": ""},
-    {"index":9, "team": "GBR", "name": "England", "hash":"7ooPAI8KJYtQkDIcXyPG", "group": "G", "image": ""},
-    {"index":19, "team": "PAN", "name": "Panama", "hash":"6h1vkdJEuMmDbAUtfUOh", "group": "G", "image": ""},
-    {"index":25, "team": "TUN", "name": "Tunisia", "hash":"FmyPk59DZTee6QZtKQdP", "group": "G", "image": ""},
-
-    {"index":3, "team": "JPN", "name": "Japan", "hash":"tJ1fDhnAJzRmjpiSOHjX", "group": "H", "image": ""},
-    {"index":13, "team": "POL", "name": "Poland", "hash":"78unOTUv445lVDgHaHgv", "group": "H", "image": ""},
-    {"index":21, "team": "COL", "name": "Colombia", "hash":"4m9KVvut5SVkQTlz3kXt", "group": "H", "image": ""},
-    {"index":23, "team": "SEN", "name": "Senegal", "hash":"cOVha2RLw28ULykdPZFz", "group": "H", "image": ""}
-  ]
+    {
+      "index": 1,
+      "name": "Russia",
+      "team": "RUS",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/900px-Flag_of_Russia.png",
+      "hash": "f4be7de4631f06baa30e9b89e6dd3552",
+      "group": ""
+    },
+    {
+      "index": 2,
+      "name": "Saudi Arabia",
+      "team": "KSA",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/750px-Flag_of_Saudi_Arabia.png",
+      "hash": "2fed2fd04f236dc052ae92ab808bb9db",
+      "group": ""
+    },
+    {
+      "index": 3,
+      "name": "Egypt",
+      "team": "EGY",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/900px-Flag_of_Egypt.png",
+      "hash": "64407f762c49409b80a32f4a40308af7",
+      "group": ""
+    },
+    {
+      "index": 4,
+      "name": "Uruguay",
+      "team": "URU",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/900px-Flag_of_Uruguay.png",
+      "hash": "013d3c562e765282116babcf4621de1c",
+      "group": ""
+    },
+    {
+      "index": 5,
+      "name": "Portugal",
+      "team": "POR",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/600px-Flag_of_Portugal.png",
+      "hash": "e4bf3e594d785f7362154a56b70dbb43",
+      "group": ""
+    },
+    {
+      "index": 6,
+      "name": "Spain",
+      "team": "ESP",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.png",
+      "hash": "30d9d7ab338b02ce27499924ca282189",
+      "group": ""
+    },
+    {
+      "index": 7,
+      "name": "Morocco",
+      "team": "MAR",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/900px-Flag_of_Morocco.png",
+      "hash": "b962f9cb7c3bf8c21ed573d32a173cfb",
+      "group": ""
+    },
+    {
+      "index": 8,
+      "name": "Iran",
+      "team": "IRN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/630px-Flag_of_Iran.png",
+      "hash": "d251e3d2a4fc328af66d26e49123b2be",
+      "group": ""
+    },
+    {
+      "index": 9,
+      "name": "France",
+      "team": "FRA",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/900px-Flag_of_France.png",
+      "hash": "dcea6125b94a8ef025d8592da50461b3",
+      "group": ""
+    },
+    {
+      "index": 10,
+      "name": "Australia",
+      "team": "AUS",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.png",
+      "hash": "d18b6482ae33aedd9b0783eabed2ae59",
+      "group": ""
+    },
+    {
+      "index": 11,
+      "name": "Peru",
+      "team": "PER",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/900px-Flag_of_Peru_%28state%29.png",
+      "hash": "feb8f7a802628d2faa47c09784afde02",
+      "group": ""
+    },
+    {
+      "index": 12,
+      "name": "Denmark",
+      "team": "DEN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/740px-Flag_of_Denmark.png",
+      "hash": "267d33ab86d6b3e45f9123ca3ca50284",
+      "group": ""
+    },
+    {
+      "index": 13,
+      "name": "Argentina",
+      "team": "ARG",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/800px-Flag_of_Argentina.png",
+      "hash": "f9f1549e6d42a9813ff5518652212ecb",
+      "group": ""
+    },
+    {
+      "index": 14,
+      "name": "Iceland",
+      "team": "ISL",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/800px-Flag_of_Iceland.png",
+      "hash": "0814943139525917eb60c2e104b3fdf6",
+      "group": ""
+    },
+    {
+      "index": 15,
+      "name": "Croatia",
+      "team": "CRO",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/800px-Flag_of_Croatia.png",
+      "hash": "cdcdd36403069ff2cf11db969ee93d30",
+      "group": ""
+    },
+    {
+      "index": 16,
+      "name": "Nigeria",
+      "team": "NGA",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/800px-Flag_of_Nigeria.png",
+      "hash": "86e47997254714426eb5a2aff6cff8be",
+      "group": ""
+    },
+    {
+      "index": 17,
+      "name": "Brazil",
+      "team": "BRA",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/720px-Flag_of_Brazil.png",
+      "hash": "8580d56250dba86b75a149e0ef84653e",
+      "group": ""
+    },
+    {
+      "index": 18,
+      "name": "Switzerland",
+      "team": "SUI",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/320px-Flag_of_Switzerland_%28Pantone%29.png",
+      "hash": "dcddebe06af6bdad133fc5e887584f95",
+      "group": ""
+    },
+    {
+      "index": 19,
+      "name": "Costa Rica",
+      "team": "CRC",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Costa_Rica_%28state%29.svg/833px-Flag_of_Costa_Rica_%28state%29.png",
+      "hash": "36bf57aa51897943d3cbf80928844b9e",
+      "group": ""
+    },
+    {
+      "index": 20,
+      "name": "Serbia",
+      "team": "SRB",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1350px-Flag_of_Serbia.png",
+      "hash": "eef219aa39f2b202bd94c779efa800a2",
+      "group": ""
+    },
+    {
+      "index": 21,
+      "name": "Germany",
+      "team": "GER",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.png",
+      "hash": "d5e04fa343d96a13d08eebc2eba4285f",
+      "group": ""
+    },
+    {
+      "index": 22,
+      "name": "Mexico",
+      "team": "MEX",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/800px-Flag_of_Mexico.png",
+      "hash": "7a63b1138a9d76f0c8322515e841b787",
+      "group": ""
+    },
+    {
+      "index": 23,
+      "name": "Sweden",
+      "team": "SWE",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1600px-Flag_of_Sweden.png",
+      "hash": "35ac263b2661b30ad65d10517068c7a8",
+      "group": ""
+    },
+    {
+      "index": 24,
+      "name": "South Korea",
+      "team": "KOR",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/900px-Flag_of_South_Korea.png",
+      "hash": "67b3ae0d4ec3ff5a609cee6f0c3154e4",
+      "group": ""
+    },
+    {
+      "index": 25,
+      "name": "Belgium",
+      "team": "BEL",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/450px-Flag_of_Belgium.png",
+      "hash": "71df225a633709bcd9cbd5963a9cd8cb",
+      "group": ""
+    },
+    {
+      "index": 26,
+      "name": "Panama",
+      "team": "PAN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/450px-Flag_of_Panama.png",
+      "hash": "5be28c36b543dcd5501d19fdbb8bf07d",
+      "group": ""
+    },
+    {
+      "index": 27,
+      "name": "Tunisia",
+      "team": "TUN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/1200px-Flag_of_Tunisia.png",
+      "hash": "3aefeeb7e385fca8c3b42afbc6469377",
+      "group": ""
+    },
+    {
+      "index": 28,
+      "name": "England",
+      "team": "ENG",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png",
+      "hash": "a9e3c02248c70a65c89a5ad90c19ffc6",
+      "group": ""
+    },
+    {
+      "index": 29,
+      "name": "Poland",
+      "team": "POL",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1280px-Flag_of_Poland.png",
+      "hash": "888e0d61470c83c0e87eb24f1e0b74fd",
+      "group": ""
+    },
+    {
+      "index": 30,
+      "name": "Senegal",
+      "team": "SEN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg",
+      "hash": "53e1d8d8a21929f0a4439d33cf196af5",
+      "group": ""
+    },
+    {
+      "index": 31,
+      "name": "Colombia",
+      "team": "COL",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/450px-Flag_of_Colombia.png",
+      "hash": "f9f7261ebeecdec0306eed63d585bfde",
+      "group": ""
+    },
+    {
+      "index": 32,
+      "name": "Japan",
+      "team": "JPN",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/900px-Flag_of_Japan.png",
+      "hash": "d4868023ec902cfb3bc7c932221e1c32",
+      "group": ""
+    }
+  ]  
 }

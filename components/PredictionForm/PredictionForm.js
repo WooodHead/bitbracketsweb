@@ -48,7 +48,7 @@ class PredictionLayout extends Component {
       const {
         classes, intl, matches, groups, predictions, update, read,
       } = this.props;
-
+        console.log('PredictionForm', predictions);
       return (
         <Grid container className={classes.matches} spacing={16}>
           {_.filter(matches, match => match.data.group === groups[activeTab])
