@@ -1,7 +1,7 @@
 export default {
   en: {
     'navigation.navbarlink1': 'How does it Work?',
-    'navigation.navbarlink2': 'Rules',
+    'navigation.navbarlink2': 'Roadmap',
     'navigation.navbarlink3': 'My Pools',
     'navigation.navbarlink4': 'start pool',
     'navigation.navbarlink5': 'Terms & Conditions',
@@ -10,7 +10,7 @@ export default {
   },
   es: {
     'navigation.navbarlink1': 'Cómo funciona?',
-    'navigation.navbarlink2': 'Reglas',
+    'navigation.navbarlink2': 'Roadmap',
     'navigation.navbarlink3': 'Mis quinielas',
     'navigation.navbarlink4': 'Crear quiniela',
     'navigation.navbarlink5': 'Terminos & Condiciones',

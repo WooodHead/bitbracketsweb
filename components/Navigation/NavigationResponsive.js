@@ -27,8 +27,8 @@ const messages = defineMessages({
   },
   navigationNavbarlink2: {
     id: 'navigation.navbarlink2',
-    defaultMessage: 'rules',
-    description: 'Navigation link rules',
+    defaultMessage: 'Roadmap',
+    description: 'Navigation link roadmap',
   },
   navigationNavbarlink3: {
     id: 'navigation.navbarlink3',
@@ -124,7 +124,7 @@ class ResponsiveNavbar extends React.Component {
                       </MenuItem>
                       <Divider />
                       <MenuItem>
-                        <Button href="/faq">  {intl.formatMessage(messages.navigationNavbarlink2)}</Button>
+                        <Button href="/roadmap">  {intl.formatMessage(messages.navigationNavbarlink2)}</Button>
                       </MenuItem>
                       <Divider />
                       <MenuItem>
