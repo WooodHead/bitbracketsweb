@@ -14,7 +14,7 @@ import Layout from '../components/Layout';
 import { initStore } from '../store';
 import RoadMap from '../components/RoadMap';
 
-import MetaMaskNotInstalled from '../components/metamask/MetaMaskNotInstalled';
+
 
 addLocaleData(en);
 addLocaleData(es);
@@ -28,9 +28,9 @@ function roadmap(props) {
   return (
     <IntlProvider locale={language} messages={messages[language]}>
       <Layout>
-        {/* <RoadMap /> */}
+        <RoadMap />
      
-        <MetaMaskNotInstalled />
+  
       </Layout>
     </IntlProvider>
   );
