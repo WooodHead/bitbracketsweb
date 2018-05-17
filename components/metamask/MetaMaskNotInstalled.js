@@ -9,6 +9,8 @@ import ExpansionPanel, {
 } from 'material-ui/ExpansionPanel';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import { withStyles } from 'material-ui/styles';
+import Grid from 'material-ui/Grid';
+import Paper from 'material-ui/Paper';
 
 
 const messages = defineMessages({
@@ -19,7 +21,7 @@ const messages = defineMessages({
   },
   help: {
     id: 'help',
-    defaultMessage: 'Here some help:',
+    defaultMessage: 'Follow these steps:',
     description: '',
   },
   installHeader: {
@@ -29,7 +31,17 @@ const messages = defineMessages({
   },
   installDescription: {
     id: 'installDescription',
-    defaultMessage: '...',
+    defaultMessage: 'Add MetaMask extension - Go to metamask page',
+    description: '',
+  },
+  installDescription1: {
+    id: 'installDescription1',
+    defaultMessage: 'here',
+    description: '',
+  },
+  installDescription2: {
+    id: 'installDescription2',
+    defaultMessage: 'Then Create an account. You are given a seed phrase that can be used to restore all the accounts you ever create withing Metamask.',
     description: '',
   },
   etherHeader: {
@@ -39,7 +51,12 @@ const messages = defineMessages({
   },
   etherDescription: {
     id: 'etherDescription',
-    defaultMessage: '...',
+    defaultMessage: 'You will need to purchase ETH from an exchange, and then transfer the ETH from your exchange wallet to your MetaMask wallet',
+    description: '',
+  },
+  etherDescription1: {
+    id: 'etherDescription1',
+    defaultMessage: 'You cannot use USD with BitBrackets pools — any currencies need to be converted into ETH first.',
     description: '',
   },
   sendHeader: {
@@ -49,7 +66,7 @@ const messages = defineMessages({
   },
   sendDescription: {
     id: 'sendDescription',
-    defaultMessage: '...',
+    defaultMessage: 'Go to:',
     description: '',
   },
   headingTertiary2: {
@@ -78,6 +95,14 @@ const styles = theme => ({
   headingTertiary: {
     fontWeight: 'bold',
     marginBottom: theme.spacing.unit * 2,
+    [theme.breakpoints.down('md')]: {
+      fontSize: '20px',
+    },
+  },
+  help: {
+    [theme.breakpoints.down('md')]: {
+      fontSize: '20px',
+    },
   },
   formBox: {
     display: 'flex',
@@ -99,53 +124,132 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 2,
   },
   expansionPanel: {
+
     flexGrow: 1,
     marginTop: theme.spacing.unit * 2,
+    [theme.breakpoints.up('md')]: {
+      margin: 'auto',
+      paddingLeft: '300px',
+      paddingRight: '300px',
+    },
   },
+  root: {
+    marginTop: '100px',
+    flexGrow: 1,
+    textAlign: 'center',
+    justify: 'center',
+  },
+
+  rootPaper: theme.mixins.gutters({
+    paddingTop: 56,
+    paddingBottom: 56,
+    paddingLeft: 170,
+
+    marginTop: theme.spacing.unit * 3,
+    margin: 'auto',
+
+
+  }),
+  images: {
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '45px',
+    },
+  },
+
 });
 
 const MetaMaskNotInstalled = ({ intl, classes }) => (
-  <div>
-    <Typography className={classes.headingTertiary} variant="subheading">
-      {intl.formatMessage(messages.headingTertiary1)}
-    </Typography>
+  <div className={classes.root}>
+    <Grid container spacing={24}>
+      <Grid item xs={12}>
+        <Typography className={classes.headingTertiary} variant="display2">
+          {intl.formatMessage(messages.headingTertiary1)}
+        </Typography>
+        <img src="./../../static/metamask.png" alt="metamask" height="150" width="130" />
+      </Grid>
+      <Grid item xs={12}>
+        <Typography variant="display2" className={classes.help}>
+          {intl.formatMessage(messages.help)}
+        
+        </Typography>
+       
+      </Grid>
+      <div />
+     
 
-    <Typography>
-      {intl.formatMessage(messages.help)}
-    </Typography>
+      <Grid item xs={12}>
+        <div className={classes.expansionPanel}>
+          <ExpansionPanel>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>{intl.formatMessage(messages.installHeader)}</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
 
-    <div className={classes.expansionPanel}>
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>{intl.formatMessage(messages.installHeader)}</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            {intl.formatMessage(messages.installDescription)}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>{intl.formatMessage(messages.etherHeader)}</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            {intl.formatMessage(messages.etherDescription)}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>{intl.formatMessage(messages.sendHeader)}</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            {intl.formatMessage(messages.sendDescription)}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-    </div>
+              <ol style={{ textAlign: 'left' }}>
+                <li><Typography>{intl.formatMessage(messages.installDescription)}</Typography>
+                  <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">
+                    <Typography>{intl.formatMessage(messages.installDescription1)}</Typography>
+                  </a>
+                </li>
+
+                <img src="./../../static/metamaskpic.png" alt="metamask" height="150" width="150" />
+                <li><Typography>{intl.formatMessage(messages.installDescription2)}</Typography>
+                </li>
+
+              </ol>
+
+
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>
+                {intl.formatMessage(messages.etherHeader)}
+              </Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+
+              <ol style={{ textAlign: 'left' }}>
+                <li><Typography>{intl.formatMessage(messages.etherDescription)}   </Typography>
+                  <a href="https://blockgeeks.com/guides/best-cryptocurrency-exchanges/" target="_blank" rel="noopener noreferrer">
+                    <Typography>https://blockgeeks.com/guides/best-cryptocurrency-exchanges/   </Typography>
+                  </a>
+                </li>
+
+                <li>   <Typography>{intl.formatMessage(messages.etherDescription1)}   </Typography>
+                </li>
+
+              </ol>
+
+
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>{intl.formatMessage(messages.sendHeader)}</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+
+              <ol style={{ textAlign: 'left' }}>
+                <li> <Typography>{intl.formatMessage(messages.sendDescription)}</Typography>
+                  <a href="https://faucet.rinkeby.io/" target="_blank" rel="noopener noreferrer">
+                    <Typography>Rinkeby Authenticated Faucet</Typography>
+                  </a>
+                </li>
+
+
+              </ol>
+
+
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </div>
+      </Grid>
+
+
+    </Grid>
+
+
   </div>
 );
 
@@ -157,3 +261,16 @@ MetaMaskNotInstalled.propTypes = {
 // MetaMaskNotInstalled.getInitialProps = () => ({});
 
 export default withStyles(styles)(injectIntl(MetaMaskNotInstalled));
+
+// type metamask in the search bar
+// add metamaks to chrome with chrome extensions wait till
+// the instalation is completed , then go to metamask oficial website ,
+// then click at the icon in the upper right corner
+// a pop-up window will apear you will see privacy statement which should be double confirmed
+// then create a password and re-enter it then press crate button
+// then you will see the window containing 12 words you will need them to restore your account that´s why you should copy and save
+// in a text file
+// then click on the advanced setting in your account window and choose copy address this is your wallet adress you should
+// save it in the created text file now you are ready to become an investor refill etherium wallet and transfer a desirable sum to our
+// contract address
+

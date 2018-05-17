@@ -7,7 +7,7 @@
   {
     "id": "help",
     "description": "",
-    "defaultMessage": "Here some help:"
+    "defaultMessage": "Follow these steps:"
   },
   {
     "id": "installHeader",
@@ -17,7 +17,17 @@
   {
     "id": "installDescription",
     "description": "",
-    "defaultMessage": "..."
+    "defaultMessage": "Add MetaMask extension - Go to metamask page"
+  },
+  {
+    "id": "installDescription1",
+    "description": "",
+    "defaultMessage": "here"
+  },
+  {
+    "id": "installDescription2",
+    "description": "",
+    "defaultMessage": "Then Create an account. You are given a seed phrase that can be used to restore all the accounts you ever create withing Metamask."
   },
   {
     "id": "etherHeader",
@@ -27,7 +37,12 @@
   {
     "id": "etherDescription",
     "description": "",
-    "defaultMessage": "..."
+    "defaultMessage": "You will need to purchase ETH from an exchange, and then transfer the ETH from your exchange wallet to your MetaMask wallet"
+  },
+  {
+    "id": "etherDescription1",
+    "description": "",
+    "defaultMessage": "You cannot use USD with BitBrackets pools — any currencies need to be converted into ETH first."
   },
   {
     "id": "sendHeader",
@@ -37,7 +52,7 @@
   {
     "id": "sendDescription",
     "description": "",
-    "defaultMessage": "..."
+    "defaultMessage": "Go to:"
   },
   {
     "id": "headingTertiary2",

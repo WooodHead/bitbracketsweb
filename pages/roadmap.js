@@ -14,6 +14,8 @@ import Layout from '../components/Layout';
 import { initStore } from '../store';
 import RoadMap from '../components/RoadMap';
 
+
+
 addLocaleData(en);
 addLocaleData(es);
 const messages = initMessages();
@@ -27,6 +29,8 @@ function roadmap(props) {
     <IntlProvider locale={language} messages={messages[language]}>
       <Layout>
         <RoadMap />
+     
+  
       </Layout>
     </IntlProvider>
   );

@@ -3,9 +3,10 @@ import navigation from "./navigation";
 import home from "./home";
 import createPool from "./pages/create-pool";
 import roadmap from "./roadmap";
+import metamask from "./metamask";
 
 // agregar las traducciones de los componentes a este arreglo
-const componentMsg = [navigation, home, createPool, roadmap];
+const componentMsg = [navigation, home, createPool, roadmap, metamask];
 
 export default () => {
   const messages = _.reduce(
