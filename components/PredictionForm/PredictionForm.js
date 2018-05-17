@@ -31,7 +31,7 @@ const messages = defineMessages({
   },
 });
 
-class PredictionLayout extends Component {
+class PredictionForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,7 +48,7 @@ class PredictionLayout extends Component {
       const {
         classes, intl, matches, groups, predictions, update, read,
       } = this.props;
-        console.log('PredictionForm', predictions);
+
       return (
         <Grid container className={classes.matches} spacing={16}>
           {_.filter(matches, match => match.data.group === groups[activeTab])
@@ -56,7 +56,7 @@ class PredictionLayout extends Component {
                       (
                         <Grid item xs={6} key={match.index}>
                           <MatchCard
-                          
+
                             match={match}
                             prediction={predictions[match.index] ? predictions[match.index].prediction : undefined}
                             update={update}
@@ -69,9 +69,11 @@ class PredictionLayout extends Component {
     }
 
     render() {
-      const { classes, intl, groups } = this.props;
+      const {
+        classes, groups, predictions,
+      } = this.props;
       const { activeStep } = this.state;
-
+      console.info('predictionForm predictions', predictions);
       return (
         <Paper className={classes.form}>
           <Tabs
@@ -91,14 +93,18 @@ class PredictionLayout extends Component {
     }
 }
 
-PredictionLayout.propTypes = {
+PredictionForm.defaultProps = {
+  predictions: {},
+};
+
+PredictionForm.propTypes = {
   classes: PropTypes.object.isRequired,
   matches: PropTypes.object.isRequired,
-  predictions: PropTypes.object.isRequired,
+  predictions: PropTypes.object,
   update: PropTypes.object.isRequired,
   read: PropTypes.object.isRequired,
   groups: PropTypes.object.isRequired,
   intl: PropTypes.object.isRequired,
 
 };
-export default withStyles(styles)(injectIntl(PredictionLayout));
+export default withStyles(styles)(injectIntl(PredictionForm));
