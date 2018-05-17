@@ -95,6 +95,14 @@ const styles = theme => ({
   headingTertiary: {
     fontWeight: 'bold',
     marginBottom: theme.spacing.unit * 2,
+    [theme.breakpoints.down('md')]: {
+      fontSize: '20px',
+    },
+  },
+  help: {
+    [theme.breakpoints.down('md')]: {
+      fontSize: '20px',
+    },
   },
   formBox: {
     display: 'flex',
@@ -116,11 +124,14 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 2,
   },
   expansionPanel: {
-    margin: 'auto',
-    paddingLeft: '300px',
-    paddingRight: '300px',
+
     flexGrow: 1,
     marginTop: theme.spacing.unit * 2,
+    [theme.breakpoints.up('md')]: {
+      margin: 'auto',
+      paddingLeft: '300px',
+      paddingRight: '300px',
+    },
   },
   root: {
     marginTop: '100px',
@@ -128,20 +139,23 @@ const styles = theme => ({
     textAlign: 'center',
     justify: 'center',
   },
-  itemsIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    margin: '5px',
-    fontSize: '10px',
-  },
+
   rootPaper: theme.mixins.gutters({
     paddingTop: 56,
     paddingBottom: 56,
+    paddingLeft: 170,
 
     marginTop: theme.spacing.unit * 3,
     margin: 'auto',
 
+
   }),
+  images: {
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '45px',
+    },
+  },
+
 });
 
 const MetaMaskNotInstalled = ({ intl, classes }) => (
@@ -151,39 +165,17 @@ const MetaMaskNotInstalled = ({ intl, classes }) => (
         <Typography className={classes.headingTertiary} variant="display2">
           {intl.formatMessage(messages.headingTertiary1)}
         </Typography>
+        <img src="./../../static/metamask.png" alt="metamask" height="150" width="130" />
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="display2">
+        <Typography variant="display2" className={classes.help}>
           {intl.formatMessage(messages.help)}
+        
         </Typography>
+       
       </Grid>
-      <Paper elevation={4} className={classes.rootPaper}>
-        <Grid container spacing={24} >
-          <Grid item xs={6} sm={3}>
-            <img src="./../../static/metamask.png" alt="metamask" height="170" width="150" />
-
-          </Grid>
-          <Grid item xs={6} sm={2} className={classes.itemsIcon}>
-            <i className="material-icons" style={{ fontSize: '58px' }}>
-add
-            </i>
-          </Grid>
-
-          <Grid item xs={6} sm={2}>
-            <img src="./../../static/Mamushka.png" alt="metamask" height="170" width="150" />
-          </Grid>
-          <Grid item xs={6} sm={2} className={classes.itemsIcon}>
-            <i className="material-icons" style={{ fontSize: '58px', marginLeft: '0.5em' }} >
-drag_handle
-            </i>
-          </Grid>
-          <Grid item xs={6} sm={2}>
-            <img src="./../../static/img4.png" alt="metamask" height="170" width="170" />
-          </Grid>
-
-
-        </Grid>
-      </Paper>
+      <div />
+     
 
       <Grid item xs={12}>
         <div className={classes.expansionPanel}>
@@ -192,18 +184,21 @@ drag_handle
               <Typography>{intl.formatMessage(messages.installHeader)}</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography>
-                <ol style={{ textAlign: 'left' }}>
-                  <li>{intl.formatMessage(messages.installDescription)} <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">{intl.formatMessage(messages.installDescription1)}</a></li>
 
-                  <img src="./../../static/metamaskpic.png" alt="metamask" height="150" width="150" />
-                  <li>{intl.formatMessage(messages.installDescription2)}
-                  </li>
+              <ol style={{ textAlign: 'left' }}>
+                <li><Typography>{intl.formatMessage(messages.installDescription)}</Typography>
+                  <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">
+                    <Typography>{intl.formatMessage(messages.installDescription1)}</Typography>
+                  </a>
+                </li>
 
-                </ol>
+                <img src="./../../static/metamaskpic.png" alt="metamask" height="150" width="150" />
+                <li><Typography>{intl.formatMessage(messages.installDescription2)}</Typography>
+                </li>
+
+              </ol>
 
 
-              </Typography>
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <ExpansionPanel>
@@ -213,18 +208,20 @@ drag_handle
               </Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography>
-                <ol style={{ textAlign: 'left' }}>
-                  <li>{intl.formatMessage(messages.etherDescription)}
-                    <a href="https://blockgeeks.com/guides/best-cryptocurrency-exchanges/" target="_blank" rel="noopener noreferrer">https://blockgeeks.com/guides/best-cryptocurrency-exchanges/</a>
-                  </li>
 
-                  <li>{intl.formatMessage(messages.etherDescription1)}
-                  </li>
+              <ol style={{ textAlign: 'left' }}>
+                <li><Typography>{intl.formatMessage(messages.etherDescription)}   </Typography>
+                  <a href="https://blockgeeks.com/guides/best-cryptocurrency-exchanges/" target="_blank" rel="noopener noreferrer">
+                    <Typography>https://blockgeeks.com/guides/best-cryptocurrency-exchanges/   </Typography>
+                  </a>
+                </li>
 
-                </ol>
+                <li>   <Typography>{intl.formatMessage(messages.etherDescription1)}   </Typography>
+                </li>
 
-              </Typography>
+              </ol>
+
+
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <ExpansionPanel>
@@ -232,16 +229,18 @@ drag_handle
               <Typography>{intl.formatMessage(messages.sendHeader)}</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography>
-                <ol style={{ textAlign: 'left' }}>
-                  <li> {intl.formatMessage(messages.sendDescription)}
-                    <a href="https://faucet.rinkeby.io/" target="_blank" rel="noopener noreferrer">Rinkeby Authenticated Faucet</a>
-                  </li>
+
+              <ol style={{ textAlign: 'left' }}>
+                <li> <Typography>{intl.formatMessage(messages.sendDescription)}</Typography>
+                  <a href="https://faucet.rinkeby.io/" target="_blank" rel="noopener noreferrer">
+                    <Typography>Rinkeby Authenticated Faucet</Typography>
+                  </a>
+                </li>
 
 
-                </ol>
+              </ol>
 
-              </Typography>
+
             </ExpansionPanelDetails>
           </ExpansionPanel>
         </div>
