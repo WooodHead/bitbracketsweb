@@ -23,7 +23,7 @@ export default {
       question: 'How to Install Metamask to play with digital money?',
       answer:
         'MetaMask is like a digital wallet to hold your digital money which you can use to play in BitBrackets different pools. You will need to put Ether (the supported digital money in BitBrackets) into MetaMask in the same  way you put real money into your real wallet to be able to play in pools or create a new one. ',
-      answer1: 'You can download it here.http://somewebsite.com/somepage.asp',
+      answer1: 'You can download it here.https://metamask.io/',
       answer2:
         'Warning: With digital money you are responsible for being your own bank. Take precautions of not revealing your password and seed words to anyone else or you may lose all your funds.',
     },
