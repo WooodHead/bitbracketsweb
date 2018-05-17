@@ -15,7 +15,7 @@ const messages = defineMessages({
   },
   navigationNavbarlink2: {
     id: 'navigation.navbarlink2',
-    defaultMessage: 'rules',
+    defaultMessage: 'RoadMap',
     description: 'Navigation link rules',
   },
   navigationNavbarlink3: {
@@ -74,7 +74,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#section3"className={classes.aTag}>
+              <a href="/roadmap"className={classes.aTag}>
                 <Typography variant="subheading" gutterBottom className={classes.text}>
                   {intl.formatMessage(messages.navigationNavbarlink2)}
                 </Typography>
