@@ -3,8 +3,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
-import _ from 'lodash';
+import { injectIntl, defineMessages } from 'react-intl';
+// import _ from 'lodash';
 
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
@@ -106,7 +106,7 @@ class PredictionLayout extends Component {
           {intl.formatMessage(messages.headingSecondary)}
         </Typography>
         <PredictionForm
-          team={team}
+          // team={team}
           groups={groups}
           matches={matches}
           predictions={predictions}
@@ -128,6 +128,5 @@ PredictionLayout.propTypes = {
   groups: PropTypes.object.isRequired,
   intl: PropTypes.object.isRequired,
   save: PropTypes.func.isRequired,
- 
 };
 export default withStyles(styles)(injectIntl(PredictionLayout));

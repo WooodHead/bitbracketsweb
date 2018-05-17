@@ -20,6 +20,7 @@ class JoinPoolPage extends React.Component {
   }
 
   componentWillMount() {
+    console.log('fetching contest');
     this.props.fetchContest('Russia2018');
   }
 
@@ -31,18 +32,25 @@ class JoinPoolPage extends React.Component {
   }
 
   render() {
+    const {
+      predictions,
+      pool,
+      groups,
+      matches,
+      updatePrediction,
+      savePredictions,
+    } = this.props;
+
     return (
       <Layout>
         <JoinPoolLayout
-         
-          poolInfo={this.props.poolInfo}
-          pool={this.props.pool}
+          pool={pool}
           onSubmit={this.props.joinPool}
-          groups={this.props.groups}
-          matches={this.props.matches}
-          predictions={this.props.predictions}
-          update={this.props.updatePrediction}
-          save={this.props.savePredictions}
+          groups={groups}
+          matches={matches}
+          predictions={predictions}
+          update={updatePrediction}
+          save={savePredictions}
         />
       </Layout>
     );
@@ -50,9 +58,8 @@ class JoinPoolPage extends React.Component {
 }
 
 function mapStateToProps(state) {
+  console.info('redux predictions', state.predictions);
   return {
-    // poolInfo: state.pool,
-    // pool: state.joinPool,
     pool: state.pool,
     matches: MatchesSelector(state),
     groups: GroupsSelector(state),
@@ -68,6 +75,5 @@ const mapDispatchToProps = dispatch => ({
   getPoolDetails: bindActionCreators(getPoolDetails, dispatch),
 });
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(JoinPoolPage),
-  // withRedux(initStore, mapStateToProps, mapDispatchToProps)(withPersistGate()(JoinPoolPage))
-);
+export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(JoinPoolPage));
+

@@ -204,18 +204,12 @@ class JoinPoolLayout extends Component {
       const lastStep = this.getSteps().length;
 
       switch (activeStep) {
-        // case 1:
-        //     this.props.dispatch(actions.submit('joinPool'));
-        //     if (form.$form.valid) {
-        //         this.setState({ activeStep: activeStep + 1 });
-        //     }
-        //     break;
         case 1:
-          console.log("predictions ", predictions);
+          console.log('predictions ', predictions);
           const numberMatches = _.filter(matches, match => _.isObject(match)).length;
           const numberPredictions = _.filter(predictions.predictions, prediction => _.isObject(prediction)).length;
-          console.log("numberMatches", numberMatches);
-          console.log("numberPredictions", numberPredictions);
+          console.log('numberMatches', numberMatches);
+          console.log('numberPredictions', numberPredictions);
           if (numberMatches === numberPredictions) {
             this.props.save(pool, predictions.predictions)
               .then(() => this.setState({ activeStep: activeStep + 1, error: '' }))
@@ -229,6 +223,9 @@ class JoinPoolLayout extends Component {
           this.props.onSubmit(pool.info, apiPredictions)
             .then(poolAddress => Router.pushRoute(`/pools/${pool.address}?prediction=success`))
             .catch(err => console.error('Error: ', err));
+          break;
+        default:
+          throw new Error('unexpected error');
       }
     };
 
@@ -267,7 +264,7 @@ class JoinPoolLayout extends Component {
 
 const mapStateToProps = state => ({
   form: state.forms.joinPool,
-  apiPredictions: state.predictions.apiPredictions ? state.predictions.apiPredictions: [] 
+  apiPredictions: state.predictions.apiPredictions ? state.predictions.apiPredictions : [],
 });
 
 export default withStyles(styles)(injectIntl(connect(mapStateToProps)(JoinPoolLayout)));
