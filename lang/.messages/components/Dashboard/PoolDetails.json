@@ -1,0 +1,37 @@
+[
+  {
+    "id": "PoolDetails",
+    "description": "Pool Details for Contest:",
+    "defaultMessage": "Pool Details for Contest:"
+  },
+  {
+    "id": "PoolName",
+    "description": "Pool Name:",
+    "defaultMessage": "Pool Name:"
+  },
+  {
+    "id": "Manager",
+    "description": "Manager:",
+    "defaultMessage": "Manager:"
+  },
+  {
+    "id": "EntryFee",
+    "description": "Entry Fee:",
+    "defaultMessage": "Entry Fee:"
+  },
+  {
+    "id": "PricePool",
+    "description": "Price Pool:",
+    "defaultMessage": "Price Pool:"
+  },
+  {
+    "id": "ManagerFee",
+    "description": "Manager Fee:",
+    "defaultMessage": "Manager Fee:"
+  },
+  {
+    "id": "NumberofPlayers",
+    "description": "Number of Players:",
+    "defaultMessage": "Number of Players:"
+  }
+]
