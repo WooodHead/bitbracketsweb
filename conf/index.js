@@ -4,6 +4,7 @@ import prod from './prod';
 
 const environmentsConf = new Map();
 environmentsConf.set('development', dev);
+environmentsConf.set('test', dev);
 environmentsConf.set('qa', qa);
 environmentsConf.set('production', prod);
 
@@ -11,7 +12,7 @@ const environment = process.env.NODE_ENV;
 
 console.log(environment);
 
-const currentConf = environmentsConf.get(environment);
+let currentConf = environmentsConf.get(environment);
 
 if(typeof currentConf === 'undefined') {
   throw new Error(`Configuration for environment NODE_ENV = ${environment} not found.`);
