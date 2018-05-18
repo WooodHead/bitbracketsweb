@@ -15,8 +15,8 @@ const messages = defineMessages({
   },
   navigationNavbarlink2: {
     id: 'navigation.navbarlink2',
-    defaultMessage: 'rules',
-    description: 'Navigation link rules',
+    defaultMessage: 'roadmap',
+    description: 'Navigation link roadmap',
   },
   navigationNavbarlink3: {
     id: 'navigation.navbarlink3',
@@ -41,6 +41,9 @@ const messages = defineMessages({
 });
 
 const styles = theme => ({
+  root: {
+    marginTop: '3em',
+  },
   list: {
     listStyleType: 'none',
   },
@@ -62,26 +65,27 @@ function Footer(props) {
   const { intl, classes } = props;
   return (
 
-    <div styles={{ backgroundColor: '#fff' }}>
+    <div className={classes.root}>
+    
       <Grid container spacing={24} >
         <Grid item xs={6} sm={3} className={classes.paper} >
           <ul className={classes.list}>
             <li>
-              <a href="#section3"className={classes.aTag}>
+              <a href="/#section3"className={classes.aTag}>
                 <Typography variant="subheading" gutterBottom className={classes.text}>
                   {intl.formatMessage(messages.navigationNavbarlink1)}
                 </Typography>
               </a>
             </li>
             <li>
-              <a href="#section3"className={classes.aTag}>
+              <a href="/roadmap"className={classes.aTag}>
                 <Typography variant="subheading" gutterBottom className={classes.text}>
                   {intl.formatMessage(messages.navigationNavbarlink2)}
                 </Typography>
               </a>
             </li>
             <li>
-              <a href="#section3"className={classes.aTag}>
+              <a href="/mypools"className={classes.aTag}>
                 <Typography variant="subheading" gutterBottom className={classes.text}>
                   {intl.formatMessage(messages.navigationNavbarlink3)}
                 </Typography>
@@ -141,7 +145,7 @@ function Footer(props) {
           <ul className={classes.list}>
             <li>
               <a
-                href="/faq"
+                href="/termsconditions"
                 className={classes.aTag}
               >
                 <Typography variant="subheading" gutterBottom className={classes.text}>
@@ -171,6 +175,7 @@ function Footer(props) {
 
         </Grid>
       </Grid>
+
     </div>
 
   );

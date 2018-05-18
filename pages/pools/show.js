@@ -25,6 +25,7 @@ const PoolDashboard = ({ address, pool, errorStatus }) => {
     <div>
       <Layout>
         <IndexDashboard address={address} pool={pool} />
+        <div style={{ marginTop: '5em' }}> <hr /></div>
       </Layout>
     </div>
   );

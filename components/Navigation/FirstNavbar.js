@@ -89,7 +89,7 @@ function FirstNavbar(props) {
         <div className={classes.responsive}>
           <Toolbar>
 
-            <Button href="#section3" color="inherit">
+            <Button href="/#section3" color="inherit">
               {intl.formatMessage(messages.navigationNavbarlink1)}
             </Button>
             <Button href="/roadmap" color="inherit">
@@ -98,7 +98,7 @@ function FirstNavbar(props) {
             <Button href="/faq" color="inherit">
             FAQs
             </Button>
-            <Button href="/howDoesItWork" color="inherit">
+            <Button href="/mypools" color="inherit">
               {intl.formatMessage(messages.navigationNavbarlink3)}
             </Button>
 
