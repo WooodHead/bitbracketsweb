@@ -18,7 +18,8 @@
     "npm": "5.7.1"
   },
   "scripts": {
-    "dev": "node ./server.js",
+    "dev": "NODE_ENV=development node ./server.js",
+    "qa": "NODE_ENV=qa node ./server.js",
     "test": "NODE_ENV=test jest",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",

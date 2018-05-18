@@ -1,17 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
-
 import React from 'react';
-
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
-
-
 import { injectIntl, defineMessages } from 'react-intl';
 import NavigationResponsive from './NavigationResponsive';
+import CONF from '../../conf';
 
 const styles = theme => ({
   root: {
@@ -107,7 +103,7 @@ function FirstNavbar(props) {
             </Button>
 
             <Button
-              href="/contest/Russia2018/pools/new"
+              href={`/contest/${CONF.web3.contestName}/pools/new`}
               variant="raised"
               style={{ backgroundColor: '#E91E63', color: '#fff' }}
             >
@@ -123,7 +119,7 @@ function FirstNavbar(props) {
           <Toolbar>
 
             <Button
-              href="/contest/Russia2018/pools/new"
+              href={`/contest/${CONF.web3.contestName}/pools/new`}
             >
               {intl.formatMessage(messages.navigationNavbarlink4)}
             </Button>

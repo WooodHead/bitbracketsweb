@@ -229,6 +229,13 @@ To configure the syntax highlighting in your favorite text editor, head to the [
 
 You can find more details about [`now` here](https://zeit.co/now).
 
+## An error message when you execute: npm run dev? (Windows)
+
+Check it out. Visit: https://github.com/laggingreflex/win-node-env
+
+Execute ```npm install -g win-node-env```, and try ```npm run dev``` again.
+
+
 ## Something Missing?
 
 If you have ideas for how we could improve this readme or the project in general, [let us know](https://github.com/segmentio/create-next-app/issues) or [contribute some!](https://github.com/segmentio/create-next-app/edit/master/lib/templates/default/README.md)

@@ -4,6 +4,7 @@ const WEB3 = {
   interval: 1000,
   factoryAddress: process.env.FACTORY_ADDR,
   infuraUrl: process.env.INFURA_KEY,
+  contestName: process.env.CONTEST_NAME
 };
 
 module.exports = WEB3;
