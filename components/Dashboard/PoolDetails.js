@@ -55,10 +55,10 @@ const messages = defineMessages({
     defaultMessage: 'Entry Fee:',
     description: 'Entry Fee:',
   },
-  PricePool: {
-    id: 'PricePool',
-    defaultMessage: 'Price Pool:',
-    description: 'Price Pool:',
+  PrizePool: {
+    id: 'PrizePool',
+    defaultMessage: 'Prize Pool:',
+    description: 'Prize Pool:',
   },
   ManagerFee: {
     id: 'ManagerFee',
@@ -70,6 +70,27 @@ const messages = defineMessages({
     defaultMessage: 'Number of Players:',
     description: 'Number of Players:',
   },
+  PoolAmounts: {
+    id: 'PoolAmounts',
+    defaultMessage: 'Pool Amounts:',
+    description: 'Pool Amounts:',
+  },
+  PoolBalance: {
+    id: 'PoolBalance',
+    defaultMessage: 'Pool Balance:',
+    description: 'Pool Balance:',
+  },
+  OwnerFee: {
+    id: 'OwnerFee',
+    defaultMessage: 'Owner Fee:',
+    description: 'Owner Fee:',
+  },
+  MaxNumofPlayers: {
+    id: 'MaxNumofPlayers',
+    defaultMessage: 'Max. Num. of Player:',
+    description: 'MaxNumofPlayers:',
+  },
+
 });
 function PoolDetails(props) {
   const { classes, pool, intl } = props;
@@ -106,11 +127,11 @@ function PoolDetails(props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Number of Players: &nbsp;</span>
+            <span className={classes.paragraph}>{intl.formatMessage(messages.NumberofPlayers)} &nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.numPlayers}</span>
           </Typography>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Max. Num. of Players: &nbsp;</span>
+            <span className={classes.paragraph}>{intl.formatMessage(messages.MaxNumofPlayers)} &nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.maxPlayers}</span>
           </Typography>
         </Grid>
@@ -118,47 +139,47 @@ function PoolDetails(props) {
 
         <Grid item sm={12} >
           <Typography variant="title" gutterBottom>
-            Pool Amounts:
+            {intl.formatMessage(messages.PoolAmounts)}
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subheading">
             <span className={classes.paragraph}>Max Balance: &nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.maxBalanceEth} ETH</span>
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={6}>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Pool Balance: &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{pool.totalBalanceEth} ETH</span>
-            <span className={classes.paragraph}>{intl.formatMessage(messages.PricePool)} &nbsp;</span>
+            <span className={classes.paragraph}>{intl.formatMessage(messages.PoolBalance)} &nbsp;</span>
+            <span style={{ fontWeight: '600' }}>{pool.totalBalanceEth} ETH &nbsp; &nbsp;</span>
+            <span className={classes.paragraph}>{intl.formatMessage(messages.PrizePool)} &nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.priceBalance} ETH</span>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Manager Fee: &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{pool.managerFee}% </span>
-            <span style={{ fontWeight: '600' }}>{pool.managerTotal} ETH</span>
             <span className={classes.paragraph}>{intl.formatMessage(messages.ManagerFee)} &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{pool.managerFee}%</span>
+            <span style={{ fontWeight: '600' }}>{pool.managerFee}%&nbsp; &nbsp; </span>
+            <span style={{ fontWeight: '600' }}>{pool.managerTotal} ETH</span>
+            {/* <span className={classes.paragraph}>{intl.formatMessage(messages.ManagerFee)} &nbsp;</span>
+            <span style={{ fontWeight: '600' }}>{pool.managerFee}%</span> */}
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Owner Fee: &nbsp;</span>
-            <span style={{ fontWeight: '600' }}>{pool.fee}% </span>
+            <span className={classes.paragraph}>{intl.formatMessage(messages.OwnerFee)} &nbsp;</span>
+            <span style={{ fontWeight: '600' }}>{pool.fee}% &nbsp;&nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.ownerTotal} ETH</span>
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={3}>
+        {/* <Grid item xs={12} sm={6}>
           <Typography variant="subheading">
             <span className={classes.paragraph}>Prize Pool: &nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.priceBalance} ETH</span>
             <span className={classes.paragraph}>{intl.formatMessage(messages.NumberofPlayers)} &nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.numPlayers}</span>
           </Typography>
-        </Grid>
+        </Grid> */}
 
       </Grid>
     </div>

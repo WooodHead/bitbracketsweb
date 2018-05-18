@@ -20,9 +20,9 @@
     "defaultMessage": "Entry Fee:"
   },
   {
-    "id": "PricePool",
-    "description": "Price Pool:",
-    "defaultMessage": "Price Pool:"
+    "id": "PrizePool",
+    "description": "Prize Pool:",
+    "defaultMessage": "Prize Pool:"
   },
   {
     "id": "ManagerFee",
@@ -33,5 +33,25 @@
     "id": "NumberofPlayers",
     "description": "Number of Players:",
     "defaultMessage": "Number of Players:"
+  },
+  {
+    "id": "PoolAmounts",
+    "description": "Pool Amounts:",
+    "defaultMessage": "Pool Amounts:"
+  },
+  {
+    "id": "PoolBalance",
+    "description": "Pool Balance:",
+    "defaultMessage": "Pool Balance:"
+  },
+  {
+    "id": "OwnerFee",
+    "description": "Owner Fee:",
+    "defaultMessage": "Owner Fee:"
+  },
+  {
+    "id": "MaxNumofPlayers",
+    "description": "MaxNumofPlayers:",
+    "defaultMessage": "Max. Num. of Player:"
   }
 ]
