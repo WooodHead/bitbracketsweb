@@ -5,7 +5,6 @@ export default {
     PoolName: 'Pool Name:',
     Manager: 'Manager:',
     EntryFee: 'Entry Fee:',
-<<<<<<< HEAD
     PrizePool: 'Prize Pool:',
     ManagerFee: 'Manager Fee:',
     NumberofPlayers: 'Number of Players:',
@@ -13,13 +12,6 @@ export default {
     MaxNumofPlayers: 'Max. Num. of Players:',
     PoolBalance: 'Pool Balance:',
     OwnerFee: 'Owner Fee',
-=======
-    PricePool: 'Price Pool:',
-    ManagerFee: 'Manager Fee:',
-    NumberofPlayers: 'Number of Players:',
-
-  
->>>>>>> 45bb4b7c4b3d2ac457430f5bde7dc30ff490073d
 
   },
   es: {
@@ -28,7 +20,6 @@ export default {
     PoolName: 'Nombre de la quiniela:',
     Manager: 'Administrador:',
     EntryFee: 'Costo:',
-<<<<<<< HEAD
     PrizePool: 'Premio:',
     ManagerFee: 'Comision del Administrador:',
     NumberofPlayers: 'Numero de jugadores:',
@@ -37,13 +28,6 @@ export default {
     PoolBalance: 'Balance de la quiniela',
     OwnerFee: 'Tarifa del propietario',
 
-=======
-    PricePool: 'Premio:',
-    ManagerFee: 'Comision del Administrador:',
-    NumberofPlayers: 'Numero de jugadores:',
-    
-   
->>>>>>> 45bb4b7c4b3d2ac457430f5bde7dc30ff490073d
 
 
   },
