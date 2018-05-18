@@ -11,17 +11,18 @@ import Layout from '../../components/Layout';
 import GroupsSelector from '../../selectors/groupsSelector';
 import MatchesSelector from '../../selectors/matchesSelector';
 import { joinPool, updatePrediction, savePredictions, fetchContest, getPoolDetails } from '../../actions';
+import CONF from '../../conf';
 
 class JoinPoolPage extends React.Component {
   static async getInitialProps({ store, query, isServer }) {
     const { address } = query;
-    await store.dispatch(fetchContest('Russia2018'));
+    await store.dispatch(fetchContest(CONF.web3.contestName));
     return { isServer, address };
   }
 
   componentWillMount() {
     console.log('fetching contest');
-    this.props.fetchContest('Russia2018');
+    this.props.fetchContest(CONF.web3.contestName);
   }
 
   componentDidMount() {

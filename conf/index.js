@@ -1,19 +1,22 @@
-import testing from './testing';
+import qa from './qa';
+import dev from './dev';
 import prod from './prod';
 
-// keys.js - figure out what set of credentials to return.
-let configTemp;
+const environmentsConf = new Map();
+environmentsConf.set('development', dev);
+environmentsConf.set('qa', qa);
+environmentsConf.set('production', prod);
 
-if (process.env.NODE_ENV === 'production') {
-  // we are in production - return the prod set of keys.
-  console.info('production');
-  configTemp = prod;
-} else {
-  // we are in development - return the dev keys.
-  console.info('dev');
-  configTemp = testing;
+const environment = process.env.NODE_ENV;
+
+console.log(environment);
+
+const currentConf = environmentsConf.get(environment);
+
+if(typeof currentConf === 'undefined') {
+  throw new Error(`Configuration for environment NODE_ENV = ${environment} not found.`);
 }
 
-const config = configTemp;
+console.log(`Web app is using the ${currentConf.name} configuration.`);
 
-export default config;
+export default currentConf;

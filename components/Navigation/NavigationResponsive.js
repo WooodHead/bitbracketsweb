@@ -1,5 +1,4 @@
 /* eslint-disable react/forbid-prop-types */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -7,17 +6,13 @@ import { Manager, Target, Popper } from 'react-popper';
 import Button from 'material-ui/Button';
 import ClickAwayListener from 'material-ui/utils/ClickAwayListener';
 import Collapse from 'material-ui/transitions/Collapse';
-
 import Portal from 'material-ui/Portal';
 import { MenuItem, MenuList } from 'material-ui/Menu';
 import { withStyles } from 'material-ui/styles';
 import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
-
-
 import { injectIntl, defineMessages } from 'react-intl';
-
-// import MoreVertIcon from 'material-ui/icons/MoreVert';
+import CONF from '../../conf';
 
 const messages = defineMessages({
   navigationNavbarlink1: {
@@ -134,7 +129,7 @@ class ResponsiveNavbar extends React.Component {
                       <MenuItem onClick={this.handleClose}>
                         {' '}
                         <Button
-                          href="/contest/Russia2018/pools/new"
+                          href={`/contest/${CONF.web3.contestName}/pools/new`}
                         >
                           {intl.formatMessage(messages.navigationNavbarlink3)}
 
