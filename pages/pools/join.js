@@ -53,6 +53,8 @@ class JoinPoolPage extends React.Component {
           update={updatePrediction}
           save={savePredictions}
         />
+        
+        <div style={{ marginTop: '5em' }}> <hr /></div>
       </Layout>
     );
   }

@@ -189,7 +189,7 @@ function RoadMap(props) {
             </Paper>
           </ScrollAnimation>
         </div>
-      
+
       </div>
       <style jsx>{`
    
@@ -313,7 +313,7 @@ function RoadMap(props) {
     `}</style>
 
 
-      <hr />
+      <div style={{ marginTop: '5em' }}> <hr /></div>
 
     </div>
 

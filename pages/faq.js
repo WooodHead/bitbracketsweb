@@ -33,7 +33,7 @@ function faq(props) {
             <Qa faqText={faqQ[language]} />
           </div>
         </div>
-        <hr />
+        <div style={{ marginTop: '5em' }}> <hr /></div>
       </Layout>
     </IntlProvider>
   );

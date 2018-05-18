@@ -112,7 +112,7 @@ class ResponsiveNavbar extends React.Component {
                   >
                     <MenuList role="menu" style={{ alignText: 'center' }}>
                       <MenuItem>
-                        <Button href="#section3">
+                        <Button href="/#section3">
                           {' '}
                           {intl.formatMessage(messages.navigationNavbarlink1)}
                         </Button>

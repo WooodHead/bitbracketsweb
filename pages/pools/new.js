@@ -25,6 +25,8 @@ const CreatePoolPage = ({
       onSubmit={createPoolAction}
       onNext={fetchPoolDetailsAction}
     />
+    <div style={{ marginTop: '5em' }}> <hr /></div>
+   
   </Layout>
 );
 
