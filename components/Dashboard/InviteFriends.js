@@ -1,6 +1,10 @@
 /* eslint-disable react/no-did-mount-set-state */
+/* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl, defineMessages } from 'react-intl';
+
 import Button from 'material-ui/Button';
 import Dialog, {
   DialogActions,
@@ -10,6 +14,34 @@ import Dialog, {
 } from 'material-ui/Dialog';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
+
+const messages = defineMessages({
+  Copyandshare: {
+    id: 'Copyandshare',
+    defaultMessage: 'Copy and share the link below to invite your friends:',
+    description: 'Copy and share the link below to invite your friends',
+  },
+  InviteFriends: {
+    id: 'InviteFriends',
+    defaultMessage: 'Invite Friends',
+    description: 'InviteFriends',
+  },
+  CopyLink: {
+    id: 'CopyLink',
+    defaultMessage: 'Copy Link',
+    description: 'Copy Link',
+  },
+  close: {
+    id: 'close',
+    defaultMessage: 'close',
+    description: 'close',
+  },
+  copied: {
+    id: 'copied',
+    defaultMessage: 'copied',
+    description: 'copied',
+  },
+});
 class InviteFriends extends React.Component {
   constructor(props) {
     super(props);
@@ -42,17 +74,20 @@ class InviteFriends extends React.Component {
     this.setState({ open: false });
   };
 
+
   render() {
+    const { intl } = this.props;
     return (
+
       <div>
-        <Button style={{ backgroundColor: 'black', color: '#fff' }} onClick={this.handleClickOpen}>Invite Friends</Button>
+        <Button style={{ backgroundColor: 'black', color: '#fff' }} onClick={this.handleClickOpen}>{intl.formatMessage(messages.InviteFriends)}</Button>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">Copy and share the link below to invite your friends</DialogTitle>
+          <DialogTitle id="alert-dialog-title">   {intl.formatMessage(messages.Copyandshare)}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
 
@@ -68,16 +103,18 @@ class InviteFriends extends React.Component {
                 text={this.state.value}
                 onCopy={() => this.setState({ copied: true })}
               >
-                <Button style={{ backgroundColor: 'black', color: '#fff' }}>Copy Link</Button>
+                <Button style={{ backgroundColor: 'black', color: '#fff' }}>
+                  {intl.formatMessage(messages.CopyLink)}
+                </Button>
               </CopyToClipboard>
 
-              {this.state.copied ? <span style={{ color: 'green' }}>Copied.</span> : null}
+              {this.state.copied ? <span style={{ color: 'green' }}>   {intl.formatMessage(messages.copied)}</span> : null}
 
             </DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
-           close
+              {intl.formatMessage(messages.close)}
             </Button>
 
           </DialogActions>
@@ -89,6 +126,7 @@ class InviteFriends extends React.Component {
 
 InviteFriends.propTypes = {
   url: PropTypes.string.isRequired,
+  intl: PropTypes.object.isRequired,
 };
 
-export default InviteFriends;
+export default injectIntl(InviteFriends);
