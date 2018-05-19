@@ -2,12 +2,12 @@
   {
     "id": "PredictionForm.headingPrimary",
     "description": "",
-    "defaultMessage": "[MY] Predictions"
+    "defaultMessage": "{player} Predictions"
   },
   {
     "id": "PredictionForm.headingSecondary",
     "description": "",
-    "defaultMessage": "[NAME] Crypto Pool"
+    "defaultMessage": "{poolName} Crypto Pool"
   },
   {
     "id": "PredictionForm.backButton",

@@ -73,7 +73,7 @@ class PredictionForm extends Component {
         classes, groups, predictions,
       } = this.props;
       const { activeStep } = this.state;
-      console.info('predictionForm predictions', predictions);
+      // console.info('predictionForm predictions', predictions);
       return (
         <Paper className={classes.form}>
           <Tabs
@@ -101,10 +101,9 @@ PredictionForm.propTypes = {
   classes: PropTypes.object.isRequired,
   matches: PropTypes.object.isRequired,
   predictions: PropTypes.object,
-  update: PropTypes.object.isRequired,
-  read: PropTypes.object.isRequired,
-  groups: PropTypes.object.isRequired,
+  update: PropTypes.func,
+  read: PropTypes.bool,
+  groups: PropTypes.array.isRequired,
   intl: PropTypes.object.isRequired,
-
 };
 export default withStyles(styles)(injectIntl(PredictionForm));

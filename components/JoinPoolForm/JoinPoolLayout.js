@@ -67,7 +67,7 @@ const styles = theme => ({
 const messages = defineMessages({
   headingPrimary: {
     id: 'JoinPoolLayout.headingPrimary',
-    defaultMessage: 'Welcome to [CRYPTOPOOL]',
+    defaultMessage: 'Welcome to {poolName}',
     description: '',
   },
   userSetupStep: {
@@ -237,13 +237,13 @@ class JoinPoolLayout extends Component {
     };
 
     render() {
-      const { classes, intl } = this.props;
+      const { classes, intl, pool } = this.props;
       const { activeStep, error } = this.state;
 
       return (
         <div className={classes.root}>
           <Typography className={classes.headingPrimary} variant="headline" align="center" gutterBottom>
-            {intl.formatMessage(messages.headingPrimary)}
+            {intl.formatMessage(messages.headingPrimary, { poolName: pool.info.name })}
           </Typography>
           <div className={classes.stepper}>
             {this.renderStepper(this.getSteps(), activeStep)}
