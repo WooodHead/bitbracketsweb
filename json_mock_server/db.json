@@ -987,5 +987,201 @@
         "location": { "lng": 50.238854, "lat": 53.278146 }
       }
     }
-  ]  
+  ],
+
+  
+  "prediction": {
+    "1": {
+        "index": 1,
+        "prediction": ""
+    },
+    "2": {
+        "index": 2,
+        "prediction": "64407f762c49409b80a32f4a40308af7"
+    },
+    "3": {
+        "index": 3,
+        "prediction": "30d9d7ab338b02ce27499924ca282189"
+    },
+    "4": {
+        "index": 4,
+        "prediction": ""
+    },
+    "5": {
+        "index": 5,
+        "prediction": "dcea6125b94a8ef025d8592da50461b3"
+    },
+    "6": {
+        "index": 6,
+        "prediction": ""
+    },
+    "7": {
+        "index": 7,
+        "prediction": "f9f1549e6d42a9813ff5518652212ecb"
+    },
+    "8": {
+        "index": 8,
+        "prediction": ""
+    },
+    "9": {
+        "index": 9,
+        "prediction": "8580d56250dba86b75a149e0ef84653e"
+    },
+    "10": {
+        "index": 10,
+        "prediction": "eef219aa39f2b202bd94c779efa800a2"
+    },
+    "11": {
+        "index": 11,
+        "prediction": "d5e04fa343d96a13d08eebc2eba4285f"
+    },
+    "12": {
+        "index": 12,
+        "prediction": ""
+    },
+    "13": {
+        "index": 13,
+        "prediction": "5be28c36b543dcd5501d19fdbb8bf07d"
+    },
+    "14": {
+        "index": 14,
+        "prediction": ""
+    },
+    "15": {
+        "index": 15,
+        "prediction": ""
+    },
+    "16": {
+        "index": 16,
+        "prediction": "f9f7261ebeecdec0306eed63d585bfde"
+    },
+    "17": {
+        "index": 17,
+        "prediction": "f4be7de4631f06baa30e9b89e6dd3552"
+    },
+    "18": {
+        "index": 18,
+        "prediction": "013d3c562e765282116babcf4621de1c"
+    },
+    "19": {
+        "index": 19,
+        "prediction": "e4bf3e594d785f7362154a56b70dbb43"
+    },
+    "20": {
+        "index": 20,
+        "prediction": "30d9d7ab338b02ce27499924ca282189"
+    },
+    "21": {
+        "index": 21,
+        "prediction": "dcea6125b94a8ef025d8592da50461b3"
+    },
+    "22": {
+        "index": 22,
+        "prediction": "267d33ab86d6b3e45f9123ca3ca50284"
+    },
+    "23": {
+        "index": 23,
+        "prediction": "f9f1549e6d42a9813ff5518652212ecb"
+    },
+    "24": {
+        "index": 24,
+        "prediction": "86e47997254714426eb5a2aff6cff8be"
+    },
+    "25": {
+        "index": 25,
+        "prediction": "8580d56250dba86b75a149e0ef84653e"
+    },
+    "26": {
+        "index": 26,
+        "prediction": "eef219aa39f2b202bd94c779efa800a2"
+    },
+    "27": {
+        "index": 27,
+        "prediction": "d5e04fa343d96a13d08eebc2eba4285f"
+    },
+    "28": {
+        "index": 28,
+        "prediction": "7a63b1138a9d76f0c8322515e841b787"
+    },
+    "29": {
+        "index": 29,
+        "prediction": ""
+    },
+    "30": {
+        "index": 30,
+        "prediction": ""
+    },
+    "31": {
+        "index": 31,
+        "prediction": "888e0d61470c83c0e87eb24f1e0b74fd"
+    },
+    "32": {
+        "index": 32,
+        "prediction": ""
+    },
+    "33": {
+        "index": 33,
+        "prediction": "013d3c562e765282116babcf4621de1c"
+    },
+    "34": {
+        "index": 34,
+        "prediction": "64407f762c49409b80a32f4a40308af7"
+    },
+    "35": {
+        "index": 35,
+        "prediction": "e4bf3e594d785f7362154a56b70dbb43"
+    },
+    "36": {
+        "index": 36,
+        "prediction": "30d9d7ab338b02ce27499924ca282189"
+    },
+    "37": {
+        "index": 37,
+        "prediction": "dcea6125b94a8ef025d8592da50461b3"
+    },
+    "38": {
+        "index": 38,
+        "prediction": ""
+    },
+    "39": {
+        "index": 39,
+        "prediction": "f9f1549e6d42a9813ff5518652212ecb"
+    },
+    "40": {
+        "index": 40,
+        "prediction": "0814943139525917eb60c2e104b3fdf6"
+    },
+    "41": {
+        "index": 41,
+        "prediction": "8580d56250dba86b75a149e0ef84653e"
+    },
+    "42": {
+        "index": 42,
+        "prediction": ""
+    },
+    "43": {
+        "index": 43,
+        "prediction": "d5e04fa343d96a13d08eebc2eba4285f"
+    },
+    "44": {
+        "index": 44,
+        "prediction": "7a63b1138a9d76f0c8322515e841b787"
+    },
+    "45": {
+        "index": 45,
+        "prediction": "71df225a633709bcd9cbd5963a9cd8cb"
+    },
+    "46": {
+        "index": 46,
+        "prediction": "5be28c36b543dcd5501d19fdbb8bf07d"
+    },
+    "47": {
+        "index": 47,
+        "prediction": "d4868023ec902cfb3bc7c932221e1c32"
+    },
+    "48": {
+        "index": 48,
+        "prediction": "f9f7261ebeecdec0306eed63d585bfde"
+    }
+  }
 }

@@ -49,12 +49,12 @@ const styles = theme => ({
 const messages = defineMessages({
   headingPrimary: {
     id: 'PredictionForm.headingPrimary',
-    defaultMessage: '[MY] Predictions',
+    defaultMessage: '{player} Predictions',
     description: '',
   },
   headingSecondary: {
     id: 'PredictionForm.headingSecondary',
-    defaultMessage: '[NAME] Crypto Pool',
+    defaultMessage: '{poolName} Crypto Pool',
     description: '',
   },
   backButton: {
@@ -94,22 +94,21 @@ class PredictionLayout extends Component {
 
   render() {
     const {
-      classes, intl, groups, matches, predictions, update, read,
+      classes, intl, groups, matches, predictions, update, read, pool, player
     } = this.props;
 
     return (
       <div className={classes.root}>
         <Typography className={classes.headingPrimary} variant="headline" align="center" gutterBottom>
-          {intl.formatMessage(messages.headingPrimary)}
+          {intl.formatMessage(messages.headingPrimary, { player })}
         </Typography>
         <Typography className={classes.headingSecondary} variant="headline" align="center" gutterBottom>
-          {intl.formatMessage(messages.headingSecondary)}
+          {intl.formatMessage(messages.headingSecondary, { poolName: pool.info.name })}
         </Typography>
         <PredictionForm
-          // team={team}
           groups={groups}
           matches={matches}
-          predictions={predictions}
+          predictions={predictions.predictions}
           update={update}
           read={read}
         />
@@ -123,10 +122,12 @@ PredictionLayout.propTypes = {
   classes: PropTypes.object.isRequired,
   matches: PropTypes.object.isRequired,
   predictions: PropTypes.object.isRequired,
-  update: PropTypes.object.isRequired,
-  read: PropTypes.object.isRequired,
-  groups: PropTypes.object.isRequired,
+  update: PropTypes.func,
+  read: PropTypes.bool,
+  groups: PropTypes.array.isRequired,
   intl: PropTypes.object.isRequired,
-  save: PropTypes.func.isRequired,
+  save: PropTypes.func,
+  pool: PropTypes.object.isRequired,
+  player: PropTypes.string.isRequired,
 };
 export default withStyles(styles)(injectIntl(PredictionLayout));

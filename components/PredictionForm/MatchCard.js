@@ -103,7 +103,7 @@ MatchCard.propTypes = {
   classes: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
   prediction: PropTypes.string,
-  update: PropTypes.func.isRequired,
+  update: PropTypes.func,
   read: PropTypes.bool,
 };
 export default withStyles(styles)(MatchCard);

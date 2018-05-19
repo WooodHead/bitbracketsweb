@@ -10,14 +10,14 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
-    /*
-        case actionTypes.FETCH_PREDICTIONS_REQUEST:
-            return { ...state, loading: true, error: undefined };
-        case actionTypes.FETCH_PREDICTIONS_SUCCESS:
-            return { ...state, predictions: _.mapKeys(action.payload, 'index'), loading: false, error: undefined }
-        case actionTypes.FETCH_PREDICTIONS_FAIL:
-            return { ...state, loading: false, error: action.payload }
-*/
+
+    case actionTypes.FETCH_PREDICTIONS_REQUEST:
+      return { ...state, loading: true, error: undefined };
+    case actionTypes.FETCH_PREDICTIONS_SUCCESS:
+      return { ...state, predictions: action.payload, loading: false, error: undefined }
+    case actionTypes.FETCH_PREDICTIONS_FAIL:
+      return { ...state, loading: false, error: action.payload }
+
     case actionTypes.UPDATE_PREDICTION_REQUEST:
       console.log('predictionsReducer updatePredictionRequest', action);
       return { ...state, loading: true, error: undefined };
