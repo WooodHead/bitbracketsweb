@@ -6,6 +6,7 @@ const INITIAL_STATE = {
   error: undefined,
   apiPredictions: undefined,
   predictions: {},
+  othersPredictions: {},
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -14,7 +15,7 @@ export default function (state = INITIAL_STATE, action) {
     case actionTypes.FETCH_PREDICTIONS_REQUEST:
       return { ...state, loading: true, error: undefined };
     case actionTypes.FETCH_PREDICTIONS_SUCCESS:
-      return { ...state, predictions: action.payload, loading: false, error: undefined }
+      return { ...state, othersPredictions: action.payload, loading: false, error: undefined }
     case actionTypes.FETCH_PREDICTIONS_FAIL:
       return { ...state, loading: false, error: action.payload }
 

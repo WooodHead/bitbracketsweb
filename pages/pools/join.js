@@ -16,7 +16,10 @@ import CONF from '../../conf';
 class JoinPoolPage extends React.Component {
   static async getInitialProps({ store, query, isServer }) {
     const { address } = query;
-    await store.dispatch(fetchContest(CONF.web3.contestName));
+    await Promise.all([
+      store.dispatch(fetchContest(CONF.web3.contestName)),
+      store.dispatch(getPoolDetails(address))
+    ]);
     return { isServer, address };
   }
 
@@ -53,7 +56,7 @@ class JoinPoolPage extends React.Component {
           update={updatePrediction}
           save={savePredictions}
         />
-        
+
         <div style={{ marginTop: '5em' }}> <hr /></div>
       </Layout>
     );

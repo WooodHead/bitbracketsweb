@@ -108,7 +108,7 @@ class PredictionLayout extends Component {
         <PredictionForm
           groups={groups}
           matches={matches}
-          predictions={predictions.predictions}
+          predictions={predictions.othersPredictions}
           update={update}
           read={read}
         />
