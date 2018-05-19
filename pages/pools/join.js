@@ -16,16 +16,9 @@ import CONF from '../../conf';
 class JoinPoolPage extends React.Component {
   static async getInitialProps({ store, query, isServer }) {
     const { address } = query;
-    await Promise.all([
-      store.dispatch(fetchContest(CONF.web3.contestName)),
-      store.dispatch(getPoolDetails(address))
-    ]);
+    await store.dispatch(getPoolDetails(address));
+    await store.dispatch(fetchContest(store.getState().pool.contestName));
     return { isServer, address };
-  }
-
-  componentWillMount() {
-    console.log('fetching contest');
-    this.props.fetchContest(CONF.web3.contestName);
   }
 
   componentDidMount() {
@@ -33,6 +26,8 @@ class JoinPoolPage extends React.Component {
       const { address } = this.props;
       this.props.getPoolDetails(address);
     }
+    console.log('fetching contest', this.props.pool.info.contestName);
+    this.props.fetchContest(this.props.pool.info.contestName);
   }
 
   render() {

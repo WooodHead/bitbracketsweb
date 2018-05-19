@@ -16,25 +16,21 @@ import CONF from '../../conf';
 class PoolPredictionPage extends React.Component {
     static async getInitialProps({ store, query, isServer }) {
         const { address, playerAddress } = query;
+        await store.dispatch(getPoolDetails(address));
         await Promise.all([
-            store.dispatch(fetchContest(CONF.web3.contestName)),
-            store.dispatch(fetchPredictions(address, playerAddress)),
-            store.dispatch(getPoolDetails(address))
+            store.dispatch(fetchContest(store.getState().pool.contestName)),
+            store.dispatch(fetchPredictions(address, playerAddress))
         ]);
         return { isServer, address, playerAddress };
     }
 
-    componentWillMount() {
-        const { address, playerAddress } = this.props;
-        this.props.fetchContest(CONF.web3.contestName);
-        this.props.fetchPredictions(address, playerAddress);        
-    }
-
     componentDidMount() {
+        const { address, playerAddress } = this.props;
         if (!this.props.pool || !this.props.pool.info) {
-            const { address } = this.props;
             this.props.getPoolDetails(address);
         }
+        this.props.fetchContest(this.props.pool.info.contestName);
+        this.props.fetchPredictions(address, playerAddress);  
     }
 
     render() {
