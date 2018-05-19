@@ -101,10 +101,9 @@ PredictionForm.propTypes = {
   classes: PropTypes.object.isRequired,
   matches: PropTypes.object.isRequired,
   predictions: PropTypes.object,
-  update: PropTypes.object.isRequired,
-  read: PropTypes.object.isRequired,
-  groups: PropTypes.object.isRequired,
+  update: PropTypes.func.isRequired,
+  read: PropTypes.bool.isRequired,
+  groups: PropTypes.array.isRequired,
   intl: PropTypes.object.isRequired,
-
 };
 export default withStyles(styles)(injectIntl(PredictionForm));
