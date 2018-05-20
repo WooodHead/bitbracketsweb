@@ -15,16 +15,17 @@ class LanguageSelect extends Component {
       <SelectField
         name="language"
         items={this.itemList()}
-        value={this.props.languages}
+        value={this.props.current}
         onChange={this.props.onChange}
       />
     );
   }
 }
+
 LanguageSelect.propTypes = {
   languages: PropTypes.array.isRequired,
-  // current: PropTypes.string.isRequired,
+  current: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-
 };
+
 export default LanguageSelect;

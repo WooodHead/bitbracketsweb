@@ -19,11 +19,6 @@ const styles = theme => ({
 });
 
 class SelectField extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: 'en' };
-  }
-
   handleChange = (event) => {
     this.setState({ value: event.target.value });
     this.props.onChange(event.target.value);
@@ -44,7 +39,7 @@ class SelectField extends React.Component {
       <form className={classes.root} autoComplete="off">
         <FormControl className={classes.formControl}>
           {/* <InputLabel>{this.props.name}</InputLabel> */}
-          <Select value={this.state.value} onChange={this.handleChange}>
+          <Select value={this.props.value} onChange={this.handleChange}>
             {this.renderItems()}
           </Select>
         </FormControl>
@@ -56,7 +51,7 @@ class SelectField extends React.Component {
 SelectField.propTypes = {
   classes: PropTypes.object.isRequired,
   // name: PropTypes.string.isRequired,
-  // value: PropTypes.array.isRequired,
+  value: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
   onChange: PropTypes.func.isRequired,
 };
