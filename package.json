@@ -27,6 +27,8 @@
     "json-server": "json-server --watch ./json_mock_server/db.json --routes ./json_mock_server/routes.json --port 3001"
   },
   "dependencies": {
+    "babel-plugin-react-intl": "^2.4.0",
+    "babel-plugin-transform-define": "^1.3.0",
     "@material-ui/icons": "^1.0.0-beta.43",
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",
