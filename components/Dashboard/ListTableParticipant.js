@@ -5,8 +5,38 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
-import Button from 'material-ui/Button';
+import { injectIntl, defineMessages } from 'react-intl';
+
+
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+
+const messages = defineMessages({
+  PlayersAddress: {
+    id: 'PlayersAddress',
+    defaultMessage: 'Players Address',
+    description: 'Players Address',
+  },
+  lonelyhere: {
+    id: 'lonelyhere',
+    defaultMessage: 'It’s a little bit lonely here... Invite some friends',
+    description: 'lonely here',
+  },
+  Predictions: {
+    id: 'Predictions',
+    defaultMessage: 'Predictions',
+    description: 'Predictions',
+  },
+  Score: {
+    id: 'Score',
+    defaultMessage: 'Score',
+    description: 'Score',
+  },
+  viewpredictions: {
+    id: 'viewpredictions',
+    defaultMessage: 'view predictions',
+    description: 'viewpredictions',
+  },
+});
 
 const styles = theme => ({
   root: {
@@ -20,13 +50,14 @@ const styles = theme => ({
 });
 
 function ListTableParticipant(props) {
-  const { players, classes } = props;
+  const { players, classes, intl } = props;
   if (players.length === 0) {
     return (
       <Grid container spacing={24}>
         <Grid item xs={12} sm={4}>
           <Typography style={{ fontWeight: '500', color: 'grey' }} variant="headline" gutterBottom>
-      It’s a little bit lonely here... Invite some friends
+            {intl.formatMessage(messages.lonelyhere)}
+
           </Typography>
         </Grid>
       </Grid>);
@@ -40,19 +71,19 @@ function ListTableParticipant(props) {
             <TableCell>
               {' '}
               <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
-                   Players Address
+                {intl.formatMessage(messages.PlayersAddress)}
               </Typography>
             </TableCell>
             <TableCell>
               {' '}
               <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
-                    Predictions
+                {intl.formatMessage(messages.Predictions)}
               </Typography>
             </TableCell>
             <TableCell>
               {' '}
               <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
-                    Score
+                {intl.formatMessage(messages.Score)}
               </Typography>
             </TableCell>
           </TableRow>
@@ -68,7 +99,7 @@ function ListTableParticipant(props) {
               </TableCell>
               <TableCell>
                 <Typography style={{ fontWeight: '500' }} variant="subheading" gutterBottom>
-                      view predictions {n.status}
+                  {intl.formatMessage(messages.viewpredictions)}  {n.status}
                 </Typography>
               </TableCell>
               <TableCell>
@@ -94,6 +125,7 @@ ListTableParticipant.defaultProps = {
 ListTableParticipant.propTypes = {
   classes: PropTypes.object.isRequired,
   players: PropTypes.array,
+  intl: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ListTableParticipant);
+export default injectIntl(withStyles(styles)(ListTableParticipant));

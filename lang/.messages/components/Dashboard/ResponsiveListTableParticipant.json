@@ -1,0 +1,27 @@
+[
+  {
+    "id": "PlayersAddress",
+    "description": "Players Address",
+    "defaultMessage": "Players Address"
+  },
+  {
+    "id": "lonelyhere",
+    "description": "lonely here",
+    "defaultMessage": "It’s a little bit lonely here... Invite some friends"
+  },
+  {
+    "id": "Predictions",
+    "description": "Predictions",
+    "defaultMessage": "Predictions"
+  },
+  {
+    "id": "Score",
+    "description": "Score",
+    "defaultMessage": "Score"
+  },
+  {
+    "id": "viewpredictions",
+    "description": "viewpredictions",
+    "defaultMessage": "view predictions"
+  }
+]

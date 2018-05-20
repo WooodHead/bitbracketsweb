@@ -1,0 +1,66 @@
+[
+  {
+    "id": "PoolDetails",
+    "description": "Pool Details for Contest:",
+    "defaultMessage": "Pool Details for Contest:"
+  },
+  {
+    "id": "PoolName",
+    "description": "Pool Name:",
+    "defaultMessage": "Pool Name:"
+  },
+  {
+    "id": "Manager",
+    "description": "Manager:",
+    "defaultMessage": "Manager:"
+  },
+  {
+    "id": "EntryFee",
+    "description": "Entry Fee:",
+    "defaultMessage": "Entry Fee:"
+  },
+  {
+<<<<<<< HEAD
+    "id": "PrizePool",
+    "description": "Prize Pool:",
+    "defaultMessage": "Prize Pool:"
+=======
+    "id": "PricePool",
+    "description": "Price Pool:",
+    "defaultMessage": "Price Pool:"
+>>>>>>> 45bb4b7c4b3d2ac457430f5bde7dc30ff490073d
+  },
+  {
+    "id": "ManagerFee",
+    "description": "Manager Fee:",
+    "defaultMessage": "Manager Fee:"
+  },
+  {
+    "id": "NumberofPlayers",
+    "description": "Number of Players:",
+    "defaultMessage": "Number of Players:"
+<<<<<<< HEAD
+  },
+  {
+    "id": "PoolAmounts",
+    "description": "Pool Amounts:",
+    "defaultMessage": "Pool Amounts:"
+  },
+  {
+    "id": "PoolBalance",
+    "description": "Pool Balance:",
+    "defaultMessage": "Pool Balance:"
+  },
+  {
+    "id": "OwnerFee",
+    "description": "Owner Fee:",
+    "defaultMessage": "Owner Fee:"
+  },
+  {
+    "id": "MaxNumofPlayers",
+    "description": "MaxNumofPlayers:",
+    "defaultMessage": "Max. Num. of Player:"
+=======
+>>>>>>> 45bb4b7c4b3d2ac457430f5bde7dc30ff490073d
+  }
+]
