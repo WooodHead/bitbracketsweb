@@ -18,6 +18,7 @@ import ExpansionPanel, {
 } from 'material-ui/ExpansionPanel';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import { CircularProgress } from 'material-ui/Progress';
+import withMetaMask from '../HOC/withMetaMask';
 
 import { Router } from '../../routes';
 
@@ -171,8 +172,10 @@ class JoinPoolLayout extends Component {
 
   getStepContent(stepIndex) {
     const {
-      groups, matches, predictions, update, read, team,
+      groups, matches, predictions, update, read, team, pool
     } = this.props;
+
+    const JoinPaymentFormWithMM = withMetaMask(JoinPaymentForm);
 
     switch (stepIndex) {
       // case 1:
@@ -187,7 +190,7 @@ class JoinPoolLayout extends Component {
           read={read || predictions.loading}
         />);
       case 2:
-        return <JoinPaymentForm />;
+        return <JoinPaymentFormWithMM pool={pool} />;
       default:
         return 'Unknown stepIndex';
     }
@@ -198,18 +201,13 @@ class JoinPoolLayout extends Component {
       const {
         intl, pool, form, predictions, apiPredictions, matches,
       } = this.props;
-      console.log('JoinPoolLayout', 'handleNext ', pool);
-      console.log('JoinPoolLayout', 'handleNext ', predictions);
-      console.log('JoinPoolLayout', 'handleNext ', apiPredictions);
+
       const lastStep = this.getSteps().length;
 
       switch (activeStep) {
         case 1:
-          console.log('predictions ', predictions);
           const numberMatches = _.filter(matches, match => _.isObject(match)).length;
           const numberPredictions = _.filter(predictions.predictions, prediction => _.isObject(prediction)).length;
-          console.log('numberMatches', numberMatches);
-          console.log('numberPredictions', numberPredictions);
           if (numberMatches === numberPredictions) {
             this.props.save(pool, predictions.predictions)
               .then(() => this.setState({ activeStep: activeStep + 1, error: '' }))
@@ -219,7 +217,6 @@ class JoinPoolLayout extends Component {
           }
           break;
         case lastStep:
-          console.log('JoinPoolLayout', 'lastStep', apiPredictions);
           this.props.onSubmit(pool.info, apiPredictions)
             .then(poolAddress => Router.pushRoute(`/pools/${pool.address}?prediction=success`))
             .catch(err => console.error('Error: ', err));

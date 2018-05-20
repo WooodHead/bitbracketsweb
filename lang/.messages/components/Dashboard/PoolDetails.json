@@ -20,15 +20,9 @@
     "defaultMessage": "Entry Fee:"
   },
   {
-<<<<<<< HEAD
     "id": "PrizePool",
     "description": "Prize Pool:",
     "defaultMessage": "Prize Pool:"
-=======
-    "id": "PricePool",
-    "description": "Price Pool:",
-    "defaultMessage": "Price Pool:"
->>>>>>> 45bb4b7c4b3d2ac457430f5bde7dc30ff490073d
   },
   {
     "id": "ManagerFee",
@@ -39,7 +33,6 @@
     "id": "NumberofPlayers",
     "description": "Number of Players:",
     "defaultMessage": "Number of Players:"
-<<<<<<< HEAD
   },
   {
     "id": "PoolAmounts",
@@ -53,14 +46,17 @@
   },
   {
     "id": "OwnerFee",
-    "description": "Owner Fee:",
-    "defaultMessage": "Owner Fee:"
+    "description": "Platform Fee:",
+    "defaultMessage": "Platform Fee:"
   },
   {
     "id": "MaxNumofPlayers",
     "description": "MaxNumofPlayers:",
     "defaultMessage": "Max. Num. of Player:"
-=======
->>>>>>> 45bb4b7c4b3d2ac457430f5bde7dc30ff490073d
+  },
+  {
+    "id": "MaxBalance",
+    "description": "MaxBalance",
+    "defaultMessage": "MaxBalance"
   }
 ]
