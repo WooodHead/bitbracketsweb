@@ -14,8 +14,7 @@ export const fetchPredictions = (poolAddress, playerAddress) => async dispatch =
         const res = await axios.get(`${API_BASE_URL}/pools/${poolAddress}/player/${playerAddress}`);
         dispatch({ type: actionTypes.FETCH_PREDICTIONS_SUCCESS, payload: res.data });
     } catch (error) {
-        console.log('error', error);
-        dispatch({ type: actionTypes.FETCH_PREDICTIONS_FAIL, payload: error });
+        dispatch({ type: actionTypes.FETCH_PREDICTIONS_FAIL, payload: error.message });
     }
 }
 
@@ -48,7 +47,6 @@ export const savePredictions = (pool, predictions) => async dispatch => {
         const res = await axios.post(`${API_BASE_URL}/predictions/${contestName}/build`, data);
         dispatch({ type: actionTypes.SAVE_PREDICTIONS_SUCCESS, payload: res.data });
     } catch (error) {
-        console.log('error', error);
-        dispatch({ type: actionTypes.SAVE_PREDICTIONS_FAIL, payload: error });
+        dispatch({ type: actionTypes.SAVE_PREDICTIONS_FAIL, payload: error.message });
     }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { bindActionCreators } from "redux";
 import withRedux from "next-redux-wrapper";
 import Link from "next/link";
+import Error from 'next/error';
 
 import withRoot from '../../components/HOC/md/withRoot';
 import { initStore } from '../../store';
@@ -30,7 +31,7 @@ class PoolPredictionPage extends React.Component {
             this.props.getPoolDetails(address);
         }
         this.props.fetchContest(this.props.pool.info.contestName);
-        this.props.fetchPredictions(address, playerAddress);  
+        this.props.fetchPredictions(address, playerAddress);
     }
 
     render() {
@@ -39,8 +40,13 @@ class PoolPredictionPage extends React.Component {
             pool,
             groups,
             matches,
-            playerAddress
+            playerAddress,
+            error
         } = this.props;
+
+        if (error) {
+            return <Error statusCode={error} />
+        }
 
         return (
             <Layout>
@@ -65,13 +71,14 @@ function mapStateToProps(state) {
         matches: MatchesSelector(state),
         groups: GroupsSelector(state),
         predictions: state.predictions,
+        error: state.pool.error || state.contest.error || state.predictions.error,
     };
 }
 
 const mapDispatchToProps = dispatch => ({
     fetchContest: bindActionCreators(fetchContest, dispatch),
     getPoolDetails: bindActionCreators(getPoolDetails, dispatch),
-    fetchPredictions: bindActionCreators(fetchPredictions, dispatch),    
+    fetchPredictions: bindActionCreators(fetchPredictions, dispatch),
 });
 
 export default withRoot(

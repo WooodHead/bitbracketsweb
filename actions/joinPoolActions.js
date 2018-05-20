@@ -34,7 +34,7 @@ export const joinPool = (pool, predictions) => dispatch =>
       resolve(tx);
     } catch (error) {
       console.log(error);
-      dispatch({ type: actionTypes.JOIN_POOL_FAIL, payload: error });
+      dispatch({ type: actionTypes.JOIN_POOL_FAIL, payload: error.message });
       reject(error);
     }
   });

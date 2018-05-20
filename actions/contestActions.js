@@ -13,7 +13,7 @@ const fetchMatches = (contest) => async dispatch => {
         const res = await axios.get(`${API_BASE_URL}/contests/${contest}/matches`);
         dispatch({ type: actionTypes.FETCH_MATCHES_SUCCESS, payload: res.data });
     } catch (error) {
-        dispatch({ type: actionTypes.FETCH_MATCHES_FAIL, payload: error });
+        dispatch({ type: actionTypes.FETCH_MATCHES_FAIL, payload: error.message });
     }
 };
 
@@ -24,7 +24,7 @@ const fetchTeams = (contest) => async dispatch => {
         const res = await axios.get(`${API_BASE_URL}/contests/${contest}/teams`);
         dispatch({ type: actionTypes.FETCH_TEAMS_SUCCESS, payload: res.data });
     } catch (error) {
-        dispatch({ type: actionTypes.FETCH_TEAMS_FAIL, payload: error });
+        dispatch({ type: actionTypes.FETCH_TEAMS_FAIL, payload: error.message });
     }
 };
 

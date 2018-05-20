@@ -1,6 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import withRedux from 'next-redux-wrapper';
+import Error from 'next/error';
 
 import withRoot from '../../components/HOC/md/withRoot';
 import { initStore } from '../../store';
@@ -38,7 +39,12 @@ class JoinPoolPage extends React.Component {
       matches,
       updatePrediction,
       savePredictions,
+      error
     } = this.props;
+
+    if (error) {
+      return <Error statusCode={error} />
+    }
 
     return (
       <Layout>
@@ -64,6 +70,7 @@ function mapStateToProps(state) {
     matches: MatchesSelector(state),
     groups: GroupsSelector(state),
     predictions: state.predictions,
+    error: state.pool.error || state.contest.error || state.predictions.error,
   };
 }
 
