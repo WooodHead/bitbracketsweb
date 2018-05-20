@@ -11,7 +11,6 @@
     }
   },
   "plugins": [
-
     ["transform-define", "./env.config.js"],
     ["react-intl", { "messagesDir": "lang/.messages/" }]
   ]
