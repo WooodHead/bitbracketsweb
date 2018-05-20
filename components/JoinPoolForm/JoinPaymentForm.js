@@ -1,17 +1,12 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { Component } from 'react';
-import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
-import { Control, Form, actions } from 'react-redux-form';
+import PropTypes from 'prop-types';
+import { injectIntl, defineMessages } from 'react-intl';
+import { Form } from 'react-redux-form';
 
 import { withStyles } from 'material-ui/styles';
-import TextField from 'material-ui/TextField';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
-import { FormLabel } from 'material-ui/Form';
-import ExpansionPanel, {
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
-} from 'material-ui/ExpansionPanel';
-import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
@@ -108,61 +103,9 @@ const messages = defineMessages({
 });
 
 class JoinPaymentForm extends Component {
-  renderPayment() {
-    const { classes, intl } = this.props;
-
-    return (
-      <Form
-        className={classes.formBox}
-        model="joinPool"
-      >
-        <Typography className={classes.headingTertiary} variant="subheading">
-          {intl.formatMessage(messages.headingTertiary1)}
-        </Typography>
-
-        <Typography>
-          {intl.formatMessage(messages.help)}
-        </Typography>
-
-        <div className={classes.expansionPanel}>
-          <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{intl.formatMessage(messages.installHeader)}</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                {intl.formatMessage(messages.installDescription)}
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{intl.formatMessage(messages.etherHeader)}</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                {intl.formatMessage(messages.etherDescription)}
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{intl.formatMessage(messages.sendHeader)}</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                {intl.formatMessage(messages.sendDescription)}
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-        </div>
-
-      </Form>
-    );
-  }
-
   renderPaymentDetails() {
-    const { classes, intl } = this.props;
+    const { classes, intl, pool } = this.props;
+    const entryFee = pool.info ? pool.info.amountPerPlayer : 'undefined';
 
     return (
       <Form
@@ -172,7 +115,7 @@ class JoinPaymentForm extends Component {
         <Typography className={classes.headingTertiary} variant="subheading">
           {intl.formatMessage(messages.headingTertiary2)}
         </Typography>
-        <Grid container alignItems="baseline">
+        {/* <Grid container alignItems="baseline">
           <Grid item xs={3}>
             <Typography>{intl.formatMessage(messages.entryLabel)}</Typography>
           </Grid>
@@ -185,20 +128,21 @@ class JoinPaymentForm extends Component {
               InputProps={{ disableUnderline: true }}
             />
           </Grid>
-        </Grid>
+        </Grid> */}
 
         <Grid container alignItems="baseline">
           <Grid item xs={3}>
             <Typography>{intl.formatMessage(messages.feeLabel)}</Typography>
           </Grid>
           <Grid item xs={9}>
-            <Control.text
+            {/* <Control.text
               className={classes.textField}
               model=".entryFee"
               component={TextField}
               disabled
               InputProps={{ disableUnderline: true }}
-            />
+            /> */}
+            {entryFee} ETH
           </Grid>
         </Grid>
 
@@ -209,13 +153,14 @@ class JoinPaymentForm extends Component {
             <Typography>{intl.formatMessage(messages.totalLabel)}</Typography>
           </Grid>
           <Grid item xs={9}>
-            <Control.text
+            {/* <Control.text
               className={classes.textField}
               model=".entryTotal"
               component={TextField}
               disabled
               InputProps={{ disableUnderline: true }}
-            />
+            /> */}
+            {entryFee} ETH
           </Grid>
         </Grid>
 
@@ -225,9 +170,15 @@ class JoinPaymentForm extends Component {
 
   render() {
     return (
-      this.renderPayment()
+      this.renderPaymentDetails()
     );
   }
 }
+
+JoinPaymentForm.propTypes = {
+  pool: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(injectIntl(JoinPaymentForm));

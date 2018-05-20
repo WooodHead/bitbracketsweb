@@ -18,6 +18,7 @@ import ExpansionPanel, {
 } from 'material-ui/ExpansionPanel';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import { CircularProgress } from 'material-ui/Progress';
+import withMetaMask from '../HOC/withMetaMask';
 
 import { Router } from '../../routes';
 
@@ -171,8 +172,10 @@ class JoinPoolLayout extends Component {
 
   getStepContent(stepIndex) {
     const {
-      groups, matches, predictions, update, read, team,
+      groups, matches, predictions, update, read, team, pool
     } = this.props;
+
+    const JoinPaymentFormWithMM = withMetaMask(JoinPaymentForm);
 
     switch (stepIndex) {
       // case 1:
@@ -187,7 +190,7 @@ class JoinPoolLayout extends Component {
           read={read || predictions.loading}
         />);
       case 2:
-        return <JoinPaymentForm />;
+        return <JoinPaymentFormWithMM pool={pool} />;
       default:
         return 'Unknown stepIndex';
     }
