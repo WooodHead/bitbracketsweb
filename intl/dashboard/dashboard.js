@@ -11,7 +11,8 @@ export default {
     PoolAmounts: 'Pool Amounts',
     MaxNumofPlayers: 'Max. Num. of Players:',
     PoolBalance: 'Pool Balance:',
-    OwnerFee: 'Owner Fee',
+    OwnerFee: 'Platform Fee',
+    MaxBalance: 'Max Allowed Balance:',
 
   },
   es: {
@@ -26,10 +27,8 @@ export default {
     PoolAmounts: 'Cantidad de la Quiniela',
     MaxNumofPlayers: 'Num. Max. de jugadores:',
     PoolBalance: 'Balance de la quiniela',
-    OwnerFee: 'Tarifa del propietario',
-
-
-
+    OwnerFee: 'Tarifa de la Plataform',
+    MaxBalance: 'Balance Máximo Posible :',
   },
 };
 

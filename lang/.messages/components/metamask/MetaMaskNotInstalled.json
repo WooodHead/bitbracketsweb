@@ -45,6 +45,11 @@
     "defaultMessage": "You cannot use USD with BitBrackets pools — any currencies need to be converted into ETH first."
   },
   {
+    "id": "etherDescription2",
+    "description": "",
+    "defaultMessage": "You can try BitBrackets with play money if you are using the Rinkeby test platform at https://rinkeby.bitbrackets.io, follow this link to load MetaMask with play ether"
+  },
+  {
     "id": "sendHeader",
     "description": "",
     "defaultMessage": "How to Send ETH to MetaMask"
@@ -52,7 +57,12 @@
   {
     "id": "sendDescription",
     "description": "",
-    "defaultMessage": "Go to:"
+    "defaultMessage": "If you want to try BitBrackets with Play money follow the instructions here to load play money into your wallet:"
+  },
+  {
+    "id": "sendDescription2",
+    "description": "",
+    "defaultMessage": "If you want to try with Play money follow the instructions here to load play money into your wallet:"
   },
   {
     "id": "headingTertiary2",

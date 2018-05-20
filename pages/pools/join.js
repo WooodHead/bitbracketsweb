@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import withRedux from 'next-redux-wrapper';
 import Link from 'next/link';
 
+import withMetaMask from '../../components/HOC/withMetaMask';
 import withRoot from '../../components/HOC/md/withRoot';
 import withPersistGate from '../../components/HOC/withPersistGate';
 import { initStore } from '../../store';
@@ -40,9 +41,11 @@ class JoinPoolPage extends React.Component {
       savePredictions,
     } = this.props;
 
+    const JoinPoolLayoutWithMM = withMetaMask(JoinPoolLayout);
+
     return (
       <Layout>
-        <JoinPoolLayout
+        <JoinPoolLayoutWithMM
           pool={pool}
           onSubmit={this.props.joinPool}
           groups={groups}

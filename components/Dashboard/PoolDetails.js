@@ -82,15 +82,19 @@ const messages = defineMessages({
   },
   OwnerFee: {
     id: 'OwnerFee',
-    defaultMessage: 'Owner Fee:',
-    description: 'Owner Fee:',
+    defaultMessage: 'Platform Fee:',
+    description: 'Platform Fee:',
   },
   MaxNumofPlayers: {
     id: 'MaxNumofPlayers',
     defaultMessage: 'Max. Num. of Player:',
     description: 'MaxNumofPlayers:',
   },
-
+  MaxBalance: {
+    id: 'MaxBalance',
+    defaultMessage: 'MaxBalance',
+    description: 'MaxBalance',
+  },
 });
 function PoolDetails(props) {
   const { classes, pool, intl } = props;
@@ -144,7 +148,7 @@ function PoolDetails(props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="subheading">
-            <span className={classes.paragraph}>Max Balance: &nbsp;</span>
+            <span className={classes.paragraph}>{intl.formatMessage(messages.MaxBalance)} &nbsp;</span>
             <span style={{ fontWeight: '600' }}>{pool.maxBalanceEth} ETH</span>
           </Typography>
         </Grid>

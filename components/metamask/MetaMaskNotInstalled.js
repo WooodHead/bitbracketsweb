@@ -59,6 +59,11 @@ const messages = defineMessages({
     defaultMessage: 'You cannot use USD with BitBrackets pools — any currencies need to be converted into ETH first.',
     description: '',
   },
+  etherDescription2: {
+    id: 'etherDescription2',
+    defaultMessage: 'You can try BitBrackets with play money if you are using the Rinkeby test platform at https://rinkeby.bitbrackets.io, follow this link to load MetaMask with play ether',
+    description: '',
+  },
   sendHeader: {
     id: 'sendHeader',
     defaultMessage: 'How to Send ETH to MetaMask',
@@ -66,7 +71,12 @@ const messages = defineMessages({
   },
   sendDescription: {
     id: 'sendDescription',
-    defaultMessage: 'Go to:',
+    defaultMessage: 'If you want to try BitBrackets with Play money follow the instructions here to load play money into your wallet:',
+    description: '',
+  },
+  sendDescription2: {
+    id: 'sendDescription2',
+    defaultMessage: 'If you want to try with Play money follow the instructions here to load play money into your wallet:',
     description: '',
   },
   headingTertiary2: {
@@ -170,12 +180,12 @@ const MetaMaskNotInstalled = ({ intl, classes }) => (
       <Grid item xs={12}>
         <Typography variant="display2" className={classes.help}>
           {intl.formatMessage(messages.help)}
-        
+
         </Typography>
-       
+
       </Grid>
       <div />
-     
+
 
       <Grid item xs={12}>
         <div className={classes.expansionPanel}>
@@ -216,7 +226,14 @@ const MetaMaskNotInstalled = ({ intl, classes }) => (
                   </a>
                 </li>
 
-                <li>   <Typography>{intl.formatMessage(messages.etherDescription1)}   </Typography>
+                <li>
+                  <Typography>{intl.formatMessage(messages.etherDescription1)}</Typography>
+                </li>
+                <li>
+                  <Typography>{intl.formatMessage(messages.etherDescription2)}</Typography>
+                  <a href="https://faucet.rinkeby.io/" target="_blank" rel="noopener noreferrer">
+                    <Typography>Rinkeby Authenticated Faucet</Typography>
+                  </a>
                 </li>
 
               </ol>
