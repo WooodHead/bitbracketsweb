@@ -126,7 +126,7 @@ class ResponsiveNavbar extends React.Component {
                         <Button href="/faq">FAQs</Button>
                       </MenuItem>
                       <Divider />
-                      <MenuItem onClick={this.handleClose}>
+                      {/* <MenuItem onClick={this.handleClose}>
                         {' '}
                         <Button
                           href={`/contest/${CONF.web3.contestName}/pools/new`}
@@ -134,7 +134,7 @@ class ResponsiveNavbar extends React.Component {
                           {intl.formatMessage(messages.navigationNavbarlink3)}
 
                         </Button>
-                      </MenuItem>
+                      </MenuItem> */}
                       <Divider />
                       {languageSelect}
 
