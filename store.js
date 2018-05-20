@@ -19,7 +19,7 @@ export const initStore = (initialState, {
   const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['predictions'], // make sure it does not clash with server keys
+    whitelist: ['predictions', 'language'], // make sure it does not clash with server keys
   };
 
   const persistedReducer = persistReducer(persistConfig, reducer);
