@@ -90,7 +90,7 @@ class MetamaskLocked extends React.Component {
         </Grid>
 
         <div className={classes.image}>
-          <img src="./../../static/metalocked.png" alt="metamask" height="250" width="350" />
+          <img src="/static/metalocked.png" alt="metamask" height="250" width="350" />
 
 
         </div>
