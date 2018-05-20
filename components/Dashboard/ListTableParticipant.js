@@ -6,6 +6,7 @@ import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import { injectIntl, defineMessages } from 'react-intl';
+import ViewPredictionsLink from './ViewPredictionsLink';
 
 
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
@@ -50,7 +51,9 @@ const styles = theme => ({
 });
 
 function ListTableParticipant(props) {
-  const { players, classes, intl } = props;
+  const {
+    players, classes, intl, poolAddress,
+  } = props;
   if (players.length === 0) {
     return (
       <Grid container spacing={24}>
@@ -99,7 +102,13 @@ function ListTableParticipant(props) {
               </TableCell>
               <TableCell>
                 <Typography style={{ fontWeight: '500' }} variant="subheading" gutterBottom>
-                  {intl.formatMessage(messages.viewpredictions)}  {n.status}
+                  <ViewPredictionsLink
+                    text={intl.formatMessage(messages.viewpredictions)}
+                    status={n.status}
+                    playerAddress={n.address}
+                    poolAddress={poolAddress}
+                  />
+                  {/* {intl.formatMessage(messages.viewpredictions)} */}
                 </Typography>
               </TableCell>
               <TableCell>
@@ -123,6 +132,7 @@ ListTableParticipant.defaultProps = {
 };
 
 ListTableParticipant.propTypes = {
+  poolAddress: PropTypes.string.isRequired,
   classes: PropTypes.object.isRequired,
   players: PropTypes.array,
   intl: PropTypes.object.isRequired,

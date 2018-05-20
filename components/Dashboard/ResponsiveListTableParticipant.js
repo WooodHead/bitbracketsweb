@@ -6,8 +6,8 @@ import { injectIntl, defineMessages } from 'react-intl';
 import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
-
 import Grid from 'material-ui/Grid';
+import ViewPredictionsLink from './ViewPredictionsLink';
 
 
 const messages = defineMessages({
@@ -48,7 +48,7 @@ const styles = theme => ({
 });
 
 function ResponsiveListTableParticipant(props) {
-  const { players, intl } = props;
+  const { players, intl, poolAddress } = props;
   if (players.length === 0) {
     return (
       <Grid container spacing={24}>
@@ -98,7 +98,12 @@ function ResponsiveListTableParticipant(props) {
                   variant="subheading"
                   gutterBottom
                 >
-                  {intl.formatMessage(messages.viewpredictions)} {n.status}
+                  <ViewPredictionsLink
+                    text={intl.formatMessage(messages.viewpredictions)}
+                    status={n.status}
+                    playerAddress={n.address}
+                    poolAddress={poolAddress}
+                  />
                 </Typography>
               </Grid>
             </Grid>
@@ -130,7 +135,7 @@ function ResponsiveListTableParticipant(props) {
 }
 
 ResponsiveListTableParticipant.propTypes = {
-  // classes: PropTypes.object.isRequired,
+  poolAddress: PropTypes.string.isRequired,
   players: PropTypes.array.isRequired,
   intl: PropTypes.object.isRequired,
 };

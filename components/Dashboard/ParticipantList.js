@@ -59,6 +59,7 @@ class ParticipantList extends React.Component {
       players,
       loadingPlayers,
       error,
+      pool,
     } = this.props;
 
     if (loadingPlayers) {
@@ -77,11 +78,11 @@ class ParticipantList extends React.Component {
       <div>
         <Grid className={classes.list}>
           {' '}
-          <ListTableParticipant players={players} />
+          <ListTableParticipant players={players} poolAddress={pool.address} />
         </Grid>
 
         <div className={classes.listResponsive}>
-          <ResponsiveListTableParticipant players={players} />
+          <ResponsiveListTableParticipant players={players} poolAddress={pool.address} />
         </div>
       </div>
     );
