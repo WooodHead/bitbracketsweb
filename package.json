@@ -29,6 +29,8 @@
   "dependencies": {
     "@material-ui/icons": "^1.0.0-beta.43",
     "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
     "ethereumjs-util": "^5.2.0",
     "fs-extra": "^5.0.0",
     "lodash": "^4.17.5",
