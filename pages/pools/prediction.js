@@ -50,14 +50,14 @@ class PoolPredictionPage extends React.Component {
 
         return (
             <Layout>
-                {/* <PredictionLayout
+                <PredictionLayout
                     pool={pool}
                     groups={groups}
                     matches={matches}
                     predictions={predictions}
                     player={playerAddress}
                     read
-                /> */}
+                />
 
                 <div style={{ marginTop: '5em' }}> <hr /></div>
             </Layout>
