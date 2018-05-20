@@ -30,6 +30,7 @@ const IndexDashboard = (props) => {
       <TimeRemaining date={dateStartTime} />
       <PoolDetails pool={pool} />
       <ParticipantList pool={pool} />
+  
     </div>
   );
 };

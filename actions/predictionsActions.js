@@ -8,10 +8,15 @@ const API_BASE_URL = CONF.endpoint.url;
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const isNotUndefined = value => !(_.isUndefined(value));
 
-export const fetchPredictions = (pool) => async dispatch => {
+export const fetchPredictions = (poolAddress, playerAddress) => async dispatch => {
     dispatch({ type: actionTypes.FETCH_PREDICTIONS_REQUEST });
-    await delay(5000);
-    dispatch({ type: actionTypes.FETCH_PREDICTIONS_SUCCESS, payload: pool });
+    try {
+        const res = await axios.get(`${API_BASE_URL}/pools/${poolAddress}/player/${playerAddress}`);
+        dispatch({ type: actionTypes.FETCH_PREDICTIONS_SUCCESS, payload: res.data });
+    } catch (error) {
+        console.log('error', error);
+        dispatch({ type: actionTypes.FETCH_PREDICTIONS_FAIL, payload: error });
+    }
 }
 
 export const updatePrediction = (matchIndex, prediction) => async dispatch => {

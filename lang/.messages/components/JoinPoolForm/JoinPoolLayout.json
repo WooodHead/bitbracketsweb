@@ -2,7 +2,7 @@
   {
     "id": "JoinPoolLayout.headingPrimary",
     "description": "",
-    "defaultMessage": "Welcome to [CRYPTOPOOL]"
+    "defaultMessage": "Welcome to {poolName}"
   },
   {
     "id": "JoinPoolLayout.userSetupStep",
