@@ -17,6 +17,6 @@ export const fetchLanguages = () => async (dispatch) => {
     const res = await axios.get(`${API}/languages`);
     dispatch({ type: actionTypes.FETCH_LANGUAGES_SUCCESS, payload: res.data });
   } catch (error) {
-    dispatch({ type: actionTypes.FETCH_LANGUAGES_FAIL, payload: error });
+    dispatch({ type: actionTypes.FETCH_LANGUAGES_FAIL, payload: error.message });
   }
 };
