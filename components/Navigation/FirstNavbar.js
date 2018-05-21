@@ -32,7 +32,7 @@ const styles = theme => ({
     },
   },
   buttonResponsive: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       visibility: 'hidden',
       display: 'none',
     },
