@@ -175,7 +175,7 @@ const MetaMaskNotInstalled = ({ intl, classes }) => (
         <Typography className={classes.headingTertiary} variant="display2">
           {intl.formatMessage(messages.headingTertiary1)}
         </Typography>
-        <img src="./../../static/metamask.png" alt="metamask" height="150" width="130" />
+        <img src="/static/metamask.png" alt="metamask" height="150" width="130" />
       </Grid>
       <Grid item xs={12}>
         <Typography variant="display2" className={classes.help}>

@@ -84,13 +84,13 @@ function Footer(props) {
                 </Typography>
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/mypools"className={classes.aTag}>
                 <Typography variant="subheading" gutterBottom className={classes.text}>
                   {intl.formatMessage(messages.navigationNavbarlink3)}
                 </Typography>
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="/faq"className={classes.aTag}>
                 <Typography variant="subheading" gutterBottom className={classes.text}>
@@ -141,7 +141,7 @@ function Footer(props) {
 
           </ul>
         </Grid>
-        <Grid item xs={6} sm={3}>
+        {/* <Grid item xs={6} sm={3}>
           <ul className={classes.list}>
             <li>
               <a
@@ -154,7 +154,7 @@ function Footer(props) {
               </a>
             </li>
           </ul>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12}>
           <a
             href="https://coralbytes.com/"

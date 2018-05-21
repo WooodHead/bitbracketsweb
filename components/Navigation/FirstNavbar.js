@@ -79,13 +79,15 @@ function FirstNavbar(props) {
 
         <Typography variant="title" color="inherit" className={classes.flex}>
           <a href="/" className={classes.brandname}>
-
-          &nbsp;&nbsp; BitBrackets
-
-
+          &nbsp;&nbsp; BitBrackets &nbsp; &nbsp; &nbsp;
           </a>
-
+          <span style={{ color: '#b9f7e0' }}>
+            <i className="fas fa-circle fa-xs" />
+          </span>
+          <span style={{ fontSize: '14px' }}>    Beta Rinkeby Test Net</span>
         </Typography>
+
+
         <div className={classes.responsive}>
           <Toolbar>
 
@@ -98,9 +100,9 @@ function FirstNavbar(props) {
             <Button href="/faq" color="inherit">
             FAQs
             </Button>
-            <Button href="/mypools" color="inherit">
+            {/* <Button href="/mypools" color="inherit">
               {intl.formatMessage(messages.navigationNavbarlink3)}
-            </Button>
+            </Button> */}
 
             <Button
               href={`/contest/${CONF.web3.contestName}/pools/new`}

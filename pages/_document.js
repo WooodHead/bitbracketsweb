@@ -26,6 +26,15 @@ class MyDocument extends Document {
             name="theme-color"
             content={pageContext.theme.palette.primary[500]}
           />
+          {/* social  */}
+          <meta property="og:title" content="BitBrackets.io - First Cryptocurrency Sports Pool Platform" />
+          <meta property="og:description" content="Start a pool with your friends and family" />
+          <meta property="og:image" content="https://bitbrackets.io/static/metaTag.png" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://bitbrackets.io/" />
+
+
+          {/* end social */}
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
@@ -34,8 +43,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
           />
-          
-        
+
 
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 
