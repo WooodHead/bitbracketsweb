@@ -40,7 +40,7 @@ const styles = theme => ({
 
   list: {
     display: 'flex',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       visibility: 'hidden',
       display: 'none',
     },
@@ -66,6 +66,21 @@ class ParticipantList extends React.Component {
       return <CircularProgress />;
     }
 
+
+    if (players) {
+      return (
+        <div>
+          <Grid className={classes.list}>
+            {' '}
+            <ListTableParticipant players={players} poolAddress={pool.address} />
+          </Grid>
+
+          <div className={classes.listResponsive}>
+            <ResponsiveListTableParticipant players={players} poolAddress={pool.address} />
+          </div>
+        </div>
+      );
+    }
     if (error) {
       return (
         <div className={classes.box}>
@@ -73,19 +88,6 @@ class ParticipantList extends React.Component {
         </div>
       );
     }
-
-    return (
-      <div>
-        <Grid className={classes.list}>
-          {' '}
-          <ListTableParticipant players={players} poolAddress={pool.address} />
-        </Grid>
-
-        <div className={classes.listResponsive}>
-          <ResponsiveListTableParticipant players={players} poolAddress={pool.address} />
-        </div>
-      </div>
-    );
   };
 
   render() {
