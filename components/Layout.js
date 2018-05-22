@@ -1,12 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { Component } from 'react';
 import { IntlProvider, addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { initGA, logPageView } from '../utils/analytics';
 
-import en from 'react-intl/locale-data/en';
-import es from 'react-intl/locale-data/es';
 
 import Head from './Header';
 import Navigation from './Navigation/Navigation';
@@ -28,7 +29,13 @@ class Layout extends Component {
   componentWillMount() {
     this.props.fetchLanguages();
   }
-
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  }
   render() {
     const language = this.props.current;
 
