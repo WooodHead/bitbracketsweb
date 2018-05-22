@@ -16,7 +16,7 @@ class JoinPoolPage extends React.Component {
   static async getInitialProps({ store, query, isServer }) {
     const { address } = query;
     await store.dispatch(getPoolDetails(address));
-    await store.dispatch(fetchContest(store.getState().pool.contestName));
+    await store.dispatch(fetchContest(store.getState().pool.info.contestName));
     return { isServer, address };
   }
 
@@ -25,10 +25,10 @@ class JoinPoolPage extends React.Component {
     if (!pool || !pool.info) {
       const { address } = this.props;
       this.props.getPoolDetails(address);
+    } else {
+      console.log('fetching contest', pool.info.contestName);
+      this.props.fetchContest(pool.info.contestName);
     }
-
-    console.log('fetching contest', this.props.pool.info.contestName);
-    this.props.fetchContest(this.props.pool.info.contestName);
   }
 
   render() {
@@ -42,8 +42,10 @@ class JoinPoolPage extends React.Component {
       error
     } = this.props;
 
+    console.error('error from redux', error);
+
     if (error) {
-      return <Error statusCode={error} />
+      return <Error statusCode={error} />;
     }
 
     return (
@@ -70,7 +72,8 @@ function mapStateToProps(state) {
     matches: MatchesSelector(state),
     groups: GroupsSelector(state),
     predictions: state.predictions,
-    error: state.pool.error || state.contest.error || state.predictions.error,
+    // TODO: separar estos error en el mapping del estado
+    error: state.pool.error || state.contest.error, // || state.predictions.error,
   };
 }
 
