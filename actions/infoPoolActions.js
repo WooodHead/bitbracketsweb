@@ -48,13 +48,12 @@ export const getPoolDetails = address => dispatch =>
       const fee = contestDetails[9];
       const managerFee = contestDetails[10];
       const amountPaid = contestDetails[11];
+      const highScore = contestDetails[12];
 
-      const highScore = 0;//poolInstance.methods.highestScore().call();
       const winners = poolInstance.methods.getWinners().call();
       const totalBalance = poolInstance.methods.getPoolBalance().call();
       const contractBalance = web3.eth.getBalance(address);
       const res = await Promise.all([
-        highScore,
         winners,
         totalBalance,
         contractBalance
@@ -71,10 +70,10 @@ export const getPoolDetails = address => dispatch =>
         managerFee: managerFee,
         fee: fee,
         amountPaid: web3.utils.fromWei(amountPaid, 'ether'),
-        highScore: res[0],
-        winners: res[1],
-        totalBalance: res[2],
-        totalBalanceEth: web3.utils.fromWei(res[2], 'ether'),
+        highScore: highScore,
+        winners: res[0],
+        totalBalance: res[1],
+        totalBalanceEth: web3.utils.fromWei(res[1], 'ether'),
         address,
         maxBalance,
         maxBalanceEth: web3.utils.fromWei(maxBalance, 'ether')

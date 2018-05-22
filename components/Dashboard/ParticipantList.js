@@ -40,7 +40,7 @@ const styles = theme => ({
 
   list: {
     display: 'flex',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       visibility: 'hidden',
       display: 'none',
     },

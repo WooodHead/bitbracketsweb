@@ -1,6 +1,6 @@
 // Configutation for Production
 const ENDPOINT = {
-  url: process.env.API_URL,
+  url: 'https://rinkeby.api.bitbrackets.io/api' || process.env.API_URL,
 };
 
 module.exports = ENDPOINT;

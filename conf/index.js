@@ -14,10 +14,11 @@ console.log(environment);
 
 let currentConf = environmentsConf.get(environment);
 
-if(typeof currentConf === 'undefined') {
+if (typeof currentConf === 'undefined') {
   throw new Error(`Configuration for environment NODE_ENV = ${environment} not found.`);
 }
 
 console.log(`Web app is using the ${currentConf.name} configuration.`);
+console.log('Web app is using configuration.', currentConf);
 
 export default currentConf;

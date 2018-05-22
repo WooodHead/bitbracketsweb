@@ -2,7 +2,7 @@
 const WEB3 = {
   networks: ['ropsten', 'kovan', 'rinkeby'],
   interval: 1000,
-  factoryAddress: '0x7994df3c4cdf60a56559dd811aad3156e3ab6b72',
+  factoryAddress: '0x2230747607ae54002a0a33da54511d54014c317e',
   infuraUrl: 'https://rinkeby.infura.io/x8dGVFhCSTJoQ7WJ4OIP',
   contestName: 'Russia2018Test'
 };
