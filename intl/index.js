@@ -7,9 +7,10 @@ import metamask from "./metamask";
 import dashboard from "./dashboard/dashboard";
 import dashboardlist from "./dashboard/dashboardlist";
 import metamasklocked from "./metamasklocked";
+import header from "./header";
 
 // agregar las traducciones de los componentes a este arreglo
-const componentMsg = [navigation, home, createPool, roadmap, metamask, dashboard, dashboardlist, metamasklocked];
+const componentMsg = [navigation, home, createPool, roadmap, metamask, dashboard, dashboardlist, metamasklocked, header];
 
 export default () => {
   const messages = _.reduce(

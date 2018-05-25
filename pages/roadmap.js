@@ -27,7 +27,7 @@ function roadmap(props) {
 
   return (
     <IntlProvider locale={language} messages={messages[language]}>
-      <Layout>
+      <Layout title="Roadmap">
         <RoadMap />
      
   
