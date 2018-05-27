@@ -18,7 +18,7 @@ import { initStore } from '../store';
 class Index extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout title="Home">
         {/* <App /> */}
 
         <Home />

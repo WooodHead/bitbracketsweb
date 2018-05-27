@@ -1,0 +1,12 @@
+[
+  {
+    "id": "shortDescription",
+    "description": "",
+    "defaultMessage": "The platform for creating prediction pools for sporting events."
+  },
+  {
+    "id": "description",
+    "description": "",
+    "defaultMessage": "BitBrackets is a smart contract driven platform for creating prediction pools for sporting events based on Ethereum blockchain."
+  }
+]

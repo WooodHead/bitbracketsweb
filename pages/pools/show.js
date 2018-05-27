@@ -17,7 +17,7 @@ const PoolDashboard = ({
   if (errorStatus) {
     return (
       <div>
-        <Layout>
+        <Layout title={`Error ${errorStatus}`}>
           <ErrorPage statusCode={errorStatus} />
         </Layout>
       </div>
@@ -25,7 +25,7 @@ const PoolDashboard = ({
   }
   return (
     <div>
-      <Layout>
+      <Layout title={`${pool.contestName} (${pool.address})`}>
         <IndexDashboard address={address} pool={pool} predictionSuccess={predictionSuccess} />
         <div style={{ marginTop: '5em' }}> <hr /></div>
       </Layout>

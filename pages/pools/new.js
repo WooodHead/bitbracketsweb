@@ -1,24 +1,18 @@
 /* eslint-disable react/forbid-prop-types */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import withRedux from 'next-redux-wrapper';
-// import Link from 'next/link';
-// import util from 'ethereumjs-util';
-// import web3 from '../../ethereum/web3';
-// import factory from '../../ethereum/contestPoolFactory';
 import withRoot from '../../components/HOC/md/withRoot';
 import { initStore } from '../../store';
 import CreatePoolForm from '../../components/CreatePoolForm/CreatePoolForm';
 import { createPool, fetchPoolDetails } from '../../actions';
 import Layout from '../../components/Layout';
 
-
 const CreatePoolPage = ({
   contest, pool, createPoolAction, fetchPoolDetailsAction,
 }) => (
-  <Layout>
+  <Layout title={contest}>
     <CreatePoolForm
       contest={contest}
       pool={pool}

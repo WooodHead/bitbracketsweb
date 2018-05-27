@@ -27,7 +27,7 @@ function faq(props) {
 
   return (
     <IntlProvider locale={language} messages={messages[language]}>
-      <Layout>
+      <Layout title="FAQs">
         <div className="container">
           <div style={{ padding: '1.5em' }}>
             <Qa faqText={faqQ[language]} />

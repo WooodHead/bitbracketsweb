@@ -9,7 +9,7 @@ import { bindActionCreators } from 'redux';
 import { initGA, logPageView } from '../utils/analytics';
 
 
-import Head from './Header';
+import Header from './Header';
 import Navigation from './Navigation/Navigation';
 
 import initMessages from '../intl/';
@@ -42,7 +42,10 @@ class Layout extends Component {
     return (
       <IntlProvider locale={language} messages={messages[language]}>
         <div>
-          <Head title="BitBrackets" />
+          <Header
+            title={this.props.title}
+            description={this.props.description}
+          />
 
           <Navigation
             languageSelect={
