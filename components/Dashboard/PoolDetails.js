@@ -181,6 +181,7 @@ function PoolDetails(props) {
 
           <Typography variant="subheading">
             <span className={classes.paragraph}>{intl.formatMessage(messages.PrizePool)} &nbsp;</span>
+            <span style={{ fontWeight: '600' }}>{pool.priceTotal}% &nbsp;&nbsp;</span>
             <span style={{ fontWeight: '600', color: '#E91E63' }}>{pool.priceBalance} ETH</span>
           </Typography>
         </Grid>

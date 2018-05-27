@@ -81,9 +81,10 @@ export const getPoolDetails = address => dispatch =>
       const balanceEntries = (pool.amountPerPlayer * pool.numPlayers);
       const feeTotal = balanceEntries * (pool.fee / 100);
       const managerTotal = balanceEntries * (pool.managerFee / 100);
-      pool.priceBalance = balanceEntries - feeTotal - managerTotal - pool.amountPaid;
-      pool.managerTotal = managerTotal;
-      pool.ownerTotal = feeTotal;
+      pool.priceTotal = 100 - managerFee - fee;
+      pool.priceBalance = Number(balanceEntries - feeTotal - managerTotal - pool.amountPaid).toFixed(8);
+      pool.managerTotal = Number(managerTotal).toFixed(8);
+      pool.ownerTotal = Number(feeTotal).toFixed(8);
       pool.maxPlayers = maxBalance / amountPerPlayer;
       dispatch({ type: actionTypes.FETCH_POOL_SUCCESS, payload: pool });
       resolve(pool);
