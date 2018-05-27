@@ -1,0 +1,12 @@
+[
+  {
+    "id": "city",
+    "description": "city",
+    "defaultMessage": "City:"
+  },
+  {
+    "id": "stadium",
+    "description": "Stadium",
+    "defaultMessage": "Stadium:"
+  }
+]

@@ -11,7 +11,9 @@ import withRoot from '../../components/HOC/md/withRoot';
 import { initStore } from '../../store';
 import { getPoolDetails } from '../../actions';
 
-const PoolDashboard = ({ address, pool, errorStatus }) => {
+const PoolDashboard = ({
+  address, pool, errorStatus, predictionSuccess,
+}) => {
   if (errorStatus) {
     return (
       <div>
@@ -24,7 +26,7 @@ const PoolDashboard = ({ address, pool, errorStatus }) => {
   return (
     <div>
       <Layout>
-        <IndexDashboard address={address} pool={pool} />
+        <IndexDashboard address={address} pool={pool} predictionSuccess={predictionSuccess} />
         <div style={{ marginTop: '5em' }}> <hr /></div>
       </Layout>
     </div>
@@ -44,10 +46,11 @@ const getStatusFromError = (error) => {
 };
 
 PoolDashboard.getInitialProps = async ({ query, store }) => {
-  const { address } = query;
+  const { address, prediction } = query;
+  console.log('predicctiones:', prediction);
   try {
     const pool = await store.dispatch(getPoolDetails(address));
-    return { address, pool };
+    return { address, pool, predictionSuccess: prediction };
   } catch (error) {
     // console.error('Error while loading page: ', error);
     return { address, errorStatus: getStatusFromError(error) };
@@ -56,12 +59,14 @@ PoolDashboard.getInitialProps = async ({ query, store }) => {
 
 PoolDashboard.defaultProps = {
   errorStatus: undefined,
+  predictionSuccess: undefined,
 };
 
 PoolDashboard.propTypes = {
   pool: PropTypes.object.isRequired,
   address: PropTypes.string.isRequired,
   errorStatus: PropTypes.string,
+  predictionSuccess: PropTypes.string,
 };
 
 export default withRoot(withRedux(initStore)(PoolDashboard));

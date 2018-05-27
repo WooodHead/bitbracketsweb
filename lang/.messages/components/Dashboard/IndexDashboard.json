@@ -1,0 +1,7 @@
+[
+  {
+    "id": "predictionSuccessMessage",
+    "description": "predictionSuccessMessage",
+    "defaultMessage": "Your prediction has been successfully processed. Please give it refresh if it is not listed yet."
+  }
+]
