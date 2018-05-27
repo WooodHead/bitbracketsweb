@@ -2,8 +2,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl, defineMessages } from 'react-intl';
 import { withStyles } from 'material-ui/styles';
-import Card, { CardActions, CardContent } from 'material-ui/Card';
+import Card from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
@@ -30,81 +31,116 @@ const styles = theme => ({
     background: 'linear-gradient(45deg, #e72564, #e72564)',
     color: 'white',
   },
+
 });
 
-const MatchCard = ({
+const messages = defineMessages({
+  city: {
+    id: 'city',
+    defaultMessage: 'City:',
+    description: 'city',
+  },
+  stadium: {
+    id: 'stadium',
+    defaultMessage: 'Stadium:',
+    description: 'Stadium',
+  },
+});
 
-  classes, match, prediction, update, read,
+function MatchCard(props) {
+  const {
+    classes, match, prediction, update, read, intl,
+  } = props;
+  const dateInMillis = match.date;
+  const theDate = new Date(dateInMillis).toDateString();
+  const theHour = new Date(dateInMillis).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' });
+  return (
+    <Card className={classes.card}>
+      <Grid container spacing={24}>
+        <Grid item xs={12}>
+          <Typography variant="body2" gutterBottom align="center">
+            {theDate} &nbsp; {theHour} &nbsp; &nbsp;
+            <span style={{ color: '#616161' }}>     {intl.formatMessage(messages.city)}</span> {match.data.city}
+             &nbsp; &nbsp;
+            <span style={{ color: '#616161' }}>{intl.formatMessage(messages.stadium)} </span>{match.data.stadium}
+          </Typography>
 
-}) => (
+        </Grid>
+      </Grid>
 
+      <Grid container className={classes.container} spacing={16}>
+        <Grid item className={classes.controls} xs={4}>
 
-  <Card className={classes.card}>
-    <Grid container className={classes.container} spacing={16}>
-      <Grid item className={classes.controls} xs={4}>
-    
-        <Button
-          variant="fab"
-          color={prediction === match.home ? 'primary' : 'default'}
-          onClick={() => update(match.index, match.home)}
-          classes={{
+          <Button
+            variant="fab"
+            color={prediction === match.home ? 'primary' : 'default'}
+            onClick={() => update(match.index, match.home)}
+            classes={{
                             disabled: prediction === match.home ? classes.disabled : '',
                         }}
-          disabled={read}
-        >
-          {match.homeAbbr}
-        </Button>
-      </Grid>
-      <Grid item className={classes.controls} xs={4}>
-        <Button
-          variant="fab"
-          color={prediction === '' ? 'primary' : 'default'}
-          onClick={() => update(match.index, '')}
-          classes={{
+            disabled={read}
+          >
+            {match.homeAbbr}
+          </Button>
+        </Grid>
+        <Grid item className={classes.controls} xs={4}>
+          <Button
+            variant="fab"
+            color={prediction === '' ? 'primary' : 'default'}
+            onClick={() => update(match.index, '')}
+            classes={{
                             disabled: prediction === '' ? classes.disabled : '',
                         }}
-          disabled={read}
-        >
+            disabled={read}
+          >
                         TIE
-        </Button>
-      </Grid>
-      <Grid item className={classes.controls} xs={4}>
-    
-        <Button
-          variant="fab"
-          color={prediction === match.away ? 'primary' : 'default'}
-          onClick={() => update(match.index, match.away)}
-          classes={{
+          </Button>
+        </Grid>
+        <Grid item className={classes.controls} xs={4}>
+
+          <Button
+            variant="fab"
+            color={prediction === match.away ? 'primary' : 'default'}
+            onClick={() => update(match.index, match.away)}
+            classes={{
                             disabled: prediction === match.away ? classes.disabled : '',
                         }}
-          disabled={read}
-        >
-          {match.awayAbbr}
-        </Button>
+            disabled={read}
+          >
+            {match.awayAbbr}
+          </Button>
+        </Grid>
       </Grid>
-    </Grid>
-    <Grid container className={classes.container} spacing={16}>
-      <Grid item className={classes.controls} xs={4}>
-        <Typography>{match.homeName}</Typography>
-        <img src={match.homeImag} alt="world cup flags" height="42" width="42" className="img-circle" />
+      <Grid container className={classes.container} spacing={16}>
+        <Grid item className={classes.controls} xs={4}>
+          <Typography>{match.homeName}</Typography>
+          <img src={match.homeImag} alt="world cup flags" height="42" width="42" className="img-circle" />
+        </Grid>
+        <Grid item className={classes.controls} xs={4}>
+          <Typography>-</Typography>
+        </Grid>
+        <Grid item className={classes.controls} xs={4}>
+          <Typography>{match.awayName}</Typography>
+          <img src={match.awayImag} alt="world cup flags" height="42" width="42" />
+        </Grid>
       </Grid>
-      <Grid item className={classes.controls} xs={4}>
-        <Typography>-</Typography>
-      </Grid>
-      <Grid item className={classes.controls} xs={4}>
-        <Typography>{match.awayName}</Typography>
-        <img src={match.awayImag} alt="world cup flags" height="42" width="42" />
-      </Grid>
-    </Grid>
-   
-  </Card>
-);
+
+    </Card>
+  );
+}
+MatchCard.defaultProps = {
+  prediction: PropTypes.string,
+  update: PropTypes.func,
+  read: PropTypes.bool,
+};
+
 MatchCard.propTypes = {
   classes: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
   prediction: PropTypes.string,
   update: PropTypes.func,
   read: PropTypes.bool,
+  intl: PropTypes.object.isRequired,
 };
-export default withStyles(styles)(MatchCard);
+export default withStyles(styles)(injectIntl(MatchCard));
 
