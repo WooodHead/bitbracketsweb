@@ -3,5 +3,6 @@
     "/:resource/:id/show": "/:resource/:id",
     "/posts/:category": "/posts?category=:category",
     "/articles\\?id=:id": "/posts/:id",
-    "/pools/:address": "/pools?address=:address"
+    "/pools/:address": "/pools?address=:address",
+    "/users/:address/pools": "/users?address=:address"
   }

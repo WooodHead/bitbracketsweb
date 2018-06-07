@@ -88,85 +88,62 @@
             }
         ],
         "winner" : []
-    },
-    { 
-        "address":"0x0bbdbdbdbd2121200231",
-        "contestName": "RusiaTest2018",  
-        "manager": "0x02332212121212121200231",
-        "startTime": "2018-06-14T08:40:51.620Z",
-        "endTime": "2018-07-16T08:40:51.620Z",
-        "graceTimeInHours": "24",
-        "amountToPlay": "0.0000001",
-        "managerFeePercentage": "10",
-        "ownerFeePercentage": 10,
-        "totalBalance": "1",
-        "highScore": "32",
-        "firstPlacePlayer": "0x01",
-        "status": "IN_PROGRESS",
-        "results": [8,3,111,3,5],
-        "gamesPlayed": 5,
-        "published_at": "2015-08-05T08:40:51.620Z",
-        "totalPlayer": 29,
-        "players": [
-            {
-                "address": "0x01",
-                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
-                "score": 32
-            }, {
-                "address": "0x02",
-                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
-                "score": 28
-            }, {
-                "address": "0x03",
-                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
-                "score": 21
-            }, {
-                "address": "0x04",
-                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
-                "score": 11
-            }
-        ],
-        "winner" : []
-    },    
-    { 
-        "address":"0x0bbdbdbdbd2121200231",
-        "contestName": "RusiaPrueba2018",  
-        "manager": "0x02332212121212121200231",
-        "startTime": "2018-06-14T08:40:51.620Z",
-        "endTime": "2018-07-16T08:40:51.620Z",
-        "graceTimeInHours": "24",
-        "amountToPlay": "0.0000001",
-        "managerFeePercentage": "10",
-        "ownerFeePercentage": 10,
-        "totalBalance": "1",
-        "highScore": "32",
-        "firstPlacePlayer": "0x01",
-        "status": "IN_PROGRESS",
-        "results": [8,3,111,3,5],
-        "gamesPlayed": 5,
-        "published_at": "2015-08-05T08:40:51.620Z",
-        "totalPlayer": 29,
-        "players": [
-            {
-                "address": "0x01",
-                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
-                "score": 32
-            }, {
-                "address": "0x02",
-                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
-                "score": 28
-            }, {
-                "address": "0x03",
-                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
-                "score": 21
-            }, {
-                "address": "0x04",
-                "prediction": [8,3,111,3,5,1,24,17,21,13,9,7,31,28,22,14,18,7,11,30],
-                "score": 11
-            }
-        ],
-        "winner" : []
-    }   
-    ]
+    }
+    ],
+    "users":
+        {
+            "address":"0xE1F8feA4699Ce3e0196923E6fA16F773600E59e0",
+            "pools":[
+                {
+                    "address":"0xB430747521BB02715c8c7F1b1366e27527d1541E",
+                    "name":"General",
+                    "contestName":"Russia2018Test",
+                    "manager":"0x23b90d187598D4F80669A10E01A6050281009023",
+                    "role":"player",
+                    "totalBalance":0,
+                    "totalPlayers":2,
+                    "amountToPlay":1000000000000000,
+                    "highScore":0,
+                    "status":"NOT_STARTED"
+                },
+                {
+                    "address":"0x4b0B9D6C0D15C05380c766A1f26567C1C92a5781",
+                    "name":"BitBrackets",
+                    "contestName":"Russia2018Test",
+                    "manager":"0xE1F8feA4699Ce3e0196923E6fA16F773600E59e0",
+                    "role":"manager",
+                    "totalBalance":0,
+                    "totalPlayers":70,
+                    "amountToPlay":10000000000000000,
+                    "highScore":0,
+                    "status":"NOT_STARTED"
+                },
+                {
+                    "address":"0xFc62fDe6caA4d80d72E69Cf2Aa56346B025fF95a",
+                    "name":"BitcoinCostaRica",
+                    "contestName":"Russia2018Test",
+                    "manager":"0xE1F8feA4699Ce3e0196923E6fA16F773600E59e0",
+                    "role":"manager",
+                    "totalBalance":0,
+                    "totalPlayers":1,
+                    "amountToPlay":1000000000000000,
+                    "highScore":0,
+                    "status":"NOT_STARTED"
+                },
+                {
+                    "address":"0x87Cb25B25F82e0c8063272655248700ba44540B7",
+                    "name":"BitcoinCostaRica",
+                    "contestName":"Russia2018Test",
+                    "manager":"0xE1F8feA4699Ce3e0196923E6fA16F773600E59e0",
+                    "role":"manager",
+                    "totalBalance":0,
+                    "totalPlayers":1,
+                    "amountToPlay":1000000000000000,
+                    "highScore":0,
+                    "status":"NOT_STARTED"
+                }
+            ]
+        }                         
+         
 }
   

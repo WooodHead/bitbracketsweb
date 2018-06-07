@@ -9,11 +9,13 @@ import { initStore } from '../store';
 import { fetchPools } from '../actions';
 import Layout from '../components/Layout';
 import PoolsComp from '../components/MyPools/MyPools';
+import withMetaMask from '../components/HOC/withMetaMask';
 
 class myPools extends React.Component {
-  
+   
   componentWillMount() {
-    this.props.fetchPools();
+    // this.props.fetchPools('0xE1F8feA4699Ce3e0196923E6fA16F773600E59e0');
+    this.props.fetchPools(this.props.defaultAccount);
   }
 
   render() {
@@ -26,7 +28,6 @@ class myPools extends React.Component {
 }
 
 function mapstateToProps(state) {
-  // console.log('state',state);
   return { pools: state.poolR.pools };
 }
 
@@ -35,5 +36,5 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default withRoot(
-  withRedux(initStore, mapstateToProps, mapDispatchToProps)(myPools)
+  withRedux(initStore, mapstateToProps, mapDispatchToProps)(withMetaMask(myPools))
 );

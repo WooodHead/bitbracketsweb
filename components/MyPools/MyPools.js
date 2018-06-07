@@ -11,35 +11,38 @@ class MyPools extends React.Component {
   }
 
   renderPools() {
-    return this.props.pools.map(poolsItems => (
-      <CardItem key={poolsItems.contestName} item={poolsItems} />
+    const {pools} = this.props;
+
+    if (!pools.pools) {
+      return null;
+    }
+    return pools.pools.map(poolsItems => (
+      <CardItem key={poolsItems.address} item={poolsItems} userAddress={pools.address} />
     ));
   }
 
   render() {
     const style = {
-      height: '100px', width: '100%', margin: '20px auto', padding: '20px 0px',
+      height: '100px', width: '100%', margin: '20px auto', padding: '20px 0px', align: 'center',
     };
     const style2 = {
       height: '100px',
-      width: '40%',
+      width: '200px',
       margin: 'auto',
       padding: '30px 0px',
       clear: 'left',
     };
-
     return (
       <div>
         <div id="page-wrap" style={style}>
-            {this.renderPools()}
-          </div>
+          {this.renderPools()}
+        </div>
         <div style={style2}>
-            <Button href="/create-pool" variant="raised" color="primary">
-                        Create New Pool
-              </Button>
-          </div>
+          <Button href="/contest/Russia2018/pools/new" variant="raised" color="primary">
+                          Create New Pool
+          </Button>
+        </div>
       </div>
-
     );
   }
 }

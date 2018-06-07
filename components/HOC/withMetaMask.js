@@ -162,7 +162,7 @@ function withMetaMask(Component) {
         if (this.state.metamaskLocked) {
           componentToRender = <MetaMaskLocked />;
         } else {
-          componentToRender = <Component {...this.props} />;
+          componentToRender = <Component {...this.props} defaultAccount={this.state.defaultAccount} />;
         }
       } else {
         componentToRender = <MetaMaskNotInstalled />;
