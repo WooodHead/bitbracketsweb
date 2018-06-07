@@ -24,7 +24,7 @@ export default {
   },
   es: {
     headingPrimary: 'Crear Quiniela',
-    poolSetupStep: 'Configuracion de la Quiniela',
+    poolSetupStep: 'Configuración de la Quiniela',
     reviewDetailsStep: 'Revision de los datos',
     paymentStep: 'Pago',
     backButton: 'Atrás',
