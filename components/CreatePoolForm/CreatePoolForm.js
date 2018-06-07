@@ -25,9 +25,11 @@ const styles = theme => ({
     alignItems: 'center',
   },
   stepper: {
-    width: '60%',
-    border: '2px solid lightgray',
-    borderRadius: '5px',
+    [theme.breakpoints.up('md')]: {
+      width: '60%',
+      border: '2px solid lightgray',
+      borderRadius: '5px',
+    },
   },
   headingPrimary: {
     fontWeight: 'bold',
