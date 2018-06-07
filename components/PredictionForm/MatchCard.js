@@ -56,16 +56,28 @@ function MatchCard(props) {
   const theHour = new Date(dateInMillis).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' });
   return (
     <Card className={classes.card}>
-      <Grid container spacing={24}>
-        <Grid item xs={12}>
+      <Grid container spacing={0}>
+        <Grid item xs={12} sm={4}>
           <Typography variant="body2" gutterBottom align="center">
             {theDate} &nbsp; {theHour} &nbsp; &nbsp;
+          
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="body2" gutterBottom align="center">
+           
             <span style={{ color: '#616161' }}>     {intl.formatMessage(messages.city)}</span> {match.data.city}
-             &nbsp; &nbsp;
+   
+           
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="body2" gutterBottom align="center">
+         
             <span style={{ color: '#616161' }}>{intl.formatMessage(messages.stadium)} </span>{match.data.stadium}
           </Typography>
-
         </Grid>
+      
       </Grid>
 
       <Grid container className={classes.container} spacing={16}>
