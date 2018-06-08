@@ -45,6 +45,6 @@ export default {
     'home.section4.title3': 'si creaste la quiniela tambien tendras un % ',
     'home.section4.title4': 'del pozo por ser un embajador del cripto.',
     'home.section5.title1': 'Juega la quiniela de tu evento deportivo favorito con criptomonedas',
-    subscribe: 'subscribete',
+    subscribe: 'Suscribirse',
   },
 };
