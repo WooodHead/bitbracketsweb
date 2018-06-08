@@ -30,6 +30,7 @@ class Banner extends Component {
             background-position: 80% 80%;
             padding-bottom: 350px;
             text-align: center;
+            background-attachment:fixed;
           }
         `}</style>
       </div>
