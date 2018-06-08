@@ -1,17 +1,20 @@
 //
 
-import React, { Component } from "react";
-import Typography from "material-ui/Typography";
+import React, { Component } from 'react';
+import Typography from 'material-ui/Typography';
+import MailchimpSubscribe from '../MailchimpSubscribe';
 
-import { injectIntl, defineMessages, FormattedMessage } from "react-intl";
+import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 
 const messages = defineMessages({
   homeSection5Title1: {
-    id: "home.section5.title1",
-    defaultMessage: "Play your favorite sport events with Cryptocurrency",
-    description: "home > section3"
-  }
+    id: 'home.section5.title1',
+    defaultMessage: 'Play your favorite sport events with Cryptocurrency',
+    description: 'home > section3',
+  },
 });
+
+
 
 class Section5 extends Component {
   render() {
@@ -19,19 +22,20 @@ class Section5 extends Component {
     return (
       <div
         style={{
-          background: "#418BFF",
-          padding: "12%",
-          textAlign: "center"
+          background: '#418BFF',
+          padding: '12%',
+          textAlign: 'center',
         }}
       >
         <Typography
           variant="display1"
           gutterBottom
           align="center"
-          style={{ color: "#fff" }}
+          style={{ color: '#fff' }}
         >
           {intl.formatMessage(messages.homeSection5Title1)}
         </Typography>
+        <MailchimpSubscribe />
       </div>
     );
   }
