@@ -50,6 +50,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-count-down": "^1.1.0",
     "react-dom": "16.2.0",
+    "react-floating-button-menu": "^1.0.9",
     "react-ga": "^2.5.2",
     "react-intl": "^2.4.0",
     "react-linkify": "^0.2.2",

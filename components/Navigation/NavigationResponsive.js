@@ -13,6 +13,7 @@ import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import { injectIntl, defineMessages } from 'react-intl';
 import CONF from '../../conf';
+import ToshiButton from '../ToshiButton';
 
 const messages = defineMessages({
   navigationNavbarlink1: {
@@ -86,8 +87,11 @@ class ResponsiveNavbar extends React.Component {
                 <i className="fas fa-ellipsis-v" />
                 {/* <MoreVertIcon /> */}
               </IconButton>
+            
             </div>
+         
           </Target>
+       
           <Portal>
             <Popper
               placement="bottom"
@@ -144,7 +148,9 @@ class ResponsiveNavbar extends React.Component {
               </ClickAwayListener>
             </Popper>
           </Portal>
+        
         </Manager>
+        {/* <ToshiButton /> */}
       </div>
     );
   }
