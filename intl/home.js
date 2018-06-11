@@ -21,6 +21,11 @@ export default {
     'home.section4.title4': 'fee of the pool for helping to spread crypto awareness',
     'home.section5.title1': 'Play your favorite sport events with Cryptocurrency',
     subscribe: 'subscribe',
+    createprediction: 'Create prediction pools for your favorite sports.',
+    Browser: 'Browser for the Ethereum network',
+    trustwallet: 'Secure wallet for Ethereum',
+    appInstall: 'For best mobile experience we recommend you play with bitbrackes using any of the following apps.',
+
   },
   es: {
     'home.section2.title1': 'Hazte fan y un Crypto geek',
@@ -46,5 +51,10 @@ export default {
     'home.section4.title4': 'del pozo por ser un embajador del cripto.',
     'home.section5.title1': 'Juega la quiniela de tu evento deportivo favorito con criptomonedas',
     subscribe: 'Suscribirse',
+    createprediction: 'Crea tu predicción de tu deporte favorito.',
+    Browser: 'Navegador para la red Ethereum.',
+    trustwallet: 'Billetera segura para Ethereum',
+    appInstall: 'Para una mejor experiencia móvil, te recomendamos que juegues con bitbrackes usando cualquiera de las siguientes aplicaciones.',
+
   },
 };

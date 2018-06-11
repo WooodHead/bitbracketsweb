@@ -1,0 +1,17 @@
+[
+  {
+    "id": "createprediction",
+    "description": "Create prediction pools for your favorite sports.",
+    "defaultMessage": "Create prediction pools for your favorite sports."
+  },
+  {
+    "id": "appInstall",
+    "description": "for best mobile experience we recommend you play with bitbrackes using any of the following apps",
+    "defaultMessage": "For best mobile experience we recommend you play with bitbrackes using any of the following apps."
+  },
+  {
+    "id": "navigation.navbarlink4",
+    "description": "Navigation link start pool",
+    "defaultMessage": "start pool"
+  }
+]
