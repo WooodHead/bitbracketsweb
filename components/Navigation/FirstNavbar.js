@@ -100,9 +100,9 @@ function FirstNavbar(props) {
             <Button href="/faq" color="inherit">
             FAQs
             </Button>
-            {/* <Button href="/mypools" color="inherit">
+            <Button href="/myPools" color="inherit">
               {intl.formatMessage(messages.navigationNavbarlink3)}
-            </Button> */}
+            </Button>
 
             <Button
               href={`/contest/${CONF.web3.contestName}/pools/new`}

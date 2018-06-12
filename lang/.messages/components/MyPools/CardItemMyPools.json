@@ -1,0 +1,17 @@
+[
+  {
+    "id": "youAreAdminMyPool",
+    "description": "You are the Admin",
+    "defaultMessage": "You are the Admin"
+  },
+  {
+    "id": "totalPlayerMyPool",
+    "description": "Navigation link roadmap",
+    "defaultMessage": "Total Players:"
+  },
+  {
+    "id": "prizeMyPool",
+    "description": "Navigation link My Pools",
+    "defaultMessage": "Prize:"
+  }
+]

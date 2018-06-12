@@ -52,4 +52,10 @@ export const actionTypes = {
     FETCH_TEAMS_REQUEST: 'fetch_teams_request',
     FETCH_TEAMS_SUCCESS: 'fetch_teams_success',
     FETCH_TEAMS_FAIL: 'fetch_teams_fail',
+
+    /** Fetch Pools actions*/
+    FETCH_POOLS_REQUEST: 'fetch_pools_request',
+    FETCH_POOLS_SUCCESS: 'fetch_pools_success',
+    FETCH_POOLS_FAIL: 'fetch_pools_fail',
+
 }

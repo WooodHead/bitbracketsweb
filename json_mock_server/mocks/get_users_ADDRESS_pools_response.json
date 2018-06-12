@@ -1,0 +1,42 @@
+{
+    "address": "managerA",
+    "pools": [
+      {
+        "address": "contestPoolAddressB",
+        "name": "nameA",
+        "contestName": "Russia2018",
+        "manager": "managerB",
+        "role": "player",
+        "totalBalance": 40000000,
+        "totalPlayers": 4,
+        "amountToPlay": 10000000,
+        "highScore": 0,
+        "status": "NOT_STARTED"
+      },
+      {
+        "address": "contestPoolAddressD",
+        "name": "nameA",
+        "contestName": "Russia2018",
+        "manager": "managerD",
+        "role": "player",
+        "totalBalance": 0,
+        "totalPlayers": 0,
+        "amountToPlay": 10000000,
+        "highScore": 0,
+        "status": "NOT_STARTED"
+      },
+      {
+        "address": "contestPoolAddressA",
+        "name": "nameA",
+        "contestName": "Russia2018",
+        "manager": "managerA",
+        "role": "manager",
+        "totalBalance": 30000000,
+        "totalPlayers": 3,
+        "amountToPlay": 10000000,
+        "highScore": 0,
+        "status": "NOT_STARTED"
+      }
+    ]
+  }
+  

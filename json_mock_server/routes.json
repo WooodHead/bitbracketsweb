@@ -6,5 +6,6 @@
     "/contests/Russia2018/matches": "/matches",
     "/contests/Russia2018/teams": "/teams",
     "/pools/:address/player/:playerAddress": "/prediction",
-    "/pools/*": "/pools/1"
+    "/pools/*": "/pools/1",
+    "/users/:address/pools": "/users?address=:address"
   }
