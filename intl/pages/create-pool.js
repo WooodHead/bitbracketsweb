@@ -1,8 +1,47 @@
 export default {
-    en: {
-        'headingPrimary': `Create Pool`
-    },
-    es: {
-        'headingPrimary': `Crear Quiniela`
-    }
-}
+  en: {
+    headingPrimary: 'Create Pool',
+    poolSetupStep: 'Pool Setup',
+    reviewDetailsStep: 'Review Details',
+    paymentStep: 'Payment',
+    backButton: 'Back',
+    nextButton: 'Next',
+    finishButton: 'Finish',
+    headingTertiary2: 'Pool Info',
+    nameLabel: 'Name',
+    adminNameTextbox: 'Nickname',
+    emailLabel: 'Email',
+    entryLabel: 'Entry Amount',
+    termsCheckbox: 'I agree with the terms of use',
+    rulesCheckbox: 'I agree with the pool rules',
+    errorRequired: 'Field is Required',
+    errorEmail: 'Not a Valid Email',
+    poolNameTextbox: 'Pool Name',
+    headingTertiary3: 'Payment Details',
+    feeLabel: 'Pool Creation Fee',
+
+   
+  },
+  es: {
+    headingPrimary: 'Crear Quiniela',
+    poolSetupStep: 'Configuración de la Quiniela',
+    reviewDetailsStep: 'Revision de los datos',
+    paymentStep: 'Pago',
+    backButton: 'Atrás',
+    nextButton: 'Siguiente',
+    finishButton: 'Finalizar',
+    headingTertiary2: 'Info de la Quiniela',
+    nameLabel: 'Nombre',
+    adminNameTextbox: 'Apodo',
+    emailLabel: 'Correo',
+    entryLabel: 'Monto',
+    termsCheckbox: 'Estoy de acuerdo con los terminos de uso',
+    rulesCheckbox: 'Estoy de acuerdo con las reglas de la Quiniela',
+    errorRequired: 'Campo Requerido',
+    errorEmail: 'Correo invalido',
+    poolNameTextbox: 'Nombre de la quiniela',
+    headingTertiary3: 'Detalles del Pago',
+    feeLabel: 'Costo de la creación',
+    
+  },
+};

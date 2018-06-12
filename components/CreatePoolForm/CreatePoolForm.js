@@ -25,9 +25,11 @@ const styles = theme => ({
     alignItems: 'center',
   },
   stepper: {
-    width: '60%',
-    border: '2px solid lightgray',
-    borderRadius: '5px',
+    [theme.breakpoints.up('md')]: {
+      width: '60%',
+      border: '2px solid lightgray',
+      borderRadius: '5px',
+    },
   },
   headingPrimary: {
     fontWeight: 'bold',
@@ -157,7 +159,7 @@ class CreatePoolForm extends Component {
           // TODO: update state on error
           this.props.onSubmit(pool)
             .then(poolAddress => Router.pushRoute(`/pools/${poolAddress}`))
-            .catch(err => console.err('Error: ', err));
+            .catch(err => console.error('Error: ', err));
           break;
         default:
           break;

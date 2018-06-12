@@ -3,6 +3,9 @@
     "/:resource/:id/show": "/:resource/:id",
     "/posts/:category": "/posts?category=:category",
     "/articles\\?id=:id": "/posts/:id",
-    "/pools/:address": "/pools?address=:address",
+    "/contests/Russia2018/matches": "/matches",
+    "/contests/Russia2018/teams": "/teams",
+    "/pools/:address/player/:playerAddress": "/prediction",
+    "/pools/*": "/pools/1",
     "/users/:address/pools": "/users?address=:address"
   }

@@ -1,35 +1,31 @@
-import { createStore, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import thunkMiddleware from 'redux-thunk'
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage' // defaults to localStorage for web and AsyncStorage for react-native
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunkMiddleware from 'redux-thunk';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web and AsyncStorage for react-native
 import reducer from './reducers';
 
-const makeStore = (reducers, initialState) => {    
-    return createStore(reducers, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
-}
+const makeStore = (reducers, initialState) => createStore(reducers, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)));
 
-export const initStore = (initialState, { isServer, req, debug, storeKey }) => {
+export const initStore = (initialState, {
+  isServer, req, debug, storeKey,
+}) => {
+  if (isServer) {
+    // initialState = initialState || { fromServer: 'foo' };
 
-    if (isServer) {
+    return makeStore(reducer, initialState);
+  }
 
-        // initialState = initialState || { fromServer: 'foo' };
+  const persistConfig = {
+    key: 'root',
+    storage,
+    whitelist: ['predictions', 'language'], // make sure it does not clash with server keys
+  };
 
-        return makeStore(reducer, initialState);
+  const persistedReducer = persistReducer(persistConfig, reducer);
+  const store = makeStore(persistedReducer, initialState);
 
-    } else {
+  store.__persistor = persistStore(store); // Nasty hack
 
-        const persistConfig = {
-            key: 'root',
-            storage,
-            whitelist: ['predictions'], // make sure it does not clash with server keys
-        };
-
-        const persistedReducer = persistReducer(persistConfig, reducer);
-        const store = makeStore(persistedReducer, initialState);
-
-        store.__persistor = persistStore(store); // Nasty hack
-
-        return store;
-    }
+  return store;
 };

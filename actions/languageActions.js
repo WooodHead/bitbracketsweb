@@ -6,7 +6,8 @@ const API_BASE_URL = CONF.endpoint.url;
 
 export const changeLanguage = language => (dispatch) => {
   dispatch({ type: actionTypes.CHANGE_LANGUAGE_REQUEST });
-  return dispatch({ type: actionTypes.CHANGE_LANGUAGE_SUCCESS, payload: language });
+
+  dispatch({ type: actionTypes.CHANGE_LANGUAGE_SUCCESS, payload: language });
 };
 
 export const fetchLanguages = () => async (dispatch) => {
@@ -16,6 +17,6 @@ export const fetchLanguages = () => async (dispatch) => {
     const res = await axios.get(`${API}/languages`);
     dispatch({ type: actionTypes.FETCH_LANGUAGES_SUCCESS, payload: res.data });
   } catch (error) {
-    dispatch({ type: actionTypes.FETCH_LANGUAGES_FAIL, payload: error });
+    dispatch({ type: actionTypes.FETCH_LANGUAGES_FAIL, payload: error.message });
   }
 };

@@ -1,12 +1,15 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { Component } from 'react';
 import { IntlProvider, addLocaleData } from 'react-intl';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
 import en from 'react-intl/locale-data/en';
 import es from 'react-intl/locale-data/es';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { initGA, logPageView } from '../utils/analytics';
 
-import Head from './Header';
+
+import Header from './Header';
 import Navigation from './Navigation/Navigation';
 
 import initMessages from '../intl/';
@@ -26,14 +29,23 @@ class Layout extends Component {
   componentWillMount() {
     this.props.fetchLanguages();
   }
-
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  }
   render() {
     const language = this.props.current;
 
     return (
       <IntlProvider locale={language} messages={messages[language]}>
         <div>
-          <Head title="BitBrackets" />
+          <Header
+            title={this.props.title}
+            description={this.props.description}
+          />
 
           <Navigation
             languageSelect={
@@ -47,13 +59,7 @@ class Layout extends Component {
 
           {this.props.children}
 
-          <Footer>
-            <LanguageSelect
-              languages={this.props.languages} // {["en", "es"]}
-              current={language}
-              onChange={value => this.props.changeLanguage(value)}
-            />
-          </Footer>
+          <Footer />
         </div>
       </IntlProvider>
     );
@@ -72,4 +78,10 @@ const mapDispatchToProps = dispatch => ({
   fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
 });
 
+Layout.propTypes = {
+  languages: PropTypes.array.isRequired,
+  changeLanguage: PropTypes.func.isRequired,
+  current: PropTypes.string.isRequired,
+  fetchLanguages: PropTypes.func.isRequired,
+};
 export default withRoot(connect(mapStateToProps, mapDispatchToProps)(Layout));

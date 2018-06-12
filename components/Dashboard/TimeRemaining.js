@@ -6,15 +6,23 @@ import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import Countdown from 'react-count-down';
+import { injectIntl, defineMessages } from 'react-intl';
 
+const messages = defineMessages({
+  TimeRemaining: {
+    id: 'TimeRemaining',
+    defaultMessage: 'Time remaining to make your predictions:',
+    description: 'Time remaining to make your predictions',
+  },
+});
 const cb = () => {
   console.log('expired callback');
 };
 
-const OPTIONS = {
-  endDate: '07/16/2018 10:55 AM',
-  cb,
-};
+// const OPTIONS = {
+//   endDate: '06/14/2018 9:00 AM',
+//   cb,
+// };
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -33,12 +41,18 @@ const styles = theme => ({
   },
 });
 function TimeRemaining(props) {
-  const { classes } = props;
+  const { classes, date, intl } = props;
+  const OPTIONS = {
+    endDate: date,
+    cb,
+  };
   return (
     <div>
       <Paper className={classes.root}>
         <Typography className={classes.paragraph} variant="title">
-          Time remaining to make your predictions:
+          {intl.formatMessage(messages.TimeRemaining)}
+
+   
           <Countdown options={OPTIONS} />
         </Typography>
       </Paper>
@@ -48,6 +62,8 @@ function TimeRemaining(props) {
 
 TimeRemaining.propTypes = {
   classes: PropTypes.object.isRequired,
+  date: PropTypes.string.isRequired,
+  intl: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TimeRemaining);
+export default injectIntl(withStyles(styles)(TimeRemaining));

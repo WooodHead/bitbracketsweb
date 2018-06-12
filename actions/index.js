@@ -5,3 +5,5 @@ export * from './joinPoolActions';
 export * from './predictionsActions';
 export * from './poolsActions';
 
+export * from './contestActions';
+export * from './infoPoolActions';

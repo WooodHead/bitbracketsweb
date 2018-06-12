@@ -11,7 +11,7 @@ import Collapse from 'material-ui/transitions/Collapse';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Linkify from 'react-linkify';
 
 const styles = theme => ({
@@ -37,10 +37,10 @@ const styles = theme => ({
     transform: 'rotate(180deg)',
   },
   text: {
-    fontWeight: '500',
+    fontWeight: '400',
     lineHeight: '24px',
     fontSize: '16px',
-    color: 'rgb(130, 129, 125)',
+    color: 'rgb(143, 143, 143)',
     paddingBottom: '0.5em',
     '&:hover': {
       color: 'black',
@@ -48,16 +48,17 @@ const styles = theme => ({
   },
   textPrueba: {
     color: 'black',
-    fontWeight: '600',
+
   },
   text2: {
-    fontWeight: '500',
+
     lineHeight: '24px',
     fontSize: '16px',
-    color: 'rgb(130, 129, 125)',
+    color: 'rgb(143, 143, 143)',
     paddingBottom: '0.5em',
   },
 });
+
 
 class Qa extends React.Component {
   state = {};
@@ -84,7 +85,7 @@ class Qa extends React.Component {
           <div key={Math.random()}>
             <Typography
               style={{
-                fontWeight: '500',
+                // fontWeight: '500',
                 lineHeight: '38.4px',
                 fontSize: '32px',
                 color: 'rgb(42, 40, 37)',
@@ -116,7 +117,8 @@ class Qa extends React.Component {
                 aria-expanded={this.state[id.question]}
                 aria-label="Show more"
               >
-                <ExpandMoreIcon />
+                <i className="fas fa-caret-down" />
+                {/* <ExpandMoreIcon /> */}
               </IconButton>
             </CardActions>
             <Collapse in={this.state[id.question]} timeout="auto" unmountOnExit>

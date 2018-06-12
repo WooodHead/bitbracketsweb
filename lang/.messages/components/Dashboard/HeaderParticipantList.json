@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ParticipantList",
+    "description": "ParticipantList",
+    "defaultMessage": "ParticipantList"
+  },
+  {
+    "id": "JointhePool",
+    "description": "Join the Pool",
+    "defaultMessage": "Join the Pool"
+  }
+]

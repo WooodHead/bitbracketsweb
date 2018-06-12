@@ -23,6 +23,7 @@ export const createPool = pool => dispatch =>
       console.info('CreatePool state', pool);
       const { poolName, contestName, entryPrice } = pool;
       const accounts = await web3.eth.getAccounts();
+      /*
       console.log('poolName', poolName);
       console.log('poolName bytes32', stringToBytes32(poolName));
       console.log('poolName ascii to hex', web3.utils.stringToHex(poolName));
@@ -31,21 +32,7 @@ export const createPool = pool => dispatch =>
       console.log('Amount per player', entryPrice);
       console.log('ContestPool', contestName);
       console.log('Account', accounts[0]);
-      /*
-Contest Name: Rusia2018Test11
-0: bytes32: contestName 0x5275736961323031385465737431310000000000000000000000000000000000
-1: uint256: startTime 1527811200
-2: uint256: endTime 1530403200
-3: uint256: graceTime 345600
-4: uint256: maxBalance 10000000000000000000
-5: uint256: fee 10000000000000000
-6: bool: exists true
-7: uint256: ownerFee 10
-8: uint256: managerFee 10
-9: bool: enabled true
-
-// contestname test: Rusia2018Test11
-*/
+      */
 
       const tx = await factory.methods
         .createContestPool(
@@ -73,9 +60,10 @@ Contest Name: Rusia2018Test11
     }
   });
 
+  // this should be named fetchContestDetails
 export const fetchPoolDetails = pool => async (dispatch) => {
   dispatch({ type: actionTypes.POOL_DETAIL_REQUEST });
-  await delay(500);
+  // await delay(500);
   dispatch({ type: actionTypes.POOL_DETAIL_SUCCESS, payload: pool });
 };
 

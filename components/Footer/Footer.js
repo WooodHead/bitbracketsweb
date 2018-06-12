@@ -1,110 +1,188 @@
-import React, { Component } from "react";
+/* eslint-disable react/forbid-prop-types */
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import Typography from 'material-ui/Typography';
+import Grid from 'material-ui/Grid';
+import { injectIntl, defineMessages } from 'react-intl';
 
-import Grid from "material-ui/Grid";
-import List, { ListItem, ListItemIcon, ListItemText } from "material-ui/List";
-
-import { injectIntl, defineMessages, FormattedMessage } from "react-intl";
 
 const messages = defineMessages({
   navigationNavbarlink1: {
-    id: "navigation.navbarlink1",
-    defaultMessage: "How does it works?",
-    description: "Navigation link How does it works?"
+    id: 'navigation.navbarlink1',
+    defaultMessage: 'How does it works?',
+    description: 'Navigation link How does it works?',
   },
   navigationNavbarlink2: {
-    id: "navigation.navbarlink2",
-    defaultMessage: "rules",
-    description: "Navigation link rules"
+    id: 'navigation.navbarlink2',
+    defaultMessage: 'roadmap',
+    description: 'Navigation link roadmap',
   },
   navigationNavbarlink3: {
-    id: "navigation.navbarlink3",
-    defaultMessage: "My Pools",
-    description: "Navigation link My Pools"
+    id: 'navigation.navbarlink3',
+    defaultMessage: 'My Pools',
+    description: 'Navigation link My Pools',
   },
   navigationNavbarlink4: {
-    id: "navigation.navbarlink4",
-    defaultMessage: "start pool",
-    description: "Navigation link start pool"
+    id: 'navigation.navbarlink4',
+    defaultMessage: 'start pool',
+    description: 'Navigation link start pool',
   },
   navigationNavbarlink5: {
-    id: "navigation.navbarlink5",
-    defaultMessage: "Terms & conditions",
-    description: "Navigation link start pool"
-  }
+    id: 'navigation.navbarlink5',
+    defaultMessage: 'Terms & conditions',
+    description: 'Navigation link start pool',
+  },
+  navigationNavbarlink6: {
+    id: 'navigation.navbarlink6',
+    defaultMessage: 'Join to Telegram',
+    description: 'Navigation link telegram',
+  },
 });
 
-class Footer extends Component {
-  render() {
-    const { intl } = this.props;
-    return (
-      <div>
-        <footer className="container">
-          <Grid container spacing={24}>
-            <Grid item xs={6} sm={3}>
-              <ListItem button component="a" href="#section3">
-                <ListItemText
-                  primary={intl.formatMessage(messages.navigationNavbarlink1)}
-                />
-              </ListItem>
-              <ListItem button component="a" href="/rules">
-                <ListItemText
-                  primary={intl.formatMessage(messages.navigationNavbarlink2)}
-                />
-              </ListItem>
-              <ListItem button component="a" href="/faq">
-                <ListItemText primary="FAQs" />
-              </ListItem>
-            </Grid>
-            <Grid item xs={6} sm={3}>
-              <ListItem button component="a">
-                <ListItemText
-                  primary={intl.formatMessage(messages.navigationNavbarlink3)}
-                />
-              </ListItem>
-              <ListItem button component="a">
-                <ListItemText primary="Blog" />
-              </ListItem>
-              <ListItem
-                button
-                component="a"
+const styles = theme => ({
+  root: {
+    marginTop: '3em',
+  },
+  list: {
+    listStyleType: 'none',
+  },
+  aTag: {
+    textDecoration: 'none',
+  },
+  text: {
+    color: 'black',
+    textAlign: 'right',
+    '&:hover': {
+      color: '#E91E63',
+    },
+    [theme.breakpoints.only('xs')]: {
+      textAlign: 'center',
+    },
+  },
+});
+function Footer(props) {
+  const { intl, classes } = props;
+  return (
+
+    <div className={classes.root}>
+    
+      <Grid container spacing={24} >
+        <Grid item xs={6} sm={3} className={classes.paper} >
+          <ul className={classes.list}>
+            <li>
+              <a href="/#section3"className={classes.aTag}>
+                <Typography variant="subheading" gutterBottom className={classes.text}>
+                  {intl.formatMessage(messages.navigationNavbarlink1)}
+                </Typography>
+              </a>
+            </li>
+            <li>
+              <a href="/roadmap"className={classes.aTag}>
+                <Typography variant="subheading" gutterBottom className={classes.text}>
+                  {intl.formatMessage(messages.navigationNavbarlink2)}
+                </Typography>
+              </a>
+            </li>
+            {/* <li>
+              <a href="/mypools"className={classes.aTag}>
+                <Typography variant="subheading" gutterBottom className={classes.text}>
+                  {intl.formatMessage(messages.navigationNavbarlink3)}
+                </Typography>
+              </a>
+            </li> */}
+            <li>
+              <a href="/faq"className={classes.aTag}>
+                <Typography variant="subheading" gutterBottom className={classes.text}>
+                  FAQs
+                </Typography>
+              </a>
+            </li>
+          </ul>
+        </Grid>
+        <Grid item xs={6} sm={3} className={classes.paper}>
+          <ul className={classes.list}>
+            <li>
+              <a
                 href="https://www.facebook.com/BitBrackets-401862976892734/"
                 target="_blank"
+                rel="noopener noreferrer"
+                className={classes.aTag}
               >
-                <ListItemText primary="FaceBook" />
-              </ListItem>
-            </Grid>
-            <Grid item xs={6} sm={3}>
-              <ListItem button component="a" style={{ textAlign: "right" }}>
-                <ListItemText
-                  primary={intl.formatMessage(messages.navigationNavbarlink5)}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12}>
-              <ListItem
-                button
-                component="a"
-                href="https://coralbytes.com/"
+                <Typography variant="subheading" gutterBottom className={classes.text}>
+                 Facebook
+                </Typography>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Bitbrackets/bitbrackets_smart_contracts"
                 target="_blank"
-                style={{ textAlign: "center" }}
+                rel="noopener noreferrer"
+                className={classes.aTag}
               >
-                <ListItemText
-                  primary={
-                    <span>
-                      Powered by:{" "}
-                      <span style={{ color: "#E72459" }}>
-                        CoralBytes Studios
-                      </span>
-                    </span>
-                  }
-                />
-              </ListItem>
-            </Grid>
-          </Grid>
-        </footer>
-      </div>
-    );
-  }
-}
+                <Typography variant="subheading" gutterBottom className={classes.text}>
+                 Github
+                </Typography>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://t.me/bitbrackets"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.aTag}
+              >
+                <Typography variant="subheading" gutterBottom className={classes.text}>
+                  {intl.formatMessage(messages.navigationNavbarlink6)}
+                </Typography>
+              </a>
+            </li>
 
-export default injectIntl(Footer);
+          </ul>
+        </Grid>
+        {/* <Grid item xs={6} sm={3}>
+          <ul className={classes.list}>
+            <li>
+              <a
+                href="/termsconditions"
+                className={classes.aTag}
+              >
+                <Typography variant="subheading" gutterBottom className={classes.text}>
+                  {intl.formatMessage(messages.navigationNavbarlink5)}
+                </Typography>
+              </a>
+            </li>
+          </ul>
+        </Grid> */}
+        <Grid item xs={12}>
+          <a
+            href="https://coralbytes.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.aTag}
+          >
+            <Typography variant="subheading" gutterBottom align="center" >
+
+                      Powered by:{' '}
+              <span style={{ color: '#E91E63' }}>
+                        CoralBytes Studios
+              </span>
+
+            </Typography>
+          </a>
+
+
+        </Grid>
+      </Grid>
+
+    </div>
+
+  );
+}
+Footer.propTypes = {
+  intl: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+};
+
+export default injectIntl(withStyles(styles)(Footer));

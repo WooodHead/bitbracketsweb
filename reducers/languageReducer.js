@@ -1,13 +1,13 @@
-import { actionTypes } from "../actions/types";
+import { actionTypes } from '../actions/types';
 
 const INITIAL_STATE = {
-  languages: [],
-  current: "en",
+  languages: [{ code: 'en', name: 'en' }, { code: 'es', name: 'es' }],
+  current: 'en',
   loading: false,
-  error: undefined
+  error: undefined,
 };
 
-export default function(state = INITIAL_STATE, action) {
+export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
     case actionTypes.FETCH_LANGUAGES_REQUEST:
       return { ...state, loading: true, error: undefined };
@@ -16,7 +16,7 @@ export default function(state = INITIAL_STATE, action) {
         ...state,
         languages: action.payload,
         loading: false,
-        error: undefined
+        error: undefined,
       };
     case actionTypes.FETCH_LANGUAGES_FAIL:
       return { ...state, loading: false, error: action.payload };
@@ -28,7 +28,7 @@ export default function(state = INITIAL_STATE, action) {
         ...state,
         current: action.payload,
         loading: false,
-        error: undefined
+        error: undefined,
       };
     case actionTypes.CHANGE_LANGUAGE_FAIL:
       return { ...state, loading: false, error: action.payload };

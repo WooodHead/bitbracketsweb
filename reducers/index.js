@@ -5,18 +5,16 @@ import metamaskReducer from './metamaskReducer';
 import createPoolReducer from './createPoolReducer';
 import joinPoolReducer from './joinPoolReducer';
 import poolReducer from './poolReducer';
-import matchesReducer from './matchesReducer';
+import contestReducer from './contestReducer';
 import predictionsReducer from './predictionsReducer';
-import listParticipantReducer from './listParticipantReducer';
 import poolsReducer from './poolsReducer';
 
 export default combineReducers({
-  list: listParticipantReducer,
   language: languageReducer,
   metamask: metamaskReducer,
   pool: poolReducer,
+  contest: contestReducer,
   poolR: poolsReducer,
-  matches: matchesReducer,
   predictions: predictionsReducer,
   ...createForms({
     createPool: createPoolReducer,
