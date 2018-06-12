@@ -13,7 +13,7 @@ import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import { injectIntl, defineMessages } from 'react-intl';
 import CONF from '../../conf';
-import ToshiButton from '../ToshiButton';
+
 
 const messages = defineMessages({
   navigationNavbarlink1: {
@@ -85,13 +85,13 @@ class ResponsiveNavbar extends React.Component {
                 onClick={this.handleToggle}
               >
                 <i className="fas fa-ellipsis-v" />
-                {/* <MoreVertIcon /> */}
+ 
               </IconButton>
-            
+
             </div>
-         
+
           </Target>
-       
+
           <Portal>
             <Popper
               placement="bottom"
@@ -130,6 +130,11 @@ class ResponsiveNavbar extends React.Component {
                         <Button href="/faq">FAQs</Button>
                       </MenuItem>
                       <Divider />
+                      <MenuItem>
+                        <Button href="/myPools">
+                          {intl.formatMessage(messages.navigationNavbarlink3)}
+                        </Button>
+                      </MenuItem>
                       {/* <MenuItem onClick={this.handleClose}>
                         {' '}
                         <Button
@@ -140,17 +145,18 @@ class ResponsiveNavbar extends React.Component {
                         </Button>
                       </MenuItem> */}
                       <Divider />
-                      {languageSelect}
-
+                      <MenuItem>
+                        {languageSelect}
+                      </MenuItem>
                     </MenuList>
                   </div>
                 </Collapse>
               </ClickAwayListener>
             </Popper>
           </Portal>
-        
+
         </Manager>
-        {/* <ToshiButton /> */}
+     
       </div>
     );
   }

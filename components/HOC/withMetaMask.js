@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 import Web3 from 'web3';
 import PropTypes from 'prop-types';
@@ -28,6 +30,7 @@ const isMetamaskInstalled = function isMetamaskInstalled(_window) {
 const hasAccounts = function hasAccounts(newAccounts) {
   return typeof newAccounts !== 'undefined' && newAccounts.length > 0;
 };
+
 
 const progressStyle = {
   position: 'absolute',
@@ -153,7 +156,7 @@ function withMetaMask(Component) {
     render() {
       let componentToRender;
       if (this.state.loading) {
-        componentToRender = <CircularProgress size={24} className={progressStyle} />;
+        componentToRender = <CircularProgress size={24} style={{ position: 'absolute', top: '50%', left: '50%', marginTop: '-12', marginLeft: '-12' }} />;
         return (
           componentToRender
         );
@@ -177,9 +180,13 @@ function withMetaMask(Component) {
       );
     }
   }
+  WithMetaMask.defaultProps = {
+    pageContext: PropTypes.func,
+  };
+
 
   WithMetaMask.propTypes = {
-    pageContext: PropTypes.object,
+    pageContext: PropTypes.func,
   };
 
   WithMetaMask.getInitialProps = (ctx) => {
@@ -188,7 +195,6 @@ function withMetaMask(Component) {
     }
     return {};
   };
-
   // return withRedux(initStore, mapStateToProps, mapDispatchToProps)(WithMetaMask);
   return WithMetaMask;
 }

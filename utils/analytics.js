@@ -1,12 +1,12 @@
 import ReactGA from 'react-ga';
 
 export const initGA = () => {
-  console.log('GOOGLE ANALYTICS init');
+  
   ReactGA.initialize(process.env.GA_ID || 'UA-119719705-1');
 };
 
 export const logPageView = () => {
-  console.log('Logging pageview for ${window.location.pathname');
+
   ReactGA.set({ page: window.location.pathname });
   ReactGA.pageview(window.location.pathname);
 };
