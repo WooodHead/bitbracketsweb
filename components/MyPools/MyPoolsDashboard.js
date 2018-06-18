@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import Button from 'material-ui/Button';
 // import CardItem from '../common/CardItem';
 import CardItemMyPools from './CardItemMyPools';
+import withMetaMask from '../HOC/withMetaMask';
 
 
 // import Typography from 'material-ui/Typography';
@@ -22,13 +23,20 @@ const messages = defineMessages({
 });
 class MyPoolsDashboard extends React.Component {
   renderPools() {
+    const MyPoolDshboardWithMM = withMetaMask(MyPoolsDashboard);
     const { pools } = this.props;
 
+
+    if (pools.pools === undefined) {
+      return <MyPoolDshboardWithMM />;
+    }
     if (!pools.pools) {
       return null;
     }
+
+
     return pools.pools.map(poolsItems => (
-      // <CardItem key={poolsItems.address} item={poolsItems} userAddress={pools.address} />
+
       <CardItemMyPools key={poolsItems.address} item={poolsItems} userAddress={pools.address} />
     ));
   }
@@ -36,7 +44,7 @@ class MyPoolsDashboard extends React.Component {
   render() {
     const { intl } = this.props;
     const style = {
-      height: '100px', width: '100%', margin: '20px auto', padding: '20px 0px', align: 'center',
+      height: '100px', width: '100%', margin: '20px auto', padding: '20px 0px', align: 'center', paddingBottom: '400px',
     };
     const style2 = {
       height: '100px',
