@@ -29,7 +29,7 @@ const messages = initMessages();
 class myPools extends React.Component {
   componentWillMount() {
     // this.props.fetchPools('0xE1F8feA4699Ce3e0196923E6fA16F773600E59e0');
-    this.props.fetchPools(this.props.defaultAccount);
+    this.props.fetchPools();
   }
 
   render() {
@@ -47,12 +47,12 @@ class myPools extends React.Component {
 }
 myPools.defaultProps = {
 
-  defaultAccount: PropTypes.string,
+  // defaultAccount: PropTypes.string,
 
 };
 myPools.propTypes = {
   fetchPools: PropTypes.func.isRequired,
-  defaultAccount: PropTypes.string,
+  // defaultAccount: PropTypes.string,
   pools: PropTypes.any.isRequired,
   current: PropTypes.string.isRequired,
 };
