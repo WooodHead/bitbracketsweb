@@ -1,15 +1,17 @@
+/* eslint-disable import/prefer-default-export */
 import axios from 'axios';
 import { actionTypes } from '../actions/types';
+import CONF from '../conf';
 
- const BASE_URL = process.env.BACKEND_URL;
- // const API = 'http://localhost:3001/users/managerA/pools';
-  // const API = 'https://rinkeby.api.bitbrackets.io/api';
-  const API = BASE_URL;
+const BASE_URL = CONF.endpoint.url;
 
-export const fetchPools = (address) => async dispatch => {
+const API = BASE_URL;
+
+export const fetchPools = address => async (dispatch) => {
+  console.log('este es el fetchpools en actions', (`${API}/users/${address}/pools`));
   dispatch({ type: actionTypes.FETCH_POOLS_REQUEST });
 
-  try {    
+  try {
     const res = await axios.get(`${API}/users/${address}/pools`);
     dispatch({ type: actionTypes.FETCH_POOLS_SUCCESS, payload: res.data });
   } catch (error) {
