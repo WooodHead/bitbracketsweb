@@ -1,13 +1,20 @@
 /* eslint-disable react/forbid-prop-types */
 
 import React from 'react';
+import _ from 'lodash';
 import { injectIntl, defineMessages } from 'react-intl';
+import { bindActionCreators } from 'redux';
 
 import PropTypes from 'prop-types';
 import Button from 'material-ui/Button';
+import withRedux from 'next-redux-wrapper';
+import { fetchPools } from '../../actions';
+
+
 // import CardItem from '../common/CardItem';
 import CardItemMyPools from './CardItemMyPools';
 import withMetaMask from '../HOC/withMetaMask';
+import { initStore } from '../../store';
 
 
 // import Typography from 'material-ui/Typography';
@@ -22,19 +29,18 @@ const messages = defineMessages({
 
 });
 class MyPoolsDashboard extends React.Component {
+  componentDidMount() {
+    this.props.fetchPools(this.props.defaultAccount);
+  }
+
+
   renderPools() {
-    const MyPoolDshboardWithMM = withMetaMask(MyPoolsDashboard);
+    console.log('este se pools el dayshoard : ', this.props.pools.length);
     const { pools } = this.props;
 
-
-    if (pools.pools === undefined) {
-      return <MyPoolDshboardWithMM />;
+    if (!pools || pools.length === 0) {
+      return <h1>You don´t have pools</h1>;
     }
-    if (!pools.pools) {
-      return null;
-    }
-
-
     return pools.pools.map(poolsItems => (
 
       <CardItemMyPools key={poolsItems.address} item={poolsItems} userAddress={pools.address} />
@@ -69,8 +75,19 @@ class MyPoolsDashboard extends React.Component {
 }
 
 MyPoolsDashboard.propTypes = {
+  fetchPools: PropTypes.func.isRequired,
+  defaultAccount: PropTypes.any.isRequired,
   pools: PropTypes.any.isRequired,
   intl: PropTypes.object.isRequired,
 };
+function mapStateToProps(state) {
+  return {
 
-export default (injectIntl(MyPoolsDashboard));
+    pools: state.poolR.pools,
+    defaultAccount: state.defaultAccount,
+  };
+}
+const mapDispatchToProps = dispatch => ({
+  fetchPools: bindActionCreators(fetchPools, dispatch),
+});
+export default (withRedux(initStore, mapStateToProps, mapDispatchToProps))(withMetaMask(injectIntl(MyPoolsDashboard)));
