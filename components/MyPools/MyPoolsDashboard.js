@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 
 import React from 'react';
-import _ from 'lodash';
+
 import { injectIntl, defineMessages } from 'react-intl';
 import { bindActionCreators } from 'redux';
 
@@ -10,15 +10,11 @@ import Button from 'material-ui/Button';
 import withRedux from 'next-redux-wrapper';
 import { fetchPools } from '../../actions';
 
-
-// import CardItem from '../common/CardItem';
 import CardItemMyPools from './CardItemMyPools';
 import withMetaMask from '../HOC/withMetaMask';
 import { initStore } from '../../store';
+import NoPools from './NoPools';
 
-
-// import Typography from 'material-ui/Typography';
-// import Card, { CardContent, CardMedia, CardText } from 'material-ui/Card';
 
 const messages = defineMessages({
   CreateNewPool: {
@@ -35,11 +31,13 @@ class MyPoolsDashboard extends React.Component {
 
 
   renderPools() {
-    console.log('este se pools el dayshoard : ', this.props.pools.length);
     const { pools } = this.props;
 
-    if (!pools || pools.length === 0) {
-      return <h1>You don´t have pools</h1>;
+    if (!pools.pools) {
+      return null;
+    }
+    if (pools.pools.length === 0) {
+      return <NoPools />;
     }
     return pools.pools.map(poolsItems => (
 
@@ -50,7 +48,7 @@ class MyPoolsDashboard extends React.Component {
   render() {
     const { intl } = this.props;
     const style = {
-      height: '100px', width: '100%', margin: '20px auto', padding: '20px 0px', align: 'center', paddingBottom: '400px',
+      height: '100px', width: '100%', margin: '20px auto', padding: '300px', align: 'center', paddingBottom: '400px',
     };
     const style2 = {
       height: '100px',

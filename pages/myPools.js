@@ -24,7 +24,6 @@ function myPools(props) {
   return (
     <IntlProvider locale={language} messages={messages[language]}>
       <Layout>
-
         <MyPoolsDashboard />
       </Layout>
     </IntlProvider>

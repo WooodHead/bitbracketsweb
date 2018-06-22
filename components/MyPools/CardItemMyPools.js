@@ -37,12 +37,12 @@ const messages = defineMessages({
   totalPlayerMyPool: {
     id: 'totalPlayerMyPool',
     defaultMessage: 'Total Players: ',
-    description: 'Navigation link roadmap',
+    description: 'Total Players',
   },
   prizeMyPool: {
     id: 'prizeMyPool',
     defaultMessage: 'Prize:',
-    description: 'Navigation link My Pools',
+    description: 'Prize:',
   },
 });
 function CardItemMyPools(props) {
@@ -80,4 +80,4 @@ CardItemMyPools.propTypes = {
   intl: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(injectIntl(CardItemMyPools));
+export default (injectIntl(withStyles(styles)(CardItemMyPools)));

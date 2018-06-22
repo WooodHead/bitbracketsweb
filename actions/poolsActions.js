@@ -8,7 +8,6 @@ const BASE_URL = CONF.endpoint.url;
 const API = BASE_URL;
 
 export const fetchPools = address => async (dispatch) => {
-  console.log('este es el fetchpools en actions', (`${API}/users/${address}/pools`));
   dispatch({ type: actionTypes.FETCH_POOLS_REQUEST });
 
   try {

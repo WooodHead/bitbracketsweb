@@ -4,6 +4,8 @@ export default {
     totalPlayerMyPool: 'Total Players: ',
     prizeMyPool: 'Prize:',
     CreateNewPool: 'Create New Pool',
+    nopools: 'You don´t have Pools',
+    CreateANewPool: 'Create a New Pool here',
 
 
   },
@@ -12,6 +14,8 @@ export default {
     totalPlayerMyPool: 'Total Jugadores: ',
     prizeMyPool: 'Premio:',
     CreateNewPool: 'Crear Nueva Quiniela',
+    nopools: 'No tienes Quinielas.',
+    CreateANewPool: 'Crea una quiniela aqui.',
 
   },
 };
