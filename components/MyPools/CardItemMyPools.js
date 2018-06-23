@@ -10,10 +10,8 @@ import { Router } from '../../routes';
 
 const styles = {
   root: {
-    height: '130px',
-    width: '330px',
-    background: 'white',
-    float: 'left',
+    display: 'inline-flex',
+    justify: 'center',
     padding: '0px 0px 0px 0px',
     margin: '25px 10px 10px 25px',
     cursor: 'pointer',
@@ -65,8 +63,7 @@ function CardItemMyPools(props) {
           </Typography>
         </div>
       </CardContent>
-
-
+    
     </Card>
   );
 }

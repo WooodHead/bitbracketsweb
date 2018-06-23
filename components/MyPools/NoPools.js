@@ -2,12 +2,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+
 import { injectIntl, defineMessages } from 'react-intl';
 import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
+
 import Grid from 'material-ui/Grid';
 
 const messages = defineMessages({
@@ -35,6 +35,8 @@ const styles = theme => ({
     paddingTop: 16,
     paddingBottom: 16,
     marginTop: theme.spacing.unit * 3,
+
+    textAlign: 'center',
   }),
 });
 
@@ -42,10 +44,12 @@ const styles = theme => ({
 function NoPools(props) {
   const { classes, intl } = props;
   return (
-    <div>
-      <Paper className={classes.root} elevation={4}>
+    <div className={classes.root}>
 
+      <Paper elevation={4}>
         <Grid container spacing={24}>
+
+
           <Grid item xs={6} sm={3}>
             <Typography variant="headline" component="h3">
               {intl.formatMessage(messages.nopools)}
@@ -55,17 +59,13 @@ function NoPools(props) {
             <Typography component="p">
               {intl.formatMessage(messages.CreateANewPool)}
 
-     
+
             </Typography>
           </Grid>
-          <Grid item xs={6} sm={3}>
-            <Button href="/contest/Russia2018/pools/new" variant="raised" color="primary">
-              {intl.formatMessage(messages.CreateNewPool)}
-
-            </Button>
-          </Grid>
+        
         </Grid>
       </Paper>
+
     </div>
   );
 }
