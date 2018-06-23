@@ -18,8 +18,11 @@
     "npm": "5.7.1"
   },
   "scripts": {
-    "start": "node -r dotenv/config server.js",
-    "test": "SET NODE_ENV=test jest",
+    "startwithdotenv": "node -r dotenv/config server.js",
+    "dev": "NODE_ENV=development node -r dotenv/config ./server.js", 
+    "qa": "NODE_ENV=qa node -r dotenv/config ./server.js", 
+    "test": "NODE_ENV=test jest", 
+    "start": "NODE_ENV=production node -r dotenv/config server.js", 
     "build": "next build",
     "heroku-postbuild": "npm run build",
     "json-server": "json-server --watch ./json_mock_server/db.json --routes ./json_mock_server/routes.json --port 3001"
