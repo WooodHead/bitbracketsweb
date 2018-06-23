@@ -10,10 +10,8 @@ import { Router } from '../../routes';
 
 const styles = {
   root: {
-    height: '130px',
-    width: '330px',
-    background: 'white',
-    float: 'left',
+    display: 'inline-flex',
+    justify: 'center',
     padding: '0px 0px 0px 0px',
     margin: '25px 10px 10px 25px',
     cursor: 'pointer',
@@ -37,12 +35,12 @@ const messages = defineMessages({
   totalPlayerMyPool: {
     id: 'totalPlayerMyPool',
     defaultMessage: 'Total Players: ',
-    description: 'Navigation link roadmap',
+    description: 'Total Players',
   },
   prizeMyPool: {
     id: 'prizeMyPool',
     defaultMessage: 'Prize:',
-    description: 'Navigation link My Pools',
+    description: 'Prize:',
   },
 });
 function CardItemMyPools(props) {
@@ -65,8 +63,7 @@ function CardItemMyPools(props) {
           </Typography>
         </div>
       </CardContent>
-
-
+    
     </Card>
   );
 }
@@ -80,4 +77,4 @@ CardItemMyPools.propTypes = {
   intl: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(injectIntl(CardItemMyPools));
+export default (injectIntl(withStyles(styles)(CardItemMyPools)));

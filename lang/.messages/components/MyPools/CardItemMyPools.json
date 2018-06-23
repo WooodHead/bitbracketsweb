@@ -6,12 +6,12 @@
   },
   {
     "id": "totalPlayerMyPool",
-    "description": "Navigation link roadmap",
+    "description": "Total Players",
     "defaultMessage": "Total Players:"
   },
   {
     "id": "prizeMyPool",
-    "description": "Navigation link My Pools",
+    "description": "Prize:",
     "defaultMessage": "Prize:"
   }
 ]
