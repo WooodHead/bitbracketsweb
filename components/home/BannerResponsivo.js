@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
 import { injectIntl, defineMessages } from 'react-intl';
 import Button from 'material-ui/Button';
-import CONF from '../../conf';
 import ToshiButton from '../ToshiButton';
 import TrustWalletButton from '../TrustWalletButton';
 
@@ -60,7 +59,7 @@ Russia 2018
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
         <Button
 
-          href={`/contest/${CONF.web3.contestName}/pools/new`}
+          href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
           variant="raised"
           style={{ backgroundColor: '#E91E63', color: '#fff' }}
         >

@@ -1,8 +1,7 @@
 import axios from 'axios';
-import CONF from '../conf';
 import { actionTypes } from '../actions/types';
 
-const API_BASE_URL = CONF.endpoint.url;
+const API_BASE_URL = process.env.ENDPOINT_URL;
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 

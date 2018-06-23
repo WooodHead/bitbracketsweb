@@ -12,7 +12,6 @@ import { MenuItem, MenuList } from 'material-ui/Menu';
 import { withStyles } from 'material-ui/styles';
 
 import { injectIntl, defineMessages } from 'react-intl';
-// import CONF from '../../conf';
 
 
 const messages = defineMessages({

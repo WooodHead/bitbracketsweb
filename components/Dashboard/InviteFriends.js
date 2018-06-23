@@ -56,7 +56,7 @@ class InviteFriends extends React.Component {
   componentDidMount() {
     if (window) {
       let proto = 'https://';
-      if (process.env.NODE_ENV !== 'production') {
+      if (process.env.NODE_ENV === 'development') {
         proto = 'http://';
       }
       const { url } = this.props;

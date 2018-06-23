@@ -1,5 +1,13 @@
-const prod = process.env.NODE_ENV === 'production';
-
 module.exports = {
-  'process.env.BACKEND_URL': prod ? 'https://rinkeby.api.bitbrackets.io' : 'http://localhost:3001'
-}
+    'process.env.WEB3_NETWORKS': process.env.WEB3_NETWORKS,
+    'process.env.NODE_ENV': process.env.NODE_ENV,
+
+    'process.env.GA_ID': process.env.GA_ID,
+
+    'process.env.ENDPOINT_URL': process.env.ENDPOINT_URL,
+
+    'process.env.WEB3_INTERVAL': process.env.WEB3_INTERVAL,
+    'process.env.WEB3_FACTORY_ADDRESS': process.env.WEB3_FACTORY_ADDRESS,
+    'process.env.WEB3_INFURA_URL': process.env.WEB3_INFURA_URL,
+    'process.env.WEB3_CONTEST_NAME': process.env.WEB3_CONTEST_NAME,
+};

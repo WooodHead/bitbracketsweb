@@ -12,7 +12,6 @@ import { withStyles } from 'material-ui/styles';
 import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import { injectIntl, defineMessages } from 'react-intl';
-import CONF from '../../conf';
 
 
 const messages = defineMessages({
@@ -138,7 +137,7 @@ class ResponsiveNavbar extends React.Component {
                       {/* <MenuItem onClick={this.handleClose}>
                         {' '}
                         <Button
-                          href={`/contest/${CONF.web3.contestName}/pools/new`}
+                          href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
                         >
                           {intl.formatMessage(messages.navigationNavbarlink3)}
 

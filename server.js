@@ -3,11 +3,11 @@ const { createServer } = require('http');
 const next = require('next');
 const routes = require('./routes');
 
-const app = next({ dev: process.env.NODE_ENV !== 'production' });
+const app = next({ dev: process.env.NODE_ENV === 'development' });
 
 const handler = routes.getRequestHandler(app);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.FRONTEND_PORT || 3000;
 
 // Without express
 app.prepare().then(() => {

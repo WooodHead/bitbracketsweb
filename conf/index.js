@@ -8,11 +8,10 @@ environmentsConf.set('test', dev);
 environmentsConf.set('qa', qa);
 environmentsConf.set('production', prod);
 
-const environment = process.env.NODE_ENV;
+/*const environment = process.env.NODE_ENV;
 
-console.log(environment);
 
-let currentConf = environmentsConf.get(environment);
+const currentConf = environmentsConf.get(environment);
 
 if (typeof currentConf === 'undefined') {
   throw new Error(`Configuration for environment NODE_ENV = ${environment} not found.`);
@@ -20,5 +19,7 @@ if (typeof currentConf === 'undefined') {
 
 console.log(`Web app is using the ${currentConf.name} configuration.`);
 console.log('Web app is using configuration.', currentConf);
+*/
+const currentConf = {};
 
 export default currentConf;

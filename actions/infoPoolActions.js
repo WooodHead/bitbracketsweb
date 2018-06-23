@@ -1,11 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 import axios from 'axios';
-import CONF from '../conf';
 import { actionTypes } from '../actions/types';
 import getContestPoolInstance from '../ethereum/contestPool';
 import web3 from '../ethereum/web3';
 
-const API_BASE_URL = CONF.endpoint.url;
+const API_BASE_URL = process.env.ENDPOINT_URL;
 
 // function stringToBytes32(text) {
 //   return util.bufferToHex(util.setLengthRight(text, 32));
