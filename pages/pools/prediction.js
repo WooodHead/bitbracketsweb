@@ -19,6 +19,7 @@ class PoolPredictionPage extends React.Component {
         if (!this.props.pool || !this.props.pool.info) {
             this.props.getPoolDetails(address);
         }
+
         this.props.fetchContest(this.props.pool.info.contestName);
         this.props.fetchPredictions(address, playerAddress);
     }
@@ -27,7 +28,7 @@ class PoolPredictionPage extends React.Component {
         const { address, playerAddress } = query;
         await store.dispatch(getPoolDetails(address));
         await Promise.all([
-            store.dispatch(fetchContest(store.getState().pool.contestName)),
+            store.dispatch(fetchContest(store.getState().pool.info.contestName)),
             store.dispatch(fetchPredictions(address, playerAddress))
         ]);
         return { isServer, address, playerAddress };
