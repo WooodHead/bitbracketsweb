@@ -170,6 +170,8 @@ class ListTableParticipant extends React.Component {
 
 ListTableParticipant.defaultProps = {
   players: [],
+  TablePaginationActionsWrapped: undefined,
+
 };
 
 ListTableParticipant.propTypes = {
@@ -177,7 +179,7 @@ ListTableParticipant.propTypes = {
   classes: PropTypes.object.isRequired,
   players: PropTypes.array,
   intl: PropTypes.object.isRequired,
-  TablePaginationActionsWrapped: PropTypes.object.isRequired,
+  TablePaginationActionsWrapped: PropTypes.object,
 };
 
 export default injectIntl(withStyles(styles)(ListTableParticipant));
