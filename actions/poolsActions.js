@@ -1,9 +1,13 @@
+/* eslint-disable import/prefer-default-export */
 import axios from 'axios';
 import { actionTypes } from '../actions/types';
+import CONF from '../conf';
 
  const BASE_URL = process.env.ENDPOINT_URL;
 
-export const fetchPools = (address) => async dispatch => {
+const API = BASE_URL;
+
+export const fetchPools = address => async (dispatch) => {
   dispatch({ type: actionTypes.FETCH_POOLS_REQUEST });
 
   try {    

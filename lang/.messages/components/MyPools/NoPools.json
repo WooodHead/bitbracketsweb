@@ -1,0 +1,17 @@
+[
+  {
+    "id": "CreateNewPool",
+    "description": "Create New Pool",
+    "defaultMessage": "Create New Pool"
+  },
+  {
+    "id": "nopools",
+    "description": "You don´t have Pools",
+    "defaultMessage": "You don´t have Pools"
+  },
+  {
+    "id": "CreateANewPool",
+    "description": "Create a New Pool here",
+    "defaultMessage": "Create a new Pool here"
+  }
+]

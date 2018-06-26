@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 export const actionTypes = {
   /** Language actions. */
   FETCH_LANGUAGES_REQUEST: 'fetch_language_request',
@@ -34,28 +36,28 @@ export const actionTypes = {
   JOIN_POOL_SUCCESS: 'join_pool_success',
   JOIN_POOL_FAIL: 'join_pool_fail',
 
-    /** Predictions actions. */
-    FETCH_PREDICTIONS_REQUEST: 'fetch_predictions_request',
-    FETCH_PREDICTIONS_SUCCESS: 'fetch_predictions_success',
-    FETCH_PREDICTIONS_FAIL: 'fetch_predictions_fail',
-    UPDATE_PREDICTION_REQUEST: 'update_prediction_request',
-    UPDATE_PREDICTION_SUCCESS: 'update_prediction_success',
-    UPDATE_PREDICTION_FAIL: 'update_prediction_fail',
-    SAVE_PREDICTIONS_REQUEST: 'save_predictions_request',
-    SAVE_PREDICTIONS_SUCCESS: 'save_predictions_success',
-    SAVE_PREDICTIONS_FAIL: 'save_predictions_fail',
+  /** Predictions actions. */
+  FETCH_PREDICTIONS_REQUEST: 'fetch_predictions_request',
+  FETCH_PREDICTIONS_SUCCESS: 'fetch_predictions_success',
+  FETCH_PREDICTIONS_FAIL: 'fetch_predictions_fail',
+  UPDATE_PREDICTION_REQUEST: 'update_prediction_request',
+  UPDATE_PREDICTION_SUCCESS: 'update_prediction_success',
+  UPDATE_PREDICTION_FAIL: 'update_prediction_fail',
+  SAVE_PREDICTIONS_REQUEST: 'save_predictions_request',
+  SAVE_PREDICTIONS_SUCCESS: 'save_predictions_success',
+  SAVE_PREDICTIONS_FAIL: 'save_predictions_fail',
 
-    /** Contest actions. */
-    FETCH_MATCHES_REQUEST: 'fetch_matches_request',
-    FETCH_MATCHES_SUCCESS: 'fetch_matches_success',
-    FETCH_MATCHES_FAIL: 'fetch_matches_fail',
-    FETCH_TEAMS_REQUEST: 'fetch_teams_request',
-    FETCH_TEAMS_SUCCESS: 'fetch_teams_success',
-    FETCH_TEAMS_FAIL: 'fetch_teams_fail',
+  /** Contest actions. */
+  FETCH_MATCHES_REQUEST: 'fetch_matches_request',
+  FETCH_MATCHES_SUCCESS: 'fetch_matches_success',
+  FETCH_MATCHES_FAIL: 'fetch_matches_fail',
+  FETCH_TEAMS_REQUEST: 'fetch_teams_request',
+  FETCH_TEAMS_SUCCESS: 'fetch_teams_success',
+  FETCH_TEAMS_FAIL: 'fetch_teams_fail',
 
-    /** Fetch Pools actions*/
-    FETCH_POOLS_REQUEST: 'fetch_pools_request',
-    FETCH_POOLS_SUCCESS: 'fetch_pools_success',
-    FETCH_POOLS_FAIL: 'fetch_pools_fail',
+  /** Fetch Pools actions */
+  FETCH_POOLS_REQUEST: 'fetch_pools_request',
+  FETCH_POOLS_SUCCESS: 'fetch_pools_success',
+  FETCH_POOLS_FAIL: 'fetch_pools_fail',
 
-}
+};

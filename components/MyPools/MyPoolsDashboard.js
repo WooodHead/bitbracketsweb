@@ -1,16 +1,21 @@
 /* eslint-disable react/forbid-prop-types */
 
 import React from 'react';
-import { injectIntl, defineMessages } from 'react-intl';
 
+import { injectIntl, defineMessages } from 'react-intl';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from 'material-ui/Button';
-// import CardItem from '../common/CardItem';
+import Grid from 'material-ui/Grid';
+
+
+import { fetchPools } from '../../actions';
+
 import CardItemMyPools from './CardItemMyPools';
+import withMetaMask from '../HOC/withMetaMask';
+import NoPools from './NoPools';
 
-
-// import Typography from 'material-ui/Typography';
-// import Card, { CardContent, CardMedia, CardText } from 'material-ui/Card';
 
 const messages = defineMessages({
   CreateNewPool: {
@@ -20,24 +25,30 @@ const messages = defineMessages({
   },
 
 });
+
 class MyPoolsDashboard extends React.Component {
+  componentDidMount() {
+    this.props.fetchPools(this.props.defaultAccount);
+  }
+
+
   renderPools() {
     const { pools } = this.props;
 
     if (!pools.pools) {
       return null;
     }
+    if (pools.pools.length === 0) {
+      return <NoPools />;
+    }
     return pools.pools.map(poolsItems => (
-      // <CardItem key={poolsItems.address} item={poolsItems} userAddress={pools.address} />
+
       <CardItemMyPools key={poolsItems.address} item={poolsItems} userAddress={pools.address} />
     ));
   }
 
   render() {
     const { intl } = this.props;
-    const style = {
-      height: '100px', width: '100%', margin: '20px auto', padding: '20px 0px', align: 'center',
-    };
     const style2 = {
       height: '100px',
       width: '200px',
@@ -45,24 +56,43 @@ class MyPoolsDashboard extends React.Component {
       padding: '30px 0px',
       clear: 'left',
     };
+    const style = {
+      paddingTop: '100px',
+    };
     return (
-      <div>
-        <div id="page-wrap" style={style}>
-          {this.renderPools()}
-        </div>
-        <div style={style2}>
+
+      <div style={style}>
+        {this.renderPools()}
+
+        <Grid item xs={6} sm={3} style={style2}>
           <Button href="/contest/Russia2018/pools/new" variant="raised" color="primary">
             {intl.formatMessage(messages.CreateNewPool)}
+
           </Button>
-        </div>
+        </Grid>
       </div>
+
+
     );
   }
 }
 
 MyPoolsDashboard.propTypes = {
+  fetchPools: PropTypes.func.isRequired,
+  defaultAccount: PropTypes.any.isRequired,
   pools: PropTypes.any.isRequired,
   intl: PropTypes.object.isRequired,
 };
+function mapStateToProps(state) {
+  return {
 
-export default (injectIntl(MyPoolsDashboard));
+    pools: state.poolR.pools,
+    defaultAccount: state.defaultAccount,
+  };
+}
+const mapDispatchToProps = dispatch => ({
+  fetchPools: bindActionCreators(fetchPools, dispatch),
+});
+
+export default (injectIntl(connect(mapStateToProps, mapDispatchToProps)(withMetaMask(MyPoolsDashboard))));
+
