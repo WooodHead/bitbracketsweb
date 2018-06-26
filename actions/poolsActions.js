@@ -5,8 +5,6 @@ import CONF from '../conf';
 
  const BASE_URL = process.env.ENDPOINT_URL;
 
-const API = BASE_URL;
-
 export const fetchPools = address => async (dispatch) => {
   dispatch({ type: actionTypes.FETCH_POOLS_REQUEST });
 
