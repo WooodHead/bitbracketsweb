@@ -115,8 +115,8 @@ const styles = theme => ({
     },
   },
   formBox: {
-    display: 'flex',
-    flexDirection: 'column',
+    // display: 'flex',
+    // flexDirection: 'column',
     width: '60%',
     backgroundColor: 'white',
     border: '2px solid lightgray',
