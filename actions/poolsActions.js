@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import axios from 'axios';
 import { actionTypes } from '../actions/types';
-import CONF from '../conf';
 
  const BASE_URL = process.env.ENDPOINT_URL;
 
