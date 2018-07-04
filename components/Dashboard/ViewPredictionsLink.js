@@ -15,9 +15,13 @@ const ViewPredictionsLink = ({
   );
 };
 
+ViewPredictionsLink.defaultProps = {
+  status: undefined,
+
+};
 ViewPredictionsLink.propTypes = {
   text: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
+  status: PropTypes.string,
   poolAddress: PropTypes.string.isRequired,
   playerAddress: PropTypes.string.isRequired,
 };

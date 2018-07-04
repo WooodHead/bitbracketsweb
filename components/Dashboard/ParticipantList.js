@@ -11,6 +11,7 @@ import ListTableParticipant from './ListTableParticipant';
 import ResponsiveListTableParticipant from './ResponsiveListTableParticipant';
 import HeaderParticipantList from './HeaderParticipantList';
 
+
 const styles = theme => ({
   root: theme.mixins.gutters({
     paddingTop: 16,
@@ -80,7 +81,6 @@ class ParticipantList extends React.Component {
           {' '}
           <ListTableParticipant players={players} poolAddress={pool.address} />
         </Grid>
-
         <div className={classes.listResponsive}>
           <ResponsiveListTableParticipant players={players} poolAddress={pool.address} />
         </div>
