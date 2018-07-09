@@ -1,11 +1,8 @@
 import util from 'ethereumjs-util';
 import _ from 'lodash';
-import CONF from '../conf';
 import { actionTypes } from '../actions/types';
 import factory from '../ethereum/contestPoolFactory';
 import web3 from '../ethereum/web3';
-
-const API_BASE_URL = CONF.endpoint.url;
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 

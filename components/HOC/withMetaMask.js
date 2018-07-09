@@ -13,7 +13,6 @@ import MetaMaskLocked from '../metamask/MetaMaskLocked';
 import MetaMaskInvalidNetwork from '../metamask/MetaMaskInvalidNetwork';
 import MetaMaskNotInstalled from '../metamask/MetaMaskNotInstalled';
 // import Loader from '../common/Loader';
-import conf from '../../conf';
 
 
 /**
@@ -30,7 +29,6 @@ const isMetamaskInstalled = function isMetamaskInstalled(_window) {
 const hasAccounts = function hasAccounts(newAccounts) {
   return typeof newAccounts !== 'undefined' && newAccounts.length > 0;
 };
-
 
 const progressStyle = {
   position: 'absolute',
@@ -57,16 +55,16 @@ function withMetaMask(Component) {
 
     componentWillMount = async () => {
       this.initMetamaskChecks();
-      // setInterval(this.initMetamaskChecks, conf.web3.interval);
+      // setInterval(this.initMetamaskChecks, process.env.WEB3_INTERVAL);
     }
 
     componentDidMount = async () => {
       this.initMetamaskChecks();
-      setInterval(this.initMetamaskChecks, conf.web3.interval);
+      setInterval(this.initMetamaskChecks, process.env.WEB3_INTERVAL);
     }
 
     initMetamaskChecks = async () => {
-      // console.log(`Interval:  ${conf.web3.interval}`);
+      // console.log(`Interval:  ${process.env.WEB3_INTERVAL}`);
       let metamaskInstalled = isMetamaskInstalled(window);
       // console.log(`Is Metamask Installed? ${isMetamaskInstalled}`);
 
@@ -118,7 +116,7 @@ function withMetaMask(Component) {
       self.setState({
         metamaskInstalled,
         metamaskLocked: isMetamaskLocked,
-        metamaskNetworkIsValid: conf.web3.networks.indexOf(self.state.network) > -1,
+        metamaskNetworkIsValid: process.env.WEB3_NETWORKS.split(',').indexOf(self.state.network) > -1,
         loading: false,
         defaultAccount,
       });

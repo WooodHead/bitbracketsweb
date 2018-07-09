@@ -7,7 +7,6 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import { injectIntl, defineMessages } from 'react-intl';
 import NavigationResponsive from './NavigationResponsive';
-import CONF from '../../conf';
 
 const styles = theme => ({
   root: {
@@ -105,7 +104,7 @@ function FirstNavbar(props) {
             </Button>
 
             <Button
-              href={`/contest/${CONF.web3.contestName}/pools/new`}
+              href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
               variant="raised"
               style={{ backgroundColor: '#E91E63', color: '#fff' }}
             >
@@ -121,7 +120,7 @@ function FirstNavbar(props) {
           <Toolbar>
 
             <Button
-              href={`/contest/${CONF.web3.contestName}/pools/new`}
+              href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
             >
               {intl.formatMessage(messages.navigationNavbarlink4)}
             </Button>

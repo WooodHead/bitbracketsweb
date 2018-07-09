@@ -1,9 +1,8 @@
 import _ from 'lodash';
 import axios from 'axios';
 import { actionTypes } from '../actions/types';
-import CONF from '../conf';
 
-const API_BASE_URL = CONF.endpoint.url;
+const API_BASE_URL = process.env.ENDPOINT_URL;
 
 // const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const isNotUndefined = value => !(_.isUndefined(value));
