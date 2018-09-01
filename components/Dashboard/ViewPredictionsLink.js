@@ -9,7 +9,9 @@ const ViewPredictionsLink = ({
   const linkUrl = `/pools/${poolAddress}/prediction/${playerAddress}`;
   return (
     <div>
-      <Link route={linkUrl}>{text}</Link>
+      <Link prefetch href={linkUrl} route={linkUrl}>
+        <a>{text}</a>
+      </Link>
       {status}
     </div>
   );
