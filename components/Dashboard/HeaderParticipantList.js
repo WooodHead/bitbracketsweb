@@ -21,29 +21,15 @@ const messages = defineMessages({
   JointhePool: {
     id: 'JointhePool',
     defaultMessage: 'Join the Pool',
-    description: 'Join the Pool', 
+    description: 'Join the Pool',
   },
 });
 
 class HeaderParticipantList extends Component {
-  getJoinUrl = () => {
-    const { pool } = this.props;
-
-    const joinUrl = `/pools/${pool.address}/join`;
-
-    return joinUrl;
-  }
-
-  handleClickJoin = () => {
-    const url = this.getJoinUrl();
-    console.log('click url', url);
-    Router.pushRoute(url);
-  }
-
   showButtonJoinPool() {
     const { pool, intl } = this.props;
 
-    const joinUrl = this.getJoinUrl();
+    const joinUrl = `/pools/${pool.address}/join`;
 
     return (
       <Grid container spacing={24}>
@@ -57,13 +43,14 @@ class HeaderParticipantList extends Component {
           <InviteFriends url={`/pools/${pool.address}`} />
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Button
-            variant="raised"
-            style={{ backgroundColor: '#E91E63', color: '#fff' }}
-            onClick={this.handleClickJoin}
-          >
-            {intl.formatMessage(messages.JointhePool)}
-          </Button>
+          <Link prefetch href={joinUrl} route={joinUrl} >
+            <Button
+              variant="raised"
+              style={{ backgroundColor: '#E91E63', color: '#fff' }}
+            >
+              {intl.formatMessage(messages.JointhePool)}
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     );
