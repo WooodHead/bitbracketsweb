@@ -20,33 +20,11 @@ const messages = defineMessages({
   JointhePool: {
     id: 'JointhePool',
     defaultMessage: 'Join the Pool',
-<<<<<<< HEAD
-    description: 'Join the Pool',
-  },
-});
-
-class HeaderParticipantList extends Component {
-=======
     description: 'Join the Pool'
   }
 });
 
 class HeaderParticipantList extends Component {
-  getJoinUrl = () => {
-    const { pool } = this.props;
-
-    const joinUrl = `/pools/${pool.address}/join`;
-
-    return joinUrl;
-  };
-
-  handleClickJoin = () => {
-    const url = this.getJoinUrl();
-    console.log('click url', url);
-    Router.pushRoute(url);
-  };
-
->>>>>>> add precommit staging to lint and prettier
   showButtonJoinPool() {
     const { pool, intl } = this.props;
 
@@ -63,7 +41,7 @@ class HeaderParticipantList extends Component {
           <InviteFriends url={`/pools/${pool.address}`} />
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Link prefetch href={joinUrl} route={joinUrl} >
+          <Link prefetch href={joinUrl} route={joinUrl}>
             <Button
               variant="raised"
               style={{ backgroundColor: '#E91E63', color: '#fff' }}
