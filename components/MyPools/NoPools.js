@@ -14,21 +14,19 @@ const messages = defineMessages({
   CreateNewPool: {
     id: 'CreateNewPool',
     defaultMessage: 'Create New Pool',
-    description: 'Create New Pool',
+    description: 'Create New Pool'
   },
   nopools: {
     id: 'nopools',
     defaultMessage: 'You don´t have Pools',
-    description: 'You don´t have Pools',
+    description: 'You don´t have Pools'
   },
   CreateANewPool: {
     id: 'CreateANewPool',
     defaultMessage: 'Create a new Pool here',
-    description: 'Create a New Pool here',
-  },
-
+    description: 'Create a New Pool here'
+  }
 });
-
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -36,20 +34,16 @@ const styles = theme => ({
     paddingBottom: 16,
     marginTop: theme.spacing.unit * 3,
 
-    textAlign: 'center',
-  }),
+    textAlign: 'center'
+  })
 });
-
 
 function NoPools(props) {
   const { classes, intl } = props;
   return (
     <div className={classes.root}>
-
       <Paper elevation={4}>
         <Grid container spacing={24}>
-
-
           <Grid item xs={6} sm={3}>
             <Typography variant="headline" component="h3">
               {intl.formatMessage(messages.nopools)}
@@ -58,21 +52,17 @@ function NoPools(props) {
           <Grid item xs={6} sm={3}>
             <Typography component="p">
               {intl.formatMessage(messages.CreateANewPool)}
-
-
             </Typography>
           </Grid>
-        
         </Grid>
       </Paper>
-
     </div>
   );
 }
 
 NoPools.propTypes = {
   classes: PropTypes.object.isRequired,
-  intl: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired
 };
 
-export default (injectIntl(withStyles(styles)(NoPools)));
+export default injectIntl(withStyles(styles)(NoPools));

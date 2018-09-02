@@ -18,7 +18,7 @@ import Grid from 'material-ui/Grid';
 const styles = theme => ({
   headingTertiary: {
     fontWeight: 'bold',
-    marginBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2
   },
   formBox: {
     backgroundColor: '#fff',
@@ -30,59 +30,54 @@ const styles = theme => ({
       backgroundColor: 'white',
       border: '2px solid lightgray',
       borderRadius: '5px',
-      padding: theme.spacing.unit * 3,
-    },
+      padding: theme.spacing.unit * 3
+    }
   },
   textField: {
-    marginBottom: theme.spacing.unit,
+    marginBottom: theme.spacing.unit
     // width: '60%',
   },
   division: {
     alignSelf: 'center',
     width: '100%',
     marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2
   },
   expansionPanel: {
     flexGrow: 1,
-    marginTop: theme.spacing.unit * 2,
-  },
+    marginTop: theme.spacing.unit * 2
+  }
 });
 
 const messages = defineMessages({
   headingTertiary2: {
     id: 'headingTertiary2',
     defaultMessage: 'Payment Details',
-    description: '',
+    description: ''
   },
   entryLabel: {
     id: 'entryLabel',
     defaultMessage: 'Entry Price',
-    description: '',
+    description: ''
   },
   feeLabel: {
     id: 'feeLabel',
     defaultMessage: 'Pool Creation Fee',
-    description: '',
+    description: ''
   },
   totalLabel: {
     id: 'totalLabel',
     defaultMessage: 'TOTAL',
-    description: '',
-  },
+    description: ''
+  }
 });
 
 class PaymentForm extends Component {
   renderPaymentDetails() {
-    const {
- classes, intl, forms, contest 
-} = this.props;
+    const { classes, intl, forms, contest } = this.props;
 
     return (
-      <Form
-        className={classes.formBox}
-        model="createPool"
-      >
+      <Form className={classes.formBox} model="createPool">
         <Typography className={classes.headingTertiary} variant="subheading">
           {intl.formatMessage(messages.headingTertiary2)}
         </Typography>
@@ -119,7 +114,6 @@ class PaymentForm extends Component {
             />
           </Grid>
         </Grid>
-
       </Form>
     );
   }
@@ -133,7 +127,7 @@ class PaymentForm extends Component {
 }
 
 const mapStateToProps = ({ forms }) => ({
-  form: forms.createPool,
+  form: forms.createPool
 });
 
 const ConnectedPaymentForm = connect(mapStateToProps)(PaymentForm);

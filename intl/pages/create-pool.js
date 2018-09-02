@@ -18,9 +18,7 @@ export default {
     errorEmail: 'Not a Valid Email',
     poolNameTextbox: 'Pool Name',
     headingTertiary3: 'Payment Details',
-    feeLabel: 'Pool Creation Fee',
-
-   
+    feeLabel: 'Pool Creation Fee'
   },
   es: {
     headingPrimary: 'Crear Quiniela',
@@ -41,7 +39,6 @@ export default {
     errorEmail: 'Correo invalido',
     poolNameTextbox: 'Nombre de la quiniela',
     headingTertiary3: 'Detalles del Pago',
-    feeLabel: 'Costo de la creación',
-    
-  },
+    feeLabel: 'Costo de la creación'
+  }
 };

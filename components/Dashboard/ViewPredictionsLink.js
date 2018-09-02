@@ -3,9 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '../../routes';
 
-const ViewPredictionsLink = ({
-  text, status, poolAddress, playerAddress,
-}) => {
+const ViewPredictionsLink = ({ text, status, poolAddress, playerAddress }) => {
   const linkUrl = `/pools/${poolAddress}/prediction/${playerAddress}`;
   return (
     <div>
@@ -18,14 +16,13 @@ const ViewPredictionsLink = ({
 };
 
 ViewPredictionsLink.defaultProps = {
-  status: undefined,
-
+  status: undefined
 };
 ViewPredictionsLink.propTypes = {
   text: PropTypes.string.isRequired,
   status: PropTypes.string,
   poolAddress: PropTypes.string.isRequired,
-  playerAddress: PropTypes.string.isRequired,
+  playerAddress: PropTypes.string.isRequired
 };
 
 export default ViewPredictionsLink;

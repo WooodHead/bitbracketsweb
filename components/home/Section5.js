@@ -10,11 +10,9 @@ const messages = defineMessages({
   homeSection5Title1: {
     id: 'home.section5.title1',
     defaultMessage: 'Play your favorite sport events with Cryptocurrency',
-    description: 'home > section3',
-  },
+    description: 'home > section3'
+  }
 });
-
-
 
 class Section5 extends Component {
   render() {
@@ -24,7 +22,7 @@ class Section5 extends Component {
         style={{
           background: '#418BFF',
           padding: '12%',
-          textAlign: 'center',
+          textAlign: 'center'
         }}
       >
         <Typography

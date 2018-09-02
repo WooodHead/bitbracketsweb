@@ -8,7 +8,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { initGA, logPageView } from '../utils/analytics';
 
-
 import Header from './Header';
 import Navigation from './Navigation/Navigation';
 
@@ -69,19 +68,24 @@ class Layout extends Component {
 function mapStateToProps(state) {
   return {
     current: state.language.current,
-    languages: state.language.languages,
+    languages: state.language.languages
   };
 }
 
 const mapDispatchToProps = dispatch => ({
   changeLanguage: bindActionCreators(changeLanguage, dispatch),
-  fetchLanguages: bindActionCreators(fetchLanguages, dispatch),
+  fetchLanguages: bindActionCreators(fetchLanguages, dispatch)
 });
 
 Layout.propTypes = {
   languages: PropTypes.array.isRequired,
   changeLanguage: PropTypes.func.isRequired,
   current: PropTypes.string.isRequired,
-  fetchLanguages: PropTypes.func.isRequired,
+  fetchLanguages: PropTypes.func.isRequired
 };
-export default withRoot(connect(mapStateToProps, mapDispatchToProps)(Layout));
+export default withRoot(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Layout)
+);

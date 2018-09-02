@@ -12,15 +12,20 @@ const API_BASE_URL = process.env.ENDPOINT_URL;
 
 // const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-export const loadPoolParticipants = address => (dispatch) => {
+export const loadPoolParticipants = address => dispatch => {
   dispatch({ type: actionTypes.FETCH_POOL_PARTICIPANTS_REQUEST });
 
-  axios.get(`${API_BASE_URL}/pools/${address}`)
-    .then(res => dispatch({
-      type: actionTypes.FETCH_POOL_PARTICIPANTS_SUCCESS,
-      payload: res.data,
-    }))
-    .catch(err => dispatch({ type: actionTypes.FETCH_POOL_PARTICIPANTS_FAIL, payload: err }));
+  axios
+    .get(`${API_BASE_URL}/pools/${address}`)
+    .then(res =>
+      dispatch({
+        type: actionTypes.FETCH_POOL_PARTICIPANTS_SUCCESS,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({ type: actionTypes.FETCH_POOL_PARTICIPANTS_FAIL, payload: err })
+    );
 };
 
 export const getPoolDetails = address => dispatch =>
@@ -32,7 +37,9 @@ export const getPoolDetails = address => dispatch =>
         throw new Error('Error: Invalid address provided');
       }
       const poolInstance = await getContestPoolInstance(address);
-      const contestDetails = await poolInstance.methods.getContestDetails().call();
+      const contestDetails = await poolInstance.methods
+        .getContestDetails()
+        .call();
       console.log(contestDetails);
 
       const manager = contestDetails[0];
@@ -52,11 +59,7 @@ export const getPoolDetails = address => dispatch =>
       const winners = poolInstance.methods.getWinners().call();
       const totalBalance = poolInstance.methods.getPoolBalance().call();
       const contractBalance = web3.eth.getBalance(address);
-      const res = await Promise.all([
-        winners,
-        totalBalance,
-        contractBalance
-      ]);
+      const res = await Promise.all([winners, totalBalance, contractBalance]);
 
       const pool = {
         manager,
@@ -77,11 +80,13 @@ export const getPoolDetails = address => dispatch =>
         maxBalance,
         maxBalanceEth: web3.utils.fromWei(maxBalance, 'ether')
       };
-      const balanceEntries = (pool.amountPerPlayer * pool.numPlayers);
+      const balanceEntries = pool.amountPerPlayer * pool.numPlayers;
       const feeTotal = balanceEntries * (pool.fee / 100);
       const managerTotal = balanceEntries * (pool.managerFee / 100);
       pool.priceTotal = 100 - managerFee - fee;
-      pool.priceBalance = Number(balanceEntries - feeTotal - managerTotal - pool.amountPaid).toFixed(8);
+      pool.priceBalance = Number(
+        balanceEntries - feeTotal - managerTotal - pool.amountPaid
+      ).toFixed(8);
       pool.managerTotal = Number(managerTotal).toFixed(8);
       pool.ownerTotal = Number(feeTotal).toFixed(8);
       pool.maxPlayers = maxBalance / amountPerPlayer;
@@ -92,4 +97,3 @@ export const getPoolDetails = address => dispatch =>
       reject(error);
     }
   });
-

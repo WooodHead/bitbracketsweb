@@ -18,6 +18,6 @@ export default combineReducers({
   predictions: predictionsReducer,
   ...createForms({
     createPool: createPoolReducer,
-    joinPool: joinPoolReducer,
-  }),
+    joinPool: joinPoolReducer
+  })
 });

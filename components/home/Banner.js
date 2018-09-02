@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Typography from "material-ui/Typography";
+import React, { Component } from 'react';
+import Typography from 'material-ui/Typography';
 
 class Banner extends Component {
   render() {
@@ -9,7 +9,7 @@ class Banner extends Component {
           align="center"
           variant="display4"
           gutterBottom
-          style={{ color: "#fff", paddingTop: "1em", fontWeight: "500" }}
+          style={{ color: '#fff', paddingTop: '1em', fontWeight: '500' }}
         >
           BitBrackets
         </Typography>
@@ -17,7 +17,7 @@ class Banner extends Component {
           align="center"
           variant="display2"
           gutterBottom
-          style={{ color: "#fff", fontWeight: "400" }}
+          style={{ color: '#fff', fontWeight: '400' }}
         >
           Russia 2018
         </Typography>
@@ -30,7 +30,7 @@ class Banner extends Component {
             background-position: 80% 80%;
             padding-bottom: 350px;
             text-align: center;
-            background-attachment:fixed;
+            background-attachment: fixed;
           }
         `}</style>
       </div>

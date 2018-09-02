@@ -16,7 +16,7 @@ import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
   headingTertiary: {
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   formBox: {
     backgroundColor: '#fff',
@@ -28,8 +28,8 @@ const styles = theme => ({
       backgroundColor: 'white',
       border: '2px solid lightgray',
       borderRadius: '5px',
-      padding: theme.spacing.unit * 3,
-    },
+      padding: theme.spacing.unit * 3
+    }
     // display: 'flex',
     // flexDirection: 'column',
     // width: '60%',
@@ -39,15 +39,15 @@ const styles = theme => ({
     // padding: theme.spacing.unit * 3,
   },
   textField: {
-    marginBottom: theme.spacing.unit,
+    marginBottom: theme.spacing.unit
     // width: '60%',
   },
   division: {
     alignSelf: 'center',
     width: '100%',
     marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2,
-  },
+    marginBottom: theme.spacing.unit * 2
+  }
 });
 
 const messages = defineMessages({
@@ -55,45 +55,45 @@ const messages = defineMessages({
     id: 'headingTertiary1',
     defaultMessage: 'Admin Info',
     description:
-      'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 1',
+      'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 1'
   },
   headingTertiary2: {
     id: 'headingTertiary2',
     defaultMessage: 'Pool Info',
     description:
-      'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 2',
+      'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 2'
   },
   headingTertiary3: {
     id: 'headingTertiary3',
     defaultMessage: 'Payment Details',
     description:
-      'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 3',
+      'Create Pool Page -> Create Pool Form -> Review Details Form -> tittle 3'
   },
   nameLabel: {
     id: 'nameLabel',
     defaultMessage: 'Name',
-    description: '',
+    description: ''
   },
   emailLabel: {
     id: 'emailLabel',
     defaultMessage: 'Email',
-    description: '',
+    description: ''
   },
   entryPasswordLabel: {
     id: 'entryPasswordLabel',
     defaultMessage: 'Entry Password',
-    description: '',
+    description: ''
   },
   entryLabel: {
     id: 'entryLabel',
     defaultMessage: 'Entry Amount',
-    description: '',
+    description: ''
   },
   feeLabel: {
     id: 'feeLabel',
     defaultMessage: 'Pool Creation Fee',
-    description: '',
-  },
+    description: ''
+  }
 });
 
 const ReviewDetailForm = ({ classes, intl }) => (
@@ -208,8 +208,7 @@ const ReviewDetailForm = ({ classes, intl }) => (
 
 ReviewDetailForm.propTypes = {
   classes: PropTypes.object.isRequired,
-  intl: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired
 };
-
 
 export default withStyles(styles)(injectIntl(ReviewDetailForm));

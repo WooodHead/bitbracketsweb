@@ -14,7 +14,6 @@ import MetaMaskInvalidNetwork from '../metamask/MetaMaskInvalidNetwork';
 import MetaMaskNotInstalled from '../metamask/MetaMaskNotInstalled';
 // import Loader from '../common/Loader';
 
-
 /**
  *
  * @description https://github.com/MetaMask/faq/blob/master/DEVELOPERS.md#partly_sunny-web3---ethereum-browser-environment-check
@@ -35,7 +34,7 @@ const progressStyle = {
   top: '50%',
   left: '50%',
   marginTop: -12,
-  marginLeft: -12,
+  marginLeft: -12
 };
 
 function withMetaMask(Component) {
@@ -49,19 +48,19 @@ function withMetaMask(Component) {
         metamaskNetworkIsValid: undefined,
         defaultAccount: undefined,
         loading: true,
-        network: '',
+        network: ''
       };
     }
 
     componentWillMount = async () => {
       this.initMetamaskChecks();
       // setInterval(this.initMetamaskChecks, process.env.WEB3_INTERVAL);
-    }
+    };
 
     componentDidMount = async () => {
       this.initMetamaskChecks();
       setInterval(this.initMetamaskChecks, process.env.WEB3_INTERVAL);
-    }
+    };
 
     initMetamaskChecks = async () => {
       // console.log(`Interval:  ${process.env.WEB3_INTERVAL}`);
@@ -116,13 +115,14 @@ function withMetaMask(Component) {
       self.setState({
         metamaskInstalled,
         metamaskLocked: isMetamaskLocked,
-        metamaskNetworkIsValid: process.env.WEB3_NETWORKS.split(',').indexOf(self.state.network) > -1,
+        metamaskNetworkIsValid:
+          process.env.WEB3_NETWORKS.split(',').indexOf(self.state.network) > -1,
         loading: false,
-        defaultAccount,
+        defaultAccount
       });
-    }
+    };
 
-    checkNetwork = (_window) => {
+    checkNetwork = _window => {
       _window.web3.version.getNetwork((err, netId) => {
         let network;
         switch (netId) {
@@ -146,24 +146,38 @@ function withMetaMask(Component) {
         }
         // console.log(`This is the ${network} network.`);
         this.setState({
-          network,
+          network
         });
       });
-    }
+    };
 
     render() {
       let componentToRender;
       if (this.state.loading) {
-        componentToRender = <CircularProgress size={24} style={{ position: 'absolute', top: '50%', left: '50%', marginTop: '-12', marginLeft: '-12' }} />;
-        return (
-          componentToRender
+        componentToRender = (
+          <CircularProgress
+            size={24}
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              marginTop: '-12',
+              marginLeft: '-12'
+            }}
+          />
         );
+        return componentToRender;
       }
       if (this.state.metamaskInstalled) {
         if (this.state.metamaskLocked) {
           componentToRender = <MetaMaskLocked />;
         } else {
-          componentToRender = <Component {...this.props} defaultAccount={this.state.defaultAccount} />;
+          componentToRender = (
+            <Component
+              {...this.props}
+              defaultAccount={this.state.defaultAccount}
+            />
+          );
         }
       } else {
         componentToRender = <MetaMaskNotInstalled />;
@@ -173,21 +187,18 @@ function withMetaMask(Component) {
       //   return (<MetaMaskInvalidNetwork />);
       // }
 
-      return (
-        componentToRender
-      );
+      return componentToRender;
     }
   }
   WithMetaMask.defaultProps = {
-    pageContext: PropTypes.func,
+    pageContext: PropTypes.func
   };
-
 
   WithMetaMask.propTypes = {
-    pageContext: PropTypes.func,
+    pageContext: PropTypes.func
   };
 
-  WithMetaMask.getInitialProps = (ctx) => {
+  WithMetaMask.getInitialProps = ctx => {
     if (Component.getInitialProps) {
       return Component.getInitialProps(ctx);
     }

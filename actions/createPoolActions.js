@@ -35,13 +35,16 @@ export const createPool = pool => dispatch =>
         .createContestPool(
           stringToBytes32(poolName),
           stringToBytes32(contestName),
-          web3.utils.toWei(entryPrice, 'ether'),
+          web3.utils.toWei(entryPrice, 'ether')
         )
         .send({
           from: accounts[0],
-          value: pool.fee,
+          value: pool.fee
         });
-      const poolAddress = _.get(tx, 'events.ContestPoolCreated.returnValues.contestPoolAddress');
+      const poolAddress = _.get(
+        tx,
+        'events.ContestPoolCreated.returnValues.contestPoolAddress'
+      );
       console.log('poolAddress', poolAddress);
       if (poolAddress) {
         dispatch({ type: actionTypes.CREATE_POOL_SUCCESS, payload: tx });
@@ -57,8 +60,8 @@ export const createPool = pool => dispatch =>
     }
   });
 
-  // this should be named fetchContestDetails
-export const fetchPoolDetails = pool => async (dispatch) => {
+// this should be named fetchContestDetails
+export const fetchPoolDetails = pool => async dispatch => {
   dispatch({ type: actionTypes.POOL_DETAIL_REQUEST });
   // await delay(500);
   dispatch({ type: actionTypes.POOL_DETAIL_SUCCESS, payload: pool });
@@ -76,7 +79,10 @@ export const fetchPoolDefinition = pool => dispatch =>
       console.log('poolName', stringToBytes32(poolName));
       console.log('poolName ascii to hex', web3.utils.stringToHex(poolName));
       console.log('contestName', stringToBytes32(contestName));
-      console.log('contestName ascii to hex', web3.utils.stringToHex(contestName));
+      console.log(
+        'contestName ascii to hex',
+        web3.utils.stringToHex(contestName)
+      );
       const res = await factory.methods
         .definitions(stringToBytes32(contestName))
         .call();

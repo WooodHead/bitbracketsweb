@@ -10,22 +10,19 @@ import Section4 from './Section4';
 import Section5 from './Section5';
 import BannerResponsivo from './BannerResponsivo';
 
-
 const styles = theme => ({
   rootWeb: {
     padding: theme.spacing.unit,
     [theme.breakpoints.down('sm')]: {
-      display: 'none',
-    },
-   
+      display: 'none'
+    }
   },
   rootResponsive: {
     padding: theme.spacing.unit,
     [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
-   
-  },
+      display: 'none'
+    }
+  }
 });
 
 function Home(props) {
@@ -43,12 +40,11 @@ function Home(props) {
       <Section3 />
       <Section4 />
       <Section5 />
-
     </div>
   );
 }
 Home.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Home);

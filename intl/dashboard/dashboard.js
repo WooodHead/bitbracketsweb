@@ -13,8 +13,8 @@ export default {
     PoolBalance: 'Pool Balance:',
     OwnerFee: 'Platform Fee',
     MaxBalance: 'Max Allowed Balance:',
-    predictionSuccessMessage: 'Your prediction has been successfully processed. Please give it refresh if it is not listed yet.',
-
+    predictionSuccessMessage:
+      'Your prediction has been successfully processed. Please give it refresh if it is not listed yet.'
   },
   es: {
     TimeRemaining: 'Tiempo restante para hacer tu predicción:',
@@ -30,8 +30,7 @@ export default {
     PoolBalance: 'Balance de la quiniela',
     OwnerFee: 'Tarifa de la Plataform',
     MaxBalance: 'Balance Máximo Posible :',
-    predictionSuccessMessage: 'Su predicción se ha procesado con éxito. Favor darle refrescar si no aparece listada aún.',
-
-  },
+    predictionSuccessMessage:
+      'Su predicción se ha procesado con éxito. Favor darle refrescar si no aparece listada aún.'
+  }
 };
-

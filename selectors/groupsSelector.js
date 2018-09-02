@@ -3,13 +3,10 @@ import { createSelector } from 'reselect';
 
 const matchesSelector = state => state.contest.matches;
 
-const getGroups = (matches) => {
-    const groups = _.uniq(_.map(matches, (match => match.data.group)));
+const getGroups = matches => {
+  const groups = _.uniq(_.map(matches, match => match.data.group));
 
-    return groups;
+  return groups;
 };
 
-export default createSelector(
-    matchesSelector,
-    getGroups,
-);
+export default createSelector(matchesSelector, getGroups);

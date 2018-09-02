@@ -6,13 +6,12 @@ import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 
-
 const styles = theme => ({
   root: theme.mixins.gutters({
     paddingTop: 16,
     paddingBottom: 16,
-    marginTop: theme.spacing.unit * 3,
-  }),
+    marginTop: theme.spacing.unit * 3
+  })
 });
 
 function Messages(props) {
@@ -24,21 +23,17 @@ function Messages(props) {
     <div>
       <Paper className={classes.root} elevation={4}>
         {messages}
-
-
       </Paper>
     </div>
   );
 }
 
 Messages.defaultProps = {
-
-  messages: undefined,
+  messages: undefined
 };
 Messages.propTypes = {
   classes: PropTypes.object.isRequired,
-  messages: PropTypes.string,
-
+  messages: PropTypes.string
 };
 
-export default (withStyles(styles)(Messages));
+export default withStyles(styles)(Messages);

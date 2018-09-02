@@ -58,6 +58,5 @@ export const actionTypes = {
   /** Fetch Pools actions */
   FETCH_POOLS_REQUEST: 'fetch_pools_request',
   FETCH_POOLS_SUCCESS: 'fetch_pools_success',
-  FETCH_POOLS_FAIL: 'fetch_pools_fail',
-
+  FETCH_POOLS_FAIL: 'fetch_pools_fail'
 };

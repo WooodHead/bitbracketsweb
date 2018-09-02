@@ -9,8 +9,13 @@ import JoinPoolLayout from '../../components/JoinPoolForm/JoinPoolLayout';
 import Layout from '../../components/Layout';
 import GroupsSelector from '../../selectors/groupsSelector';
 import MatchesSelector from '../../selectors/matchesSelector';
-import { joinPool, updatePrediction, savePredictions, fetchContest, getPoolDetails } from '../../actions';
-
+import {
+  joinPool,
+  updatePrediction,
+  savePredictions,
+  fetchContest,
+  getPoolDetails
+} from '../../actions';
 
 class JoinPoolPage extends React.Component {
   static async getInitialProps({ store, query, isServer }) {
@@ -60,7 +65,10 @@ class JoinPoolPage extends React.Component {
           save={savePredictions}
         />
 
-        <div style={{ marginTop: '5em' }}> <hr /></div>
+        <div style={{ marginTop: '5em' }}>
+          {' '}
+          <hr />
+        </div>
       </Layout>
     );
   }
@@ -73,7 +81,7 @@ function mapStateToProps(state) {
     groups: GroupsSelector(state),
     predictions: state.predictions,
     // TODO: separar estos error en el mapping del estado
-    error: state.pool.error || state.contest.error, // || state.predictions.error,
+    error: state.pool.error || state.contest.error // || state.predictions.error,
   };
 }
 
@@ -82,8 +90,9 @@ const mapDispatchToProps = dispatch => ({
   updatePrediction: bindActionCreators(updatePrediction, dispatch),
   savePredictions: bindActionCreators(savePredictions, dispatch),
   fetchContest: bindActionCreators(fetchContest, dispatch),
-  getPoolDetails: bindActionCreators(getPoolDetails, dispatch),
+  getPoolDetails: bindActionCreators(getPoolDetails, dispatch)
 });
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(JoinPoolPage));
-
+export default withRoot(
+  withRedux(initStore, mapStateToProps, mapDispatchToProps)(JoinPoolPage)
+);

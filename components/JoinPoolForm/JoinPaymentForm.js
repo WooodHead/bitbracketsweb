@@ -12,7 +12,7 @@ import Grid from 'material-ui/Grid';
 const styles = theme => ({
   headingTertiary: {
     fontWeight: 'bold',
-    marginBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2
   },
   formBox: {
     display: 'flex',
@@ -21,85 +21,85 @@ const styles = theme => ({
     backgroundColor: 'white',
     border: '2px solid lightgray',
     borderRadius: '5px',
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing.unit * 3
   },
   textField: {
-    marginBottom: theme.spacing.unit,
+    marginBottom: theme.spacing.unit
     // width: '60%',
   },
   division: {
     alignSelf: 'center',
     width: '100%',
     marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2
   },
   expansionPanel: {
     flexGrow: 1,
-    marginTop: theme.spacing.unit * 2,
-  },
+    marginTop: theme.spacing.unit * 2
+  }
 });
 
 const messages = defineMessages({
   headingTertiary1: {
     id: 'JoinPaymentForm.headingTertiary1',
     defaultMessage: 'Finish Installing MetaMask to Continue',
-    description: '',
+    description: ''
   },
   help: {
     id: 'JoinPaymentForm.help',
     defaultMessage: 'Here some help:',
-    description: '',
+    description: ''
   },
   installHeader: {
     id: 'JoinPaymentForm.installHeader',
     defaultMessage: 'How to Install MetaMask',
-    description: '',
+    description: ''
   },
   installDescription: {
     id: 'JoinPaymentForm.installDescription',
     defaultMessage: '...',
-    description: '',
+    description: ''
   },
   etherHeader: {
     id: 'JoinPaymentForm.etherHeader',
     defaultMessage: 'Getting Ether Your Digital Currency',
-    description: '',
+    description: ''
   },
   etherDescription: {
     id: 'JoinPaymentForm.etherDescription',
     defaultMessage: '...',
-    description: '',
+    description: ''
   },
   sendHeader: {
     id: 'JoinPaymentForm.sendHeader',
     defaultMessage: 'How to Send ETH to MetaMask',
-    description: '',
+    description: ''
   },
   sendDescription: {
     id: 'JoinPaymentForm.sendDescription',
     defaultMessage: '...',
-    description: '',
+    description: ''
   },
   headingTertiary2: {
     id: 'JoinPaymentForm.headingTertiary2',
     defaultMessage: 'Payment Details',
-    description: '',
+    description: ''
   },
   entryLabel: {
     id: 'JoinPaymentForm.entryLabel',
     defaultMessage: 'Entry Price',
-    description: '',
+    description: ''
   },
   feeLabel: {
     id: 'JoinPaymentForm.feeLabel',
     defaultMessage: 'Entry Fee',
-    description: '',
+    description: ''
   },
   totalLabel: {
     id: 'JoinPaymentForm.totalLabel',
     defaultMessage: 'TOTAL',
-    description: '',
-  },
+    description: ''
+  }
 });
 
 class JoinPaymentForm extends Component {
@@ -108,10 +108,7 @@ class JoinPaymentForm extends Component {
     const entryFee = pool.info ? pool.info.amountPerPlayer : 'undefined';
 
     return (
-      <Form
-        className={classes.formBox}
-        model="joinPool"
-      >
+      <Form className={classes.formBox} model="joinPool">
         <Typography className={classes.headingTertiary} variant="subheading">
           {intl.formatMessage(messages.headingTertiary2)}
         </Typography>
@@ -163,22 +160,19 @@ class JoinPaymentForm extends Component {
             {entryFee} ETH
           </Grid>
         </Grid>
-
       </Form>
     );
   }
 
   render() {
-    return (
-      this.renderPaymentDetails()
-    );
+    return this.renderPaymentDetails();
   }
 }
 
 JoinPaymentForm.propTypes = {
   pool: PropTypes.object.isRequired,
   intl: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(injectIntl(JoinPaymentForm));

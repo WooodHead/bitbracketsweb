@@ -14,12 +14,9 @@ import Layout from '../components/Layout';
 import { initStore } from '../store';
 import RoadMap from '../components/RoadMap';
 
-
-
 addLocaleData(en);
 addLocaleData(es);
 const messages = initMessages();
-
 
 function roadmap(props) {
   // const { language } = props;
@@ -29,27 +26,24 @@ function roadmap(props) {
     <IntlProvider locale={language} messages={messages[language]}>
       <Layout title="Roadmap">
         <RoadMap />
-     
-  
       </Layout>
     </IntlProvider>
   );
 }
 
 roadmap.propTypes = {
-
-
-  current: PropTypes.string.isRequired,
-
+  current: PropTypes.string.isRequired
 };
 function mapStateToProps(state) {
   return {
     current: state.language.current,
-    languages: state.language.languages,
+    languages: state.language.languages
   };
 }
 const mapDispatchToProps = dispatch => ({
   // changeLanguage: bindActionCreators(changeLanguage, dispatch),
 });
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(roadmap));
+export default withRoot(
+  withRedux(initStore, mapStateToProps, mapDispatchToProps)(roadmap)
+);

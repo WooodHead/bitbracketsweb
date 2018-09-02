@@ -3,7 +3,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import FirstNavbar from './FirstNavbar';
 
 function Navigation(props) {
@@ -32,7 +31,7 @@ function Navigation(props) {
   );
 }
 Navigation.propTypes = {
-  languageSelect: PropTypes.object.isRequired,
+  languageSelect: PropTypes.object.isRequired
 };
 
 export default Navigation;

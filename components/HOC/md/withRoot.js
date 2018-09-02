@@ -38,7 +38,7 @@ function withRoot(Component) {
   }
 
   WithRoot.propTypes = {
-    pageContext: PropTypes.object,
+    pageContext: PropTypes.object
   };
 
   WithRoot.getInitialProps = ctx => {

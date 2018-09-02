@@ -11,12 +11,11 @@ import ListTableParticipant from './ListTableParticipant';
 import ResponsiveListTableParticipant from './ResponsiveListTableParticipant';
 import HeaderParticipantList from './HeaderParticipantList';
 
-
 const styles = theme => ({
   root: theme.mixins.gutters({
     paddingTop: 16,
     paddingBottom: 16,
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing.unit * 3
   }),
   box: {
     // display: "flex",
@@ -30,22 +29,22 @@ const styles = theme => ({
     border: '1px solid lightgray',
     borderRadius: '5px',
     paddingLeft: theme.spacing.unit * 3,
-    paddingRight: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3
   },
   listResponsive: {
     [theme.breakpoints.up('md')]: {
       visibility: 'hidden',
-      display: 'none',
-    },
+      display: 'none'
+    }
   },
 
   list: {
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       visibility: 'hidden',
-      display: 'none',
-    },
-  },
+      display: 'none'
+    }
+  }
 });
 
 class ParticipantList extends React.Component {
@@ -55,13 +54,7 @@ class ParticipantList extends React.Component {
   }
 
   renderParticipantList = () => {
-    const {
-      classes,
-      players,
-      loadingPlayers,
-      error,
-      pool,
-    } = this.props;
+    const { classes, players, loadingPlayers, error, pool } = this.props;
 
     if (loadingPlayers) {
       return <CircularProgress />;
@@ -70,7 +63,8 @@ class ParticipantList extends React.Component {
     if (error) {
       return (
         <div className={classes.box}>
-          An error ocurred while loading players list. Please try refreshing your browser
+          An error ocurred while loading players list. Please try refreshing
+          your browser
         </div>
       );
     }
@@ -82,18 +76,17 @@ class ParticipantList extends React.Component {
           <ListTableParticipant players={players} poolAddress={pool.address} />
         </Grid>
         <div className={classes.listResponsive}>
-          <ResponsiveListTableParticipant players={players} poolAddress={pool.address} />
+          <ResponsiveListTableParticipant
+            players={players}
+            poolAddress={pool.address}
+          />
         </div>
       </div>
     );
   };
 
   render() {
-    const {
-      classes,
-      players,
-      pool,
-    } = this.props;
+    const { classes, players, pool } = this.props;
 
     return (
       <div className={classes.box}>
@@ -108,14 +101,14 @@ function mapStateToProps({ pool }) {
   return {
     players: pool.info.players,
     loadingPlayers: pool.loadingPlayers,
-    error: pool.error,
+    error: pool.error
   };
 }
 
 ParticipantList.defaultProps = {
   players: [],
   loadingPlayers: true,
-  error: undefined,
+  error: undefined
 };
 
 ParticipantList.propTypes = {
@@ -124,7 +117,10 @@ ParticipantList.propTypes = {
   loadPoolParticipants: PropTypes.func.isRequired,
   players: PropTypes.array,
   loadingPlayers: PropTypes.bool,
-  error: PropTypes.object,
+  error: PropTypes.object
 };
 
-export default connect(mapStateToProps, actions)(withStyles(styles)(ParticipantList));
+export default connect(
+  mapStateToProps,
+  actions
+)(withStyles(styles)(ParticipantList));

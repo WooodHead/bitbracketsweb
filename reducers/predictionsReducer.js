@@ -6,18 +6,22 @@ const INITIAL_STATE = {
   error: undefined,
   apiPredictions: undefined,
   predictions: {},
-  othersPredictions: {},
+  othersPredictions: {}
 };
 
-export default function (state = INITIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
-
     case actionTypes.FETCH_PREDICTIONS_REQUEST:
       return { ...state, loading: true, error: undefined };
     case actionTypes.FETCH_PREDICTIONS_SUCCESS:
-      return { ...state, othersPredictions: action.payload, loading: false, error: undefined }
+      return {
+        ...state,
+        othersPredictions: action.payload,
+        loading: false,
+        error: undefined
+      };
     case actionTypes.FETCH_PREDICTIONS_FAIL:
-      return { ...state, loading: false, error: action.payload }
+      return { ...state, loading: false, error: action.payload };
 
     case actionTypes.UPDATE_PREDICTION_REQUEST:
       console.log('predictionsReducer updatePredictionRequest', action);
@@ -28,10 +32,10 @@ export default function (state = INITIAL_STATE, action) {
       return {
         predictions: {
           ...state.predictions,
-          [action.payload.index]: action.payload,
+          [action.payload.index]: action.payload
         },
         loading: false,
-        error: undefined,
+        error: undefined
       };
     case actionTypes.UPDATE_PREDICTION_FAIL:
       return { ...state, loading: false, error: action.payload };
@@ -40,11 +44,15 @@ export default function (state = INITIAL_STATE, action) {
       return { ...state, loading: true, error: undefined };
     case actionTypes.SAVE_PREDICTIONS_SUCCESS:
       return {
-        ...state, apiPredictions: action.payload, loading: false, error: undefined,
+        ...state,
+        apiPredictions: action.payload,
+        loading: false,
+        error: undefined
       };
     case actionTypes.SAVE_PREDICTIONS_FAIL:
       return { ...state, loading: false, error: action.payload };
 
-    default: return state;
+    default:
+      return state;
   }
 }

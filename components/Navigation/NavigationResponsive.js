@@ -13,51 +13,50 @@ import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import { injectIntl, defineMessages } from 'react-intl';
 
-
 const messages = defineMessages({
   navigationNavbarlink1: {
     id: 'navigation.navbarlink1',
     defaultMessage: 'How does it works?',
-    description: 'Navigation link How does it works?',
+    description: 'Navigation link How does it works?'
   },
   navigationNavbarlink2: {
     id: 'navigation.navbarlink2',
     defaultMessage: 'Roadmap',
-    description: 'Navigation link roadmap',
+    description: 'Navigation link roadmap'
   },
   navigationNavbarlink3: {
     id: 'navigation.navbarlink3',
     defaultMessage: 'My Pools',
-    description: 'Navigation link My Pools',
+    description: 'Navigation link My Pools'
   },
   navigationNavbarlink4: {
     id: 'navigation.navbarlink4',
     defaultMessage: 'start pool',
-    description: 'Navigation link start pool',
-  },
+    description: 'Navigation link start pool'
+  }
 });
 const styles = theme => ({
   root: {
-    display: 'flex',
+    display: 'flex'
   },
   paper: {
-    marginRight: theme.spacing.unit * 2,
+    marginRight: theme.spacing.unit * 2
   },
   popperClose: {
-    pointerEvents: 'none',
-  },
+    pointerEvents: 'none'
+  }
 });
 
 class ResponsiveNavbar extends React.Component {
   state = {
-    open: false,
+    open: false
   };
 
   handleToggle = () => {
     this.setState({ open: !this.state.open });
   };
 
-  handleClose = (event) => {
+  handleClose = event => {
     if (this.target2.contains(event.target)) {
       return;
     }
@@ -74,7 +73,7 @@ class ResponsiveNavbar extends React.Component {
         <Manager>
           <Target>
             <div
-              ref={(node) => {
+              ref={node => {
                 this.target2 = node;
               }}
             >
@@ -84,11 +83,8 @@ class ResponsiveNavbar extends React.Component {
                 onClick={this.handleToggle}
               >
                 <i className="fas fa-ellipsis-v" />
- 
               </IconButton>
-
             </div>
-
           </Target>
 
           <Portal>
@@ -110,7 +106,7 @@ class ResponsiveNavbar extends React.Component {
                       borderStyle: 'solid',
                       borderWidth: '0.5px',
                       borderColor: 'lightGrey',
-                      marginRight: '10px',
+                      marginRight: '10px'
                     }}
                   >
                     <MenuList role="menu" style={{ alignText: 'center' }}>
@@ -122,7 +118,10 @@ class ResponsiveNavbar extends React.Component {
                       </MenuItem>
                       <Divider />
                       <MenuItem>
-                        <Button href="/roadmap">  {intl.formatMessage(messages.navigationNavbarlink2)}</Button>
+                        <Button href="/roadmap">
+                          {' '}
+                          {intl.formatMessage(messages.navigationNavbarlink2)}
+                        </Button>
                       </MenuItem>
                       <Divider />
                       <MenuItem>
@@ -144,18 +143,14 @@ class ResponsiveNavbar extends React.Component {
                         </Button>
                       </MenuItem> */}
                       <Divider />
-                      <MenuItem>
-                        {languageSelect}
-                      </MenuItem>
+                      <MenuItem>{languageSelect}</MenuItem>
                     </MenuList>
                   </div>
                 </Collapse>
               </ClickAwayListener>
             </Popper>
           </Portal>
-
         </Manager>
-     
       </div>
     );
   }
@@ -164,8 +159,7 @@ class ResponsiveNavbar extends React.Component {
 ResponsiveNavbar.propTypes = {
   classes: PropTypes.object.isRequired,
   intl: PropTypes.object.isRequired,
-  languageSelect: PropTypes.object.isRequired,
-
+  languageSelect: PropTypes.object.isRequired
 };
 
-export default injectIntl((withStyles(styles)(ResponsiveNavbar)));
+export default injectIntl(withStyles(styles)(ResponsiveNavbar));

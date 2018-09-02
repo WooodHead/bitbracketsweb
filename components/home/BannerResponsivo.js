@@ -11,18 +11,20 @@ const messages = defineMessages({
   createprediction: {
     id: 'createprediction',
     defaultMessage: 'Create prediction pools for your favorite sports.',
-    description: 'Create prediction pools for your favorite sports.',
+    description: 'Create prediction pools for your favorite sports.'
   },
   appInstall: {
     id: 'appInstall',
-    defaultMessage: 'For best mobile experience we recommend you play with bitbrackes using any of the following apps.',
-    description: 'for best mobile experience we recommend you play with bitbrackes using any of the following apps',
+    defaultMessage:
+      'For best mobile experience we recommend you play with bitbrackes using any of the following apps.',
+    description:
+      'for best mobile experience we recommend you play with bitbrackes using any of the following apps'
   },
   navigationNavbarlink4: {
     id: 'navigation.navbarlink4',
     defaultMessage: 'start pool',
-    description: 'Navigation link start pool',
-  },
+    description: 'Navigation link start pool'
+  }
 });
 
 function BannerResponsivo(props) {
@@ -35,7 +37,7 @@ function BannerResponsivo(props) {
         gutterBottom
         style={{ color: 'black', paddingTop: '1em', fontWeight: '500' }}
       >
-          BitBrackets
+        BitBrackets
       </Typography>
       <Typography
         align="center"
@@ -43,38 +45,26 @@ function BannerResponsivo(props) {
         gutterBottom
         style={{ color: 'black', fontWeight: '400' }}
       >
-Russia 2018
+        Russia 2018
       </Typography>
-      <Typography
-        align="center"
-        variant="headline"
-        gutterBottom
-
-      >
+      <Typography align="center" variant="headline" gutterBottom>
         {intl.formatMessage(messages.createprediction)}
-
       </Typography>
 
-
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
+      <div
+        style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}
+      >
         <Button
-
           href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
           variant="raised"
           style={{ backgroundColor: '#E91E63', color: '#fff' }}
         >
-
           {intl.formatMessage(messages.navigationNavbarlink4)}
         </Button>
       </div>
       <div style={{ marginTop: '40px' }}>
-        <Typography
-          align="center"
-          variant="subheading"
-          gutterBottom
-        >
+        <Typography align="center" variant="subheading" gutterBottom>
           {intl.formatMessage(messages.appInstall)}
-
         </Typography>
       </div>
 
@@ -86,24 +76,20 @@ Russia 2018
       </div>
 
       <div className="rootBanner">
+        <style jsx>
+          {`
+            .styleButton {
+              text-align: center;
+            }
+            .rootBanner {
+              background: url(static/background1.svg);
+              background-size: cover;
+              background-repeat: no-repeat;
+              margin-top: 70px;
 
-
-        <style jsx>{`
-        .styleButton {
-          text-align: center;
-        }
-          .rootBanner {
-            background: url(static/background1.svg);
-           background-size: cover;
-            background-repeat: no-repeat;
-            margin-top: 70px;
-        
-          padding-bottom: 170px;
-        
-          }
-          
-          
-        `}
+              padding-bottom: 170px;
+            }
+          `}
         </style>
       </div>
     </div>
@@ -111,8 +97,6 @@ Russia 2018
 }
 
 BannerResponsivo.propTypes = {
-
-  intl: PropTypes.object.isRequired,
-
+  intl: PropTypes.object.isRequired
 };
-export default (injectIntl(BannerResponsivo));
+export default injectIntl(BannerResponsivo);
