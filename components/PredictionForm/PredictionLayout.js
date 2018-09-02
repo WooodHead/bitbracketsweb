@@ -16,64 +16,62 @@ const styles = theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   headingPrimary: {
     fontWeight: 'bold',
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing.unit * 3
   },
   headingSecondary: {
     fontWeight: 'bold',
     width: '60%',
     marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2
   },
   form: {
     width: '80%',
-    paddingTop: theme.spacing.unit * 2,
+    paddingTop: theme.spacing.unit * 2
   },
   actions: {
     marginTop: theme.spacing.unit * 2,
     marginBottom: theme.spacing.unit * 2,
-    position: 'relative',
+    position: 'relative'
   },
   buttonProgress: {
     position: 'absolute',
     top: '50%',
     left: '50%',
     marginTop: -12,
-    marginLeft: -12,
-  },
+    marginLeft: -12
+  }
 });
 
 const messages = defineMessages({
   headingPrimary: {
     id: 'PredictionForm.headingPrimary',
     defaultMessage: '{player} Predictions',
-    description: '',
+    description: ''
   },
   headingSecondary: {
     id: 'PredictionForm.headingSecondary',
     defaultMessage: '{poolName} Crypto Pool',
-    description: '',
+    description: ''
   },
   backButton: {
     id: 'PredictionForm.backButton',
     defaultMessage: 'Back to Pool Dashboard',
-    description: '',
+    description: ''
   },
   finishButton: {
     id: 'PredictionForm.finishButton',
     defaultMessage: 'Save Predictions',
-    description: '',
-  },
+    description: ''
+  }
 });
 
 class PredictionLayout extends Component {
   renderActions() {
-    const {
-      classes, intl, predictions, save, read,
-    } = this.props;
+    const { classes, intl, predictions, save, read } = this.props;
 
     if (read) return <div className={classes.actions} />;
 
@@ -87,23 +85,45 @@ class PredictionLayout extends Component {
         >
           {intl.formatMessage(messages.finishButton)}
         </Button>
-        {predictions.loading && <CircularProgress size={24} className={classes.buttonProgress} />}
+        {predictions.loading && (
+          <CircularProgress size={24} className={classes.buttonProgress} />
+        )}
       </div>
     );
   }
 
   render() {
     const {
-      classes, intl, groups, matches, predictions, update, read, pool, player
+      classes,
+      intl,
+      groups,
+      matches,
+      predictions,
+      update,
+      read,
+      pool,
+      player
     } = this.props;
 
     return (
       <div className={classes.root}>
-        <Typography className={classes.headingPrimary} variant="headline" align="center" gutterBottom>
+        <Typography
+          className={classes.headingPrimary}
+          variant="headline"
+          align="center"
+          gutterBottom
+        >
           {intl.formatMessage(messages.headingPrimary, { player })}
         </Typography>
-        <Typography className={classes.headingSecondary} variant="headline" align="center" gutterBottom>
-          {intl.formatMessage(messages.headingSecondary, { poolName: pool.info.name })}
+        <Typography
+          className={classes.headingSecondary}
+          variant="headline"
+          align="center"
+          gutterBottom
+        >
+          {intl.formatMessage(messages.headingSecondary, {
+            poolName: pool.info.name
+          })}
         </Typography>
         <PredictionForm
           groups={groups}
@@ -128,6 +148,6 @@ PredictionLayout.propTypes = {
   intl: PropTypes.object.isRequired,
   save: PropTypes.func,
   pool: PropTypes.object.isRequired,
-  player: PropTypes.string.isRequired,
+  player: PropTypes.string.isRequired
 };
 export default withStyles(styles)(injectIntl(PredictionLayout));

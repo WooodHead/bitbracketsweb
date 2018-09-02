@@ -13,34 +13,32 @@ const actionsStyles = theme => ({
   root: {
     flexShrink: 0,
     color: theme.palette.text.secondary,
-    marginLeft: theme.spacing.unit * 2.5,
-  },
+    marginLeft: theme.spacing.unit * 2.5
+  }
 });
 
 class TablePaginationActions extends React.Component {
-  handleFirstPageButtonClick = (event) => {
+  handleFirstPageButtonClick = event => {
     this.props.onChangePage(event, 0);
   };
 
-  handleBackButtonClick = (event) => {
+  handleBackButtonClick = event => {
     this.props.onChangePage(event, this.props.page - 1);
   };
 
-  handleNextButtonClick = (event) => {
+  handleNextButtonClick = event => {
     this.props.onChangePage(event, this.props.page + 1);
   };
 
-  handleLastPageButtonClick = (event) => {
+  handleLastPageButtonClick = event => {
     this.props.onChangePage(
       event,
-      Math.max(0, Math.ceil(this.props.count / this.props.rowsPerPage) - 1),
+      Math.max(0, Math.ceil(this.props.count / this.props.rowsPerPage) - 1)
     );
   };
 
   render() {
-    const {
-      classes, count, page, rowsPerPage, theme,
-    } = this.props;
+    const { classes, count, page, rowsPerPage, theme } = this.props;
 
     return (
       <div className={classes.root}>
@@ -56,14 +54,22 @@ class TablePaginationActions extends React.Component {
           disabled={page === 0}
           aria-label="Previous Page"
         >
-          {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+          {theme.direction === 'rtl' ? (
+            <KeyboardArrowRight />
+          ) : (
+            <KeyboardArrowLeft />
+          )}
         </IconButton>
         <IconButton
           onClick={this.handleNextButtonClick}
           disabled={page >= Math.ceil(count / rowsPerPage) - 1}
           aria-label="Next Page"
         >
-          {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+          {theme.direction === 'rtl' ? (
+            <KeyboardArrowLeft />
+          ) : (
+            <KeyboardArrowRight />
+          )}
         </IconButton>
         <IconButton
           onClick={this.handleLastPageButtonClick}
@@ -83,37 +89,32 @@ TablePaginationActions.propTypes = {
   onChangePage: PropTypes.func.isRequired,
   page: PropTypes.number.isRequired,
   rowsPerPage: PropTypes.number.isRequired,
-  theme: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired
 };
 
-const TablePaginationActionsWrapped = withStyles(
-  actionsStyles,
-  { withTheme: true },
-)(TablePaginationActions);
-
+const TablePaginationActionsWrapped = withStyles(actionsStyles, {
+  withTheme: true
+})(TablePaginationActions);
 
 const styles = theme => ({
   root: {
     width: '100%',
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing.unit * 3
   },
   table: {
-    minWidth: 500,
+    minWidth: 500
   },
   tableWrapper: {
-    overflowX: 'auto',
-  },
+    overflowX: 'auto'
+  }
 });
 
 function CustomPaginationActionsTable() {
   return (
     <div>
       <ListTableParticipant ActionsComponent={TablePaginationActionsWrapped} />
-
     </div>
-
   );
 }
-
 
 export default withStyles(styles)(CustomPaginationActionsTable);

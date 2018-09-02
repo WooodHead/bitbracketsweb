@@ -8,94 +8,84 @@ import Typography from 'material-ui/Typography';
 import { injectIntl, defineMessages } from 'react-intl';
 import Paper from 'material-ui/Paper';
 
-
 const messages = defineMessages({
   roadmapdate1: {
     id: 'roadmap.roadmapdate1',
     defaultMessage: 'June 2018',
-    description: 'roadmap June 2018',
+    description: 'roadmap June 2018'
   },
   roadmapdate2: {
     id: 'roadmap.roadmapdate2',
     defaultMessage: 'September 2018',
-    description: 'roadmap September 2018',
+    description: 'roadmap September 2018'
   },
   roadmapdate3: {
     id: 'roadmap.roadmapdate3',
     defaultMessage: 'March 2019',
-    description: 'March 2019',
+    description: 'March 2019'
   },
   roadmaptext1: {
     id: 'roadmap.roadmaptext1',
-    defaultMessage: 'Launch of Beta platform for World Cup pools in Rinkeby test net.',
-    description: 'roadmap',
+    defaultMessage:
+      'Launch of Beta platform for World Cup pools in Rinkeby test net.',
+    description: 'roadmap'
   },
   roadmaptext2: {
     id: 'roadmap.roadmaptext2',
     defaultMessage: 'Add support for NFL weekly pools.',
-    description: 'roadmap',
+    description: 'roadmap'
   },
   roadmaptext3: {
     id: 'roadmap.roadmaptext3',
     defaultMessage: 'Launch in main net.',
-    description: 'roadmap',
+    description: 'roadmap'
   },
   roadmaptext4: {
     id: 'roadmap.roadmaptext4',
     defaultMessage: 'Add support for Tennis Grand Slam tournaments.',
-    description: 'roadmap',
+    description: 'roadmap'
   },
   roadmaptext5: {
     id: 'roadmap.roadmaptext5',
     defaultMessage: 'Add support for March Madness Bracket pools.',
-    description: 'roadmap',
+    description: 'roadmap'
   },
   roadmaptext6: {
     id: 'roadmap.roadmaptext6',
-    defaultMessage: 'Decentralize results using oraclize or prediction market contracts (Augur).',
-    description: 'roadmap',
+    defaultMessage:
+      'Decentralize results using oraclize or prediction market contracts (Augur).',
+    description: 'roadmap'
   },
   roadmaptext7: {
     id: 'roadmap.roadmaptext7',
-    defaultMessage: 'Launch desktop client to allow building user customize tournaments/leagues and personalize pools.',
-    description: 'roadmap',
-  },
-
+    defaultMessage:
+      'Launch desktop client to allow building user customize tournaments/leagues and personalize pools.',
+    description: 'roadmap'
+  }
 });
 function RoadMap(props) {
   const { intl } = props;
   return (
-    <div >
-
+    <div>
       <div className="timeline">
-
         <div className="container left">
           <ScrollAnimation animateIn="bounceInLeft">
-
-
             <Paper elevation={4}>
-
               <div className="content">
                 <Typography variant="title" gutterBottom>
                   {intl.formatMessage(messages.roadmapdate1)}
-
                 </Typography>
                 <Typography ariant="body1" gutterBottom>
                   {intl.formatMessage(messages.roadmaptext1)}
                 </Typography>
-
               </div>
-
-
             </Paper>
           </ScrollAnimation>
         </div>
 
-
         <div className="container right">
           <ScrollAnimation animateIn="bounceInRight">
             <Paper elevation={4}>
-
               <div className="content">
                 <Typography variant="title" gutterBottom>
                   {intl.formatMessage(messages.roadmapdate2)}
@@ -103,48 +93,41 @@ function RoadMap(props) {
                 <Typography ariant="body1" gutterBottom>
                   {intl.formatMessage(messages.roadmaptext2)}
                 </Typography>
-
               </div>
-
             </Paper>
           </ScrollAnimation>
         </div>
         <div className="container left">
           <ScrollAnimation animateIn="bounceInLeft">
             <Paper elevation={4}>
-
               <div className="content">
                 <Typography variant="title" gutterBottom>
-              2018 Q4
+                  2018 Q4
                 </Typography>
                 <Typography ariant="body1" gutterBottom>
                   {intl.formatMessage(messages.roadmaptext3)}
                 </Typography>
               </div>
-
             </Paper>
           </ScrollAnimation>
         </div>
         <div className="container right">
           <ScrollAnimation animateIn="bounceInRight">
             <Paper elevation={4}>
-
               <div className="content">
                 <Typography variant="title" gutterBottom>
-              2018 Q4-2019 Q1
+                  2018 Q4-2019 Q1
                 </Typography>
                 <Typography ariant="body1" gutterBottom>
                   {intl.formatMessage(messages.roadmaptext4)}
                 </Typography>
               </div>
-
             </Paper>
           </ScrollAnimation>
         </div>
         <div className="container left">
           <ScrollAnimation animateIn="bounceInLeft">
             <Paper elevation={4}>
-
               <div className="content">
                 <Typography variant="title" gutterBottom>
                   {intl.formatMessage(messages.roadmapdate3)}
@@ -153,43 +136,37 @@ function RoadMap(props) {
                   {intl.formatMessage(messages.roadmaptext5)}
                 </Typography>
               </div>
-
             </Paper>
           </ScrollAnimation>
         </div>
         <div className="container right">
           <ScrollAnimation animateIn="bounceInRight">
             <Paper elevation={4}>
-
               <div className="content">
                 <Typography variant="title" gutterBottom>
-              2019 Q1/Q2
+                  2019 Q1/Q2
                 </Typography>
                 <Typography ariant="body1" gutterBottom>
                   {intl.formatMessage(messages.roadmaptext6)}
                 </Typography>
               </div>
-
             </Paper>
           </ScrollAnimation>
         </div>
         <div className="container left">
           <ScrollAnimation animateIn="bounceInLeft">
             <Paper elevation={4}>
-
               <div className="content">
                 <Typography variant="title" gutterBottom>
-              2019 Q4
+                  2019 Q4
                 </Typography>
                 <Typography ariant="body1" gutterBottom>
                   {intl.formatMessage(messages.roadmaptext7)}
                 </Typography>
               </div>
-
             </Paper>
           </ScrollAnimation>
         </div>
-
       </div>
       <style jsx>{`
    
@@ -312,18 +289,15 @@ function RoadMap(props) {
     
     `}</style>
 
-
-      <div style={{ marginTop: '5em' }}> <hr /></div>
-
+      <div style={{ marginTop: '5em' }}>
+        {' '}
+        <hr />
+      </div>
     </div>
-
-
   );
 }
 RoadMap.propTypes = {
-
-  intl: PropTypes.object.isRequired,
-
+  intl: PropTypes.object.isRequired
 };
 
 export default injectIntl(RoadMap);

@@ -6,80 +6,85 @@ import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import { injectIntl, defineMessages } from 'react-intl';
 
-
 const messages = defineMessages({
   navigationNavbarlink1: {
     id: 'navigation.navbarlink1',
     defaultMessage: 'How does it works?',
-    description: 'Navigation link How does it works?',
+    description: 'Navigation link How does it works?'
   },
   navigationNavbarlink2: {
     id: 'navigation.navbarlink2',
     defaultMessage: 'roadmap',
-    description: 'Navigation link roadmap',
+    description: 'Navigation link roadmap'
   },
   navigationNavbarlink3: {
     id: 'navigation.navbarlink3',
     defaultMessage: 'My Pools',
-    description: 'Navigation link My Pools',
+    description: 'Navigation link My Pools'
   },
   navigationNavbarlink4: {
     id: 'navigation.navbarlink4',
     defaultMessage: 'start pool',
-    description: 'Navigation link start pool',
+    description: 'Navigation link start pool'
   },
   navigationNavbarlink5: {
     id: 'navigation.navbarlink5',
     defaultMessage: 'Terms & conditions',
-    description: 'Navigation link start pool',
+    description: 'Navigation link start pool'
   },
   navigationNavbarlink6: {
     id: 'navigation.navbarlink6',
     defaultMessage: 'Join to Telegram',
-    description: 'Navigation link telegram',
-  },
+    description: 'Navigation link telegram'
+  }
 });
 
 const styles = theme => ({
   root: {
-    marginTop: '3em',
+    marginTop: '3em'
   },
   list: {
-    listStyleType: 'none',
+    listStyleType: 'none'
   },
   aTag: {
-    textDecoration: 'none',
+    textDecoration: 'none'
   },
   text: {
     color: 'black',
     textAlign: 'right',
     '&:hover': {
-      color: '#E91E63',
+      color: '#E91E63'
     },
     [theme.breakpoints.only('xs')]: {
-      textAlign: 'center',
-    },
-  },
+      textAlign: 'center'
+    }
+  }
 });
 function Footer(props) {
   const { intl, classes } = props;
   return (
-
     <div className={classes.root}>
-    
-      <Grid container spacing={24} >
-        <Grid item xs={6} sm={3} className={classes.paper} >
+      <Grid container spacing={24}>
+        <Grid item xs={6} sm={3} className={classes.paper}>
           <ul className={classes.list}>
             <li>
-              <a href="/#section3"className={classes.aTag}>
-                <Typography variant="subheading" gutterBottom className={classes.text}>
+              <a href="/#section3" className={classes.aTag}>
+                <Typography
+                  variant="subheading"
+                  gutterBottom
+                  className={classes.text}
+                >
                   {intl.formatMessage(messages.navigationNavbarlink1)}
                 </Typography>
               </a>
             </li>
             <li>
-              <a href="/roadmap"className={classes.aTag}>
-                <Typography variant="subheading" gutterBottom className={classes.text}>
+              <a href="/roadmap" className={classes.aTag}>
+                <Typography
+                  variant="subheading"
+                  gutterBottom
+                  className={classes.text}
+                >
                   {intl.formatMessage(messages.navigationNavbarlink2)}
                 </Typography>
               </a>
@@ -92,8 +97,12 @@ function Footer(props) {
               </a>
             </li> */}
             <li>
-              <a href="/faq"className={classes.aTag}>
-                <Typography variant="subheading" gutterBottom className={classes.text}>
+              <a href="/faq" className={classes.aTag}>
+                <Typography
+                  variant="subheading"
+                  gutterBottom
+                  className={classes.text}
+                >
                   FAQs
                 </Typography>
               </a>
@@ -109,8 +118,12 @@ function Footer(props) {
                 rel="noopener noreferrer"
                 className={classes.aTag}
               >
-                <Typography variant="subheading" gutterBottom className={classes.text}>
-                 Facebook
+                <Typography
+                  variant="subheading"
+                  gutterBottom
+                  className={classes.text}
+                >
+                  Facebook
                 </Typography>
               </a>
             </li>
@@ -121,8 +134,12 @@ function Footer(props) {
                 rel="noopener noreferrer"
                 className={classes.aTag}
               >
-                <Typography variant="subheading" gutterBottom className={classes.text}>
-                 Github
+                <Typography
+                  variant="subheading"
+                  gutterBottom
+                  className={classes.text}
+                >
+                  Github
                 </Typography>
               </a>
             </li>
@@ -133,12 +150,15 @@ function Footer(props) {
                 rel="noopener noreferrer"
                 className={classes.aTag}
               >
-                <Typography variant="subheading" gutterBottom className={classes.text}>
+                <Typography
+                  variant="subheading"
+                  gutterBottom
+                  className={classes.text}
+                >
                   {intl.formatMessage(messages.navigationNavbarlink6)}
                 </Typography>
               </a>
             </li>
-
           </ul>
         </Grid>
         {/* <Grid item xs={6} sm={3}>
@@ -162,27 +182,19 @@ function Footer(props) {
             rel="noopener noreferrer"
             className={classes.aTag}
           >
-            <Typography variant="subheading" gutterBottom align="center" >
-
-                      Powered by:{' '}
-              <span style={{ color: '#E91E63' }}>
-                        CoralBytes Studios
-              </span>
-
+            <Typography variant="subheading" gutterBottom align="center">
+              Powered by:{' '}
+              <span style={{ color: '#E91E63' }}>CoralBytes Studios</span>
             </Typography>
           </a>
-
-
         </Grid>
       </Grid>
-
     </div>
-
   );
 }
 Footer.propTypes = {
   intl: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default injectIntl(withStyles(styles)(Footer));

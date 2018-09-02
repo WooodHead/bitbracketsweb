@@ -12,8 +12,8 @@ const messages = defineMessages({
   TimeRemaining: {
     id: 'TimeRemaining',
     defaultMessage: 'Time remaining to make your predictions:',
-    description: 'Time remaining to make your predictions',
-  },
+    description: 'Time remaining to make your predictions'
+  }
 });
 const cb = () => {
   console.log('expired callback');
@@ -30,21 +30,21 @@ const styles = theme => ({
 
     paddingTop: 16,
     paddingBottom: 16,
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing.unit * 3
   }),
   paragraph: {
     color: '#fff',
     justifyContent: 'center',
 
     display: 'flex',
-    flexWrap: 'wrap',
-  },
+    flexWrap: 'wrap'
+  }
 });
 function TimeRemaining(props) {
   const { classes, date, intl } = props;
   const OPTIONS = {
     endDate: date,
-    cb,
+    cb
   };
   return (
     <div>
@@ -52,7 +52,6 @@ function TimeRemaining(props) {
         <Typography className={classes.paragraph} variant="title">
           {intl.formatMessage(messages.TimeRemaining)}
 
-   
           <Countdown options={OPTIONS} />
         </Typography>
       </Paper>
@@ -63,7 +62,7 @@ function TimeRemaining(props) {
 TimeRemaining.propTypes = {
   classes: PropTypes.object.isRequired,
   date: PropTypes.string.isRequired,
-  intl: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired
 };
 
 export default injectIntl(withStyles(styles)(TimeRemaining));

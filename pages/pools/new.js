@@ -10,7 +10,10 @@ import { createPool, fetchPoolDetails } from '../../actions';
 import Layout from '../../components/Layout';
 
 const CreatePoolPage = ({
-  contest, pool, createPoolAction, fetchPoolDetailsAction,
+  contest,
+  pool,
+  createPoolAction,
+  fetchPoolDetailsAction
 }) => (
   <Layout title={contest}>
     <CreatePoolForm
@@ -19,18 +22,20 @@ const CreatePoolPage = ({
       onSubmit={createPoolAction}
       onNext={fetchPoolDetailsAction}
     />
-    <div style={{ marginTop: '5em' }}> <hr /></div>
-   
+    <div style={{ marginTop: '5em' }}>
+      {' '}
+      <hr />
+    </div>
   </Layout>
 );
 
 function mapStateToProps(state) {
   return {
-    pool: state.createPool,
+    pool: state.createPool
   };
 }
 
-CreatePoolPage.getInitialProps = async (props) => {
+CreatePoolPage.getInitialProps = async props => {
   const { contest } = props.query;
   return { contest };
 };
@@ -39,12 +44,12 @@ CreatePoolPage.propTypes = {
   contest: PropTypes.string.isRequired,
   pool: PropTypes.object.isRequired,
   createPoolAction: PropTypes.func.isRequired,
-  fetchPoolDetailsAction: PropTypes.func.isRequired,
+  fetchPoolDetailsAction: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch => ({
   createPoolAction: bindActionCreators(createPool, dispatch),
-  fetchPoolDetailsAction: bindActionCreators(fetchPoolDetails, dispatch),
+  fetchPoolDetailsAction: bindActionCreators(fetchPoolDetails, dispatch)
 });
 
 const createPoolPageWeb3 = CreatePoolPage;

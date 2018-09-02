@@ -11,18 +11,17 @@ import Button from 'material-ui/Button';
 import InviteFriends from './InviteFriends';
 import { Link, Router } from '../../routes';
 
-
 const messages = defineMessages({
   ParticipantList: {
     id: 'ParticipantList',
     defaultMessage: 'ParticipantList',
-    description: 'ParticipantList',
+    description: 'ParticipantList'
   },
   JointhePool: {
     id: 'JointhePool',
     defaultMessage: 'Join the Pool',
-    description: 'Join the Pool',
-  },
+    description: 'Join the Pool'
+  }
 });
 
 class HeaderParticipantList extends Component {
@@ -39,11 +38,10 @@ class HeaderParticipantList extends Component {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={4}>
-
           <InviteFriends url={`/pools/${pool.address}`} />
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Link prefetch href={joinUrl} route={joinUrl} >
+          <Link prefetch href={joinUrl} route={joinUrl}>
             <Button
               variant="raised"
               style={{ backgroundColor: '#E91E63', color: '#fff' }}
@@ -63,7 +61,7 @@ class HeaderParticipantList extends Component {
 HeaderParticipantList.propTypes = {
   players: PropTypes.array.isRequired,
   pool: PropTypes.object.isRequired,
-  intl: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired
 };
 
 export default injectIntl(HeaderParticipantList);

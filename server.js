@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // Without express
 app.prepare().then(() => {
-  createServer(handler).listen(PORT, (err) => {
+  createServer(handler).listen(PORT, err => {
     if (err) throw err;
     console.log(`Ready on localhost: ${PORT}`);
   });

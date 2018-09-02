@@ -15,11 +15,11 @@ import Messages from './Messages';
 const messages = defineMessages({
   predictionSuccessMessage: {
     id: 'predictionSuccessMessage',
-    defaultMessage: 'Your prediction has been successfully processed. Please give it refresh if it is not listed yet.',
-    description: 'predictionSuccessMessage',
-  },
+    defaultMessage:
+      'Your prediction has been successfully processed. Please give it refresh if it is not listed yet.',
+    description: 'predictionSuccessMessage'
+  }
 });
-
 
 const styles = theme => ({
   root: {
@@ -29,39 +29,36 @@ const styles = theme => ({
       paddingLeft: '200px',
       paddingRight: '200px',
       marginBottom: '100px',
-      marginTop: '100px',
-    },
-  },
+      marginTop: '100px'
+    }
+  }
 });
 
-const IndexDashboard = (props) => {
-  const {
-    pool, classes, predictionSuccess, intl,
-  } = props;
+const IndexDashboard = props => {
+  const { pool, classes, predictionSuccess, intl } = props;
   const dateStartTime = moment.unix(pool.startTime).toISOString();
   const msg = (
     <Typography variant="subheading" style={{ color: 'green' }}>
       {intl.formatMessage(messages.predictionSuccessMessage)}
-    </Typography>);
+    </Typography>
+  );
   return (
     <div className={classes.root}>
       <Messages messages={predictionSuccess ? msg : undefined} />
       <TimeRemaining date={dateStartTime} />
       <PoolDetails pool={pool} />
       <ParticipantList pool={pool} />
-
     </div>
   );
 };
 
 IndexDashboard.defaultProps = {
-
-  predictionSuccess: undefined,
+  predictionSuccess: undefined
 };
 IndexDashboard.propTypes = {
   pool: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
   predictionSuccess: PropTypes.string,
-  intl: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired
 };
 export default injectIntl(withStyles(styles)(IndexDashboard));

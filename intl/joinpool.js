@@ -8,8 +8,7 @@ export default {
     'JoinPoolLayout.finishButton': 'Pay',
     'JoinPoolLayout.predictionError': '*You Must Fill All Predictions',
     'JoinPaymentForm.headingTertiary2': 'Payment Details',
-    'JoinPaymentForm.feeLabel': 'Entry Fee',
-
+    'JoinPaymentForm.feeLabel': 'Entry Fee'
   },
   es: {
     'JoinPoolLayout.headingPrimary': 'Bienvenido a {poolName}',
@@ -18,11 +17,9 @@ export default {
     'JoinPoolLayout.backButton': 'Atrás',
     'JoinPoolLayout.nextButton': 'Siguiente',
     'JoinPoolLayout.finishButton': 'Pagar',
-    'JoinPoolLayout.predictionError': '* Tienes que llenar todas las predicciones',
+    'JoinPoolLayout.predictionError':
+      '* Tienes que llenar todas las predicciones',
     'JoinPaymentForm.headingTertiary2': 'Detalle del Pago',
-    'JoinPaymentForm.feeLabel': 'Costo de la creación',
-
-
-  },
+    'JoinPaymentForm.feeLabel': 'Costo de la creación'
+  }
 };
-

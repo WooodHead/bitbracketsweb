@@ -15,7 +15,7 @@ import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
   headingTertiary: {
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   formBox: {
     backgroundColor: '#fff',
@@ -27,20 +27,20 @@ const styles = theme => ({
       backgroundColor: 'white',
       border: '2px solid lightgray',
       borderRadius: '5px',
-      padding: theme.spacing.unit * 3,
-    },
+      padding: theme.spacing.unit * 3
+    }
   },
   textField: {
-    marginBottom: theme.spacing.unit,
+    marginBottom: theme.spacing.unit
     // width: '60%',
   },
   division: {
     alignSelf: 'center',
     width: '100%',
     marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2
   },
-  error: {},
+  error: {}
 });
 
 const messages = defineMessages({
@@ -48,69 +48,69 @@ const messages = defineMessages({
     id: 'headingTertiary1',
     defaultMessage: 'Admin Info',
     description:
-      'Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 1',
+      'Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 1'
   },
   headingTertiary2: {
     id: 'headingTertiary2',
     defaultMessage: 'Pool Info',
     description:
-      'Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 2',
+      'Create Pool Page -> Create Pool Form -> Pool Setup Form -> tittle 2'
   },
   nameLabel: {
     id: 'nameLabel',
     defaultMessage: 'Name',
-    description: '',
+    description: ''
   },
   adminNameTextbox: {
     id: 'adminNameTextbox',
     defaultMessage: 'Nickname',
-    description: '',
+    description: ''
   },
   emailLabel: {
     id: 'emailLabel',
     defaultMessage: 'Email',
-    description: '',
+    description: ''
   },
   emailTextbox: {
     id: 'emailTextbox',
     defaultMessage: 'email@email.com',
-    description: '',
+    description: ''
   },
   poolNameTextbox: {
     id: 'poolNameTextbox',
     defaultMessage: 'Pool Name',
-    description: '',
+    description: ''
   },
   entryLabel: {
     id: 'entryLabel',
     defaultMessage: 'Entry Amount',
-    description: '',
+    description: ''
   },
   entryTextbox: {
     id: 'entryTextbox',
     defaultMessage: '0',
-    description: '',
+    description: ''
   },
   termsCheckbox: {
     id: 'termsCheckbox',
     defaultMessage: 'I agree with the terms of use',
-    description: '',
+    description: ''
   },
   rulesCheckbox: {
     id: 'rulesCheckbox',
     defaultMessage: 'I agree with the pool rules',
-    description: '',
+    description: ''
   },
   errorRequired: {
     id: 'errorRequired',
     defaultMessage: 'Field is Required',
-    description: '',
+    description: ''
   },
   errorEmail: {
     id: 'errorEmail',
     defaultMessage: 'Not a Valid Email',
-    description: '',
-  },
+    description: ''
+  }
 });
 
 const required = val => val && val.length;
@@ -130,7 +130,7 @@ const getError = (field, intl) => {
   if (errors.isEmail) return intl.formatMessage(messages.errorEmail);
 };
 
-const PoolSetupForm = (props) => {
+const PoolSetupForm = props => {
   const { classes, intl, form } = props;
 
   return (
@@ -195,8 +195,8 @@ const PoolSetupForm = (props) => {
             component={TextField}
             placeholder={intl.formatMessage(messages.poolNameTextbox)}
             validators={{
-                required,
-              }}
+              required
+            }}
             validateOn="blur"
             error={hasError(form.poolName)}
             helperText={getError(form.poolName, intl)}
@@ -215,8 +215,8 @@ const PoolSetupForm = (props) => {
             component={TextField}
             placeholder={intl.formatMessage(messages.entryTextbox)}
             validators={{
-                required,
-              }}
+              required
+            }}
             validateOn="blur"
             error={hasError(form.entryPrice)}
             helperText={getError(form.entryPrice, intl) || 'ETH'}
@@ -230,9 +230,7 @@ const PoolSetupForm = (props) => {
           <Control.checkbox model=".terms" component={Checkbox} />
         </Grid>
         <Grid item>
-          <Typography>
-            {intl.formatMessage(messages.termsCheckbox)}
-          </Typography>
+          <Typography>{intl.formatMessage(messages.termsCheckbox)}</Typography>
         </Grid>
       </Grid>
 
@@ -241,9 +239,7 @@ const PoolSetupForm = (props) => {
           <Control.checkbox model=".rules" component={Checkbox} />
         </Grid>
         <Grid item>
-          <Typography>
-            {intl.formatMessage(messages.rulesCheckbox)}
-          </Typography>
+          <Typography>{intl.formatMessage(messages.rulesCheckbox)}</Typography>
         </Grid>
       </Grid>
     </Form>
@@ -251,13 +247,13 @@ const PoolSetupForm = (props) => {
 };
 
 const mapStateToProps = ({ forms }) => ({
-  form: forms.createPool,
+  form: forms.createPool
 });
 
 PoolSetupForm.propTypes = {
   classes: PropTypes.object.isRequired,
   form: PropTypes.object.isRequired,
-  intl: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired
 };
 
 const ConnectedPoolSetupForm = connect(mapStateToProps)(PoolSetupForm);

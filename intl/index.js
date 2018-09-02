@@ -13,11 +13,21 @@ import matches from './matches';
 import joinpool from './joinpool';
 import myPool from './myPool';
 
-
 // agregar las traducciones de los componentes a este arreglo
-const componentMsg = [myPool, navigation, home, createPool, roadmap, metamask, dashboard,
-  dashboardlist, metamasklocked, header, matches, joinpool];
-
+const componentMsg = [
+  myPool,
+  navigation,
+  home,
+  createPool,
+  roadmap,
+  metamask,
+  dashboard,
+  dashboardlist,
+  metamasklocked,
+  header,
+  matches,
+  joinpool
+];
 
 export default () => {
   const messages = _.reduce(
@@ -25,8 +35,7 @@ export default () => {
     (msg1, msg2) => {
       return _.merge(msg1, msg2);
     },
-    {},
+    {}
   );
   return messages;
 };
-

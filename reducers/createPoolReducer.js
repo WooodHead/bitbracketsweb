@@ -11,16 +11,19 @@ const INITIAL_STATE = {
   terms: false,
   rules: false,
   loading: false,
-  error: undefined,
+  error: undefined
 };
 
-export default function (state = INITIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case actionTypes.CREATE_POOL_REQUEST:
       return { ...state, loading: true, error: undefined };
     case actionTypes.CREATE_POOL_SUCCESS:
       return {
-        ...state, ...action.payload, loading: false, error: undefined,
+        ...state,
+        ...action.payload,
+        loading: false,
+        error: undefined
       };
     case actionTypes.CREATE_POOL_FAILED:
       return { ...state, loading: false, error: action.payload };
@@ -29,11 +32,15 @@ export default function (state = INITIAL_STATE, action) {
       return { ...state, loading: true, error: undefined };
     case actionTypes.POOL_DETAIL_SUCCESS:
       return {
-        ...state, ...action.payload, loading: false, error: undefined,
+        ...state,
+        ...action.payload,
+        loading: false,
+        error: undefined
       };
     case actionTypes.POOL_DETAIL_FAILED:
       return { ...state, loading: false, error: action.payload };
 
-    default: return state;
+    default:
+      return state;
   }
 }

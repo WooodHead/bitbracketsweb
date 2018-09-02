@@ -20,21 +20,21 @@ const styles = theme => ({
     display: 'block',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: '5em',
+    marginTop: '5em'
   },
 
   actions: {
-    display: 'flex',
+    display: 'flex'
   },
   expand: {
     transform: 'rotate(0deg)',
     transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
+      duration: theme.transitions.duration.shortest
     }),
-    marginLeft: 'auto',
+    marginLeft: 'auto'
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: 'rotate(180deg)'
   },
   text: {
     fontWeight: '400',
@@ -43,22 +43,19 @@ const styles = theme => ({
     color: 'rgb(143, 143, 143)',
     paddingBottom: '0.5em',
     '&:hover': {
-      color: 'black',
-    },
+      color: 'black'
+    }
   },
   textPrueba: {
-    color: 'black',
-
+    color: 'black'
   },
   text2: {
-
     lineHeight: '24px',
     fontSize: '16px',
     color: 'rgb(143, 143, 143)',
-    paddingBottom: '0.5em',
-  },
+    paddingBottom: '0.5em'
+  }
 });
-
 
 class Qa extends React.Component {
   state = {};
@@ -67,7 +64,7 @@ class Qa extends React.Component {
   // { ['pregunta'] = true } para trackear si esta
   // extendida o no la pregunta por default las
   // preguntas son undefined asi que cuenta como falso.
-  handleExpandClick = (questionId) => {
+  handleExpandClick = questionId => {
     const id = questionId;
     // console.log('current state', this.state[id]);
     const newValue = !this.state[id];
@@ -89,7 +86,7 @@ class Qa extends React.Component {
                 lineHeight: '38.4px',
                 fontSize: '32px',
                 color: 'rgb(42, 40, 37)',
-                paddingBottom: '0.5em',
+                paddingBottom: '0.5em'
               }}
             >
               {id.title}
@@ -103,7 +100,7 @@ class Qa extends React.Component {
             >
               <Typography
                 className={classnames(classes.text, {
-                  [classes.textPrueba]: this.state[id.question],
+                  [classes.textPrueba]: this.state[id.question]
                 })}
               >
                 {id.question}
@@ -111,7 +108,7 @@ class Qa extends React.Component {
 
               <IconButton
                 className={classnames(classes.expand, {
-                  [classes.expandOpen]: this.state[id.question],
+                  [classes.expandOpen]: this.state[id.question]
                 })}
                 onClick={() => this.handleExpandClick(id.question)}
                 aria-expanded={this.state[id.question]}
@@ -138,13 +135,19 @@ class Qa extends React.Component {
                     {id.answerbullet.map((m, k) => (
                       <ul key={Math.random()} className={classes.text2}>
                         <li>
-                          <Typography className={classes.text2}>{m.bulletfirst}</Typography>
+                          <Typography className={classes.text2}>
+                            {m.bulletfirst}
+                          </Typography>
                         </li>
                         <li>
-                          <Typography className={classes.text2}>{m.bulletsecond}</Typography>
+                          <Typography className={classes.text2}>
+                            {m.bulletsecond}
+                          </Typography>
                         </li>
                         <li>
-                          <Typography className={classes.text2}>{m.bulletthird}</Typography>
+                          <Typography className={classes.text2}>
+                            {m.bulletthird}
+                          </Typography>
                         </li>
                       </ul>
                     ))}
@@ -161,7 +164,7 @@ class Qa extends React.Component {
 
 Qa.propTypes = {
   // classes: PropTypes.func.isRequired,
-  faqText: PropTypes.array.isRequired,
+  faqText: PropTypes.array.isRequired
 };
 
 export default withStyles(styles)(Qa);

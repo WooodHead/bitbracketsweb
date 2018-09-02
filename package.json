@@ -18,12 +18,13 @@
     "npm": "5.7.1"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "startwithdotenv": "node -r dotenv/config server.js",
-    "dev": "NODE_ENV=development node -r dotenv/config ./server.js",  
-    "qa": "NODE_ENV=qa node -r dotenv/config ./server.js", 
-    "test": "NODE_ENV=test jest", 
-    "start": "NODE_ENV=production node server.js", 
-    "startpr": "node server.js", 
+    "dev": "NODE_ENV=development node -r dotenv/config ./server.js",
+    "qa": "NODE_ENV=qa node -r dotenv/config ./server.js",
+    "test": "NODE_ENV=test jest",
+    "start": "NODE_ENV=production node server.js",
+    "startpr": "node server.js",
     "build": "next build",
     "heroku-postbuild": "npm run build",
     "json-server": "json-server --watch ./json_mock_server/db.json --routes ./json_mock_server/routes.json --port 3001"
@@ -69,31 +70,45 @@
     "redux-persist": "^5.9.1",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.1",
+    "styled-jsx": "^3.0.2",
     "web3": "^1.0.0-beta.26",
     "webpack": "^4.1.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^8.2.6",
     "babel-plugin-react-intl": "^2.4.0",
     "babel-plugin-transform-define": "^1.3.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^1.1.11",
+    "husky": "^0.14.3",
     "install": "^0.11.0",
-    "jest": "^22.4.2",
+    "jest": "^23.5.0",
     "jest-junit-reporter": "^1.1.0",
+    "lint-staged": "^7.2.2",
     "mocha": "^5.0.0",
     "npm": "^5.8.0",
     "npm-run-all": "^4.1.3",
+    "prettier": "^1.14.2",
     "react-addons-test-utils": "^15.6.2",
     "react-scripts": "^1.1.0",
     "react-test-renderer": "^16.2.0",
     "web3": "^1.0.0-beta.26"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "jest": {
     "testResultsProcessor": "./node_modules/jest-junit-reporter"

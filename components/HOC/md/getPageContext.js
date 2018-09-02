@@ -12,14 +12,14 @@ const theme = createMuiTheme({
     primary: {
       light: pink[300],
       main: pink[500],
-      dark: pink[700],
+      dark: pink[700]
     },
     secondary: {
       light: grey[300],
       main: grey[500],
-      dark: grey[700],
-    },
-  },
+      dark: grey[700]
+    }
+  }
 });
 
 function createPageContext() {
@@ -30,7 +30,7 @@ function createPageContext() {
     // This is needed in order to inject the critical CSS.
     sheetsRegistry: new SheetsRegistry(),
     // The standard class name generator.
-    generateClassName: createGenerateClassName(),
+    generateClassName: createGenerateClassName()
   };
 }
 

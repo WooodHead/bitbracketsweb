@@ -10,86 +10,90 @@ import NavigationResponsive from './NavigationResponsive';
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   flex: {
     flex: 1,
 
     [theme.breakpoints.down('sm')]: {
       visibility: 'hidden',
-      display: 'none',
-    },
+      display: 'none'
+    }
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
+    marginRight: 20
   },
   responsive: {
     [theme.breakpoints.down('sm')]: {
       visibility: 'hidden',
-      display: 'none',
-    },
+      display: 'none'
+    }
   },
   buttonResponsive: {
     [theme.breakpoints.up('md')]: {
       visibility: 'hidden',
-      display: 'none',
-    },
+      display: 'none'
+    }
   },
   brandname: {
     textDecoration: 'none',
     color: 'rgb(42, 40, 37)',
     fontWeight: '500',
     lineHeight: '24px',
-    fontSize: '20px',
-  },
+    fontSize: '20px'
+  }
 });
-
 
 const messages = defineMessages({
   navigationNavbarlink1: {
     id: 'navigation.navbarlink1',
     defaultMessage: 'How does it works?',
-    description: 'Navigation link How does it works?',
+    description: 'Navigation link How does it works?'
   },
   navigationNavbarlink2: {
     id: 'navigation.navbarlink2',
     defaultMessage: 'Roadmap',
-    description: 'Navigation link roadmap',
+    description: 'Navigation link roadmap'
   },
   navigationNavbarlink3: {
     id: 'navigation.navbarlink3',
     defaultMessage: 'My Pools',
-    description: 'Navigation link My Pools',
+    description: 'Navigation link My Pools'
   },
   navigationNavbarlink4: {
     id: 'navigation.navbarlink4',
     defaultMessage: 'start pool',
-    description: 'Navigation link start pool',
-  },
+    description: 'Navigation link start pool'
+  }
 });
 function FirstNavbar(props) {
   const { classes, intl, languageSelect } = props;
   return (
     <div className={classes.root}>
-
       <Toolbar>
-        <a href="/" >  <img src="/static/logo.png" alt="cryptocurrency-pool" width="30" height="30" /></a>
+        <a href="/">
+          {' '}
+          <img
+            src="/static/logo.png"
+            alt="cryptocurrency-pool"
+            width="30"
+            height="30"
+          />
+        </a>
 
         <Typography variant="title" color="inherit" className={classes.flex}>
           <a href="/" className={classes.brandname}>
-          &nbsp;&nbsp; BitBrackets &nbsp; &nbsp; &nbsp;
+            &nbsp;&nbsp; BitBrackets &nbsp; &nbsp; &nbsp;
           </a>
           <span style={{ color: '#b9f7e0' }}>
             <i className="fas fa-circle fa-xs" />
           </span>
-          <span style={{ fontSize: '14px' }}>    Beta Rinkeby Test Net</span>
+          <span style={{ fontSize: '14px' }}> Beta Rinkeby Test Net</span>
         </Typography>
-
 
         <div className={classes.responsive}>
           <Toolbar>
-
             <Button href="/#section3" color="inherit">
               {intl.formatMessage(messages.navigationNavbarlink1)}
             </Button>
@@ -97,7 +101,7 @@ function FirstNavbar(props) {
               {intl.formatMessage(messages.navigationNavbarlink2)}
             </Button>
             <Button href="/faq" color="inherit">
-            FAQs
+              FAQs
             </Button>
             <Button href="/myPools" color="inherit">
               {intl.formatMessage(messages.navigationNavbarlink3)}
@@ -112,13 +116,10 @@ function FirstNavbar(props) {
             </Button>
 
             {languageSelect}
-
-
           </Toolbar>
         </div>
         <div className={classes.buttonResponsive}>
           <Toolbar>
-
             <Button
               href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
             >
@@ -126,12 +127,9 @@ function FirstNavbar(props) {
             </Button>
 
             <NavigationResponsive languageSelect={languageSelect} />
-
-
           </Toolbar>
         </div>
       </Toolbar>
-
     </div>
   );
 }
@@ -139,7 +137,7 @@ function FirstNavbar(props) {
 FirstNavbar.propTypes = {
   classes: PropTypes.object.isRequired,
   intl: PropTypes.object.isRequired,
-  languageSelect: PropTypes.object.isRequired,
+  languageSelect: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(injectIntl(FirstNavbar));

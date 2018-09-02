@@ -1,4 +1,3 @@
-
 /* eslint-disable react/forbid-prop-types */
 
 import React from 'react';
@@ -13,11 +12,9 @@ import { initStore } from '../store';
 import Layout from '../components/Layout';
 import MyPoolsDashboard from '../components/MyPools/MyPoolsDashboard';
 
-
 addLocaleData(en);
 addLocaleData(es);
 const messages = initMessages();
-
 
 function myPools(props) {
   const language = props.current;
@@ -27,25 +24,18 @@ function myPools(props) {
         <MyPoolsDashboard />
       </Layout>
     </IntlProvider>
-
   );
 }
 
-
 myPools.propTypes = {
-
-
-  current: PropTypes.string.isRequired,
+  current: PropTypes.string.isRequired
 };
 
 function mapStateToProps(state) {
   return {
     current: state.language.current,
-    languages: state.language.languages,
-
+    languages: state.language.languages
   };
 }
 
-
 export default withRoot(withRedux(initStore, mapStateToProps)(myPools));
-

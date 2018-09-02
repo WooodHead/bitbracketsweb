@@ -33,21 +33,21 @@ function faq(props) {
             <Qa faqText={faqQ[language]} />
           </div>
         </div>
-        <div style={{ marginTop: '5em' }}> <hr /></div>
+        <div style={{ marginTop: '5em' }}>
+          {' '}
+          <hr />
+        </div>
       </Layout>
     </IntlProvider>
   );
 }
 faq.propTypes = {
- 
-
-  current: PropTypes.string.isRequired,
-
+  current: PropTypes.string.isRequired
 };
 function mapStateToProps(state) {
   return {
     current: state.language.current,
-    languages: state.language.languages,
+    languages: state.language.languages
   };
 }
 
@@ -55,4 +55,6 @@ const mapDispatchToProps = dispatch => ({
   // changeLanguage: bindActionCreators(changeLanguage, dispatch),
 });
 
-export default withRoot(withRedux(initStore, mapStateToProps, mapDispatchToProps)(faq));
+export default withRoot(
+  withRedux(initStore, mapStateToProps, mapDispatchToProps)(faq)
+);

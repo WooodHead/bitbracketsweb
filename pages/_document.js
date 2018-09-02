@@ -27,12 +27,20 @@ class MyDocument extends Document {
             content={pageContext.theme.palette.primary[500]}
           />
           {/* social  */}
-          <meta property="og:title" content="BitBrackets.io - First Cryptocurrency Sports Pool Platform" />
-          <meta property="og:description" content="Start a pool with your friends and family" />
-          <meta property="og:image" content="https://bitbrackets.io/static/metaTag.png" />
+          <meta
+            property="og:title"
+            content="BitBrackets.io - First Cryptocurrency Sports Pool Platform"
+          />
+          <meta
+            property="og:description"
+            content="Start a pool with your friends and family"
+          />
+          <meta
+            property="og:image"
+            content="https://bitbrackets.io/static/metaTag.png"
+          />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://bitbrackets.io/" />
-
 
           {/* end social */}
           <link
@@ -44,9 +52,10 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+          />
         </Head>
         <body>
           <Main />
@@ -57,7 +66,7 @@ class MyDocument extends Document {
   }
 }
 
-MyDocument.getInitialProps = (ctx) => {
+MyDocument.getInitialProps = ctx => {
   // Resolution order
   //
   // On the server:
@@ -95,12 +104,12 @@ MyDocument.getInitialProps = (ctx) => {
           id="jss-server-side"
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
-            __html: pageContext.sheetsRegistry.toString(),
+            __html: pageContext.sheetsRegistry.toString()
           }}
         />
         {flush() || null}
       </React.Fragment>
-    ),
+    )
   };
 };
 

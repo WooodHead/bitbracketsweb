@@ -5,11 +5,14 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web and AsyncStorage for react-native
 import reducer from './reducers';
 
-const makeStore = (reducers, initialState) => createStore(reducers, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)));
+const makeStore = (reducers, initialState) =>
+  createStore(
+    reducers,
+    initialState,
+    composeWithDevTools(applyMiddleware(thunkMiddleware))
+  );
 
-export const initStore = (initialState, {
-  isServer, req, debug, storeKey,
-}) => {
+export const initStore = (initialState, { isServer, req, debug, storeKey }) => {
   if (isServer) {
     // initialState = initialState || { fromServer: 'foo' };
 
@@ -19,7 +22,7 @@ export const initStore = (initialState, {
   const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['predictions', 'language'], // make sure it does not clash with server keys
+    whitelist: ['predictions', 'language'] // make sure it does not clash with server keys
   };
 
   const persistedReducer = persistReducer(persistConfig, reducer);

@@ -1,64 +1,64 @@
-import React, { Component } from "react";
-import Typography from "material-ui/Typography";
-import Grid from "material-ui/Grid";
-import { injectIntl, defineMessages, FormattedMessage } from "react-intl";
-import Card, { CardActions, CardContent, CardMedia } from "material-ui/Card";
-import ScrollableAnchor from "react-scrollable-anchor";
+import React, { Component } from 'react';
+import Typography from 'material-ui/Typography';
+import Grid from 'material-ui/Grid';
+import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
+import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 const messages = defineMessages({
   homeSection3Title1: {
-    id: "home.section3.title1",
-    defaultMessage: "How does it work?",
-    description: "home > section3"
+    id: 'home.section3.title1',
+    defaultMessage: 'How does it work?',
+    description: 'home > section3'
   },
   homeSection3Title2: {
-    id: "home.section3.title2",
-    defaultMessage: "Create a Pool & Invite Friends",
-    description: "home > section3"
+    id: 'home.section3.title2',
+    defaultMessage: 'Create a Pool & Invite Friends',
+    description: 'home > section3'
   },
   homeSection3Title3: {
-    id: "home.section3.title3",
+    id: 'home.section3.title3',
     defaultMessage:
-      "Name the pool and determine the entry amount to play in the pool. If you don´t have a crypto wallet learn here.",
-    description: "home > section3"
+      'Name the pool and determine the entry amount to play in the pool. If you don´t have a crypto wallet learn here.',
+    description: 'home > section3'
   },
   homeSection3Title4: {
-    id: "home.section3.title4",
+    id: 'home.section3.title4',
     defaultMessage:
-      "The more participants, the bigger the prize. The pool is secured by a Smart Contract.",
-    description: "home > section3"
+      'The more participants, the bigger the prize. The pool is secured by a Smart Contract.',
+    description: 'home > section3'
   },
   homeSection3Title5: {
-    id: "home.section3.title5",
-    defaultMessage: "Enter prediction",
-    description: "home > section3"
+    id: 'home.section3.title5',
+    defaultMessage: 'Enter prediction',
+    description: 'home > section3'
   },
   homeSection3Title6: {
-    id: "home.section3.title6",
+    id: 'home.section3.title6',
     defaultMessage:
-      "Will Costa Rica win against Brazil? This predictions will be saved in the Blockchain. You must enter your predictions before the event starts.",
-    description: "home > section3"
+      'Will Costa Rica win against Brazil? This predictions will be saved in the Blockchain. You must enter your predictions before the event starts.',
+    description: 'home > section3'
   },
   homeSection3Title7: {
-    id: "home.section3.title7",
-    defaultMessage: "Are you winning?",
-    description: "home > section3"
+    id: 'home.section3.title7',
+    defaultMessage: 'Are you winning?',
+    description: 'home > section3'
   },
   homeSection3Title8: {
-    id: "home.section3.title8",
+    id: 'home.section3.title8',
     defaultMessage:
-      "If you are winning, and there’s no chance someone can beat you, publish your high score to the blockchain! The smart contract will validate you are winning and record your high score, if it is true the pool might be yours. The more participants, the bigger the prize. The pool is secured by Smart Contracts.",
-    description: "home > section3"
+      'If you are winning, and there’s no chance someone can beat you, publish your high score to the blockchain! The smart contract will validate you are winning and record your high score, if it is true the pool might be yours. The more participants, the bigger the prize. The pool is secured by Smart Contracts.',
+    description: 'home > section3'
   },
   homeSection3Title9: {
-    id: "home.section3.title9",
-    defaultMessage: "Fake it until you... somebody can say otherwise!",
-    description: "home > section3"
+    id: 'home.section3.title9',
+    defaultMessage: 'Fake it until you... somebody can say otherwise!',
+    description: 'home > section3'
   },
   homeSection3Title10: {
-    id: "home.section3.title10",
-    defaultMessage: "Fake it until you... somebody can say otherwise!",
-    description: "home > section3"
+    id: 'home.section3.title10',
+    defaultMessage: 'Fake it until you... somebody can say otherwise!',
+    description: 'home > section3'
   }
 });
 
@@ -66,11 +66,11 @@ class Section3 extends Component {
   render() {
     const { intl } = this.props;
     return (
-      <ScrollableAnchor id={"section3"}>
+      <ScrollableAnchor id={'section3'}>
         <div
           style={{
-            paddingTop: "5em",
-            backgroundColor: "#374785"
+            paddingTop: '5em',
+            backgroundColor: '#374785'
           }}
         >
           <div className="container">
@@ -81,7 +81,7 @@ class Section3 extends Component {
                   variant="display2"
                   gutterBottom
                   style={{
-                    color: "#fff"
+                    color: '#fff'
                   }}
                 >
                   {intl.formatMessage(messages.homeSection3Title1)}
@@ -98,7 +98,7 @@ class Section3 extends Component {
                     variant="display1"
                     gutterBottom
                     style={{
-                      color: "#fff"
+                      color: '#fff'
                     }}
                   >
                     {intl.formatMessage(messages.homeSection3Title2)}
@@ -110,7 +110,7 @@ class Section3 extends Component {
                         variant="headline"
                         gutterBottom
                         style={{
-                          color: "#fff"
+                          color: '#fff'
                         }}
                       >
                         {intl.formatMessage(messages.homeSection3Title3)}
@@ -122,7 +122,7 @@ class Section3 extends Component {
                         variant="headline"
                         gutterBottom
                         style={{
-                          color: "#fff"
+                          color: '#fff'
                         }}
                       >
                         {intl.formatMessage(messages.homeSection3Title4)}
@@ -140,7 +140,7 @@ class Section3 extends Component {
                     variant="display1"
                     gutterBottom
                     style={{
-                      color: "#fff"
+                      color: '#fff'
                     }}
                   >
                     {intl.formatMessage(messages.homeSection3Title5)}
@@ -148,7 +148,7 @@ class Section3 extends Component {
                   <Typography
                     variant="headline"
                     align="justify"
-                    style={{ color: "#fff" }}
+                    style={{ color: '#fff' }}
                   >
                     {intl.formatMessage(messages.homeSection3Title6)}
                   </Typography>
@@ -163,14 +163,14 @@ class Section3 extends Component {
                     gutterBottom
                     variant="display1"
                     component="h2"
-                    style={{ color: "#fff" }}
+                    style={{ color: '#fff' }}
                   >
                     {intl.formatMessage(messages.homeSection3Title7)}
                   </Typography>
                   <Typography
                     variant="headline"
                     align="justify"
-                    style={{ color: "#fff" }}
+                    style={{ color: '#fff' }}
                   >
                     {intl.formatMessage(messages.homeSection3Title8)}
                   </Typography>
@@ -184,14 +184,14 @@ class Section3 extends Component {
                     variant="display1"
                     component="h2"
                     align="center"
-                    style={{ color: "#fff" }}
+                    style={{ color: '#fff' }}
                   >
                     {intl.formatMessage(messages.homeSection3Title9)}
                   </Typography>
                   <Typography
                     variant="headline"
                     align="justify"
-                    style={{ color: "#fff" }}
+                    style={{ color: '#fff' }}
                   >
                     {intl.formatMessage(messages.homeSection3Title10)}
                   </Typography>

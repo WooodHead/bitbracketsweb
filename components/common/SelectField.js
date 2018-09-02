@@ -10,16 +10,16 @@ import Select from 'material-ui/Select';
 const styles = theme => ({
   root: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap'
   },
   formControl: {
-    margin: theme.spacing.unit,
+    margin: theme.spacing.unit
     // minWidth: 120,
-  },
+  }
 });
 
 class SelectField extends React.Component {
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({ value: event.target.value });
     this.props.onChange(event.target.value);
   };
@@ -53,7 +53,7 @@ SelectField.propTypes = {
   // name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default withStyles(styles)(SelectField);

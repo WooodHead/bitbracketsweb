@@ -9,42 +9,41 @@ import Divider from 'material-ui/Divider';
 import Grid from 'material-ui/Grid';
 import ViewPredictionsLink from './ViewPredictionsLink';
 
-
 const messages = defineMessages({
   PlayersAddress: {
     id: 'PlayersAddress',
     defaultMessage: 'Players Address',
-    description: 'Players Address',
+    description: 'Players Address'
   },
   lonelyhere: {
     id: 'lonelyhere',
     defaultMessage: 'It’s a little bit lonely here... Invite some friends',
-    description: 'lonely here',
+    description: 'lonely here'
   },
   Predictions: {
     id: 'Predictions',
     defaultMessage: 'Predictions',
-    description: 'Predictions',
+    description: 'Predictions'
   },
   Score: {
     id: 'Score',
     defaultMessage: 'Score',
-    description: 'Score',
+    description: 'Score'
   },
   viewpredictions: {
     id: 'viewpredictions',
     defaultMessage: 'view predictions',
-    description: 'viewpredictions',
-  },
+    description: 'viewpredictions'
+  }
 });
 
 const styles = theme => ({
   root: {
     width: '100%',
     marginTop: theme.spacing.unit * 2,
-    overflowX: 'auto',
+    overflowX: 'auto'
   },
-  table: {},
+  table: {}
 });
 
 function ResponsiveListTableParticipant(props) {
@@ -53,12 +52,16 @@ function ResponsiveListTableParticipant(props) {
     return (
       <Grid container spacing={24}>
         <Grid item xs={12} sm={4}>
-          <Typography style={{ fontWeight: '500', color: 'grey' }} variant="headline" gutterBottom>
+          <Typography
+            style={{ fontWeight: '500', color: 'grey' }}
+            variant="headline"
+            gutterBottom
+          >
             {intl.formatMessage(messages.lonelyhere)}
-
           </Typography>
         </Grid>
-      </Grid>);
+      </Grid>
+    );
   }
 
   return (
@@ -68,7 +71,11 @@ function ResponsiveListTableParticipant(props) {
           <div key={Math.random()}>
             <Grid container spacing={24}>
               <Grid item xs={6}>
-                <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
+                <Typography
+                  style={{ color: '#616161' }}
+                  variant="subheading"
+                  gutterBottom
+                >
                   {intl.formatMessage(messages.PlayersAddress)}
                 </Typography>
               </Grid>
@@ -86,7 +93,11 @@ function ResponsiveListTableParticipant(props) {
             </Grid>
             <Grid container spacing={24}>
               <Grid item xs={6}>
-                <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
+                <Typography
+                  style={{ color: '#616161' }}
+                  variant="subheading"
+                  gutterBottom
+                >
                   {intl.formatMessage(messages.Predictions)}
                 </Typography>
               </Grid>
@@ -109,7 +120,11 @@ function ResponsiveListTableParticipant(props) {
             </Grid>
             <Grid container spacing={24}>
               <Grid item xs={6}>
-                <Typography style={{ color: '#616161' }} variant="subheading" gutterBottom>
+                <Typography
+                  style={{ color: '#616161' }}
+                  variant="subheading"
+                  gutterBottom
+                >
                   {intl.formatMessage(messages.Score)}
                 </Typography>
               </Grid>
@@ -137,7 +152,7 @@ function ResponsiveListTableParticipant(props) {
 ResponsiveListTableParticipant.propTypes = {
   poolAddress: PropTypes.string.isRequired,
   players: PropTypes.array.isRequired,
-  intl: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired
 };
 
 export default injectIntl(withStyles(styles)(ResponsiveListTableParticipant));

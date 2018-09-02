@@ -1,7 +1,5 @@
 export default {
   en: {
-  
-
     PlayersAddress: 'Players Address',
     lonelyhere: 'It’s a little bit lonely here... Invite some friends',
     Predictions: 'Predictions',
@@ -13,12 +11,9 @@ export default {
     InviteFriends: 'Invite Friends',
     CopyLink: 'Copy Link',
     close: 'close',
-    copied: 'copied',
-
+    copied: 'copied'
   },
   es: {
-
-    
     PlayersAddress: 'Dirección del jugador',
     lonelyhere: 'Aquí está un poco solitario ... Invita a algunos amigos',
     Predictions: 'Predicciones',
@@ -26,13 +21,11 @@ export default {
     viewpredictions: 'ver predicción',
     ParticipantList: 'Lista de participantes',
     JointhePool: 'Unirse a la Quiniela',
-    Copyandshare: 'Copia y comparte el siguiente enlace para invitar a tus amigos:',
+    Copyandshare:
+      'Copia y comparte el siguiente enlace para invitar a tus amigos:',
     InviteFriends: 'Invitar amigos',
     CopyLink: 'Copiar enlace',
     close: 'cerrar',
-    copied: 'copiado',
-
-
-  },
+    copied: 'copiado'
+  }
 };
-

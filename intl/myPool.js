@@ -5,9 +5,7 @@ export default {
     prizeMyPool: 'Prize:',
     CreateNewPool: 'Create New Pool',
     nopools: 'You don´t have Pools',
-    CreateANewPool: 'Create a New Pool here',
-
-
+    CreateANewPool: 'Create a New Pool here'
   },
   es: {
     youAreAdminMyPool: 'Eres el Admin',
@@ -15,8 +13,6 @@ export default {
     prizeMyPool: 'Premio:',
     CreateNewPool: 'Crear Nueva Quiniela',
     nopools: 'No tienes Quinielas.',
-    CreateANewPool: 'Crea una quiniela aqui.',
-
-  },
+    CreateANewPool: 'Crea una quiniela aqui.'
+  }
 };
-
