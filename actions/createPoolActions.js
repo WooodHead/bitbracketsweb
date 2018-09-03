@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { actionTypes } from '../actions/types';
 import factory from '../ethereum/contestPoolFactory';
 import web3 from '../ethereum/web3';
+// import { stringToBytes32 } from '../ethereum/utils';
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
