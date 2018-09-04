@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   webpack: (config, { dev }) => {
     // Fixes npm packages that depend on `fs` module

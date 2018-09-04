@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   'process.env.WEB3_NETWORKS': process.env.WEB3_NETWORKS,
   'process.env.NODE_ENV': process.env.NODE_ENV,
