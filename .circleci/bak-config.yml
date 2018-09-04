@@ -3,13 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-
-refrences:
-
-  cache-options: &cache-options
-    key: package-cache-{{ checksum "package.json" }}
-
-    
 jobs:
   build:
     docker:
@@ -25,23 +18,20 @@ jobs:
 
     steps:
       - checkout
-      - restore_cache:
-          key: bitbrackets-{{ checksum "package.json" }}
-      - run:
-          name: install-package-dependencies
-          command: npm install    
+
       # Download and cache dependencies
-      - run: npm run build
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
 
-      - run:
-          name: test-reporter-setup
-          command: npm install mocha-junit-reporter --no-save
+      - run: yarn install
+
       - save_cache:
-          key: bitbrackets-{{ checksum "package.json" }}
           paths:
-            - ./node_modules
-      - run:
-          name: test
-          command: npm test      
-
-
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+        
+      # run tests!
+      - run: yarn test
