@@ -1,6 +1,6 @@
 // const { parsed: localEnv } = require('dotenv').config();
 const localEnv = require('./env.config');
-const webpack = require('webpack');
+// const webpack = require('webpack');
 
 module.exports = {
   webpack: (config, { dev }) => {
