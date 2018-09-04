@@ -3,7 +3,7 @@ import { Admin, Resource } from 'react-admin';
 // import jsonServerProvider from 'ra-data-json-server';
 import createHistory from 'history/createMemoryHistory';
 import dataProvider from './dataprovider/dataprovider';
-import { ContestShow, ContestCreate, ContestList } from './resources/contest/';
+import { ContestShow, ContestCreate, ContestList } from './resources/contest';
 
 // const dataProvider = jsonServerProvider(process.env.ENDPOINT_URL);
 
