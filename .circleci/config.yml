@@ -14,7 +14,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:8.11.4-browsers
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -26,7 +26,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-           <<: *cache-options
+          key: bitbrackets-{{ checksum "package.json" }}
       - run:
           name: install-package-dependencies
           command: npm install    
@@ -37,7 +37,7 @@ jobs:
           name: test-reporter-setup
           command: npm install mocha-junit-reporter --no-save
       - save_cache:
-          <<: *cache-options
+          key: bitbrackets-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
