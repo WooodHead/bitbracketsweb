@@ -4,7 +4,8 @@
        "presets": ["next/babel"]
     },
     "production": {
-       "presets": ["next/babel"]
+       "presets": ["next/babel"],
+       "plugins": ["transform-inline-environment-variables"]
     },
     "test": {
          "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
