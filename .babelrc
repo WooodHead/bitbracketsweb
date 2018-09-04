@@ -4,14 +4,15 @@
        "presets": ["next/babel"]
     },
     "production": {
-       "presets": ["next/babel"]
+       "presets": ["next/babel"],
+       "plugins": ["transform-inline-environment-variables"]
     },
     "test": {
          "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
     }
   },
   "plugins": [
-    ["transform-define", "./env.config.js"],
+    "transform-inline-environment-variables",
     ["react-intl", { "messagesDir": "lang/.messages/" }]
   ]
 }
