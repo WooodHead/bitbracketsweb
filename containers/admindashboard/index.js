@@ -2,7 +2,7 @@ import React from 'react';
 import { Admin, Resource } from 'react-admin';
 // import jsonServerProvider from 'ra-data-json-server';
 import createHistory from 'history/createMemoryHistory';
-import dataProvider from './dataprovider';
+import dataProvider from './dataprovider/index';
 import { ContestShow, ContestCreate, ContestList } from './resources/contest/';
 
 // const dataProvider = jsonServerProvider(process.env.ENDPOINT_URL);
@@ -20,6 +20,7 @@ const AdminDashboard = () => (
       list={ContestList}
       create={ContestCreate}
       show={ContestShow}
+      edit={ContestCreate}
     />
   </Admin>
 );
