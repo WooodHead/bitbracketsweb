@@ -18,12 +18,14 @@
     "npm": ">= 5.7.1"
   },
   "scripts": {
+    "prestart": "next build",
     "precommit": "lint-staged",
     "startwithdotenv": "node -r dotenv/config server.js",
     "dev": "NODE_ENV=development node -r dotenv/config ./server.js",
     "qa": "NODE_ENV=qa node -r dotenv/config ./server.js",
     "test": "NODE_ENV=test jest",
-    "start": "NODE_ENV=production node server.js",
+    "start": "next start -p $PORT",
+    "start-bak": "NODE_ENV=production node server.js",
     "startpr": "node server.js",
     "build": "next build",
     "heroku-postbuild": "npm run build",
