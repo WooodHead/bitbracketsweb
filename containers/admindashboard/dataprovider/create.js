@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import moment from 'moment';
-import factory from '../../../../ethereum/contestPoolFactory';
-import web3 from '../../../../ethereum/web3';
-import { stringToBytes32 } from '../../../../ethereum/utils';
+import factory from '../../../ethereum/contestPoolFactory';
+import web3 from '../../../ethereum/web3';
+import { stringToBytes32 } from '../../../ethereum/utils';
 
 const hoursToEpoch = h => {
   return moment(h * 3600000).unix();
