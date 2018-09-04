@@ -11,6 +11,14 @@ module.exports = {
     console.log('env', localEnv);
 
     config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
+    // config.plugins.push(
+    //   new webpack.DefinePlugin({
+    //     'process.env': {
+    //       'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    //       'ENDPOINT_URL': JSON.stringify(process.env.ENDPOINT_URL)
+    //     }
+    //   })
+    // );
 
     // Perform customizations to config
     config.module.rules = config.module.rules.map(rule => {
