@@ -24,11 +24,11 @@
     "dev": "NODE_ENV=development node -r dotenv/config ./server.js",
     "qa": "NODE_ENV=qa node -r dotenv/config ./server.js",
     "test": "NODE_ENV=test jest",
-    "start": "next start -p $PORT",
-    "start-bak": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production node server.js",
     "startpr": "node server.js",
     "build": "next build",
     "heroku-postbuild": "npm run build",
+    "postintsall": "npm run build",
     "json-server": "json-server --watch ./json_mock_server/db.json --routes ./json_mock_server/routes.json --port 3001"
   },
   "dependencies": {
