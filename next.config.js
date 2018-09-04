@@ -1,6 +1,6 @@
 // const { parsed: localEnv } = require('dotenv').config();
 const localEnv = require('./env.config');
-// const webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   webpack: (config, { dev }) => {
@@ -9,9 +9,8 @@ module.exports = {
       fs: 'empty'
     };
     console.log('env', localEnv);
-    console.log('API URL', process.env.API_URL);
 
-    // config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
+    config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
 
     // Perform customizations to config
     config.module.rules = config.module.rules.map(rule => {
