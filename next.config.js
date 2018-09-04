@@ -1,4 +1,9 @@
-require('dotenv').config();
+const { parsed: localEnv, error } = require('dotenv').config();
+const webpack = require('webpack');
+
+if (error) {
+  throw error;
+}
 
 module.exports = {
   webpack: (config, { dev }) => {
@@ -6,6 +11,10 @@ module.exports = {
     config.node = {
       fs: 'empty'
     };
+
+    console.log('env', localEnv);
+
+    config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
 
     // Perform customizations to config
     config.module.rules = config.module.rules.map(rule => {
