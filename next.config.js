@@ -15,13 +15,13 @@ module.exports = {
       return rule;
     });
 
-    config.resolveLoader = {
-      modules: [path.join(__dirname, 'node_modules')]
-    };
+    // config.resolveLoader = {
+    //   modules: [path.join(__dirname, 'node_modules')]
+    // };
 
-    config.resolve = {
-      modules: [path.join(__dirname, 'node_modules')]
-    };
+    // config.resolve = {
+    //   modules: [path.join(__dirname, 'node_modules')]
+    // };
 
     return config;
   }
