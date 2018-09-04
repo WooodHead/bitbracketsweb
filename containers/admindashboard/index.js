@@ -20,7 +20,7 @@ const AdminDashboard = () => (
       list={ContestList}
       create={ContestCreate}
       show={ContestShow}
-      edit={ContestCreate}
+      // edit={ContestCreate}
     />
   </Admin>
 );
