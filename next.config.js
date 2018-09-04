@@ -1,9 +1,5 @@
-const { parsed: localEnv, error } = require('dotenv').config();
+const { parsed: localEnv } = require('dotenv').config();
 const webpack = require('webpack');
-
-if (error) {
-  throw error;
-}
 
 module.exports = {
   webpack: (config, { dev }) => {
