@@ -8,7 +8,7 @@ import {
   GET_MANY,
   GET_MANY_REFERENCE
 } from 'react-admin';
-import { createContestPoolDefinition } from './contests/create';
+import { createContestPoolDefinition } from './create';
 
 const apiUrl = process.env.ENDPOINT_URL;
 
