@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   webpack: (config, { dev }) => {
     // Fixes npm packages that depend on `fs` module
@@ -14,14 +12,6 @@ module.exports = {
       }
       return rule;
     });
-
-    // config.resolveLoader = {
-    //   modules: [path.join(__dirname, 'node_modules')]
-    // };
-
-    // config.resolve = {
-    //   modules: [path.join(__dirname, 'node_modules')]
-    // };
 
     return config;
   }
