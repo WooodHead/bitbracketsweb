@@ -12,13 +12,13 @@ import BannerResponsivo from './BannerResponsivo';
 
 const styles = theme => ({
   rootWeb: {
-    padding: theme.spacing.unit,
+    // padding: theme.spacing.unit,
     [theme.breakpoints.down('sm')]: {
       display: 'none'
     }
   },
   rootResponsive: {
-    padding: theme.spacing.unit,
+    // padding: theme.spacing.unit,
     [theme.breakpoints.up('md')]: {
       display: 'none'
     }
@@ -29,17 +29,17 @@ function Home(props) {
   const { classes } = props;
   return (
     <div>
-      <div className={classes.rootWeb}>
+      {/* <div className={classes.rootWeb}>
         <Banner />
-      </div>
-      <div className={classes.rootResponsive}>
+      </div> */}
+      {/* <div className={classes.rootResponsive}>
         <BannerResponsivo />
-      </div>
-
-      <Section2 />
+      </div> */}
+      <BannerResponsivo />
+      {/* <Section2 /> */}
       <Section3 />
       <Section4 />
-      <Section5 />
+      {/* <Section5 /> */}
     </div>
   );
 }

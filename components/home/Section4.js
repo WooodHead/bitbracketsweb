@@ -34,14 +34,33 @@ const messages = defineMessages({
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#3b4584',
     paddingTop: '8em',
     paddingBottom: '8em'
   },
   paper: {
-    padding: theme.spacing.unit * 2,
+    // padding: theme.spacing.unit * 2,
 
     color: theme.palette.text.secondary
+  },
+  title: {
+    color: '#fff',
+    paddingTop: '1em',
+    fontWeight: '500',
+    fontSize: '28px'
+  },
+  Subtitle: {
+    paddingTop: '1.5em',
+    color: '#ffff',
+
+    fontSize: '21px'
+  },
+  text: {
+    paddingTop: '1.5em',
+    color: '#fff',
+    lineHeight: '1.6',
+
+    fontSize: '16px'
   }
 });
 function Section4(props) {
@@ -52,7 +71,7 @@ function Section4(props) {
         <Grid item xs={12} sm={6} align="center">
           <span className={classes.paper}>
             <img
-              src="../../static/img4.png"
+              src="../../static/Reclama tu premio.svg"
               width="200"
               height="200"
               alt="crypto"
@@ -61,30 +80,16 @@ function Section4(props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <div className={classes.paper}>
-            <Typography
-              variant="display2"
-              align="justify"
-              gutterBottom
-              style={{ color: 'black', fontWeight: '500' }}
-            >
+            <div align="center" className={classes.Subtitle}>
               {intl.formatMessage(messages.homeSection4Title1)}
-            </Typography>
-            <Typography
-              className={classes.paper}
-              variant="headline"
-              align="justify"
-              style={{
-                color: 'black',
-                fontWeight: '400',
-                letterSpacing: '0.5px'
-              }}
-            >
+            </div>
+            <div className={classes.text} align="justify">
               {intl.formatMessage(messages.homeSection4Title2)}
               <br />
               {intl.formatMessage(messages.homeSection4Title3)}
 
               {intl.formatMessage(messages.homeSection4Title4)}
-            </Typography>
+            </div>
           </div>
         </Grid>
       </Grid>

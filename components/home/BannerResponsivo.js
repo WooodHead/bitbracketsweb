@@ -1,11 +1,14 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
+import { withStyles } from 'material-ui/styles';
+
 import PropTypes from 'prop-types';
-import Typography from 'material-ui/Typography';
+
 import { injectIntl, defineMessages } from 'react-intl';
 import Button from 'material-ui/Button';
 import ToshiButton from '../ToshiButton';
 import TrustWalletButton from '../TrustWalletButton';
+import MailchimpSubscribe from '../Mailchimp/MailchimpSubscribe';
 
 const messages = defineMessages({
   createprediction: {
@@ -22,67 +25,89 @@ const messages = defineMessages({
   },
   navigationNavbarlink4: {
     id: 'navigation.navbarlink4',
-    defaultMessage: 'start pool',
+    defaultMessage: 'start play',
     description: 'Navigation link start pool'
+  },
+  poolswith: {
+    id: 'poolswith',
+    defaultMessage: 'pools with cryptocurrency',
+    description: 'pools with cryptocurrency'
   }
 });
 
+const styles = theme => ({
+  title: {
+    color: '#d83562',
+    paddingTop: '1em',
+    fontWeight: '500',
+    fontSize: '28px'
+  },
+  Subtitle: {
+    paddingTop: '1.5em',
+    color: '#616161',
+    fontSize: '21px'
+  },
+  playButton: {
+    backgroundColor: '#E91E63',
+    color: '#fff',
+    hight: '48%',
+
+    borderRadius: '5px',
+
+    [theme.breakpoints.up('md')]: {
+      width: '25%'
+    }
+  }
+});
 function BannerResponsivo(props) {
-  const { intl } = props;
+  const { intl, classes } = props;
   return (
-    <div className="root">
-      <Typography
-        align="center"
-        variant="display1"
-        gutterBottom
-        style={{ color: 'black', paddingTop: '1em', fontWeight: '500' }}
-      >
-        BitBrackets
-      </Typography>
-      <Typography
-        align="center"
-        variant="display1"
-        gutterBottom
-        style={{ color: 'black', fontWeight: '400' }}
-      >
-        Russia 2018
-      </Typography>
-      <Typography align="center" variant="headline" gutterBottom>
-        {intl.formatMessage(messages.createprediction)}
-      </Typography>
+    <div>
+      <div align="center" className={classes.title}>
+        March Madness {intl.formatMessage(messages.poolswith)}
+      </div>
+
+      <div align="center" className={classes.Subtitle}>
+        {intl.formatMessage(messages.createprediction)}!
+      </div>
 
       <div
         style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}
       >
         <Button
-          href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
+          href="/marchMadness"
+          // href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
           variant="raised"
-          style={{ backgroundColor: '#E91E63', color: '#fff' }}
+          fullWidth
+          className={classes.playButton}
         >
           {intl.formatMessage(messages.navigationNavbarlink4)}
         </Button>
       </div>
-      <div style={{ marginTop: '40px' }}>
+      <div>
+        <MailchimpSubscribe />
+      </div>
+      {/* <div style={{ marginTop: '40px' }}>
         <Typography align="center" variant="subheading" gutterBottom>
           {intl.formatMessage(messages.appInstall)}
         </Typography>
-      </div>
+      </div> */}
 
-      <div style={{ display: 'flex', marginLeft: '40px', marginTop: '40px' }}>
+      {/* <div style={{ display: 'flex', marginLeft: '40px', marginTop: '40px' }}>
         <ToshiButton />
       </div>
       <div style={{ display: 'flex', marginLeft: '40px', marginTop: '40px' }}>
         <TrustWalletButton />
-      </div>
+      </div> */}
 
-      <div className="rootBanner">
+      {/* <div className="rootBanner">
         <style jsx>
           {`
             .styleButton {
               text-align: center;
             }
             .rootBanner {
-              background: url(static/background1.svg);
+              background: url(static/cancha.png);
               background-size: cover;
               background-repeat: no-repeat;
               margin-top: 70px;
@@ -91,7 +116,7 @@ function BannerResponsivo(props) {
             }
           `}
         </style>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -99,4 +124,4 @@ function BannerResponsivo(props) {
 BannerResponsivo.propTypes = {
   intl: PropTypes.object.isRequired
 };
-export default injectIntl(BannerResponsivo);
+export default injectIntl(withStyles(styles)(BannerResponsivo));

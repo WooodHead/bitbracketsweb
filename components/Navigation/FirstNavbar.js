@@ -107,13 +107,13 @@ function FirstNavbar(props) {
               {intl.formatMessage(messages.navigationNavbarlink3)}
             </Button>
 
-            <Button
+            {/* <Button
               href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
               variant="raised"
               style={{ backgroundColor: '#E91E63', color: '#fff' }}
             >
               {intl.formatMessage(messages.navigationNavbarlink4)}
-            </Button>
+            </Button> */}
 
             {languageSelect}
           </Toolbar>
@@ -121,7 +121,8 @@ function FirstNavbar(props) {
         <div className={classes.buttonResponsive}>
           <Toolbar>
             <Button
-              href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
+              // href={`/contest/${process.env.WEB3_CONTEST_NAME}/pools/new`}
+              href="/marchMadness"
             >
               {intl.formatMessage(messages.navigationNavbarlink4)}
             </Button>
