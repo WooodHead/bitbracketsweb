@@ -29,9 +29,11 @@ export default {
     'home.section5.title1':
       'Play your favorite sport events with Cryptocurrency',
     subscribe: 'subscribe',
-    createprediction: 'Create prediction pools for your favorite sports.',
+    createprediction:
+      'Pick the winnig teams, score more points and win cryptocurrency',
     Browser: 'Browser for the Ethereum network',
     trustwallet: 'Secure wallet for Ethereum',
+    poolswith: 'pools with cryptocurrency',
     appInstall:
       'For best mobile experience we recommend you play with bitbrackes using any of the following apps.'
   },
@@ -67,9 +69,11 @@ export default {
     'home.section5.title1':
       'Juega la quiniela de tu evento deportivo favorito con criptomonedas',
     subscribe: 'Suscribirse',
-    createprediction: 'Crea tu predicción de tu deporte favorito.',
+    createprediction:
+      'Elige los equipos ganadores, obtiene más puntos y gana criptomonedas',
     Browser: 'Navegador para la red Ethereum.',
     trustwallet: 'Billetera segura para Ethereum',
+    poolswith: 'quinielas con cryptocurrency',
     appInstall:
       'Para una mejor experiencia móvil, te recomendamos que juegues con bitbrackes usando cualquiera de las siguientes aplicaciones.'
   }

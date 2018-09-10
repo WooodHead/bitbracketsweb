@@ -48,6 +48,13 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
           />
           <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous"
+          />
+
+          <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
           />
@@ -57,7 +64,14 @@ class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
           />
         </Head>
-        <body>
+        <body
+          style={{
+            fontFamily: 'Roboto, sans-serif',
+            paddingLeft: '10px',
+            paddingRight: '10px',
+            backgroundColor: '#fff'
+          }}
+        >
           <Main />
           <NextScript />
         </body>

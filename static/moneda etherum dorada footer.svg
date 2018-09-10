@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.89 58.89">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.9;
+      }
+
+      .cls-2 {
+        fill: #f7a848;
+      }
+
+      .cls-3 {
+        fill: #ffc94e;
+      }
+
+      .cls-4 {
+        fill: #ffe3ab;
+      }
+    </style>
+  </defs>
+  <g id="Group_153" data-name="Group 153" class="cls-1" transform="matrix(0.978, 0.208, -0.208, 0.978, 10.323, 0)">
+    <ellipse id="Ellipse_15" data-name="Ellipse 15" class="cls-2" cx="24.826" cy="24.826" rx="24.826" ry="24.826" transform="translate(0 0)"/>
+    <ellipse id="Ellipse_16" data-name="Ellipse 16" class="cls-3" cx="23.244" cy="23.244" rx="23.244" ry="23.244" transform="translate(1.582 1.582)"/>
+    <ellipse id="Ellipse_17" data-name="Ellipse 17" class="cls-2" cx="17.078" cy="17.078" rx="17.078" ry="17.078" transform="translate(7.748 7.748)"/>
+    <g id="Group_91" data-name="Group 91" transform="translate(1.988 1.988)">
+      <path id="Path_172" data-name="Path 172" class="cls-2" d="M27.738,50.576a22.852,22.852,0,1,1,16.145-6.693A22.743,22.743,0,0,1,27.738,50.576Zm0-45.392A22.545,22.545,0,0,0,11.8,43.68a22.545,22.545,0,1,0,15.942-38.5Z" transform="translate(-4.9 -4.9)"/>
+    </g>
+    <g id="Group_92" data-name="Group 92" transform="translate(15.374 9.411)">
+      <path id="Path_173" data-name="Path 173" class="cls-3" d="M47.352,44.5,56.8,38.9,47.352,23.2,37.9,38.9l9.452,5.6Z" transform="translate(-37.9 -23.2)"/>
+      <path id="Path_174" data-name="Path 174" class="cls-3" d="M47.352,79.605,56.8,66.3l-9.452,5.6L37.9,66.3Z" transform="translate(-37.9 -48.816)"/>
+    </g>
+    <g id="Group_95" data-name="Group 95" transform="translate(15.861 9.979)">
+      <g id="Group_93" data-name="Group 93">
+        <path id="Path_175" data-name="Path 175" class="cls-4" d="M39.1,39.487,48.065,24.6,57.03,39.487l-8.965,5.273Z" transform="translate(-39.1 -24.6)"/>
+      </g>
+      <g id="Group_94" data-name="Group 94" transform="translate(1.744 19.147)">
+        <path id="Path_176" data-name="Path 176" class="cls-4" d="M43.4,71.8l7.221,4.259L57.841,71.8,50.621,81.982Z" transform="translate(-43.4 -71.8)"/>
+      </g>
+    </g>
+  </g>
+</svg>

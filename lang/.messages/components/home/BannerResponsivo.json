@@ -12,6 +12,11 @@
   {
     "id": "navigation.navbarlink4",
     "description": "Navigation link start pool",
-    "defaultMessage": "start pool"
+    "defaultMessage": "start play"
+  },
+  {
+    "id": "poolswith",
+    "description": "pools with cryptocurrency",
+    "defaultMessage": "pools with cryptocurrency"
   }
 ]

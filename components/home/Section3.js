@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typography from 'material-ui/Typography';
+import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
@@ -61,140 +62,118 @@ const messages = defineMessages({
     description: 'home > section3'
   }
 });
+const styles = theme => ({
+  title: {
+    color: '#616161',
+    paddingTop: '1em',
+    fontWeight: '500',
+    fontSize: '28px'
+  },
+  Subtitle: {
+    paddingTop: '1.5em',
+    color: '#757575',
 
+    fontSize: '21px'
+  },
+  text: {
+    paddingTop: '1.5em',
+    color: '#9E9E9E',
+    lineHeight: '1.6',
+
+    fontSize: '16px'
+  }
+});
 class Section3 extends Component {
   render() {
-    const { intl } = this.props;
+    const { intl, classes } = this.props;
     return (
       <ScrollableAnchor id={'section3'}>
         <div
           style={{
-            paddingTop: '5em',
-            backgroundColor: '#374785'
+            paddingTop: '5em'
           }}
         >
           <div className="container">
             <Grid container spacing={24}>
               <Grid item xs={12}>
-                <Typography
-                  align="center"
-                  variant="display2"
-                  gutterBottom
-                  style={{
-                    color: '#fff'
-                  }}
-                >
+                <div align="center" className={classes.title}>
                   {intl.formatMessage(messages.homeSection3Title1)}
-                </Typography>
+                </div>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <CardContent align="center">
                   <img
-                    src="../../static/Invitefriend.png"
+                    src="../../static/cellEther.png"
                     width="200"
-                    height="80"
+                    height="200"
+                    alt=""
                   />
-                  <Typography
-                    variant="display1"
-                    gutterBottom
-                    style={{
-                      color: '#fff'
-                    }}
-                  >
+                  <div className={classes.Subtitle}>
                     {intl.formatMessage(messages.homeSection3Title2)}
-                  </Typography>
+                  </div>
                   <Grid container spacing={24}>
                     <Grid item xs={12} sm={6}>
-                      <Typography
-                        align="justify"
-                        variant="headline"
-                        gutterBottom
-                        style={{
-                          color: '#fff'
-                        }}
-                      >
+                      <div className={classes.text} align="justify">
                         {intl.formatMessage(messages.homeSection3Title3)}
-                      </Typography>
+                      </div>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                      <Typography
-                        align="justify"
-                        variant="headline"
-                        gutterBottom
-                        style={{
-                          color: '#fff'
-                        }}
-                      >
+                      <div className={classes.text} align="justify">
                         {intl.formatMessage(messages.homeSection3Title4)}
-                      </Typography>
+                      </div>
                     </Grid>
                   </Grid>
                 </CardContent>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <CardContent align="center">
-                  <img src="../../static/grupo36.png" width="120" height="80" />
+                  <img
+                    src="../../static/computerEther.png"
+                    width="200"
+                    height="200"
+                    alt=""
+                  />
 
-                  <Typography
-                    align="center"
-                    variant="display1"
-                    gutterBottom
-                    style={{
-                      color: '#fff'
-                    }}
-                  >
+                  <div className={classes.Subtitle} align="center">
                     {intl.formatMessage(messages.homeSection3Title5)}
-                  </Typography>
-                  <Typography
-                    variant="headline"
-                    align="justify"
-                    style={{ color: '#fff' }}
-                  >
+                  </div>
+                  <div className={classes.text} align="justify">
                     {intl.formatMessage(messages.homeSection3Title6)}
-                  </Typography>
+                  </div>
                 </CardContent>
               </Grid>
             </Grid>
             <Grid container spacing={24}>
               <Grid item xs={12} sm={6}>
                 <CardContent align="center">
-                  <img src="../../static/grupo35.png" width="120" height="80" />
-                  <Typography
-                    gutterBottom
-                    variant="display1"
-                    component="h2"
-                    style={{ color: '#fff' }}
-                  >
+                  <img
+                    src="../../static/computer.png"
+                    width="200"
+                    height="200"
+                    alt=""
+                  />
+                  <div className={classes.Subtitle}>
                     {intl.formatMessage(messages.homeSection3Title7)}
-                  </Typography>
-                  <Typography
-                    variant="headline"
-                    align="justify"
-                    style={{ color: '#fff' }}
-                  >
+                  </div>
+                  <div className={classes.text} align="justify">
                     {intl.formatMessage(messages.homeSection3Title8)}
-                  </Typography>
+                  </div>
                 </CardContent>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <CardContent align="center">
-                  <img src="../../static/grupo37.png" width="280" height="80" />
-                  <Typography
-                    gutterBottom
-                    variant="display1"
-                    component="h2"
-                    align="center"
-                    style={{ color: '#fff' }}
-                  >
+                  <img
+                    src="../../static/computerperson.png"
+                    width="200"
+                    height="200"
+                    alt=""
+                  />
+                  <div className={classes.Subtitle} align="center">
                     {intl.formatMessage(messages.homeSection3Title9)}
-                  </Typography>
-                  <Typography
-                    variant="headline"
-                    align="justify"
-                    style={{ color: '#fff' }}
-                  >
+                  </div>
+                  <div className={classes.text} align="justify">
                     {intl.formatMessage(messages.homeSection3Title10)}
-                  </Typography>
+                  </div>
                 </CardContent>
               </Grid>
             </Grid>
@@ -205,4 +184,4 @@ class Section3 extends Component {
   }
 }
 
-export default injectIntl(Section3);
+export default injectIntl(withStyles(styles)(Section3));
